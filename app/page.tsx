@@ -9,6 +9,7 @@ import Sun from "@/components/illustrations/Sun";
 import Sparkles from "@/components/illustrations/Sparkles";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
+import StepIcon from "@/components/illustrations/StepIcon";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -118,16 +119,16 @@ export default function HomePage() {
             <p className="mt-3 text-warm-grey">A few sentences. See if any of these sound familiar.</p>
           </FadeIn>
 
-          <div className="mt-10 space-y-6 text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {[
-              "You&rsquo;re tired in a way that doesn&rsquo;t lift even when you do manage to sleep, and you can&rsquo;t quite remember when that started.",
-              "You catch yourself being shorter than you mean to be with the people you love, and the guilt afterwards is exhausting in its own right.",
-              "You&rsquo;ve been Googling private counsellors more than once, opening the tab and closing it again, and something keeps stopping you from sending a message.",
-              "You know, somewhere underneath all of it, that you can&rsquo;t keep going the way you are. You&rsquo;ve probably known that for a while.",
+              "You&rsquo;re tired in a way that doesn&rsquo;t lift, even when you do manage to sleep.",
+              "You&rsquo;re shorter than you mean to be with the people you love, and you carry the guilt the rest of the day.",
+              "You&rsquo;ve Googled &lsquo;private counsellor&rsquo; more than once, opened the tab, and closed it again.",
+              "Underneath all of it, you already know you can&rsquo;t keep going the way you are.",
             ].map((line, i) => (
-              <FadeIn key={i} delay={i * 60}>
+              <FadeIn key={i} delay={i * 70}>
                 <p
-                  className="border-l-2 border-soft-blue/70 pl-5"
+                  className="rounded-xl2 border-l-2 border-soft-blue-strong/70 bg-cream p-5 text-[16px] leading-relaxed text-navy/85 shadow-soft sm:text-[17px]"
                   dangerouslySetInnerHTML={{ __html: line }}
                 />
               </FadeIn>
@@ -169,71 +170,109 @@ export default function HomePage() {
         />
         <LeafFloat className="pointer-events-none absolute -bottom-6 right-[3%] h-40 w-40 opacity-80 animate-float-soft" />
         <Container size="wide">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <FadeIn>
-              <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-                What&apos;s different here
-              </p>
-              <h2 className="mt-3 text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-                Most counsellors give you a 20-minute call. I give you the full
-                first session, free.
-              </h2>
-              <div className="mt-5 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85">
-                <p>
-                  The first session is where you actually decide whether
-                  I&apos;m the right person for you to do this work with, and
-                  twenty minutes on the phone isn&apos;t really enough to know
-                  that one way or the other. Fifty-five minutes, sitting in
-                  the room, talking properly, is.
-                </p>
-                <p>
-                  You won&apos;t get scripted nodding or &ldquo;and how does
-                  that make you feel?&rdquo; on a loop. What you&apos;ll get
-                  is a real conversation with someone who is paying close
-                  attention, who isn&apos;t in any rush, and who won&apos;t
-                  make you feel like a checklist being worked through.
-                </p>
-                <p>
-                  If you&apos;ve been on an NHS waiting list for months and
-                  quietly lost faith that anything is coming, you don&apos;t
-                  have to keep waiting. And at the end of the free first hour,
-                  there&apos;s no pressure to book another session. Take a few
-                  days, talk it over with whoever you need to, and let me know
-                  when you&apos;re ready, or don&apos;t. Either is fine.
-                </p>
-              </div>
-              <div className="mt-7">
-                <Button href="/contact/" size="md">
-                  Book your free first session
-                </Button>
-              </div>
-            </FadeIn>
+          <FadeIn>
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
+              What&apos;s different here
+            </p>
+            <h2 className="mt-3 max-w-3xl text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+              Most counsellors give you a 20-minute call. I give you the full
+              first session, free.
+            </h2>
+            <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-navy/85">
+              Twenty minutes on the phone is enough to confirm a time. It
+              isn&apos;t enough to know whether you can actually work with
+              someone. Fifty-five minutes, sitting in the room, is.
+            </p>
+          </FadeIn>
 
-            <FadeIn delay={120}>
-              <div className="relative">
-                <div className="rounded-xl2 bg-cream/80 p-6 shadow-soft backdrop-blur sm:p-8">
-                  <div className="grid gap-5 sm:grid-cols-3">
-                    {[
-                      { k: "55 min", v: "the full first session" },
-                      { k: "£0", v: "no commitment to come back" },
-                      { k: "1:1", v: "in person or online, your choice" },
-                    ].map((item) => (
-                      <div key={item.k}>
-                        <p className="text-[1.6rem] font-semibold text-navy">
-                          {item.k}
-                        </p>
-                        <p className="mt-1 text-sm text-warm-grey">{item.v}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-7 border-t border-navy/10 pt-5 text-sm text-navy/80">
-                    After the free session, weekly counselling is £50 in
-                    person or £40 online. Always your call, never mine.
-                  </div>
-                </div>
+          <FadeIn delay={140}>
+            <div className="mt-10 grid gap-4 lg:grid-cols-2">
+              <div className="rounded-xl2 bg-cream/70 p-6 shadow-soft sm:p-7">
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-warm-grey-light">
+                  What most counsellors offer
+                </p>
+                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/75">
+                  {[
+                    "20-minute phone call",
+                    "Confirms availability and admin",
+                    "You decide based on a brief chat",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-navy/30"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </FadeIn>
-          </div>
+
+              <div className="rounded-xl2 border-2 border-navy/15 bg-cream p-6 shadow-soft sm:p-7">
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/70">
+                  What I offer
+                </p>
+                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy">
+                  {[
+                    "55-minute full first session",
+                    "Real work, not a screening call",
+                    "You decide based on what we actually do together",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        className="mt-0.5 h-5 w-5 shrink-0 text-navy"
+                      >
+                        <path
+                          d="M5 12.5l4 4 10-10"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          fill="none"
+                        />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={220}>
+            <div className="mt-10 grid gap-5 sm:grid-cols-3">
+              {[
+                { k: "55 min", v: "the full first session" },
+                { k: "£0", v: "no commitment to come back" },
+                { k: "1:1", v: "in person or online, your choice" },
+              ].map((item) => (
+                <div
+                  key={item.k}
+                  className="rounded-xl2 bg-cream p-5 text-center shadow-soft"
+                >
+                  <p className="text-[1.5rem] font-semibold leading-none text-navy">
+                    {item.k}
+                  </p>
+                  <p className="mt-1 text-sm text-warm-grey">{item.v}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={280}>
+            <p className="mt-8 max-w-2xl text-[16px] leading-relaxed text-navy/85">
+              If you&apos;ve been on an NHS waiting list for months and
+              quietly lost faith that anything is coming, you don&apos;t have
+              to keep waiting.
+            </p>
+            <div className="mt-6">
+              <Button href="/contact/" size="md">
+                Book your free first session
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
@@ -264,52 +303,59 @@ export default function HomePage() {
             </p>
           </FadeIn>
 
-          <ol className="mt-12 space-y-5">
+          <ol className="mt-12 grid gap-4 sm:grid-cols-2">
             {[
               {
+                icon: "arrive" as const,
                 t: "You arrive",
-                d: "The Cranberry Wellbeing Centre is opposite The Point in Eastleigh, with free parking right outside, and there&rsquo;s a small waiting area inside the building. You don&rsquo;t need to announce yourself or sign anything in, I&rsquo;ll just come and find you at the time of your appointment.",
+                d: "Free parking outside, opposite The Point. A small waiting area inside, and I&rsquo;ll come find you.",
               },
               {
+                icon: "chair" as const,
                 t: "We walk to the room",
-                d: "The room itself is private and soft, with two comfortable chairs, a window, a box of tissues, and a glass of water if you&rsquo;d like one. The door closes properly behind us, and no one outside can hear what you say.",
+                d: "Two soft chairs, a window, tissues, water if you&rsquo;d like it. The door closes properly.",
               },
               {
-                t: "I say something simple to start",
-                d: "Usually something like, &ldquo;Tell me a bit about what brought you here today, when you&rsquo;re ready,&rdquo; and we go from there. There&rsquo;s no script, no clipboard, and no first-session questionnaire to get through before we can actually talk.",
+                icon: "speech" as const,
+                t: "We start gently",
+                d: "Usually with: &ldquo;Tell me a bit about what brought you here, when you&rsquo;re ready.&rdquo; No script, no clipboard.",
               },
               {
-                t: "What is not expected",
-                d: "You don&rsquo;t have to know what to say, you don&rsquo;t have to share everything, and you certainly don&rsquo;t have to be coherent. You can pause, you can cry, you can ask questions, and you can sit in silence for as long as you need to. I&rsquo;m not going to push.",
+                icon: "heart" as const,
+                t: "What&rsquo;s not expected",
+                d: "Knowing what to say. Sharing everything. Being coherent. You can pause, cry, ask questions, sit in silence.",
               },
               {
+                icon: "lock" as const,
                 t: "What stays between us",
-                d: "Nothing leaves the room. I keep brief notes for my own work, kept locked and handled in line with GDPR, and nothing goes to your GP, your insurer, or anyone else without you asking me to send it. You can use a first name only if you&rsquo;d prefer.",
+                d: "Nothing leaves the room. Brief notes, locked, GDPR-compliant. Nothing goes to your GP or insurer unless you ask.",
               },
               {
-                t: "The session lasts 55 minutes",
-                d: "I&rsquo;ll let you know gently when we have about ten minutes left, so we can land somewhere that feels okay rather than ending mid-sentence with one foot already out the door.",
+                icon: "clock" as const,
+                t: "55 minutes, gently landed",
+                d: "I&rsquo;ll let you know when we have ten minutes left, so we can wrap up somewhere that feels okay.",
               },
               {
-                t: "At the end",
-                d: "There&rsquo;s no pressure at all to book another session. Take a day, take a week, talk to whoever you need to talk to, and if it felt right, send me a message and we&rsquo;ll find a regular time. If it didn&rsquo;t, that&rsquo;s also fine, and you&rsquo;ve cost me nothing but an hour I&rsquo;m glad to have given.",
+                icon: "leave" as const,
+                t: "At the end, no pressure",
+                d: "Take a day, take a week. Message if you want to come back, or don&rsquo;t. Either is honestly fine.",
               },
             ].map((step, i) => (
-              <FadeIn key={i} delay={i * 70}>
-                <li className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
-                  <div className="flex gap-5">
-                    <div
-                      className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-cream text-[15px] font-semibold"
-                      aria-hidden="true"
-                    >
-                      {i + 1}
+              <FadeIn key={i} delay={i * 60}>
+                <li className="h-full rounded-xl2 bg-cream p-5 shadow-soft sm:p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl2 bg-soft-blue/40 text-navy">
+                      <StepIcon name={step.icon} className="h-5 w-5" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-[18px] font-semibold text-navy sm:text-[20px]">
+                      <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/55">
+                        Step {i + 1}
+                      </p>
+                      <h3 className="mt-0.5 text-[17px] font-semibold leading-snug text-navy sm:text-[18px]">
                         {step.t}
                       </h3>
                       <p
-                        className="mt-2 leading-relaxed text-navy/80"
+                        className="mt-2 text-[15px] leading-relaxed text-navy/80"
                         dangerouslySetInnerHTML={{ __html: step.d }}
                       />
                     </div>

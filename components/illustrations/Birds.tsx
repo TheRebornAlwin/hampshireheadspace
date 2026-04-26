@@ -3,20 +3,23 @@ type Props = {
   count?: 2 | 3 | 4;
 };
 
-/* Soft V-shape silhouette birds with actual wing flapping (SMIL animate on path d). */
+/* Soft seagull-silhouette birds. Body center stays at the same y position;
+   only the arc height between wing tip and body changes during the flap.
+   That keeps the body steady and makes the wings actually look like they're
+   moving rather than the whole bird folding in on itself. */
 export default function Birds({ className = "", count = 3 }: Props) {
   const birds = [
-    { x: 20, y: 38, scale: 1, opacity: 0.7, dur: 0.55, delay: 0 },
-    { x: 70, y: 22, scale: 0.7, opacity: 0.55, dur: 0.7, delay: 0.18 },
-    { x: 120, y: 48, scale: 0.85, opacity: 0.6, dur: 0.6, delay: 0.32 },
-    { x: 175, y: 30, scale: 0.6, opacity: 0.45, dur: 0.75, delay: 0.5 },
+    { x: 25, y: 38, scale: 1.05, opacity: 0.78, dur: 0.42, delay: 0 },
+    { x: 82, y: 22, scale: 0.7, opacity: 0.55, dur: 0.55, delay: 0.21 },
+    { x: 132, y: 48, scale: 0.92, opacity: 0.65, dur: 0.48, delay: 0.36 },
+    { x: 188, y: 30, scale: 0.6, opacity: 0.45, dur: 0.6, delay: 0.55 },
   ].slice(0, count);
 
-  // Wings up high, then wings level, then back. Keeping the same path command
-  // shape so SMIL interpolates smoothly between keyframes.
-  const wingsHigh = "M-12 0 q6 -10 12 -2 q6 -8 12 2";
-  const wingsLevel = "M-12 0 q6 -3 12 0 q6 -3 12 -1";
-  const wingsLow = "M-12 0 q6 2 12 3 q6 2 12 -2";
+  // Both states keep wing tips at (-12, 0) and (12, 0), body crest at (0, -2).
+  const wingsExtended =
+    "M-12 0 C-9 -3 -3 -3 0 -2 C3 -3 9 -3 12 0";
+  const wingsRaised =
+    "M-12 0 C-9 -10 -3 -8 0 -2 C3 -8 9 -10 12 0";
 
   return (
     <svg
@@ -32,9 +35,9 @@ export default function Birds({ className = "", count = 3 }: Props) {
           opacity={b.opacity}
         >
           <path
-            d={wingsHigh}
+            d={wingsExtended}
             stroke="#2A3D5F"
-            strokeWidth="1.8"
+            strokeWidth="1.7"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
@@ -45,9 +48,9 @@ export default function Birds({ className = "", count = 3 }: Props) {
               begin={`${b.delay}s`}
               repeatCount="indefinite"
               calcMode="spline"
-              keyTimes="0;0.35;0.65;1"
-              keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
-              values={`${wingsHigh};${wingsLevel};${wingsLow};${wingsHigh}`}
+              keyTimes="0;0.42;1"
+              keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"
+              values={`${wingsExtended};${wingsRaised};${wingsExtended}`}
             />
           </path>
         </g>
