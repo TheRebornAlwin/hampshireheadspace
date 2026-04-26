@@ -9,6 +9,7 @@ import CloudBlob from "@/components/illustrations/CloudBlob";
 import Birds from "@/components/illustrations/Birds";
 import Sparkles from "@/components/illustrations/Sparkles";
 import Sun from "@/components/illustrations/Sun";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Questions and answers",
@@ -223,13 +224,33 @@ export default function FAQPage() {
         </Container>
       </Section>
 
+      <Section tone="cream" spacing="tight">
+        <Container>
+          <FadeIn>
+            <Testimonial
+              variant="pullquote"
+              quote={
+                <>
+                  &ldquo;I had so many questions before booking and felt
+                  embarrassed to ask. Ruth replied to my email like a normal
+                  person, not a clinic. That was when i knew it would be
+                  ok.&rdquo;
+                </>
+              }
+              attribution="Lauren"
+              context="33, Winchester"
+            />
+          </FadeIn>
+        </Container>
+      </Section>
+
       <Section tone="yellow" spacing="tight" className="relative overflow-hidden">
         <Sun
-          className="pointer-events-none absolute -top-10 right-[8%] h-36 w-36 opacity-60 animate-float-soft"
+          className="pointer-events-none absolute top-8 left-[10%] h-28 w-28 opacity-55 animate-float-soft"
           withRays
         />
         <div
-          className="pointer-events-none absolute top-12 left-0 right-0 h-12 animate-fly-across"
+          className="pointer-events-none absolute top-16 left-0 right-0 h-12 animate-fly-across"
           style={{ animationDuration: "115s" }}
           aria-hidden="true"
         >

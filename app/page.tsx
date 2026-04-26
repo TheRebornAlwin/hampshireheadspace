@@ -12,9 +12,9 @@ import Mountains from "@/components/illustrations/Mountains";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Testimonial from "@/components/Testimonial";
 
-const HERO_IMAGE_URL =
-  "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRac5qOIEpOtE7NBk61YirsFp3RfLSDzQATqu0d";
+const HERO_IMAGE_URL = "/hero-tangled-yarn.png";
 
 export default function HomePage() {
   return (
@@ -29,12 +29,8 @@ export default function HomePage() {
           variant="yellow"
           className="pointer-events-none absolute -bottom-20 right-[-6rem] h-72 w-[26rem] opacity-25"
         />
-        <Sun
-          className="pointer-events-none absolute -top-20 right-[8%] h-56 w-56 opacity-60 animate-float-soft"
-          withRays={false}
-        />
         <div
-          className="pointer-events-none absolute top-[12%] left-0 right-0 h-16 animate-fly-across"
+          className="pointer-events-none absolute top-[14%] left-0 right-0 h-16 animate-fly-across"
           aria-hidden="true"
         >
           <Birds className="h-16 w-56 opacity-70" count={3} />
@@ -94,6 +90,9 @@ export default function HomePage() {
                   height={820}
                   className="h-auto w-full animate-float-soft"
                   loading="eager"
+                  // @ts-expect-error fetchpriority is valid HTML
+                  fetchpriority="high"
+                  decoding="async"
                 />
               </div>
             </FadeIn>
@@ -135,6 +134,24 @@ export default function HomePage() {
               You are not broken. You are exhausted, and you are carrying more
               than you should be carrying alone.
             </p>
+          </FadeIn>
+
+          <FadeIn delay={500}>
+            <div className="mt-12">
+              <Testimonial
+                variant="inline"
+                quote={
+                  <>
+                    &ldquo;On paper i&rsquo;d not got a bad life. House,
+                    husband, two kids, decent job. So why was i crying in the
+                    car every morning? ruth was the first person who didn&rsquo;t
+                    make me feel stupid for asking that.&rdquo;
+                  </>
+                }
+                attribution="Hannah"
+                context="34, Chandler&rsquo;s Ford"
+              />
+            </div>
           </FadeIn>
         </Container>
       </Section>
@@ -286,8 +303,26 @@ export default function HomePage() {
             ))}
           </ol>
 
-          <FadeIn delay={500}>
-            <div className="mt-10 rounded-xl2 border border-soft-blue/50 bg-soft-yellow/30 p-6 text-center sm:p-7">
+          <FadeIn delay={450}>
+            <div className="mt-10">
+              <Testimonial
+                variant="pullquote"
+                quote={
+                  <>
+                    &ldquo;I sat in the car for ten minutes before going in.
+                    By the end of the first session i was actually laughing.
+                    Don&rsquo;t know how she does it. She just listens, like
+                    properly listens.&rdquo;
+                  </>
+                }
+                attribution="Sophie"
+                context="39, mum of two"
+              />
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={550}>
+            <div className="mt-12 rounded-xl2 border border-soft-blue/50 bg-soft-yellow/30 p-6 text-center sm:p-7">
               <p className="text-balance text-[17px] leading-relaxed text-navy/90 sm:text-[19px]">
                 If you have read this far, something brought you here. The first
                 session is free. You don&apos;t have to know what to say. You
@@ -487,14 +522,86 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* SECTION 7.5 — TESTIMONIALS BAND */}
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute top-4 left-[-4rem] h-32 w-72 opacity-20 animate-drift-slow"
+        />
+        <Container size="wide">
+          <FadeIn>
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
+              In their own words
+            </p>
+            <h2 className="mt-3 max-w-2xl text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+              People who weren&apos;t sure either, until they were.
+            </h2>
+          </FadeIn>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <FadeIn delay={60}>
+              <Testimonial
+                tone="blue"
+                quote={
+                  <>
+                    &ldquo;Genuinely thought I&rsquo;d be judged. Wasn&rsquo;t,
+                    at all. Ruth doesn&rsquo;t do that &lsquo;and how does
+                    that make you feel&rsquo; nodding thing. We just talk and
+                    somehow things make more sense by the end.&rdquo;
+                  </>
+                }
+                attribution="Em"
+                context="28"
+              />
+            </FadeIn>
+            <FadeIn delay={140}>
+              <Testimonial
+                tone="yellow"
+                quote={
+                  <>
+                    &ldquo;I&rsquo;d been on the NHS waiting list for months
+                    and lost faith. Booked the free session at half eleven at
+                    night. Best decision i&rsquo;ve made in ages, no
+                    exaggeration.&rdquo;
+                  </>
+                }
+                attribution="Jo"
+                context="36, Eastleigh"
+              />
+            </FadeIn>
+            <FadeIn delay={220}>
+              <Testimonial
+                tone="cream"
+                quote={
+                  <>
+                    &ldquo;I lost my mum 2 years ago and thought I was over
+                    it. Apparently not. Ruth gave me space to talk about her
+                    without rushing me, which I didn&rsquo;t know I needed
+                    so badly. I leave each session lighter than I came in.&rdquo;
+                  </>
+                }
+                attribution="Karen"
+                context="51"
+              />
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={300}>
+            <p className="mt-6 max-w-prose text-sm text-warm-grey">
+              Names changed. Quotes shared with permission.
+            </p>
+          </FadeIn>
+        </Container>
+      </Section>
+
       {/* SECTION 8 — FINAL CTA */}
       <Section tone="yellow" spacing="default" className="relative overflow-hidden">
         <Sun
-          className="pointer-events-none absolute -top-16 left-[8%] h-48 w-48 opacity-70 animate-float-soft"
+          className="pointer-events-none absolute top-12 right-[6%] h-32 w-32 opacity-55 animate-float-soft"
           withRays
         />
         <div
-          className="pointer-events-none absolute top-20 left-0 right-0 h-12 animate-fly-across"
+          className="pointer-events-none absolute top-24 left-0 right-0 h-12 animate-fly-across"
           style={{ animationDuration: "100s" }}
           aria-hidden="true"
         >

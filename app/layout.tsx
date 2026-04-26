@@ -110,6 +110,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        {/* Preload the hero image so it paints immediately on first load. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero-tangled-yarn.png"
+          // @ts-expect-error fetchpriority is valid HTML
+          fetchpriority="high"
+        />
         {/*
           Analytics placeholder. When ready, drop in Plausible or GA snippet here.
           Do not add any tracking before talking with Ruth about consent.

@@ -10,6 +10,7 @@ import Sun from "@/components/illustrations/Sun";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Sparkles from "@/components/illustrations/Sparkles";
 import FadeIn from "@/components/FadeIn";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "About Ruth",
@@ -27,12 +28,8 @@ export default function AboutPage() {
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-6rem] h-64 w-[24rem] opacity-30"
         />
-        <Sun
-          className="pointer-events-none absolute -top-20 left-[6%] h-44 w-44 opacity-55 animate-float-soft"
-          withRays={false}
-        />
         <div
-          className="pointer-events-none absolute top-[18%] left-0 right-0 h-12 animate-fly-across"
+          className="pointer-events-none absolute top-[20%] left-0 right-0 h-12 animate-fly-across"
           style={{ animationDuration: "110s" }}
           aria-hidden="true"
         >
@@ -187,6 +184,27 @@ export default function AboutPage() {
               </FadeIn>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* IN-LINE TESTIMONIAL — between values and credentials */}
+      <Section tone="cream" spacing="tight" className="relative overflow-hidden">
+        <Container>
+          <FadeIn>
+            <Testimonial
+              variant="pullquote"
+              quote={
+                <>
+                  &ldquo;I&rsquo;d done CBT through work and it didn&rsquo;t
+                  really land. This was different. Ruth doesn&rsquo;t lecture
+                  you. She doesn&rsquo;t tell you what you should be doing.
+                  She helps you figure out what you already know.&rdquo;
+                </>
+              }
+              attribution="Mark"
+              context="42, Southampton"
+            />
+          </FadeIn>
         </Container>
       </Section>
 

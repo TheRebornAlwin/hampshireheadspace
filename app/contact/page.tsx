@@ -10,6 +10,7 @@ import PaperPlane from "@/components/illustrations/PaperPlane";
 import Birds from "@/components/illustrations/Birds";
 import Sun from "@/components/illustrations/Sun";
 import LeafFloat from "@/components/illustrations/LeafFloat";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Contact and booking",
@@ -29,10 +30,6 @@ export default function ContactPage() {
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute top-32 left-[-4rem] h-32 w-60 opacity-25 animate-drift-slow"
-        />
-        <Sun
-          className="pointer-events-none absolute -top-16 left-[40%] h-36 w-36 opacity-45 animate-float-soft"
-          withRays={false}
         />
         <PaperPlane className="pointer-events-none absolute top-8 right-[12%] h-20 w-44 opacity-65 animate-float-soft hidden sm:block" />
         <Container size="wide">
@@ -131,6 +128,19 @@ export default function ContactPage() {
                   ))}
                 </ol>
               </div>
+
+              <Testimonial
+                tone="cream"
+                quote={
+                  <>
+                    &ldquo;Sending the first message was the scariest part.
+                    Ruth replied within an hour, no fuss, just a time. After
+                    that the rest was easy.&rdquo;
+                  </>
+                }
+                attribution="Beth"
+                context="36"
+              />
 
               <div className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
                 <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">

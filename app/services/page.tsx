@@ -8,6 +8,7 @@ import Sun from "@/components/illustrations/Sun";
 import Birds from "@/components/illustrations/Birds";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Services & Fees",
@@ -24,12 +25,8 @@ export default function ServicesPage() {
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
         />
-        <Sun
-          className="pointer-events-none absolute -top-16 right-[5%] h-44 w-44 opacity-55 animate-float-soft"
-          withRays={false}
-        />
         <div
-          className="pointer-events-none absolute top-[20%] left-0 right-0 h-12 animate-fly-across"
+          className="pointer-events-none absolute top-[18%] left-0 right-0 h-12 animate-fly-across"
           style={{ animationDuration: "130s" }}
           aria-hidden="true"
         >
@@ -180,6 +177,24 @@ export default function ServicesPage() {
               rather you ask than not come at all.
             </p>
           </FadeIn>
+
+          <FadeIn delay={300}>
+            <div className="mt-12">
+              <Testimonial
+                variant="inline"
+                quote={
+                  <>
+                    &ldquo;Felt selfish spending £50 a week on me when the
+                    house needs new carpets. Six months in and i&rsquo;m a
+                    different mum. Honestly best money i&rsquo;ve ever spent.
+                    Carpets can wait.&rdquo;
+                  </>
+                }
+                attribution="Rachel"
+                context="38, Hedge End"
+              />
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
@@ -237,7 +252,7 @@ export default function ServicesPage() {
 
       <Section tone="yellow" spacing="tight" className="relative overflow-hidden">
         <Sun
-          className="pointer-events-none absolute -top-12 left-[10%] h-36 w-36 opacity-65 animate-float-soft"
+          className="pointer-events-none absolute top-8 right-[8%] h-28 w-28 opacity-55 animate-float-soft"
           withRays
         />
         <Mountains className="pointer-events-none absolute bottom-0 left-0 right-0 h-24" />
