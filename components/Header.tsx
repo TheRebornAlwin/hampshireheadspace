@@ -52,10 +52,13 @@ export default function Header() {
           <img
             src={LOGO_URL}
             alt="Hampshire HeadSpace"
-            className="h-10 w-auto sm:h-11"
-            width={160}
-            height={44}
+            className="h-11 w-auto sm:h-12"
+            width={170}
+            height={48}
           />
+          <span className="hidden text-[13px] font-medium leading-tight text-warm-grey lg:block">
+            Private counselling<br />in Eastleigh
+          </span>
         </Link>
 
         <nav

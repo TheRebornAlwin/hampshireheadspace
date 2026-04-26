@@ -37,7 +37,7 @@ export default function ServicesPage() {
             <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
               Services & fees
             </p>
-            <h1 className="mt-3 text-balance text-[2.25rem] font-semibold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
               Simple, transparent, no surprises.
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                   "Separation",
                   "Bereavement",
                   "OCD",
-                  "Suicidal thoughts",
+                  "Dark thoughts you’re scared to say out loud",
                   "Long-term health issues",
                   "Burnout",
                   "Life in general",

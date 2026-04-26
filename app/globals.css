@@ -9,6 +9,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -19,7 +20,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
+
+  /* Give the mobile sticky CTA breathing room above the footer on small screens. */
+  @media (max-width: 1023px) {
+    footer {
+      padding-bottom: 96px;
+    }
+  }
+
 
   ::selection {
     background-color: #F6E9B2;

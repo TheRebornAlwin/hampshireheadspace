@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <>
       {/* SECTION 1 — HERO */}
-      <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32">
+      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-16 -left-24 h-72 w-[28rem] opacity-15 animate-drift-slow"
@@ -45,15 +45,16 @@ export default function HomePage() {
               </p>
             </FadeIn>
             <FadeIn delay={80}>
-              <h1 className="text-balance text-[2.25rem] font-semibold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.4rem]">
+              <h1 className="text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.4rem]">
                 On paper, you&apos;ve got a good life. So why does it feel like this?
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
               <p className="mt-6 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-                Hampshire HeadSpace is private counselling for people who are
-                tired of pretending they&apos;re fine. Your first 55-minute
-                session is free. No long forms. No pressure to come back.
+                Hampshire HeadSpace is private counselling in Eastleigh for
+                people who are tired of pretending they&apos;re fine. Your
+                first 55-minute session is free, with no long forms to fill in
+                and no pressure to come back if it isn&apos;t the right fit.
               </p>
             </FadeIn>
             <FadeIn delay={240}>
@@ -71,14 +72,16 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={320}>
               <p className="mt-6 text-sm text-warm-grey">
-                BACP registered. £50 in person, £40 online. First session free.
+                BACP registered. £50 in person, £40 online, with the first
+                session free. Currently accepting new clients, with most
+                first sessions available within a week.
               </p>
             </FadeIn>
           </div>
 
           <div className="lg:col-span-5">
             <FadeIn delay={120}>
-              <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div className="relative mx-auto w-full max-w-xs sm:max-w-md lg:max-w-none">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
@@ -117,14 +120,16 @@ export default function HomePage() {
 
           <div className="mt-10 space-y-6 text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
             {[
-              "You are tired. Not just sleep-tired. The kind of tired that does not lift even when you do sleep.",
-              "You snap at the people you love and hate yourself for it five minutes later.",
-              "You cry in the car. You drink one more glass than you used to. You scroll your phone until 1am to avoid being alone with your own head.",
-              "You have Googled “private counsellor near me” three times this month. You have closed the tab three times.",
-              "You can’t keep going the way you are. You already know that.",
+              "You&rsquo;re tired in a way that doesn&rsquo;t lift even when you do manage to sleep, and you can&rsquo;t quite remember when that started.",
+              "You catch yourself being shorter than you mean to be with the people you love, and the guilt afterwards is exhausting in its own right.",
+              "You&rsquo;ve been Googling private counsellors more than once, opening the tab and closing it again, and something keeps stopping you from sending a message.",
+              "You know, somewhere underneath all of it, that you can&rsquo;t keep going the way you are. You&rsquo;ve probably known that for a while.",
             ].map((line, i) => (
               <FadeIn key={i} delay={i * 60}>
-                <p className="border-l-2 border-soft-blue/70 pl-5">{line}</p>
+                <p
+                  className="border-l-2 border-soft-blue/70 pl-5"
+                  dangerouslySetInnerHTML={{ __html: line }}
+                />
               </FadeIn>
             ))}
           </div>
@@ -175,20 +180,26 @@ export default function HomePage() {
               </h2>
               <div className="mt-5 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85">
                 <p>
-                  The first session is where you decide whether I&apos;m the
-                  right person for you. Twenty minutes is not enough to know
-                  that. Fifty-five minutes is.
+                  The first session is where you actually decide whether
+                  I&apos;m the right person for you to do this work with, and
+                  twenty minutes on the phone isn&apos;t really enough to know
+                  that one way or the other. Fifty-five minutes, sitting in
+                  the room, talking properly, is.
                 </p>
                 <p>
-                  You won&apos;t get scripted nodding and &ldquo;and how does
-                  that make you feel?&rdquo; You&apos;ll get a real conversation
-                  with someone who is paying attention, who isn&apos;t in a
-                  rush, and who won&apos;t make you feel like a checklist.
+                  You won&apos;t get scripted nodding or &ldquo;and how does
+                  that make you feel?&rdquo; on a loop. What you&apos;ll get
+                  is a real conversation with someone who is paying close
+                  attention, who isn&apos;t in any rush, and who won&apos;t
+                  make you feel like a checklist being worked through.
                 </p>
                 <p>
-                  At the end of the hour, there is no pressure to book another
-                  session. Take a few days. Decide later. The free first session
-                  is just that. Free, and yours.
+                  If you&apos;ve been on an NHS waiting list for months and
+                  quietly lost faith that anything is coming, you don&apos;t
+                  have to keep waiting. And at the end of the free first hour,
+                  there&apos;s no pressure to book another session. Take a few
+                  days, talk it over with whoever you need to, and let me know
+                  when you&apos;re ready, or don&apos;t. Either is fine.
                 </p>
               </div>
               <div className="mt-7">
@@ -257,27 +268,31 @@ export default function HomePage() {
             {[
               {
                 t: "You arrive",
-                d: "The Cranberry Wellbeing Centre is opposite The Point in Eastleigh, with free parking right outside. There is a small waiting area inside. You don’t need to announce yourself. I’ll come and find you at the time of your appointment.",
+                d: "The Cranberry Wellbeing Centre is opposite The Point in Eastleigh, with free parking right outside, and there&rsquo;s a small waiting area inside the building. You don&rsquo;t need to announce yourself or sign anything in, I&rsquo;ll just come and find you at the time of your appointment.",
               },
               {
                 t: "We walk to the room",
-                d: "The room is private and soft. Two comfortable chairs, a window, a box of tissues, a glass of water if you want it. The door closes properly. No one can hear what you say.",
+                d: "The room itself is private and soft, with two comfortable chairs, a window, a box of tissues, and a glass of water if you&rsquo;d like one. The door closes properly behind us, and no one outside can hear what you say.",
               },
               {
                 t: "I say something simple to start",
-                d: "Usually something like: “Tell me a bit about what brought you here today, when you’re ready.” That’s it. There is no script and no clipboard.",
+                d: "Usually something like, &ldquo;Tell me a bit about what brought you here today, when you&rsquo;re ready,&rdquo; and we go from there. There&rsquo;s no script, no clipboard, and no first-session questionnaire to get through before we can actually talk.",
               },
               {
                 t: "What is not expected",
-                d: "You don’t have to know what to say. You don’t have to share everything. You can pause. You can cry. You can ask questions. You can sit in silence. I’m not going to push.",
+                d: "You don&rsquo;t have to know what to say, you don&rsquo;t have to share everything, and you certainly don&rsquo;t have to be coherent. You can pause, you can cry, you can ask questions, and you can sit in silence for as long as you need to. I&rsquo;m not going to push.",
+              },
+              {
+                t: "What stays between us",
+                d: "Nothing leaves the room. I keep brief notes for my own work, kept locked and handled in line with GDPR, and nothing goes to your GP, your insurer, or anyone else without you asking me to send it. You can use a first name only if you&rsquo;d prefer.",
               },
               {
                 t: "The session lasts 55 minutes",
-                d: "I’ll let you know gently when we have about ten minutes left, so we can land somewhere that feels okay rather than mid-sentence.",
+                d: "I&rsquo;ll let you know gently when we have about ten minutes left, so we can land somewhere that feels okay rather than ending mid-sentence with one foot already out the door.",
               },
               {
                 t: "At the end",
-                d: "There is zero pressure to book another session. Take a day, take a week. If it felt right, send me a message and we’ll find a regular time. If not, that’s fine too. You’ve cost me nothing but an hour of my time, and I’m glad to give it.",
+                d: "There&rsquo;s no pressure at all to book another session. Take a day, take a week, talk to whoever you need to talk to, and if it felt right, send me a message and we&rsquo;ll find a regular time. If it didn&rsquo;t, that&rsquo;s also fine, and you&rsquo;ve cost me nothing but an hour I&rsquo;m glad to have given.",
               },
             ].map((step, i) => (
               <FadeIn key={i} delay={i * 70}>
@@ -293,9 +308,10 @@ export default function HomePage() {
                       <h3 className="text-[18px] font-semibold text-navy sm:text-[20px]">
                         {step.t}
                       </h3>
-                      <p className="mt-2 leading-relaxed text-navy/80">
-                        {step.d}
-                      </p>
+                      <p
+                        className="mt-2 leading-relaxed text-navy/80"
+                        dangerouslySetInnerHTML={{ __html: step.d }}
+                      />
                     </div>
                   </div>
                 </li>

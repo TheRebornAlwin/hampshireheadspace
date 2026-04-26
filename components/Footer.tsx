@@ -32,6 +32,7 @@ export default function Footer() {
             <li><Link className="hover:text-navy" href="/services/">Services & Fees</Link></li>
             <li><Link className="hover:text-navy" href="/faq/">FAQ</Link></li>
             <li><Link className="hover:text-navy" href="/contact/">Contact</Link></li>
+            <li><Link className="hover:text-navy" href="/blog/">Articles</Link></li>
           </ul>
         </div>
 
@@ -49,10 +50,24 @@ export default function Footer() {
                 hello@hampshireheadspace.com
               </a>
             </li>
+            <li>
+              <a className="hover:text-navy" href="tel:+447446136611">
+                07446 136611
+              </a>
+              <span className="ml-1 text-xs text-warm-grey-light">
+                (text or call)
+              </span>
+            </li>
           </ul>
           <p className="pt-2 text-xs leading-relaxed text-warm-grey-light">
-            BACP registered. Fully insured. Enhanced DBS. Regular clinical supervision.
+            BACP registered, fully insured, with an enhanced DBS check and regular clinical supervision.
           </p>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1 pt-2 text-xs text-warm-grey-light">
+            <li><Link className="hover:text-navy" href="/privacy/">Privacy</Link></li>
+            <li><Link className="hover:text-navy" href="/cookies/">Cookies</Link></li>
+            <li><Link className="hover:text-navy" href="/terms/">Terms</Link></li>
+            <li><Link className="hover:text-navy" href="/ethical-framework/">Ethical framework</Link></li>
+          </ul>
         </div>
       </div>
 

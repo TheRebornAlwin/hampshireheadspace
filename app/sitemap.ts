@@ -6,7 +6,18 @@ const SITE_URL = "https://hampshireheadspace.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const paths = ["", "/about", "/services", "/faq", "/contact"];
+  const paths = [
+    "",
+    "/about",
+    "/services",
+    "/faq",
+    "/contact",
+    "/privacy",
+    "/cookies",
+    "/terms",
+    "/ethical-framework",
+    "/blog",
+  ];
   return paths.map((p) => ({
     url: `${SITE_URL}${p}`,
     lastModified: now,

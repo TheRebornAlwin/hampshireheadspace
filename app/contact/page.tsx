@@ -38,7 +38,7 @@ export default function ContactPage() {
               <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
                 Contact and booking
               </p>
-              <h1 className="mt-3 text-balance text-[2.25rem] font-semibold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
+              <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
                 Booking takes about 90 seconds.
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
@@ -94,9 +94,14 @@ export default function ContactPage() {
                     </a>
                   </li>
                   <li>
-                    Phone or text:{" "}
-                    <span className="font-medium text-navy/85">
-                      number coming soon
+                    <a
+                      className="font-medium underline-offset-4 hover:underline"
+                      href="tel:+447446136611"
+                    >
+                      07446 136611
+                    </a>
+                    <span className="ml-1 text-warm-grey-light">
+                      (text or call)
                     </span>
                   </li>
                 </ul>

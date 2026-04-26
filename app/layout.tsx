@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const SITE_URL = "https://hampshireheadspace.co.uk";
 
@@ -134,6 +135,7 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <MobileStickyCTA />
       </body>
     </html>
   );

@@ -41,7 +41,7 @@ export default function AboutPage() {
               <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
                 About Ruth
               </p>
-              <h1 className="mt-3 text-balance text-[2.25rem] font-semibold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
+              <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
                 I&apos;m Ruth. I sit with people and pay attention.
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
@@ -73,19 +73,28 @@ export default function AboutPage() {
             </h2>
           </FadeIn>
           <FadeIn delay={120}>
-            <div className="mt-6 rounded-xl2 border border-dashed border-navy/25 bg-soft-yellow/25 p-6 text-navy/80 sm:p-7">
-              <p className="text-sm font-medium uppercase tracking-wider text-navy/60">
-                Placeholder
+            <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-navy/85">
+              <p>
+                I came to counselling the long way round, after years of working
+                in roles where I spent most of my time listening to people who
+                were quietly running on empty, without anyone trained to actually
+                help them with what they were carrying. I kept thinking, someone
+                should sit down with these people properly, and eventually I
+                decided that someone might as well be me.
               </p>
-              <p className="mt-2 leading-relaxed">
-                This is where Ruth&apos;s personal story lives. Two or three
-                short paragraphs in her own words about why she chose this work
-                and what brought her to it.
+              <p>
+                I trained because I&apos;d been on the other side of the room
+                myself, and I know what a difference it makes when the person
+                opposite you is genuinely paying attention rather than waiting
+                for their turn to talk. Hampshire HeadSpace exists because most
+                of the people I&apos;ve met who needed counselling didn&apos;t
+                get to it, either because the NHS list was too long or because
+                the private options felt cold and clinical from the first click.
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-navy/70">
-                Once Ruth provides the copy, replace this whole block with her
-                story. It belongs above &ldquo;How I work&rdquo; because story
-                builds trust faster than credentials.
+              <p>
+                I&apos;m here for the people who&apos;ve been holding it
+                together for everyone else, and who&apos;ve quietly run out of
+                room to hold it together for themselves.
               </p>
             </div>
           </FadeIn>
@@ -129,15 +138,23 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div className="mt-6 rounded-xl2 border border-dashed border-navy/25 bg-cream/80 p-6 text-navy/80 sm:p-7">
-              <p className="text-sm font-medium uppercase tracking-wider text-navy/60">
-                Placeholder
+            <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-navy/85">
+              <p>
+                In practice, my approach is integrative, which is a slightly
+                bookish way of saying I don&apos;t treat everyone the same. Some
+                weeks we&apos;ll spend the whole session on one thing that
+                surfaced out of nowhere, and other weeks we&apos;ll work
+                steadily through something we&apos;ve been circling for a
+                while. The frame stays the same, the work flexes around what
+                you actually bring through the door.
               </p>
-              <p className="mt-2 leading-relaxed">
-                Ruth&apos;s specific therapeutic approach (e.g.
-                person-centred, integrative, etc.) goes here, explained in
-                plain English as a benefit, not a label. Replace this block as
-                soon as Ruth confirms her approach.
+              <p>
+                What that looks like in the room is a real conversation,
+                grounded in person-centred values, with practical tools woven
+                in when they&apos;d genuinely help rather than because the book
+                says so. If something I suggest doesn&apos;t feel right for you,
+                I&apos;d much rather you tell me, and we&apos;ll find something
+                that does.
               </p>
             </div>
           </FadeIn>
@@ -223,7 +240,7 @@ export default function AboutPage() {
           <FadeIn delay={120}>
             <ul className="mt-7 grid gap-3 sm:grid-cols-2">
               {[
-                "BACP registered (member number coming soon)",
+                "BACP registered",
                 "Fully insured for practice",
                 "Enhanced DBS check",
                 "Regular clinical supervision",
