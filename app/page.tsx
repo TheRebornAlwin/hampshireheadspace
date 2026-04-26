@@ -10,6 +10,7 @@ import Sparkles from "@/components/illustrations/Sparkles";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
 import StepIcon from "@/components/illustrations/StepIcon";
+import WaveLines from "@/components/illustrations/WaveLines";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -113,30 +114,53 @@ export default function HomePage() {
         <Sparkles className="pointer-events-none absolute top-12 left-[5%] h-28 w-44 opacity-70 animate-twinkle" />
         <Container>
           <FadeIn>
-            <h2 className="text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               You already know.
             </h2>
-            <p className="mt-3 text-warm-grey">A few sentences. See if any of these sound familiar.</p>
           </FadeIn>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {[
-              "You&rsquo;re tired in a way that doesn&rsquo;t lift, even when you do manage to sleep.",
-              "You&rsquo;re shorter than you mean to be with the people you love, and you carry the guilt the rest of the day.",
-              "You&rsquo;ve Googled &lsquo;private counsellor&rsquo; more than once, opened the tab, and closed it again.",
-              "Underneath all of it, you already know you can&rsquo;t keep going the way you are.",
-            ].map((line, i) => (
-              <FadeIn key={i} delay={i * 70}>
-                <p
-                  className="rounded-xl2 border-l-2 border-soft-blue-strong/70 bg-cream p-5 text-[16px] leading-relaxed text-navy/85 shadow-soft sm:text-[17px]"
-                  dangerouslySetInnerHTML={{ __html: line }}
-                />
-              </FadeIn>
-            ))}
+              {
+                line:
+                  "You&rsquo;re tired in a way that doesn&rsquo;t lift, even when you do manage to sleep.",
+                tone: "cream",
+              },
+              {
+                line:
+                  "You&rsquo;re shorter than you mean to be with the people you love, and you carry the guilt the rest of the day.",
+                tone: "blue",
+              },
+              {
+                line:
+                  "You&rsquo;ve Googled &lsquo;private counsellor&rsquo; more than once, opened the tab, and closed it again.",
+                tone: "yellow",
+              },
+              {
+                line:
+                  "Underneath all of it, you already know you can&rsquo;t keep going the way you are.",
+                tone: "cream",
+              },
+            ].map((item, i) => {
+              const bg =
+                item.tone === "blue"
+                  ? "bg-soft-blue/15 border-soft-blue-strong/70"
+                  : item.tone === "yellow"
+                  ? "bg-soft-yellow/40 border-soft-yellow-warm"
+                  : "bg-cream border-soft-blue-strong/70";
+              return (
+                <FadeIn key={i} delay={i * 70}>
+                  <p
+                    className={`h-full rounded-xl2 border-l-[3px] p-5 text-center text-[16px] leading-relaxed text-navy/85 shadow-soft sm:text-[17px] ${bg}`}
+                    dangerouslySetInnerHTML={{ __html: item.line }}
+                  />
+                </FadeIn>
+              );
+            })}
           </div>
 
           <FadeIn delay={400}>
-            <p className="mt-12 max-w-2xl text-balance text-[18px] font-medium leading-snug text-navy sm:text-[22px]">
+            <p className="mx-auto mt-12 max-w-2xl text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[22px]">
               You are not broken. You are exhausted, and you are carrying more
               than you should be carrying alone.
             </p>
@@ -145,7 +169,7 @@ export default function HomePage() {
           <FadeIn delay={500}>
             <div className="mt-12">
               <Testimonial
-                variant="inline"
+                variant="pullquote"
                 quote={
                   <>
                     &ldquo;On paper i&rsquo;d not got a bad life. House,
@@ -171,14 +195,11 @@ export default function HomePage() {
         <LeafFloat className="pointer-events-none absolute -bottom-6 right-[3%] h-40 w-40 opacity-80 animate-float-soft" />
         <Container size="wide">
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              What&apos;s different here
-            </p>
-            <h2 className="mt-3 max-w-3xl text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               Most counsellors give you a 20-minute call. I give you the full
               first session, free.
             </h2>
-            <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-navy/85">
+            <p className="mx-auto mt-5 max-w-2xl text-center text-[17px] leading-relaxed text-navy/85">
               Twenty minutes on the phone is enough to confirm a time. It
               isn&apos;t enough to know whether you can actually work with
               someone. Fifty-five minutes, sitting in the room, is.
@@ -186,12 +207,13 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={140}>
-            <div className="mt-10 grid gap-4 lg:grid-cols-2">
-              <div className="rounded-xl2 bg-cream/70 p-6 shadow-soft sm:p-7">
-                <p className="text-[12px] font-semibold uppercase tracking-wider text-warm-grey-light">
+            <div className="mx-auto mt-12 grid max-w-4xl items-stretch gap-5 lg:grid-cols-2">
+              {/* Muted "before" card */}
+              <div className="relative rounded-xl2 border border-warm-grey/25 bg-warm-grey/[0.06] p-6 sm:p-7">
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-warm-grey">
                   What most counsellors offer
                 </p>
-                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/75">
+                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-warm-grey">
                   {[
                     "20-minute phone call",
                     "Confirms availability and admin",
@@ -200,17 +222,26 @@ export default function HomePage() {
                     <li key={item} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-navy/30"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm-grey/50"
                       />
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-xl2 border-2 border-navy/15 bg-cream p-6 shadow-soft sm:p-7">
-                <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/70">
+              {/* Highlighted "after" card */}
+              <div
+                className="relative rounded-xl2 border-2 border-navy/20 bg-gradient-to-br from-soft-yellow/40 via-cream to-soft-blue/30 p-6 shadow-soft-lg sm:p-7"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-3 right-5 rounded-full bg-navy px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-cream"
+                >
                   What I offer
+                </span>
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/70">
+                  Hampshire HeadSpace
                 </p>
                 <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy">
                   {[
@@ -233,7 +264,7 @@ export default function HomePage() {
                           fill="none"
                         />
                       </svg>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -242,7 +273,7 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={220}>
-            <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-3">
               {[
                 { k: "55 min", v: "the full first session" },
                 { k: "£0", v: "no commitment to come back" },
@@ -262,12 +293,12 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={280}>
-            <p className="mt-8 max-w-2xl text-[16px] leading-relaxed text-navy/85">
+            <p className="mx-auto mt-10 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85">
               If you&apos;ve been on an NHS waiting list for months and
               quietly lost faith that anything is coming, you don&apos;t have
               to keep waiting.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center">
               <Button href="/contact/" size="md">
                 Book your free first session
               </Button>
@@ -291,78 +322,104 @@ export default function HomePage() {
         />
         <Container size="wide">
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              What to expect
-            </p>
-            <h2 className="mt-3 max-w-3xl text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               What the first session is actually like
             </h2>
-            <p className="mt-4 max-w-2xl text-warm-grey">
+            <p className="mx-auto mt-4 max-w-2xl text-center text-warm-grey">
               The biggest reason people close the tab is that they don&apos;t
               know what&apos;s going to happen. So here it is, step by step.
             </p>
           </FadeIn>
 
           <ol className="mt-12 grid gap-4 sm:grid-cols-2">
-            {[
+            {([
               {
-                icon: "arrive" as const,
+                icon: "arrive",
                 t: "You arrive",
                 d: "Free parking outside, opposite The Point. A small waiting area inside, and I&rsquo;ll come find you.",
+                style: "cream",
               },
               {
-                icon: "chair" as const,
+                icon: "chair",
                 t: "We walk to the room",
                 d: "Two soft chairs, a window, tissues, water if you&rsquo;d like it. The door closes properly.",
+                style: "blue",
               },
               {
-                icon: "speech" as const,
+                icon: "speech",
                 t: "We start gently",
                 d: "Usually with: &ldquo;Tell me a bit about what brought you here, when you&rsquo;re ready.&rdquo; No script, no clipboard.",
+                style: "yellow",
               },
               {
-                icon: "heart" as const,
-                t: "What&rsquo;s not expected",
+                icon: "heart",
+                t: "What’s not expected",
                 d: "Knowing what to say. Sharing everything. Being coherent. You can pause, cry, ask questions, sit in silence.",
+                style: "cream",
               },
               {
-                icon: "lock" as const,
+                icon: "lock",
                 t: "What stays between us",
                 d: "Nothing leaves the room. Brief notes, locked, GDPR-compliant. Nothing goes to your GP or insurer unless you ask.",
+                style: "highlight",
               },
               {
-                icon: "clock" as const,
+                icon: "clock",
                 t: "55 minutes, gently landed",
                 d: "I&rsquo;ll let you know when we have ten minutes left, so we can wrap up somewhere that feels okay.",
+                style: "blue",
               },
               {
-                icon: "leave" as const,
+                icon: "leave",
                 t: "At the end, no pressure",
                 d: "Take a day, take a week. Message if you want to come back, or don&rsquo;t. Either is honestly fine.",
+                style: "yellow",
               },
-            ].map((step, i) => (
-              <FadeIn key={i} delay={i * 60}>
-                <li className="h-full rounded-xl2 bg-cream p-5 shadow-soft sm:p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl2 bg-soft-blue/40 text-navy">
-                      <StepIcon name={step.icon} className="h-5 w-5" />
+            ] as const).map((step, i) => {
+              const card =
+                step.style === "blue"
+                  ? "bg-soft-blue/15"
+                  : step.style === "yellow"
+                  ? "bg-soft-yellow/35"
+                  : step.style === "highlight"
+                  ? "bg-cream ring-2 ring-navy/15 shadow-soft-lg"
+                  : "bg-cream";
+              const iconBg =
+                step.style === "blue"
+                  ? "bg-cream"
+                  : step.style === "yellow"
+                  ? "bg-cream"
+                  : step.style === "highlight"
+                  ? "bg-soft-yellow"
+                  : "bg-soft-blue/40";
+              return (
+                <FadeIn key={i} delay={i * 60}>
+                  <li
+                    className={`h-full rounded-xl2 p-5 shadow-soft sm:p-6 ${card}`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl2 text-navy ${iconBg}`}
+                      >
+                        <StepIcon name={step.icon} className="h-5 w-5" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/55">
+                          Step {i + 1}
+                        </p>
+                        <h3 className="mt-0.5 text-[17px] font-semibold leading-snug text-navy sm:text-[18px]">
+                          {step.t}
+                        </h3>
+                        <p
+                          className="mt-2 text-[15px] leading-relaxed text-navy/80"
+                          dangerouslySetInnerHTML={{ __html: step.d }}
+                        />
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/55">
-                        Step {i + 1}
-                      </p>
-                      <h3 className="mt-0.5 text-[17px] font-semibold leading-snug text-navy sm:text-[18px]">
-                        {step.t}
-                      </h3>
-                      <p
-                        className="mt-2 text-[15px] leading-relaxed text-navy/80"
-                        dangerouslySetInnerHTML={{ __html: step.d }}
-                      />
-                    </div>
-                  </div>
-                </li>
-              </FadeIn>
-            ))}
+                  </li>
+                </FadeIn>
+              );
+            })}
           </ol>
 
           <FadeIn delay={450}>
@@ -402,43 +459,42 @@ export default function HomePage() {
 
       {/* SECTION 5 — ABOUT RUTH PREVIEW */}
       <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <WaveLines
+          variant="blue"
+          className="pointer-events-none absolute inset-x-0 top-10 h-12 opacity-60"
+        />
         <Sparkles className="pointer-events-none absolute top-10 right-[6%] h-24 w-40 opacity-60 animate-twinkle" />
-        <Container size="wide">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-            <FadeIn className="lg:col-span-5">
-              <ImagePlaceholder
-                label="Ruth, Hampshire HeadSpace"
-                ratio="square"
-                className="mx-auto max-w-sm"
-              />
-            </FadeIn>
-            <FadeIn delay={120} className="lg:col-span-7">
-              <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-                About Ruth
+        <Container>
+          <FadeIn>
+            <ImagePlaceholder
+              label="Ruth, Hampshire HeadSpace"
+              ratio="square"
+              className="mx-auto max-w-[220px] rounded-full"
+            />
+          </FadeIn>
+          <FadeIn delay={120}>
+            <h2 className="mx-auto mt-7 max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+              A real person. Paying attention. Not in a rush.
+            </h2>
+            <div className="mx-auto mt-5 max-w-prose space-y-4 text-center text-[17px] leading-relaxed text-navy/85">
+              <p>
+                I&apos;m Ruth. I run Hampshire HeadSpace from a quiet room at
+                the Cranberry Wellbeing Centre in Eastleigh, working with
+                adults aged 16 and up, neurotypical and neurodiverse, all
+                identities welcome.
               </p>
-              <h2 className="mt-3 text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-                A real person. Paying attention. Not in a rush.
-              </h2>
-              <div className="mt-5 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85">
-                <p>
-                  I&apos;m Ruth. I run Hampshire HeadSpace from a quiet room at
-                  the Cranberry Wellbeing Centre in Eastleigh. I work with
-                  adults aged 16 and up, neurotypical and neurodiverse, all
-                  identities welcome.
-                </p>
-                <p>
-                  I&apos;m BACP-registered, fully insured, with an enhanced DBS
-                  and regular clinical supervision. The credentials matter. The
-                  way I sit with you matters more.
-                </p>
-              </div>
-              <div className="mt-7">
-                <Button href="/about/" variant="secondary" size="md">
-                  More about Ruth
-                </Button>
-              </div>
-            </FadeIn>
-          </div>
+              <p>
+                I&apos;m BACP-registered, fully insured, with an enhanced DBS
+                and regular clinical supervision. The credentials matter, the
+                way I sit with you matters more.
+              </p>
+            </div>
+            <div className="mt-7 flex justify-center">
+              <Button href="/about/" variant="secondary" size="md">
+                More about Ruth
+              </Button>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
@@ -454,10 +510,7 @@ export default function HomePage() {
         />
         <Container size="wide">
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              Practical things
-            </p>
-            <h2 className="mt-3 text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               Everything you might want to know upfront.
             </h2>
           </FadeIn>
@@ -467,23 +520,31 @@ export default function HomePage() {
               {
                 h: "Sessions",
                 b: "55 minutes. Usually weekly. Short term (6 to 12 sessions) or longer, decided together.",
+                accent: "bg-soft-blue/40",
               },
               {
                 h: "Fees",
                 b: "£50 in person. £40 online. First 55-minute session is free.",
+                accent: "bg-soft-yellow",
               },
               {
                 h: "Where",
                 b: "Cranberry Wellbeing Centre, Eastleigh. Opposite The Point. Free parking outside.",
+                accent: "bg-soft-blue/40",
               },
               {
                 h: "Contact",
                 b: "Email or text. I reply the same day, usually within a few hours.",
+                accent: "bg-soft-yellow",
               },
-            ].map((item) => (
-              <FadeIn key={item.h} delay={60}>
-                <div className="rounded-xl2 bg-cream p-6 shadow-soft">
-                  <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
+            ].map((item, i) => (
+              <FadeIn key={item.h} delay={60 + i * 40}>
+                <div className="h-full rounded-xl2 bg-cream p-6 text-center shadow-soft">
+                  <span
+                    aria-hidden="true"
+                    className={`mx-auto block h-1 w-10 rounded-full ${item.accent}`}
+                  />
+                  <h3 className="mt-4 text-[15px] font-semibold uppercase tracking-wider text-navy/70">
                     {item.h}
                   </h3>
                   <p className="mt-3 leading-relaxed text-navy/85">{item.b}</p>
@@ -492,8 +553,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          <FadeIn delay={200}>
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <FadeIn delay={240}>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/services/" variant="secondary">
                 Full services and fees
               </Button>
@@ -509,13 +570,14 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 7 — FAQ PREVIEW */}
-      <Section tone="cream">
+      <Section tone="cream" className="relative overflow-hidden">
+        <WaveLines
+          variant="yellow"
+          className="pointer-events-none absolute inset-x-0 bottom-10 h-12 opacity-50"
+        />
         <Container>
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              Common worries
-            </p>
-            <h2 className="mt-3 text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               The questions almost everyone asks
             </h2>
           </FadeIn>
@@ -592,10 +654,7 @@ export default function HomePage() {
         />
         <Container size="wide">
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              In their own words
-            </p>
-            <h2 className="mt-3 max-w-2xl text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               People who weren&apos;t sure either, until they were.
             </h2>
           </FadeIn>
@@ -649,8 +708,8 @@ export default function HomePage() {
           </div>
 
           <FadeIn delay={300}>
-            <p className="mt-6 max-w-prose text-sm text-warm-grey">
-              Names changed. Quotes shared with permission.
+            <p className="mx-auto mt-6 max-w-prose text-center text-sm text-warm-grey">
+              Names changed for privacy.
             </p>
           </FadeIn>
         </Container>

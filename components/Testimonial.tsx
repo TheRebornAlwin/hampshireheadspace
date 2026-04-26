@@ -28,20 +28,20 @@ export default function Testimonial({
 }: Props) {
   if (variant === "pullquote") {
     return (
-      <figure className={`relative mx-auto max-w-2xl ${className}`}>
+      <figure className={`relative mx-auto max-w-2xl text-center ${className}`}>
         <svg
           aria-hidden="true"
           viewBox="0 0 60 48"
-          className="absolute -top-2 -left-2 h-12 w-12 text-soft-blue-strong/40"
+          className="mx-auto mb-3 h-10 w-10 text-soft-blue-strong/40"
           fill="currentColor"
         >
           <path d="M16 0 q-16 6 -16 28 v20 h22 v-22 h-12 q0 -16 14 -22 z" />
           <path d="M48 0 q-16 6 -16 28 v20 h22 v-22 h-12 q0 -16 14 -22 z" />
         </svg>
-        <blockquote className="pl-8 text-balance text-[1.25rem] font-medium leading-snug text-navy sm:text-[1.5rem]">
+        <blockquote className="text-balance text-[1.25rem] font-medium leading-snug text-navy sm:text-[1.5rem]">
           {quote}
         </blockquote>
-        <figcaption className="mt-4 pl-8 text-sm text-warm-grey">
+        <figcaption className="mt-4 text-sm text-warm-grey">
           {attribution}
           {context ? <span className="text-warm-grey-light">, {context}</span> : null}
         </figcaption>

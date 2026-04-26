@@ -8,6 +8,8 @@ export default function WaveDivider({ className = "", flip = false }: Props) {
     <svg
       viewBox="0 0 1440 80"
       preserveAspectRatio="none"
+      width="100%"
+      height="100%"
       className={`${className} ${flip ? "rotate-180" : ""}`}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"

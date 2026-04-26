@@ -5,7 +5,7 @@ const LOGO_URL =
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-navy/10 bg-cream">
+    <footer className="border-t border-navy/10 bg-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-3">
         <div className="space-y-4">
           <Link href="/" aria-label="Hampshire HeadSpace, home">

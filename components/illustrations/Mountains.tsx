@@ -6,6 +6,8 @@ export default function Mountains({ className = "" }: Props) {
     <svg
       viewBox="0 0 1440 200"
       preserveAspectRatio="none"
+      width="100%"
+      height="100%"
       className={className}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
