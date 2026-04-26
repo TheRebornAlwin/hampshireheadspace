@@ -1,0 +1,136 @@
+import type { Metadata } from "next";
+import Container from "@/components/Container";
+import Section from "@/components/Section";
+import BookingForm from "@/components/BookingForm";
+import EnvelopeIllustration from "@/components/illustrations/EnvelopeIllustration";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
+import FadeIn from "@/components/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Contact and booking",
+  description:
+    "Book your free first session in about 90 seconds. No long forms. I reply the same day.",
+  alternates: { canonical: "/contact" },
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+        <Container size="wide">
+          <div className="grid items-center gap-10 lg:grid-cols-12">
+            <FadeIn className="lg:col-span-7">
+              <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
+                Contact and booking
+              </p>
+              <h1 className="mt-3 text-balance text-[2.25rem] font-semibold leading-[1.1] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
+                Booking takes about 90 seconds.
+              </h1>
+              <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
+                No long form, no questionnaire. Just a few details so I know
+                how to reach you. The first 55-minute session is free.
+              </p>
+            </FadeIn>
+            <FadeIn delay={120} className="lg:col-span-5">
+              <EnvelopeIllustration className="mx-auto h-auto w-full max-w-sm" />
+            </FadeIn>
+          </div>
+        </Container>
+      </section>
+
+      <Section tone="cream" spacing="default">
+        <Container size="wide">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <FadeIn className="lg:col-span-7">
+              <div className="rounded-xl2 bg-cream p-7 shadow-soft sm:p-9">
+                <h2 className="text-[1.4rem] font-semibold leading-tight text-navy sm:text-[1.65rem]">
+                  Send me a short message
+                </h2>
+                <p className="mt-2 text-warm-grey">
+                  First name is fine. You don&apos;t have to explain anything
+                  in detail.
+                </p>
+                <div className="mt-7">
+                  <BookingForm />
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={140} className="space-y-6 lg:col-span-5">
+              <div className="rounded-xl2 bg-soft-blue/15 p-6 sm:p-7">
+                <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
+                  Other ways to reach me
+                </h3>
+                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/90">
+                  <li>
+                    <a
+                      className="font-medium underline-offset-4 hover:underline"
+                      href="mailto:hello@hampshireheadspace.com"
+                    >
+                      hello@hampshireheadspace.com
+                    </a>
+                  </li>
+                  <li>
+                    Phone or text:{" "}
+                    <span className="font-medium text-navy/85">
+                      number coming soon
+                    </span>
+                  </li>
+                </ul>
+                <p className="mt-4 text-sm text-warm-grey">
+                  Email or text. I reply the same day, usually within a few
+                  hours.
+                </p>
+              </div>
+
+              <div className="rounded-xl2 bg-soft-yellow/40 p-6 sm:p-7">
+                <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
+                  What happens next
+                </h3>
+                <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/90">
+                  {[
+                    "You send your details. (You're here. This is the hard part.)",
+                    "I reply the same day to confirm a time that works for you.",
+                    "You come in for your free 55-minute first session.",
+                  ].map((s, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span
+                        className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-navy text-cream text-[12px] font-semibold"
+                        aria-hidden="true"
+                      >
+                        {i + 1}
+                      </span>
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
+                <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
+                  Where to find us
+                </h3>
+                <address className="mt-3 not-italic text-[15px] leading-relaxed text-navy/90">
+                  Cranberry Wellbeing Centre
+                  <br />
+                  Eastleigh, Hampshire
+                  <br />
+                  Opposite The Point
+                </address>
+                <p className="mt-3 text-sm text-warm-grey">
+                  Free parking right outside. No permits or meters.
+                </p>
+                <div className="mt-5">
+                  <ImagePlaceholder
+                    label="Cranberry Wellbeing Centre, Eastleigh"
+                    ratio="wide"
+                  />
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
+}

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FBFAF7;
+    color: #2A3D5F;
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: #F6E9B2;
+    color: #2A3D5F;
+  }
+
+  h1, h2, h3, h4 {
+    color: #2A3D5F;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2, h3 {
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #2A3D5F;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: #2A3D5F;
+    color: #FBFAF7;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    z-index: 100;
+    transition: top 200ms ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
