@@ -72,13 +72,6 @@ export default function HomePage() {
                 </Link>
               </div>
             </FadeIn>
-            <FadeIn delay={320}>
-              <p className="mt-6 text-sm text-warm-grey">
-                BACP registered. £50 in person, £40 online, with the first
-                session free. Currently accepting new clients, with most
-                first sessions available within a week.
-              </p>
-            </FadeIn>
           </div>
 
           <div className="lg:col-span-5">
