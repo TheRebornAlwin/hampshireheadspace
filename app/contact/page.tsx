@@ -5,6 +5,11 @@ import BookingForm from "@/components/BookingForm";
 import EnvelopeIllustration from "@/components/illustrations/EnvelopeIllustration";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import FadeIn from "@/components/FadeIn";
+import CloudBlob from "@/components/illustrations/CloudBlob";
+import PaperPlane from "@/components/illustrations/PaperPlane";
+import Birds from "@/components/illustrations/Birds";
+import Sun from "@/components/illustrations/Sun";
+import LeafFloat from "@/components/illustrations/LeafFloat";
 
 export const metadata: Metadata = {
   title: "Contact and booking",
@@ -17,6 +22,19 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -top-12 right-[-5rem] h-44 w-72 opacity-30 animate-drift-slower"
+        />
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute top-32 left-[-4rem] h-32 w-60 opacity-25 animate-drift-slow"
+        />
+        <Sun
+          className="pointer-events-none absolute -top-16 left-[40%] h-36 w-36 opacity-45 animate-float-soft"
+          withRays={false}
+        />
+        <PaperPlane className="pointer-events-none absolute top-8 right-[12%] h-20 w-44 opacity-65 animate-float-soft hidden sm:block" />
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <FadeIn className="lg:col-span-7">
@@ -38,7 +56,15 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <Section tone="cream" spacing="default">
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <LeafFloat className="pointer-events-none absolute -top-2 right-[-3%] h-36 w-36 opacity-50 animate-float-soft" />
+        <div
+          className="pointer-events-none absolute bottom-32 left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "140s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-44 opacity-40" count={2} />
+        </div>
         <Container size="wide">
           <div className="grid gap-10 lg:grid-cols-12">
             <FadeIn className="lg:col-span-7">

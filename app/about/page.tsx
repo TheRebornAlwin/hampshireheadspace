@@ -5,6 +5,10 @@ import Button from "@/components/Button";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ChairsIllustration from "@/components/illustrations/ChairsIllustration";
 import CloudBlob from "@/components/illustrations/CloudBlob";
+import Birds from "@/components/illustrations/Birds";
+import Sun from "@/components/illustrations/Sun";
+import LeafFloat from "@/components/illustrations/LeafFloat";
+import Sparkles from "@/components/illustrations/Sparkles";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
@@ -23,6 +27,17 @@ export default function AboutPage() {
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-6rem] h-64 w-[24rem] opacity-30"
         />
+        <Sun
+          className="pointer-events-none absolute -top-20 left-[6%] h-44 w-44 opacity-55 animate-float-soft"
+          withRays={false}
+        />
+        <div
+          className="pointer-events-none absolute top-[18%] left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "110s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-48 opacity-60" count={3} />
+        </div>
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <FadeIn className="lg:col-span-7">
@@ -81,7 +96,12 @@ export default function AboutPage() {
       </Section>
 
       {/* HOW I WORK */}
-      <Section tone="blue" spacing="default">
+      <Section tone="blue" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute -top-6 right-[-4rem] h-32 w-72 opacity-25 animate-drift-slower"
+        />
+        <LeafFloat className="pointer-events-none absolute -bottom-4 left-[2%] h-36 w-36 opacity-70 animate-float-soft" />
         <Container>
           <FadeIn>
             <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
@@ -218,7 +238,8 @@ export default function AboutPage() {
       </Section>
 
       {/* THE ROOM */}
-      <Section tone="cream" spacing="default">
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <Sparkles className="pointer-events-none absolute top-12 right-[8%] h-24 w-40 opacity-65 animate-twinkle" />
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <FadeIn className="lg:col-span-6">

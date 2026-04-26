@@ -5,6 +5,10 @@ import Button from "@/components/Button";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ThoughtBubbles from "@/components/illustrations/ThoughtBubbles";
+import CloudBlob from "@/components/illustrations/CloudBlob";
+import Birds from "@/components/illustrations/Birds";
+import Sparkles from "@/components/illustrations/Sparkles";
+import Sun from "@/components/illustrations/Sun";
 
 export const metadata: Metadata = {
   title: "Questions and answers",
@@ -17,6 +21,15 @@ export default function FAQPage() {
   return (
     <>
       <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute -top-12 left-[-5rem] h-56 w-[22rem] opacity-25 animate-drift-slow"
+        />
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -bottom-10 right-[-5rem] h-44 w-72 opacity-30 animate-drift-slower"
+        />
+        <Sparkles className="pointer-events-none absolute top-16 right-[18%] h-24 w-44 opacity-70 animate-twinkle" />
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <FadeIn className="lg:col-span-7">
@@ -38,7 +51,9 @@ export default function FAQPage() {
         </Container>
       </section>
 
-      <Section tone="cream" spacing="default">
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <ThoughtBubbles className="pointer-events-none absolute -top-6 right-[2%] h-32 w-56 opacity-40 animate-float-soft" />
+        <ThoughtBubbles className="pointer-events-none absolute bottom-10 left-[-2%] h-28 w-48 opacity-35 animate-drift-slower" />
         <Container>
           <FadeIn>
             <div className="rounded-xl2 bg-cream px-2 shadow-soft sm:px-6">
@@ -208,7 +223,18 @@ export default function FAQPage() {
         </Container>
       </Section>
 
-      <Section tone="yellow" spacing="tight">
+      <Section tone="yellow" spacing="tight" className="relative overflow-hidden">
+        <Sun
+          className="pointer-events-none absolute -top-10 right-[8%] h-36 w-36 opacity-60 animate-float-soft"
+          withRays
+        />
+        <div
+          className="pointer-events-none absolute top-12 left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "115s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-44 opacity-55" count={2} />
+        </div>
         <Container>
           <FadeIn>
             <div className="text-center">

@@ -4,6 +4,10 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import CloudBlob from "@/components/illustrations/CloudBlob";
+import Sun from "@/components/illustrations/Sun";
+import Birds from "@/components/illustrations/Birds";
+import LeafFloat from "@/components/illustrations/LeafFloat";
+import Mountains from "@/components/illustrations/Mountains";
 
 export const metadata: Metadata = {
   title: "Services & Fees",
@@ -20,6 +24,17 @@ export default function ServicesPage() {
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
         />
+        <Sun
+          className="pointer-events-none absolute -top-16 right-[5%] h-44 w-44 opacity-55 animate-float-soft"
+          withRays={false}
+        />
+        <div
+          className="pointer-events-none absolute top-[20%] left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "130s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-44 opacity-55" count={2} />
+        </div>
         <Container>
           <FadeIn>
             <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
@@ -59,7 +74,12 @@ export default function ServicesPage() {
       </Section>
 
       {/* HOW SESSIONS WORK */}
-      <Section tone="blue" spacing="default">
+      <Section tone="blue" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -top-6 left-[-4rem] h-32 w-72 opacity-30 animate-drift-slow"
+        />
+        <LeafFloat className="pointer-events-none absolute -bottom-2 right-[3%] h-36 w-36 opacity-70 animate-float-soft" />
         <Container size="wide">
           <FadeIn>
             <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
@@ -215,7 +235,12 @@ export default function ServicesPage() {
         </Container>
       </Section>
 
-      <Section tone="yellow" spacing="tight">
+      <Section tone="yellow" spacing="tight" className="relative overflow-hidden">
+        <Sun
+          className="pointer-events-none absolute -top-12 left-[10%] h-36 w-36 opacity-65 animate-float-soft"
+          withRays
+        />
+        <Mountains className="pointer-events-none absolute bottom-0 left-0 right-0 h-24" />
         <Container>
           <FadeIn>
             <div className="text-center">

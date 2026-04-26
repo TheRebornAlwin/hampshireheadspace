@@ -36,6 +36,10 @@ const config: Config = {
       animation: {
         "fade-up": "fadeUp 600ms ease-out both",
         "drift-slow": "drift 60s ease-in-out infinite",
+        "drift-slower": "drift 90s ease-in-out infinite",
+        "float-soft": "floatSoft 18s ease-in-out infinite",
+        "fly-across": "flyAcross 80s linear infinite",
+        "twinkle": "twinkle 7s ease-in-out infinite",
       },
       keyframes: {
         fadeUp: {
@@ -45,6 +49,18 @@ const config: Config = {
         drift: {
           "0%, 100%": { transform: "translateX(0) translateY(0)" },
           "50%": { transform: "translateX(20px) translateY(-12px)" },
+        },
+        floatSoft: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        flyAcross: {
+          "0%": { transform: "translateX(-12%)" },
+          "100%": { transform: "translateX(112%)" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "0.45" },
+          "50%": { opacity: "0.85" },
         },
       },
     },

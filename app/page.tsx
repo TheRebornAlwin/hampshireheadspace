@@ -2,12 +2,19 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Section from "@/components/Section";
-import HeroIllustration from "@/components/illustrations/HeroIllustration";
 import ChairsIllustration from "@/components/illustrations/ChairsIllustration";
 import CloudBlob from "@/components/illustrations/CloudBlob";
+import Birds from "@/components/illustrations/Birds";
+import Sun from "@/components/illustrations/Sun";
+import Sparkles from "@/components/illustrations/Sparkles";
+import LeafFloat from "@/components/illustrations/LeafFloat";
+import Mountains from "@/components/illustrations/Mountains";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+
+const HERO_IMAGE_URL =
+  "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRac5qOIEpOtE7NBk61YirsFp3RfLSDzQATqu0d";
 
 export default function HomePage() {
   return (
@@ -22,8 +29,18 @@ export default function HomePage() {
           variant="yellow"
           className="pointer-events-none absolute -bottom-20 right-[-6rem] h-72 w-[26rem] opacity-25"
         />
+        <Sun
+          className="pointer-events-none absolute -top-20 right-[8%] h-56 w-56 opacity-60 animate-float-soft"
+          withRays={false}
+        />
+        <div
+          className="pointer-events-none absolute top-[12%] left-0 right-0 h-16 animate-fly-across"
+          aria-hidden="true"
+        >
+          <Birds className="h-16 w-56 opacity-70" count={3} />
+        </div>
 
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-12">
+        <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7 lg:pt-6">
             <FadeIn>
               <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-soft-yellow/60 px-4 py-1.5 text-[13px] font-medium text-navy/85">
@@ -65,14 +82,32 @@ export default function HomePage() {
 
           <div className="lg:col-span-5">
             <FadeIn delay={120}>
-              <HeroIllustration className="mx-auto h-auto w-full max-w-md lg:max-w-none" />
+              <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
+                />
+                <img
+                  src={HERO_IMAGE_URL}
+                  alt="A counsellor in a soft blue chair gently holding the loose end of a tangled blue and yellow ball of yarn that sits where the other person's head would be."
+                  width={900}
+                  height={820}
+                  className="h-auto w-full animate-float-soft"
+                  loading="eager"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
       {/* SECTION 2 — RECOGNITION */}
-      <Section tone="cream" className="relative">
+      <Section tone="cream" className="relative overflow-hidden">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -top-10 right-[-5rem] h-44 w-72 opacity-25 animate-drift-slower"
+        />
+        <Sparkles className="pointer-events-none absolute top-12 left-[5%] h-28 w-44 opacity-70 animate-twinkle" />
         <Container>
           <FadeIn>
             <h2 className="text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
@@ -105,7 +140,12 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 3 — MECHANISM */}
-      <Section tone="blue">
+      <Section tone="blue" className="relative overflow-hidden">
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute top-8 left-[-5rem] h-40 w-80 opacity-30 animate-drift-slow"
+        />
+        <LeafFloat className="pointer-events-none absolute -bottom-6 right-[3%] h-40 w-40 opacity-80 animate-float-soft" />
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <FadeIn>
@@ -170,7 +210,18 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 4 — WHAT THE FIRST SESSION IS ACTUALLY LIKE */}
-      <Section tone="cream" id="what-its-like">
+      <Section tone="cream" id="what-its-like" className="relative overflow-hidden">
+        <div
+          className="pointer-events-none absolute top-24 left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "120s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-48 opacity-50" count={2} />
+        </div>
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute bottom-16 right-[-4rem] h-36 w-72 opacity-20 animate-drift-slower"
+        />
         <Container size="wide">
           <FadeIn>
             <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
@@ -253,7 +304,8 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 5 — ABOUT RUTH PREVIEW */}
-      <Section tone="cream" spacing="default">
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <Sparkles className="pointer-events-none absolute top-10 right-[6%] h-24 w-40 opacity-60 animate-twinkle" />
         <Container size="wide">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
             <FadeIn className="lg:col-span-5">
@@ -294,7 +346,15 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 6 — PRACTICAL INFO */}
-      <Section tone="blue">
+      <Section tone="blue" className="relative overflow-hidden">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -top-8 right-[10%] h-32 w-60 opacity-40 animate-drift-slow"
+        />
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute bottom-4 left-[-4rem] h-32 w-72 opacity-25 animate-drift-slower"
+        />
         <Container size="wide">
           <FadeIn>
             <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
@@ -428,7 +488,19 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 8 — FINAL CTA */}
-      <Section tone="yellow" spacing="default">
+      <Section tone="yellow" spacing="default" className="relative overflow-hidden">
+        <Sun
+          className="pointer-events-none absolute -top-16 left-[8%] h-48 w-48 opacity-70 animate-float-soft"
+          withRays
+        />
+        <div
+          className="pointer-events-none absolute top-20 left-0 right-0 h-12 animate-fly-across"
+          style={{ animationDuration: "100s" }}
+          aria-hidden="true"
+        >
+          <Birds className="h-12 w-52 opacity-65" count={3} />
+        </div>
+        <Mountains className="pointer-events-none absolute bottom-0 left-0 right-0 h-32" />
         <Container>
           <FadeIn>
             <div className="text-center">
