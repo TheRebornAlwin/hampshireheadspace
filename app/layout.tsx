@@ -98,24 +98,28 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
+        {/* Preconnect early so the font + image fetches don't pay for DNS/TLS later. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Slimmer font payload: only Plus Jakarta Sans, only the weights we use. */}
         <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
-        {/* Preload the hero image so it paints immediately on first load. */}
+        {/* Preload everything that paints in the first viewport. */}
         <link
           rel="preload"
           as="image"
-          href="/hero-tangled-yarn.png"
+          href="/hero-tangled-yarn.webp"
+          type="image/webp"
+          // @ts-expect-error fetchpriority is valid HTML
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/logo.webp"
+          type="image/webp"
           // @ts-expect-error fetchpriority is valid HTML
           fetchpriority="high"
         />

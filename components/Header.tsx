@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Button from "./Button";
 
-const LOGO_URL = "/logo.png";
+const LOGO_URL = "/logo.webp";
 
 const links = [
   { href: "/", label: "Home" },

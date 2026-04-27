@@ -16,7 +16,7 @@ import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Testimonial from "@/components/Testimonial";
 
-const HERO_IMAGE_URL = "/hero-tangled-yarn.png";
+const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
 
 export default function HomePage() {
   return (

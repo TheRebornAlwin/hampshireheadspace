@@ -100,7 +100,7 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-5rem] h-56 w-[22rem] opacity-25 animate-drift-slow"
@@ -110,24 +110,19 @@ export default function FAQPage() {
           className="pointer-events-none absolute -bottom-10 right-[-5rem] h-44 w-72 opacity-30 animate-drift-slower"
         />
         <Sparkles className="pointer-events-none absolute top-16 right-[18%] h-24 w-44 opacity-70 animate-twinkle" />
-        <Container size="wide">
-          <div className="grid items-center gap-10 lg:grid-cols-12">
-            <FadeIn className="lg:col-span-7">
-              <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-                Common worries
-              </p>
-              <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
-                The questions almost everyone asks
-              </h1>
-              <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-                If something on your mind isn&apos;t answered here, send me a
-                short message. I will reply the same day, no pressure to book.
-              </p>
-            </FadeIn>
-            <FadeIn delay={120} className="lg:col-span-5">
-              <ThoughtBubbles className="mx-auto h-auto w-full max-w-sm" />
-            </FadeIn>
-          </div>
+        <Container>
+          <FadeIn>
+            <ThoughtBubbles className="mx-auto h-auto w-full max-w-[180px] sm:max-w-[220px]" />
+          </FadeIn>
+          <FadeIn delay={120}>
+            <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+              The questions almost everyone asks
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
+              If something on your mind isn&apos;t answered here, send me a
+              short message. I&apos;ll reply the same day, no pressure to book.
+            </p>
+          </FadeIn>
         </Container>
       </section>
 

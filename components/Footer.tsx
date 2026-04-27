@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const LOGO_URL = "/logo.png";
+const LOGO_URL = "/logo.webp";
 
 export default function Footer() {
   return (

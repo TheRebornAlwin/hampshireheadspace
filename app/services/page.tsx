@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
@@ -34,13 +34,10 @@ export default function ServicesPage() {
         </div>
         <Container>
           <FadeIn>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-              Services & fees
-            </p>
-            <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h1 className="mx-auto max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
               Simple, transparent, no surprises.
             </h1>
-            <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
+            <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
               One thing at a time. Here&apos;s exactly what I offer, what it
               costs, and how sessions work.
             </p>
@@ -52,18 +49,18 @@ export default function ServicesPage() {
       <Section tone="cream" spacing="tight">
         <Container>
           <FadeIn>
-            <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
               What I offer
             </h2>
-            <div className="mt-5 space-y-4 text-[17px] leading-relaxed text-navy/85">
+            <div className="mx-auto mt-6 max-w-prose space-y-4 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
                 Individual counselling for adults aged 16 and up. Neurotypical
                 and neurodiverse welcome. All identities welcome.
               </p>
               <p>
                 Face-to-face in Eastleigh, or online via secure video,
-                whichever feels easier for you. Some people prefer the room.
-                Some prefer their own sofa. Both work.
+                whichever feels easier for you. Some people prefer the room,
+                some prefer their own sofa, and both work.
               </p>
             </div>
           </FadeIn>
@@ -79,7 +76,7 @@ export default function ServicesPage() {
         <LeafFloat className="pointer-events-none absolute -bottom-2 right-[3%] h-36 w-36 opacity-70 animate-float-soft" />
         <Container size="wide">
           <FadeIn>
-            <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
               How sessions work
             </h2>
           </FadeIn>
@@ -104,7 +101,7 @@ export default function ServicesPage() {
               },
             ].map((item, i) => (
               <FadeIn key={item.t} delay={i * 70}>
-                <div className="h-full rounded-xl2 bg-cream p-7 shadow-soft">
+                <div className="h-full rounded-xl2 bg-cream p-6 text-center shadow-soft sm:p-7">
                   <h3 className="text-[18px] font-semibold text-navy sm:text-[20px]">
                     {item.t}
                   </h3>
@@ -123,10 +120,10 @@ export default function ServicesPage() {
       <Section tone="cream" spacing="default">
         <Container size="wide">
           <FadeIn>
-            <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
               Fees
             </h2>
-            <p className="mt-3 text-warm-grey">
+            <p className="mx-auto mt-3 max-w-xl text-center text-warm-grey">
               Pricing in plain numbers. Pay as you go, after each session.
             </p>
           </FadeIn>
@@ -152,16 +149,16 @@ export default function ServicesPage() {
             ].map((row) => (
               <FadeIn key={row.t} delay={80}>
                 <div
-                  className={`flex h-full flex-col rounded-xl2 p-7 shadow-soft ${
+                  className={`flex h-full flex-col rounded-xl2 p-6 text-center shadow-soft sm:p-7 ${
                     row.highlight
-                      ? "border-2 border-navy bg-soft-yellow/40"
+                      ? "border-2 border-navy bg-soft-yellow/40 shadow-soft-lg"
                       : "bg-soft-blue/15"
                   }`}
                 >
                   <p className="text-[2rem] font-semibold leading-none text-navy sm:text-[2.4rem]">
                     {row.k}
                   </p>
-                  <p className="mt-2 text-[15px] font-semibold uppercase tracking-wider text-navy/70">
+                  <p className="mt-2 text-[14px] font-semibold uppercase tracking-wider text-navy/70">
                     {row.t}
                   </p>
                   <p className="mt-3 leading-relaxed text-navy/85">{row.d}</p>
@@ -171,7 +168,7 @@ export default function ServicesPage() {
           </div>
 
           <FadeIn delay={200}>
-            <p className="mt-6 max-w-2xl text-sm text-warm-grey">
+            <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-warm-grey">
               If money is the thing keeping you from booking, please say so when
               you message. I keep a small number of lower-cost spaces and would
               rather you ask than not come at all.
@@ -202,18 +199,18 @@ export default function ServicesPage() {
       <Section tone="blue" spacing="default">
         <Container>
           <FadeIn>
-            <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
               What I work with
             </h2>
-            <p className="mt-3 text-warm-grey">
+            <p className="mx-auto mt-3 max-w-2xl text-center text-warm-grey">
               There&apos;s no issue too big or too small. The list below is a
               rough map, not a checklist you have to fit into.
             </p>
           </FadeIn>
 
           <FadeIn delay={120}>
-            <div className="mt-8 rounded-xl2 bg-cream p-7 shadow-soft sm:p-8">
-              <div className="flex flex-wrap gap-2">
+            <div className="mt-8 rounded-xl2 bg-cream p-6 shadow-soft sm:p-8">
+              <div className="flex flex-wrap justify-center gap-2">
                 {[
                   "Anxiety",
                   "Depression",
@@ -240,7 +237,7 @@ export default function ServicesPage() {
                   </span>
                 ))}
               </div>
-              <p className="mt-6 leading-relaxed text-navy/85">
+              <p className="mt-6 text-center leading-relaxed text-navy/85">
                 Counselling isn&apos;t only for those with a specific issue. It
                 can also be helpful for anyone who wants to learn more about
                 themselves and their relationships.
@@ -259,7 +256,7 @@ export default function ServicesPage() {
         <Container>
           <FadeIn>
             <div className="text-center">
-              <h2 className="text-balance text-[1.6rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+              <h2 className="text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
                 Ready when you are.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-navy/85">

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-12 pb-12 sm:pt-20 sm:pb-16">
+      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-5rem] h-44 w-72 opacity-30 animate-drift-slower"
@@ -31,25 +31,20 @@ export default function ContactPage() {
           variant="blue"
           className="pointer-events-none absolute top-32 left-[-4rem] h-32 w-60 opacity-25 animate-drift-slow"
         />
-        <PaperPlane className="pointer-events-none absolute top-8 right-[12%] h-20 w-44 opacity-65 animate-float-soft hidden sm:block" />
-        <Container size="wide">
-          <div className="grid items-center gap-10 lg:grid-cols-12">
-            <FadeIn className="lg:col-span-7">
-              <p className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-                Contact and booking
-              </p>
-              <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.25rem]">
-                Booking takes about 90 seconds.
-              </h1>
-              <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-                No long form, no questionnaire. Just a few details so I know
-                how to reach you. The first 55-minute session is free.
-              </p>
-            </FadeIn>
-            <FadeIn delay={120} className="lg:col-span-5">
-              <EnvelopeIllustration className="mx-auto h-auto w-full max-w-sm" />
-            </FadeIn>
-          </div>
+        <PaperPlane className="pointer-events-none absolute top-8 right-[8%] hidden h-20 w-44 opacity-50 animate-float-soft lg:block" />
+        <Container>
+          <FadeIn>
+            <EnvelopeIllustration className="mx-auto h-auto w-full max-w-[180px] sm:max-w-[220px]" />
+          </FadeIn>
+          <FadeIn delay={120}>
+            <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+              Booking takes about 90 seconds.
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
+              No long form, no questionnaire. Just a few details so I know how
+              to reach you. The first 55-minute session is free.
+            </p>
+          </FadeIn>
         </Container>
       </section>
 
