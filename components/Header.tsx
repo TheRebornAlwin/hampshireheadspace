@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Button from "./Button";
 
-const LOGO_URL =
-  "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRa6UWitisUF0JPnvVqwk53LThbAGaKrtslQ9fz";
+const LOGO_URL = "/logo.png";
 
 const links = [
   { href: "/", label: "Home" },
@@ -51,10 +50,10 @@ export default function Header() {
         >
           <img
             src={LOGO_URL}
-            alt="Hampshire HeadSpace"
-            className="h-11 w-auto sm:h-12"
-            width={170}
-            height={48}
+            alt="Hampshire HeadSpace Counselling"
+            className="h-12 w-auto sm:h-14"
+            width={120}
+            height={56}
           />
           <span className="hidden text-[13px] font-medium leading-tight text-warm-grey lg:block">
             Private counselling<br />in Eastleigh

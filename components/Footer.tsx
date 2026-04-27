@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-const LOGO_URL =
-  "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRa6UWitisUF0JPnvVqwk53LThbAGaKrtslQ9fz";
+const LOGO_URL = "/logo.png";
 
 export default function Footer() {
   return (
@@ -11,10 +10,10 @@ export default function Footer() {
           <Link href="/" aria-label="Hampshire HeadSpace, home">
             <img
               src={LOGO_URL}
-              alt="Hampshire HeadSpace"
-              className="h-12 w-auto"
-              width={170}
-              height={48}
+              alt="Hampshire HeadSpace Counselling"
+              className="h-24 w-auto sm:h-28"
+              width={200}
+              height={112}
             />
           </Link>
           <p className="max-w-xs text-sm leading-relaxed text-warm-grey">
