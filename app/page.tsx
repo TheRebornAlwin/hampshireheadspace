@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-7 lg:pt-6">
+          <div className="text-center lg:col-span-7 lg:pt-6 lg:text-left">
             <FadeIn>
               <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-soft-yellow/60 px-4 py-1.5 text-[13px] font-medium text-navy/85">
                 <span className="h-1.5 w-1.5 rounded-full bg-navy/80" />
@@ -52,15 +52,13 @@ export default function HomePage() {
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
-              <p className="mt-6 max-w-xl text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-                Hampshire HeadSpace is private counselling in Eastleigh for
-                people who are tired of pretending they&apos;re fine. Your
-                first 55-minute session is free, with no long forms to fill in
-                and no pressure to come back if it isn&apos;t the right fit.
+              <p className="mx-auto mt-6 max-w-xl text-pretty text-center text-[17px] leading-relaxed text-navy/85 sm:text-[19px] lg:mx-0 lg:text-left">
+                Private counselling in Eastleigh for people tired of pretending
+                they&apos;re fine. Your first 55-minute session is free.
               </p>
             </FadeIn>
             <FadeIn delay={240}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
                 <Button href="/contact/" size="lg">
                   Book your free first session
                 </Button>
@@ -75,7 +73,7 @@ export default function HomePage() {
 
             {/* Trust micro-badges */}
             <FadeIn delay={300}>
-              <ul className="mt-7 flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px]">
+              <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px] lg:justify-start">
                 {[
                   "BACP registered",
                   "Free first 55-min session",
