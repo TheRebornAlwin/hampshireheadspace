@@ -19,6 +19,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "10.4.19",
+    "playwright": "^1.59.1",
     "postcss": "8.4.39",
     "sharp": "^0.34.5",
     "tailwindcss": "3.4.6",

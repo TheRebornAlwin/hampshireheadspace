@@ -47,7 +47,7 @@ export default function HomePage() {
               </p>
             </FadeIn>
             <FadeIn delay={80}>
-              <h1 className="text-balance text-[2rem] font-semibold leading-[1.12] text-navy sm:text-[2.75rem] lg:text-[3.4rem]">
+              <h1 className="text-balance text-[2rem] font-bold leading-[1.08] tracking-tight text-navy sm:text-[2.85rem] lg:text-[3.5rem]">
                 On paper, you&apos;ve got a good life. So why does it feel like this?
               </h1>
             </FadeIn>
@@ -72,21 +72,85 @@ export default function HomePage() {
                 </Link>
               </div>
             </FadeIn>
+
+            {/* Trust micro-badges */}
+            <FadeIn delay={300}>
+              <ul className="mt-7 flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px]">
+                {[
+                  "BACP registered",
+                  "Free first 55-min session",
+                  "Same-day reply",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-1.5">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4 text-navy"
+                    >
+                      <path
+                        d="M4 10.5l3.5 3.5 8.5-9"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
           </div>
 
           <div className="lg:col-span-5">
             <FadeIn delay={120}>
               <div className="relative mx-auto w-full max-w-xs sm:max-w-md lg:max-w-none">
+                {/* Floating accent shapes around the hero image */}
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -top-3 -right-2 h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:h-20 sm:w-20"
+                  style={{ animation: "floatSoft 12s ease-in-out infinite" }}
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute top-6 -right-4 grid h-10 w-10 place-items-center rounded-xl2 bg-cream text-navy shadow-soft sm:h-12 sm:w-12"
+                  style={{ animation: "floatSoft 14s ease-in-out 1s infinite" }}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-5 w-5"
+                  >
+                    <path d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" />
+                    <path d="M3 13h18a1 1 0 0 1 1 1v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a1 1 0 0 1 1-1Z" />
+                    <path d="M5 19v2M19 19v2" />
+                  </svg>
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-2 -left-3 h-12 w-12 rounded-full bg-soft-blue-strong/80 shadow-soft sm:h-16 sm:w-16"
+                  style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute bottom-6 -left-1 h-6 w-6 rounded-full bg-[#FFB0C0] shadow-soft sm:h-8 sm:w-8"
+                  style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
                 />
                 <img
                   src={HERO_IMAGE_URL}
                   alt="A counsellor in a soft blue chair gently holding the loose end of a tangled blue and yellow ball of yarn that sits where the other person's head would be."
                   width={900}
                   height={820}
-                  className="h-auto w-full animate-float-soft"
+                  className="relative h-auto w-full animate-float-soft"
                   loading="eager"
                   // @ts-expect-error fetchpriority is valid HTML
                   fetchpriority="high"
@@ -652,53 +716,107 @@ export default function HomePage() {
             </h2>
           </FadeIn>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <FadeIn delay={60}>
-              <Testimonial
-                tone="blue"
-                quote={
-                  <>
-                    &ldquo;Genuinely thought I&rsquo;d be judged. Wasn&rsquo;t,
-                    at all. Ruth doesn&rsquo;t do that &lsquo;and how does
-                    that make you feel&rsquo; nodding thing. We just talk and
-                    somehow things make more sense by the end.&rdquo;
-                  </>
-                }
-                attribution="Em"
-                context="28"
-              />
-            </FadeIn>
-            <FadeIn delay={140}>
-              <Testimonial
-                tone="yellow"
-                quote={
-                  <>
-                    &ldquo;I&rsquo;d been on the NHS waiting list for months
-                    and lost faith. Booked the free session at half eleven at
-                    night. Best decision i&rsquo;ve made in ages, no
-                    exaggeration.&rdquo;
-                  </>
-                }
-                attribution="Jo"
-                context="36, Eastleigh"
-              />
-            </FadeIn>
-            <FadeIn delay={220}>
-              <Testimonial
-                tone="cream"
-                quote={
-                  <>
-                    &ldquo;I lost my mum 2 years ago and thought I was over
-                    it. Apparently not. Ruth gave me space to talk about her
-                    without rushing me, which I didn&rsquo;t know I needed
-                    so badly. I leave each session lighter than I came in.&rdquo;
-                  </>
-                }
-                attribution="Karen"
-                context="51"
-              />
-            </FadeIn>
-          </div>
+          <FadeIn delay={60}>
+            <div
+              className="mt-10 -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-5 pb-4 sm:-mx-6 sm:px-6"
+              style={{ scrollbarWidth: "thin" }}
+            >
+              {[
+                {
+                  tone: "blue" as const,
+                  quote: (
+                    <>
+                      &ldquo;Genuinely thought I&rsquo;d be judged. Wasn&rsquo;t,
+                      at all. Ruth doesn&rsquo;t do that &lsquo;and how does
+                      that make you feel&rsquo; nodding thing. We just talk and
+                      somehow things make more sense by the end.&rdquo;
+                    </>
+                  ),
+                  attribution: "Em",
+                  context: "28",
+                },
+                {
+                  tone: "yellow" as const,
+                  quote: (
+                    <>
+                      &ldquo;I&rsquo;d been on the NHS waiting list for months
+                      and lost faith. Booked the free session at half eleven at
+                      night. Best decision i&rsquo;ve made in ages, no
+                      exaggeration.&rdquo;
+                    </>
+                  ),
+                  attribution: "Jo",
+                  context: "36, Eastleigh",
+                },
+                {
+                  tone: "cream" as const,
+                  quote: (
+                    <>
+                      &ldquo;I lost my mum 2 years ago and thought I was over
+                      it. Apparently not. Ruth gave me space to talk about her
+                      without rushing me, which I didn&rsquo;t know I needed so
+                      badly. I leave each session lighter than I came in.&rdquo;
+                    </>
+                  ),
+                  attribution: "Karen",
+                  context: "51",
+                },
+                {
+                  tone: "blue" as const,
+                  quote: (
+                    <>
+                      &ldquo;I&rsquo;d done CBT before and it just didn&rsquo;t
+                      stick. Ruth is different. Doesn&rsquo;t lecture you.
+                      Doesn&rsquo;t tell you what to do. Six weeks in and
+                      i&rsquo;m sleeping properly for the first time in
+                      ages.&rdquo;
+                    </>
+                  ),
+                  attribution: "Mark",
+                  context: "42, Southampton",
+                },
+                {
+                  tone: "yellow" as const,
+                  quote: (
+                    <>
+                      &ldquo;Was so embarrassed to email at first. Felt like my
+                      stuff wasn&rsquo;t big enough to bother anyone with. Ruth
+                      replied in a way that made me feel like a person, not a
+                      problem.&rdquo;
+                    </>
+                  ),
+                  attribution: "Beth",
+                  context: "36",
+                },
+              ].map((t, i) => (
+                <div
+                  key={i}
+                  className="w-[300px] shrink-0 snap-start sm:w-[340px] lg:w-[360px]"
+                >
+                  <Testimonial
+                    tone={t.tone}
+                    quote={t.quote}
+                    attribution={t.attribution}
+                    context={t.context}
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 flex items-center gap-2 text-xs text-warm-grey-light">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+              Swipe to see more
+            </p>
+          </FadeIn>
 
           <FadeIn delay={300}>
             <p className="mx-auto mt-6 max-w-prose text-center text-sm text-warm-grey">
@@ -708,10 +826,11 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* SECTION 8 — FINAL CTA */}
-      <Section tone="yellow" spacing="default" className="relative overflow-hidden">
+      {/* SECTION 8 — FINAL CTA (bold saturated) */}
+      <section className="relative overflow-hidden bg-soft-yellow py-16 sm:py-24 lg:py-32">
+        {/* Ambient elements */}
         <Sun
-          className="pointer-events-none absolute top-12 right-[6%] h-32 w-32 opacity-55 animate-float-soft"
+          className="pointer-events-none absolute top-12 right-[6%] h-32 w-32 opacity-65 animate-float-soft"
           withRays
         />
         <div
@@ -719,30 +838,46 @@ export default function HomePage() {
           style={{ animationDuration: "100s" }}
           aria-hidden="true"
         >
-          <Birds className="h-12 w-52 opacity-65" count={3} />
+          <Birds className="h-12 w-52 opacity-75" count={3} />
         </div>
         <Mountains className="pointer-events-none absolute bottom-0 left-0 right-0 h-32" />
+
         <Container>
           <FadeIn>
-            <div className="text-center">
-              <ChairsIllustration className="mx-auto mb-8 h-auto w-full max-w-sm" />
-              <h2 className="text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-                Booking is the easiest part of this.
-              </h2>
-              <p className="mx-auto mt-5 max-w-xl text-balance text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-                A short message. I&apos;ll reply the same day with a time. The
-                first 55 minutes are free. You don&apos;t have to know what to
-                say.
-              </p>
-              <div className="mt-8 flex justify-center">
-                <Button href="/contact/" size="lg">
-                  Book your free first session
-                </Button>
+            {/* Big rounded floating card with offset accent shape behind */}
+            <div className="relative mx-auto max-w-2xl">
+              {/* Offset peach circle peeking out behind card */}
+              <div
+                aria-hidden="true"
+                className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-[#FFD9B7] shadow-soft sm:-top-10 sm:-right-10 sm:h-44 sm:w-44"
+              />
+              {/* Offset pink dot bottom-left */}
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-5 -left-4 h-20 w-20 rounded-full bg-[#FFB0C0] shadow-soft sm:-bottom-8 sm:-left-8 sm:h-28 sm:w-28"
+              />
+
+              {/* Main card */}
+              <div className="relative rounded-[28px] bg-cream p-8 text-center shadow-soft-lg sm:p-12">
+                <ChairsIllustration className="mx-auto mb-6 h-auto w-full max-w-[260px] sm:max-w-xs" />
+                <h2 className="text-balance text-[1.85rem] font-bold leading-[1.1] tracking-tight text-navy sm:text-[2.4rem]">
+                  Booking is the easiest part of this.
+                </h2>
+                <p className="mx-auto mt-5 max-w-lg text-balance text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
+                  A short message. I&apos;ll reply the same day with a time.
+                  The first 55 minutes are free. You don&apos;t have to know
+                  what to say.
+                </p>
+                <div className="mt-8 flex justify-center">
+                  <Button href="/contact/" size="lg">
+                    Book your free first session
+                  </Button>
+                </div>
               </div>
             </div>
           </FadeIn>
         </Container>
-      </Section>
+      </section>
     </>
   );
 }

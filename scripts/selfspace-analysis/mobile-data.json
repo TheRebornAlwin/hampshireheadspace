@@ -1,0 +1,281 @@
+{
+  "bodyFont": "apercu-regular-pro, sans-serif",
+  "bodyBg": "rgb(244, 242, 235)",
+  "bodyColor": "rgb(0, 0, 0)",
+  "uniqueColors": [
+    "rgb(0, 0, 0)",
+    "rgb(244, 242, 235)",
+    "rgb(255, 176, 192)",
+    "rgb(255, 209, 93)",
+    "rgb(255, 255, 255)",
+    "rgb(118, 171, 112)",
+    "rgb(244, 244, 244)",
+    "rgb(0, 0, 0) rgb(0, 0, 0) rgb(244, 244, 244)",
+    "rgb(24, 99, 220)",
+    "rgb(0, 128, 0)",
+    "rgb(33, 33, 33)",
+    "rgb(235, 235, 235)",
+    "rgb(33, 33, 33) rgb(33, 33, 33) rgb(235, 235, 235)",
+    "rgb(208, 213, 210)",
+    "rgb(244, 244, 244) rgb(244, 244, 244) rgb(0, 0, 0)",
+    "rgb(237, 237, 237)",
+    "rgb(41, 60, 91)",
+    "rgb(255, 217, 183)",
+    "rgba(0, 0, 0, 0.5) rgb(0, 0, 0) rgb(0, 0, 0)",
+    "rgba(255, 255, 255, 0)",
+    "rgb(17, 35, 55)",
+    "rgb(17, 35, 55) rgb(17, 35, 55) rgb(0, 0, 0)",
+    "rgba(244, 242, 236, 0.7)",
+    "rgb(244, 242, 235) rgb(244, 242, 235) rgb(255, 255, 255)",
+    "rgb(88, 94, 106)",
+    "rgb(192, 43, 10)",
+    "rgba(255, 255, 255, 0.65)",
+    "rgba(0, 0, 0, 0.5)",
+    "rgb(0, 0, 0) rgba(255, 255, 0, 0.2)",
+    "rgb(34, 34, 34)",
+    "rgb(248, 249, 250)",
+    "rgb(225, 225, 226) rgb(34, 34, 34) rgb(34, 34, 34)"
+  ],
+  "uniqueFonts": [
+    "apercu-regular-pro, sans-serif",
+    "brandon-grotesque, sans-serif",
+    "\"Apercu Pro\", sans-serif",
+    "Times"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "We're all a bit messy"
+    },
+    {
+      "tag": "H2",
+      "text": "Mental maintenance for modern life"
+    },
+    {
+      "tag": "H3",
+      "text": "No waiting lists"
+    },
+    {
+      "tag": "H3",
+      "text": "Personalised matching"
+    },
+    {
+      "tag": "H3",
+      "text": "Whenever, wherever"
+    },
+    {
+      "tag": "H2",
+      "text": "Our spaces"
+    },
+    {
+      "tag": "H3",
+      "text": "Borough, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Greenwich, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Online, Worldwide"
+    },
+    {
+      "tag": "H3",
+      "text": "Kings Cross, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Soho, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Spitalfields, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Borough, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Greenwich, London"
+    },
+    {
+      "tag": "H2",
+      "text": "Our therapists, your choice"
+    },
+    {
+      "tag": "H2",
+      "text": "Pay It Forward"
+    },
+    {
+      "tag": "H2",
+      "text": "Get involved"
+    },
+    {
+      "tag": "H3",
+      "text": "Meet-ups"
+    },
+    {
+      "tag": "H3",
+      "text": "Instagram"
+    },
+    {
+      "tag": "H3",
+      "text": "Swag"
+    },
+    {
+      "tag": "H3",
+      "text": "Newsletter"
+    },
+    {
+      "tag": "H2",
+      "text": "Notebook"
+    },
+    {
+      "tag": "H3",
+      "text": "The Wound to Worldview Pipeline: How Young Men Are Drawn Into the Manosphere"
+    },
+    {
+      "tag": "H3",
+      "text": "What Even Is the Manosphere?"
+    },
+    {
+      "tag": "H3",
+      "text": "The Manosphere Is Quietly Shaping a Generation – And We’re Not Talking About It Enough"
+    },
+    {
+      "tag": "H3",
+      "text": "We've got you"
+    },
+    {
+      "tag": "H3",
+      "text": "Sign up to our newsletter:"
+    }
+  ],
+  "buttons": [
+    "Customise",
+    "Reject All",
+    "Accept All",
+    "Show more",
+    "Necessary",
+    "Functional",
+    "Analytics",
+    "Performance",
+    "Advertisement",
+    "Others",
+    "Accept All",
+    "Save My Preferences",
+    "Reject All",
+    "For Individuals",
+    "Individual Therapy",
+    "Couples Therapy",
+    "Family Therapy",
+    "Group Therapy",
+    "Student Therapy",
+    "Free Intro Sessions",
+    "MOT: Check-in",
+    "MOT: Deep Dive",
+    "Coaching by Self Space",
+    "Reduced Rate Therapy",
+    "Session Types",
+    "Modalities",
+    "Couples Escape with Unplugged",
+    "Open Letters",
+    "For Organisations",
+    "Self Space for Business"
+  ],
+  "images": [
+    {
+      "src": "https://theselfspace.com/wp-content/plugins/webtoffee-cookie-consent/lite/frontend/images/close.svg",
+      "alt": "Close",
+      "w": 10,
+      "h": 10
+    },
+    {
+      "src": "https://theselfspace.com/wp-content/plugins/webtoffee-cookie-consent/lite/frontend/images/webtoffee.svg",
+      "alt": "Webtoffee logo",
+      "w": 174,
+      "h": 20
+    },
+    {
+      "src": "https://theselfspace.com/wp-content/themes/theselfspace/assets/img/icons/svg/icon-account.svg",
+      "alt": "Login | Register",
+      "w": 18,
+      "h": 23
+    },
+    {
+      "src": "https://theselfspace.com/wp-content/uploads/2024/11/gfx-mini-team.png",
+      "alt": "100,000+ therapy sessions completed",
+      "w": 231,
+      "h": 72
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 300,
+      "h": 300
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 389,
+      "h": 300
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 256,
+      "h": 256
+    },
+    {
+      "src": "",
+      "alt": "Business FAQs",
+      "w": 300,
+      "h": 300
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 300,
+      "h": 300
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 300,
+      "h": 300
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 249,
+      "h": 249
+    },
+    {
+      "src": "",
+      "alt": "",
+      "w": 390,
+      "h": 349
+    },
+    {
+      "src": "",
+      "alt": "Tube",
+      "w": 48,
+      "h": 48
+    },
+    {
+      "src": "",
+      "alt": "Self Space Greenwich",
+      "w": 389,
+      "h": 436
+    }
+  ],
+  "title": "Self Space - Everyday Mental Maintenance - Therapist London",
+  "meta": "In a world which can feel a little upside down, it’s not surprising that sometimes we don't feel okay. See how Self Space can help."
+}
