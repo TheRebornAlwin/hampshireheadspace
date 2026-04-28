@@ -65,9 +65,21 @@ export default function HomePage() {
                 </Button>
                 <Link
                   href="#what-its-like"
-                  className="text-[15px] font-medium text-navy/75 underline-offset-4 hover:underline"
+                  className="group inline-flex items-center gap-1.5 text-[15px] font-semibold text-navy underline decoration-navy/40 decoration-2 underline-offset-4 transition-colors hover:decoration-navy"
                 >
                   Or read what the first session is actually like
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5"
+                  >
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                  </svg>
                 </Link>
               </div>
             </FadeIn>
