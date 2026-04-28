@@ -206,136 +206,143 @@ export default function FAQPage() {
 
               <FAQItem question="What if I don&rsquo;t know what to say?">
                 <p>
-                  Most people don&apos;t in their first session. Some cry. Some
-                  apologise for crying. Some sit quietly for a minute before
-                  anything comes out. All of that is okay.
+                  Most people don&rsquo;t in their first session, and
+                  that&rsquo;s completely normal. Some end up crying and then
+                  apologising for crying, others sit quietly for a minute
+                  before anything comes out, and all of it is fine.
                 </p>
                 <p>
-                  You don&apos;t need to prepare. I&apos;ll ask gentle questions
-                  and we will find the thread together.
+                  You don&rsquo;t need to prepare anything beforehand,
+                  I&rsquo;ll just ask gentle questions and we&rsquo;ll find
+                  the thread together.
                 </p>
               </FAQItem>
 
               <FAQItem question="Will you push me to talk about things I&rsquo;m not ready for?">
                 <p>
-                  No. You decide what we look at and how deep we go. If
-                  something feels too much in a session, you can tell me, or
-                  just shake your head, or pause. We can come back to it later
-                  or not at all.
+                  No, you decide what we look at and how deep we go. If
+                  something feels too much during a session you can tell me,
+                  shake your head, or just pause, and we can come back to it
+                  later, or never at all.
                 </p>
               </FAQItem>
 
               <FAQItem question="What if I cry?">
                 <p>
-                  That&apos;s very normal in sessions, especially early ones.
-                  Tissues are right there. You don&apos;t have to apologise.
-                  Crying is often the body&apos;s way of saying &ldquo;at last,
-                  I get to put this down for a minute&rdquo;.
+                  Crying is very normal in sessions, especially early ones,
+                  and the tissues are always right there. You don&rsquo;t need
+                  to apologise either, because crying is often the
+                  body&rsquo;s way of saying &ldquo;at last, I get to put this
+                  down for a minute.&rdquo;
                 </p>
               </FAQItem>
 
               <FAQItem question="What if we don&rsquo;t click?">
                 <p>
-                  The first session is free for exactly this reason. If by the
-                  end you don&apos;t feel I&apos;m the right person, that&apos;s
-                  important information, not a failure. Tell me, or just
-                  don&apos;t book again. I won&apos;t chase you.
+                  That&rsquo;s exactly why the first session is free. If by
+                  the end you don&rsquo;t feel I&rsquo;m the right person,
+                  that&rsquo;s genuinely useful information rather than a
+                  failure, so just tell me or simply don&rsquo;t book again
+                  and I won&rsquo;t chase you about it.
                 </p>
                 <p>
-                  If it would help, I&apos;m happy to point you towards another
-                  counsellor I trust.
+                  If it would help, I&rsquo;m happy to point you towards
+                  another counsellor I trust.
                 </p>
               </FAQItem>
 
               <FAQItem question="What&rsquo;s the difference between a counsellor and a therapist?">
                 <p>
-                  In the UK, the words are often used interchangeably.
-                  Counsellor, therapist, psychotherapist all describe people
-                  trained to do talking therapy.
+                  In the UK the words are often used interchangeably, and
+                  counsellor, therapist, and psychotherapist all describe
+                  people trained to do talking therapy.
                 </p>
                 <p>
-                  What matters more is the person, their training, and their
-                  professional registration. I&apos;m a BACP-registered
-                  counsellor, which means I work to a clear ethical framework
-                  and have regular clinical supervision.
+                  What matters more than the label is the person, their
+                  training, and their professional registration. I&rsquo;m a
+                  BACP-registered counsellor, which means I work to a clear
+                  ethical framework and take regular clinical supervision.
                 </p>
               </FAQItem>
 
               <FAQItem question="How long will it take to feel different?">
                 <p>
-                  Honestly, it varies. Some people notice things shift in the
-                  first few sessions. For others it takes longer because the
-                  load is heavier or older.
+                  Honestly, it varies, with some people noticing things shift
+                  in the first few sessions and others taking longer because
+                  the load is heavier or older.
                 </p>
                 <p>
-                  What I won&apos;t do is promise transformation by week three.
-                  What I will do is show up consistently and pay attention.
+                  I won&rsquo;t promise transformation by week three, but I
+                  will show up consistently and pay close attention.
                 </p>
               </FAQItem>
 
               <FAQItem question="Is everything I say confidential?">
                 <p>
-                  Yes. What you say in the room stays in the room. I take
-                  professional supervision, where I sometimes discuss the work
-                  with another senior counsellor, but you are never named or
-                  identifiable.
+                  Yes, what you say in the room stays in the room. I take
+                  regular professional supervision where I occasionally
+                  discuss the work with another senior counsellor, but
+                  you&rsquo;re never named or identifiable in those
+                  conversations.
                 </p>
                 <p>
-                  The only exception is if I had genuine reason to believe you
-                  or someone else was at serious risk of harm, in which case I
-                  would talk to you first about what to do next.
+                  The only exception is if I had genuine reason to believe
+                  you or someone else was at serious risk of harm, in which
+                  case I would always talk to you first about what to do next.
                 </p>
               </FAQItem>
 
               <FAQItem question="Do you offer online sessions or only in person?">
                 <p>
-                  Both. In person is at the Cranberry Wellbeing Centre in
-                  Eastleigh. Online is by secure video call. Same length, same
-                  attention. Online is £40, in person is £50. The first
-                  session is free either way.
+                  Both. In-person sessions are at the Cranberry Wellbeing
+                  Centre in Eastleigh and online is by secure video call,
+                  with the same length and the same attention either way.
+                  Online sessions are £40, in-person are £50, and the first
+                  session is free in either format.
                 </p>
               </FAQItem>
 
               <FAQItem question="Where is your room and is there parking?">
                 <p>
-                  The Cranberry Wellbeing Centre, Eastleigh, opposite The
-                  Point. There is free parking right outside, no permits or
-                  meters. The building has a small private waiting area inside.
+                  The Cranberry Wellbeing Centre is in central Eastleigh,
+                  opposite The Point, with free parking right outside (no
+                  permits or meters) and a small private waiting area
+                  inside.
                 </p>
               </FAQItem>
 
               <FAQItem question="What if I can&rsquo;t afford £50 a week?">
                 <p>
-                  Please tell me when you message. I keep a small number of
-                  lower-cost spaces. I&apos;d rather you ask than not come at
-                  all.
+                  Please mention it when you message, because I keep a small
+                  number of lower-cost spaces and would much rather you ask
+                  than not come at all.
                 </p>
               </FAQItem>
 
               <FAQItem question="Can my partner or family member come with me?">
                 <p>
                   My main work is one-to-one counselling, so the sessions
-                  themselves are just you and me. If you&apos;d like to bring
-                  someone for moral support to the building, that&apos;s fine.
-                  They can wait nearby while we talk.
+                  themselves are just you and me, but if you&rsquo;d like to
+                  bring someone to the building for moral support that&rsquo;s
+                  completely fine and they can wait nearby while we talk.
                 </p>
               </FAQItem>
 
               <FAQItem question="How do I book the free first session?">
                 <p>
-                  Send me a short message through the{" "}
+                  Send a short message through the{" "}
                   <a className="underline" href="/contact/">
                     contact page
-                  </a>
-                  , or email{" "}
+                  </a>{" "}
+                  or email{" "}
                   <a
                     className="underline"
                     href="mailto:hello@hampshireheadspace.com"
                   >
                     hello@hampshireheadspace.com
                   </a>
-                  . First name is fine. I&apos;ll reply the same day with a
-                  time. The whole thing takes about 90 seconds.
+                  , and a first name is fine. I&rsquo;ll reply the same day
+                  with a time, and the whole thing takes about 90 seconds.
                 </p>
               </FAQItem>
             </div>

@@ -144,17 +144,17 @@ export default function AboutPage() {
             {[
               {
                 t: "Compassion",
-                d: "You&rsquo;re carrying things nobody around you has fully seen. In our hour, you don&rsquo;t have to soften them so I can cope.",
+                d: "You&rsquo;re carrying things that nobody around you has fully seen, and in our hour together you don&rsquo;t have to soften any of it so I can cope.",
                 bg: "bg-soft-blue/15",
               },
               {
                 t: "Connection",
-                d: "Counselling that works isn&rsquo;t a technique done to you. It&rsquo;s a real human noticing what you&rsquo;re saying and what you&rsquo;re not.",
+                d: "Counselling that works is much less a technique being done to you and much more a real human noticing what you&rsquo;re saying, and what you&rsquo;re not quite saying.",
                 bg: "bg-soft-yellow/35",
               },
               {
                 t: "Care",
-                d: "The room is comfortable. Your time starts when you sit down. I take supervision seriously. I don&rsquo;t take you for granted.",
+                d: "The room is comfortable, your time starts properly when you sit down, I take supervision seriously, and I won&rsquo;t take you for granted.",
                 bg: "bg-soft-blue/15",
               },
             ].map((v, i) => (

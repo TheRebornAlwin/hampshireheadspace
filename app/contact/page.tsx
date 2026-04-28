@@ -101,8 +101,8 @@ export default function ContactPage() {
                   </li>
                 </ul>
                 <p className="mt-4 text-sm text-warm-grey">
-                  Email or text. I reply the same day, usually within a few
-                  hours.
+                  Email or text whenever suits you, and I&rsquo;ll reply the
+                  same day, usually within a few hours.
                 </p>
               </div>
 
@@ -154,7 +154,8 @@ export default function ContactPage() {
                   Opposite The Point
                 </address>
                 <p className="mt-3 text-sm text-warm-grey">
-                  Free parking right outside. No permits or meters.
+                  Free parking is right outside, with no permits or meters
+                  to worry about.
                 </p>
                 <div className="mt-5">
                   <ImagePlaceholder

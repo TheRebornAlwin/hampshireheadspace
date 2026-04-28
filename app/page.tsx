@@ -53,8 +53,9 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={160}>
               <p className="mx-auto mt-6 max-w-xl text-pretty text-center text-[17px] leading-relaxed text-navy/85 sm:text-[19px] lg:mx-0 lg:text-left">
-                Private counselling in Eastleigh for people tired of pretending
-                they&apos;re fine. Your first 55-minute session is free.
+                Private counselling in Eastleigh for people who are tired of
+                pretending they&rsquo;re fine, with your first 55-minute session
+                free.
               </p>
             </FadeIn>
             <FadeIn delay={240}>
@@ -216,8 +217,8 @@ export default function HomePage() {
 
           <FadeIn delay={400}>
             <p className="mx-auto mt-12 max-w-2xl text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[22px]">
-              You are not broken. You are exhausted, and you are carrying more
-              than you should be carrying alone.
+              You&rsquo;re not broken, you&rsquo;re exhausted and carrying more
+              than anyone should be carrying alone.
             </p>
           </FadeIn>
 
@@ -251,13 +252,13 @@ export default function HomePage() {
         <Container size="wide">
           <FadeIn>
             <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-              Most counsellors give you a 20-minute call. I give you the full
-              first session, free.
+              Where most counsellors offer a 20-minute call, you get the full
+              first session here, completely free.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-center text-[17px] leading-relaxed text-navy/85">
-              Twenty minutes on the phone is enough to confirm a time. It
-              isn&apos;t enough to know whether you can actually work with
-              someone. Fifty-five minutes, sitting in the room, is.
+              Twenty minutes on the phone barely scratches the surface of
+              whether you can actually work with someone. An hour together in
+              the same room is when you really start to find out.
             </p>
           </FadeIn>
 
@@ -300,9 +301,9 @@ export default function HomePage() {
                 </p>
                 <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy">
                   {[
-                    "55-minute full first session",
-                    "Real work, not a screening call",
-                    "You decide based on what we actually do together",
+                    "A full 55-minute first session",
+                    "An actual counselling hour, not a screening call",
+                    "You decide based on what we do together",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <svg
@@ -381,8 +382,9 @@ export default function HomePage() {
               What the first session is actually like
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-warm-grey">
-              The biggest reason people close the tab is that they don&apos;t
-              know what&apos;s going to happen. So here it is, step by step.
+              Most people close the tab because they don&rsquo;t know
+              what&rsquo;s about to happen, so here&rsquo;s the whole thing,
+              step by step.
             </p>
           </FadeIn>
 
@@ -391,43 +393,43 @@ export default function HomePage() {
               {
                 icon: "arrive",
                 t: "You arrive",
-                d: "Free parking outside, opposite The Point. A small waiting area inside, and I&rsquo;ll come find you.",
+                d: "There&rsquo;s free parking right outside, opposite The Point, and a small waiting area inside where I&rsquo;ll come and find you.",
                 style: "cream",
               },
               {
                 icon: "chair",
                 t: "We walk to the room",
-                d: "Two soft chairs, a window, tissues, water if you&rsquo;d like it. The door closes properly.",
+                d: "Two soft chairs, a window, tissues and a glass of water if you&rsquo;d like one, and the door closes properly behind us.",
                 style: "blue",
               },
               {
                 icon: "speech",
                 t: "We start gently",
-                d: "Usually with: &ldquo;Tell me a bit about what brought you here, when you&rsquo;re ready.&rdquo; No script, no clipboard.",
+                d: "I&rsquo;ll usually open with something like &ldquo;tell me a bit about what brought you here, when you&rsquo;re ready,&rdquo; and we go from there.",
                 style: "yellow",
               },
               {
                 icon: "heart",
-                t: "What’s not expected",
-                d: "Knowing what to say. Sharing everything. Being coherent. You can pause, cry, ask questions, sit in silence.",
+                t: "What&rsquo;s not expected",
+                d: "You don&rsquo;t need to know what to say or share everything, and you certainly don&rsquo;t have to be coherent. Pause, cry, ask things, sit in silence, all of it&rsquo;s welcome.",
                 style: "cream",
               },
               {
                 icon: "lock",
                 t: "What stays between us",
-                d: "Nothing leaves the room. Brief notes, locked, GDPR-compliant. Nothing goes to your GP or insurer unless you ask.",
+                d: "Nothing you say leaves the room, including the brief GDPR-compliant notes I keep, and nothing goes to your GP or insurer unless you specifically ask me to send it.",
                 style: "highlight",
               },
               {
                 icon: "clock",
                 t: "55 minutes, gently landed",
-                d: "I&rsquo;ll let you know when we have ten minutes left, so we can wrap up somewhere that feels okay.",
+                d: "I&rsquo;ll quietly let you know when we&rsquo;ve got ten minutes left so we can wrap up somewhere that feels okay rather than mid-sentence.",
                 style: "blue",
               },
               {
                 icon: "leave",
                 t: "At the end, no pressure",
-                d: "Take a day, take a week. Message if you want to come back, or don&rsquo;t. Either is honestly fine.",
+                d: "Take a day or a week, message me if you&rsquo;d like to come back, and if you wouldn&rsquo;t, that&rsquo;s honestly fine too.",
                 style: "yellow",
               },
             ] as const).map((step, i) => {
@@ -498,9 +500,9 @@ export default function HomePage() {
           <FadeIn delay={550}>
             <div className="mt-12 rounded-xl2 border border-soft-blue/50 bg-soft-yellow/30 p-6 text-center sm:p-7">
               <p className="text-balance text-[17px] leading-relaxed text-navy/90 sm:text-[19px]">
-                If you have read this far, something brought you here. The first
-                session is free. You don&apos;t have to know what to say. You
-                just have to show up.
+                If you&rsquo;ve read this far, something brought you here, and
+                the first session is free, so all you really need to do is
+                show up.
               </p>
               <div className="mt-5 flex justify-center">
                 <Button href="/contact/" size="lg">
@@ -529,19 +531,19 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={120}>
             <h2 className="mx-auto mt-7 max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-              A real person. Paying attention. Not in a rush.
+              Someone real, who actually pays attention.
             </h2>
             <div className="mx-auto mt-5 max-w-prose space-y-4 text-center text-[17px] leading-relaxed text-navy/85">
               <p>
-                I&apos;m Ruth. I run Hampshire HeadSpace from a quiet room at
-                the Cranberry Wellbeing Centre in Eastleigh, working with
-                adults aged 16 and up, neurotypical and neurodiverse, all
-                identities welcome.
+                I&rsquo;m Ruth, and I run Hampshire HeadSpace from a quiet
+                room at the Cranberry Wellbeing Centre in Eastleigh. I work
+                with adults from 16 upwards, neurotypical and neurodiverse,
+                and all identities are welcome.
               </p>
               <p>
-                I&apos;m BACP-registered, fully insured, with an enhanced DBS
-                and regular clinical supervision. The credentials matter, the
-                way I sit with you matters more.
+                I&rsquo;m BACP-registered, fully insured, with an enhanced DBS
+                and regular clinical supervision, although how I sit with you
+                in the room matters far more than any of those.
               </p>
             </div>
             <div className="mt-7 flex justify-center">
@@ -574,22 +576,22 @@ export default function HomePage() {
             {[
               {
                 h: "Sessions",
-                b: "55 minutes. Usually weekly. Short term (6 to 12 sessions) or longer, decided together.",
+                b: "55 minutes, usually weekly, for somewhere between 6 and 12 sessions or longer if it suits you.",
                 accent: "bg-soft-blue/40",
               },
               {
                 h: "Fees",
-                b: "£50 in person. £40 online. First 55-minute session is free.",
+                b: "£50 in person or £40 online, with the first 55-minute session free.",
                 accent: "bg-soft-yellow",
               },
               {
                 h: "Where",
-                b: "Cranberry Wellbeing Centre, Eastleigh. Opposite The Point. Free parking outside.",
+                b: "Cranberry Wellbeing Centre in Eastleigh, opposite The Point, with free parking right outside.",
                 accent: "bg-soft-blue/40",
               },
               {
                 h: "Contact",
-                b: "Email or text. I reply the same day, usually within a few hours.",
+                b: "Email or text, and I&rsquo;ll reply the same day, usually within a few hours.",
                 accent: "bg-soft-yellow",
               },
             ].map((item, i) => (
@@ -602,7 +604,10 @@ export default function HomePage() {
                   <h3 className="mt-4 text-[15px] font-semibold uppercase tracking-wider text-navy/70">
                     {item.h}
                   </h3>
-                  <p className="mt-3 leading-relaxed text-navy/85">{item.b}</p>
+                  <p
+                    className="mt-3 leading-relaxed text-navy/85"
+                    dangerouslySetInnerHTML={{ __html: item.b }}
+                  />
                 </div>
               </FadeIn>
             ))}
@@ -641,20 +646,22 @@ export default function HomePage() {
             <div className="mt-10 rounded-xl2 bg-cream px-2 shadow-soft sm:px-6">
               <FAQItem question="What if my problem isn&rsquo;t big enough?" defaultOpen>
                 <p>
-                  That is one of the most common worries, and a fair one. There
-                  is no threshold to clear. If something is making your weeks
-                  harder than they should be, that is enough.
+                  It&rsquo;s one of the most common worries and a completely
+                  fair one, but there&rsquo;s no threshold to clear: if
+                  something is making your weeks harder than they should be,
+                  that&rsquo;s already enough.
                 </p>
                 <p>
-                  Counselling isn&apos;t only for people in crisis. It&apos;s
-                  also for people who are just tired of feeling like this.
+                  Counselling isn&rsquo;t only for people in crisis, it&rsquo;s
+                  also for people who are quietly tired of feeling like this.
                 </p>
               </FAQItem>
               <FAQItem question="What if I&rsquo;ve tried counselling before and it didn&rsquo;t work?">
                 <p>
-                  A lot of people I see have. Often the issue wasn&apos;t
-                  counselling itself, it was the fit, the time, or six rushed
-                  NHS sessions that ended just as things started to land.
+                  A lot of the people I see have, and often the issue wasn&rsquo;t
+                  counselling itself but the fit, the timing, or six rushed NHS
+                  sessions that ended just as things were starting to land.
+                  None of that means it can&rsquo;t work for you now.
                 </p>
                 <p>
                   The free first session is partly so you can find out, with
@@ -663,25 +670,27 @@ export default function HomePage() {
               </FAQItem>
               <FAQItem question="What if I don&rsquo;t know what to say?">
                 <p>
-                  Most people don&apos;t in their first session. Some cry.
-                  Some apologise for crying. Some sit quietly for a minute
-                  before anything comes out. All of that is okay.
+                  Most people don&rsquo;t in their first session, and
+                  that&rsquo;s completely normal. Some end up crying and then
+                  apologising for crying, others sit quietly for a minute
+                  before anything comes out, and all of it&rsquo;s fine.
                 </p>
                 <p>
-                  You don&apos;t need to prepare. You don&apos;t need a
-                  speech. I&apos;ll ask gentle questions and we&apos;ll find
-                  the thread together.
+                  You don&rsquo;t need to prepare or have a speech ready,
+                  I&rsquo;ll ask gentle questions and we&rsquo;ll find the
+                  thread together.
                 </p>
               </FAQItem>
               <FAQItem question="What if we don&rsquo;t click?">
                 <p>
-                  The first session is free for exactly this reason. If by the
-                  end you don&apos;t feel I&apos;m the right person, that&apos;s
-                  important information, not a failure. Tell me, or just
-                  don&apos;t book again. I won&apos;t chase you.
+                  That&rsquo;s exactly why the first session is free. If by
+                  the end you don&rsquo;t feel I&rsquo;m the right person,
+                  that&rsquo;s genuinely useful information rather than a
+                  failure, so just tell me or simply don&rsquo;t book again
+                  and I won&rsquo;t chase you about it.
                 </p>
                 <p>
-                  If it would help, I&apos;m happy to point you towards
+                  If it would help, I&rsquo;m happy to point you towards
                   another counsellor I trust.
                 </p>
               </FAQItem>
@@ -862,9 +871,9 @@ export default function HomePage() {
                   Booking is the easiest part of this.
                 </h2>
                 <p className="mx-auto mt-5 max-w-lg text-balance text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-                  A short message. I&apos;ll reply the same day with a time.
-                  The first 55 minutes are free. You don&apos;t have to know
-                  what to say.
+                  Send me a short message and I&rsquo;ll get back to you the
+                  same day with a time. Your first 55 minutes are free, and
+                  you don&rsquo;t need to know what to say beforehand.
                 </p>
                 <div className="mt-8 flex justify-center">
                   <Button href="/contact/" size="lg">

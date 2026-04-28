@@ -85,19 +85,19 @@ export default function ServicesPage() {
             {[
               {
                 t: "55 minutes",
-                d: "Each session is just under an hour. We start when you sit down. I let you know gently when we have about ten minutes left so we can land somewhere okay.",
+                d: "Each session is just under an hour, starting properly when you sit down, and I&rsquo;ll quietly let you know when we&rsquo;ve got ten minutes left so we can land somewhere okay rather than mid-sentence.",
               },
               {
                 t: "Usually weekly",
-                d: "Weekly works for most people because it gives the work between us continuity. Some weeks you&rsquo;ll skip. That&rsquo;s fine. We&rsquo;ll find what suits you.",
+                d: "Weekly works for most people because it gives the work some continuity between sessions, but if you need to skip the odd one we&rsquo;ll just figure out what suits you.",
               },
               {
                 t: "Short term or longer",
-                d: "Some people want six to twelve sessions and that&rsquo;s enough. Some stay longer. We decide together based on what you actually want, not on a fixed package.",
+                d: "Six to twelve sessions is enough for some people and some prefer to stay longer, and we&rsquo;ll decide together based on what you actually want rather than a fixed package.",
               },
               {
                 t: "You&rsquo;re in charge",
-                d: "You can pause counselling, change frequency, or stop whenever you want. No tie-in, no contract. I&rsquo;d rather you stay because you choose to.",
+                d: "You can pause counselling, change the frequency, or stop whenever you want, with no tie-in or contract, because I&rsquo;d rather you stay only when it&rsquo;s genuinely your choice.",
               },
             ].map((item, i) => (
               <FadeIn key={item.t} delay={i * 70}>
@@ -133,18 +133,18 @@ export default function ServicesPage() {
               {
                 k: "Free",
                 t: "First session",
-                d: "55 minutes. No obligation to come back. Genuinely free.",
+                d: "A genuinely free 55 minutes, with no obligation to come back if it isn&rsquo;t the right fit.",
                 highlight: true,
               },
               {
                 k: "£50",
                 t: "In person, Eastleigh",
-                d: "55 minutes at the Cranberry Wellbeing Centre.",
+                d: "55 minutes in the room at the Cranberry Wellbeing Centre.",
               },
               {
                 k: "£40",
                 t: "Online",
-                d: "55 minutes by secure video. Same session, your sofa.",
+                d: "55 minutes by secure video, the same session from your own sofa.",
               },
             ].map((row) => (
               <FadeIn key={row.t} delay={80}>
@@ -161,7 +161,10 @@ export default function ServicesPage() {
                   <p className="mt-2 text-[14px] font-semibold uppercase tracking-wider text-navy/70">
                     {row.t}
                   </p>
-                  <p className="mt-3 leading-relaxed text-navy/85">{row.d}</p>
+                  <p
+                    className="mt-3 leading-relaxed text-navy/85"
+                    dangerouslySetInnerHTML={{ __html: row.d }}
+                  />
                 </div>
               </FadeIn>
             ))}
@@ -169,9 +172,10 @@ export default function ServicesPage() {
 
           <FadeIn delay={200}>
             <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-warm-grey">
-              If money is the thing keeping you from booking, please say so when
-              you message. I keep a small number of lower-cost spaces and would
-              rather you ask than not come at all.
+              If money is the thing standing in the way of booking, please
+              mention it when you message, because I keep a small number of
+              lower-cost spaces and would much rather you ask than not come at
+              all.
             </p>
           </FadeIn>
 
