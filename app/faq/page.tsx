@@ -60,7 +60,7 @@ const faqJsonLd = {
     },
     {
       q: "Do you offer online sessions or only in person?",
-      a: "Both. In person is at the Cranberry Wellbeing Centre in Eastleigh. Online is by secure video call. Online is £40, in person is £50. The first session is free either way.",
+      a: "Both. Your first session is online by secure video, which keeps it free of charge, and from there you can continue online or move to in-person sessions at the Cranberry Wellbeing Centre in Eastleigh. Online sessions are £40 and in-person sessions are £50.",
     },
     {
       q: "Where is your room and is there parking?",
@@ -294,11 +294,15 @@ export default function FAQPage() {
 
               <FAQItem question="Do you offer online sessions or only in person?">
                 <p>
-                  Both. In-person sessions are at the Cranberry Wellbeing
-                  Centre in Eastleigh and online is by secure video call,
-                  with the same length and the same attention either way.
-                  Online sessions are £40, in-person are £50, and the first
-                  session is free in either format.
+                  Both. Your first session is online by secure video call,
+                  which keeps it free of charge and easy to fit around your
+                  day, and from there you can choose to continue online or
+                  switch to in-person sessions at the Cranberry Wellbeing
+                  Centre in Eastleigh.
+                </p>
+                <p>
+                  Online sessions are £40 and in-person sessions are £50,
+                  and both are 55 minutes long.
                 </p>
               </FAQItem>
 
@@ -342,7 +346,8 @@ export default function FAQPage() {
                     hello@hampshireheadspace.com
                   </a>
                   , and a first name is fine. I&rsquo;ll reply the same day
-                  with a time, and the whole thing takes about 90 seconds.
+                  with a time and a secure video link, and the whole thing
+                  takes about 60 seconds.
                 </p>
               </FAQItem>
             </div>

@@ -21,8 +21,27 @@ const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
 export default function HomePage() {
   return (
     <>
+      {/* PROMINENT LOGO STRIP — sits above the hero, brand-mark in centre */}
+      <div className="relative pt-6 pb-2 sm:pt-10 sm:pb-4">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6">
+          <FadeIn>
+            <img
+              src="/logo.webp"
+              alt="Hampshire HeadSpace Counselling"
+              width={420}
+              height={236}
+              className="mx-auto h-auto w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[400px]"
+              loading="eager"
+              // @ts-expect-error fetchpriority is valid HTML
+              fetchpriority="high"
+              decoding="async"
+            />
+          </FadeIn>
+        </div>
+      </div>
+
       {/* SECTION 1 — HERO */}
-      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32">
+      <section className="relative overflow-hidden pt-4 pb-12 sm:pt-6 sm:pb-24 lg:pt-8 lg:pb-32">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-16 -left-24 h-72 w-[28rem] opacity-15 animate-drift-slow"
@@ -61,7 +80,7 @@ export default function HomePage() {
             <FadeIn delay={240}>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
                 <Button href="/contact/" size="lg">
-                  Book your free first session
+                  Get in touch
                 </Button>
                 <Link
                   href="#what-its-like"
@@ -89,7 +108,7 @@ export default function HomePage() {
               <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px] lg:justify-start">
                 {[
                   "BACP registered",
-                  "Free first 55-min session",
+                  "Free first 55-min online session",
                   "Same-day reply",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-1.5">
@@ -245,88 +264,22 @@ export default function HomePage() {
         <Container size="wide">
           <FadeIn>
             <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-              Where most counsellors offer a 20-minute call, you get the full
-              first session here, completely free.
+              Your first session is free
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-center text-[17px] leading-relaxed text-navy/85">
-              It&rsquo;s hard to tell from a 20-minute phone call whether you
-              can actually work with a counsellor, which is why I&rsquo;d
-              rather give you a proper hour in the room to find out.
+              The first session is a full 55 minutes, online by secure video,
+              with no obligation to book again afterwards. It&rsquo;s a chance
+              to talk properly and see whether we&rsquo;re a good fit for the
+              work you&rsquo;d like to do.
             </p>
           </FadeIn>
 
-          <FadeIn delay={140}>
-            <div className="mx-auto mt-12 grid max-w-4xl items-stretch gap-5 lg:grid-cols-2">
-              {/* Muted "before" card */}
-              <div className="relative rounded-xl2 border border-warm-grey/25 bg-warm-grey/[0.06] p-6 sm:p-7">
-                <p className="text-[12px] font-semibold uppercase tracking-wider text-warm-grey">
-                  What most counsellors offer
-                </p>
-                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-warm-grey">
-                  {[
-                    "20-minute phone call",
-                    "Confirms availability and admin",
-                    "You decide based on a brief chat",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm-grey/50"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Highlighted "after" card */}
-              <div
-                className="relative rounded-xl2 border-2 border-navy/20 bg-gradient-to-br from-soft-yellow/40 via-cream to-soft-blue/30 p-6 shadow-soft-lg sm:p-7"
-              >
-                <span
-                  aria-hidden="true"
-                  className="absolute -top-3 right-5 rounded-full bg-navy px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-cream"
-                >
-                  What I offer
-                </span>
-                <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/70">
-                  Hampshire HeadSpace
-                </p>
-                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy">
-                  {[
-                    "A full 55-minute first session",
-                    "An actual counselling hour, not a screening call",
-                    "You decide based on what we do together",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <svg
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        className="mt-0.5 h-5 w-5 shrink-0 text-navy"
-                      >
-                        <path
-                          d="M5 12.5l4 4 10-10"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          fill="none"
-                        />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={220}>
+          <FadeIn delay={180}>
             <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-3">
               {[
-                { k: "55 min", v: "the full first session" },
-                { k: "£0", v: "no commitment to come back" },
-                { k: "1:1", v: "in person or online, your choice" },
+                { k: "55 min", v: "a full counselling hour" },
+                { k: "£0", v: "no obligation to come back" },
+                { k: "Online", v: "by secure video, from wherever suits" },
               ].map((item) => (
                 <div
                   key={item.k}
@@ -341,15 +294,10 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={280}>
-            <p className="mx-auto mt-10 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85">
-              If you&apos;ve been on an NHS waiting list for months and
-              quietly lost faith that anything is coming, you don&apos;t have
-              to keep waiting.
-            </p>
-            <div className="mt-6 flex justify-center">
+          <FadeIn delay={260}>
+            <div className="mt-8 flex justify-center">
               <Button href="/contact/" size="md">
-                Book your free first session
+                Get in touch
               </Button>
             </div>
           </FadeIn>
@@ -384,19 +332,19 @@ export default function HomePage() {
           <ol className="mt-12 grid gap-4 sm:grid-cols-2">
             {([
               {
-                icon: "arrive",
-                t: "You arrive",
-                d: "There&rsquo;s free parking right outside, opposite The Point, and a small waiting area inside where I&rsquo;ll come and find you.",
+                icon: "speech",
+                t: "Booking the call",
+                d: "Send me a short message through the contact page or by email, and I&rsquo;ll reply the same day with a time and a secure video link.",
                 style: "cream",
               },
               {
                 icon: "chair",
-                t: "We walk to the room",
-                d: "Two soft chairs, a window, tissues and a glass of water if you&rsquo;d like one, and the door closes properly behind us.",
+                t: "Settling in beforehand",
+                d: "Find somewhere private and reasonably quiet, with headphones if you have them, and a glass of water nearby if you&rsquo;d like one.",
                 style: "blue",
               },
               {
-                icon: "speech",
+                icon: "arrive",
                 t: "We start gently",
                 d: "I&rsquo;ll usually open with something like &ldquo;tell me a bit about what brought you here, when you&rsquo;re ready,&rdquo; and we go from there.",
                 style: "yellow",
@@ -404,13 +352,13 @@ export default function HomePage() {
               {
                 icon: "heart",
                 t: "What you don&rsquo;t have to do",
-                d: "You don&rsquo;t need to know what to say or share everything, and you certainly don&rsquo;t have to be coherent. Pause, cry, ask things, sit in silence, all of it&rsquo;s welcome.",
+                d: "You don&rsquo;t need to know what to say or share everything, and you certainly don&rsquo;t have to be coherent. Pause, cry, ask things, sit quietly, all of it&rsquo;s welcome.",
                 style: "cream",
               },
               {
                 icon: "lock",
                 t: "What stays between us",
-                d: "Nothing you say leaves the room, including the brief GDPR-compliant notes I keep, and nothing goes to your GP or insurer unless you specifically ask me to send it.",
+                d: "Nothing you say leaves our session, including the brief GDPR-compliant notes I keep, and nothing goes to your GP or insurer unless you specifically ask me to send it.",
                 style: "highlight",
               },
               {
@@ -494,12 +442,11 @@ export default function HomePage() {
             <div className="mt-12 rounded-xl2 border border-soft-blue/50 bg-soft-yellow/30 p-6 text-center sm:p-7">
               <p className="text-balance text-[17px] leading-relaxed text-navy/90 sm:text-[19px]">
                 If you&rsquo;ve read this far, something brought you here, and
-                the first session is free, so all you really need to do is
-                show up.
+                the first online session is free.
               </p>
               <div className="mt-5 flex justify-center">
                 <Button href="/contact/" size="lg">
-                  Book your free first session
+                  Get in touch
                 </Button>
               </div>
             </div>
@@ -574,7 +521,7 @@ export default function HomePage() {
               },
               {
                 h: "Fees",
-                b: "£50 in person or £40 online, with the first 55-minute session free.",
+                b: "£50 in person or £40 online, with the first 55-minute online session free.",
                 accent: "bg-soft-yellow",
               },
               {
@@ -739,10 +686,10 @@ export default function HomePage() {
                   tone: "yellow" as const,
                   quote: (
                     <>
-                      &ldquo;I&rsquo;d been on the NHS waiting list for
-                      months and lost faith. Booked the free session at half
-                      eleven at night. Best decision I&rsquo;ve made in ages,
-                      no exaggeration.&rdquo;
+                      &ldquo;I&rsquo;d been telling myself I&rsquo;d sort it
+                      out on my own for months. Booked the free session at
+                      half eleven at night. Best decision I&rsquo;ve made in
+                      ages, no exaggeration.&rdquo;
                     </>
                   ),
                   attribution: "Jo",
@@ -817,9 +764,9 @@ export default function HomePage() {
                   tone: "yellow" as const,
                   quote: (
                     <>
-                      &ldquo;My GP put me on antidepressants but said the NHS
-                      wait was 9 months. Found Ruth, started the next week.
-                      Such a relief honestly.&rdquo;
+                      &ldquo;Was waiting and waiting for proper support and
+                      it just wasn&rsquo;t coming. Found Ruth, started the
+                      next week. Such a relief honestly.&rdquo;
                     </>
                   ),
                   attribution: "Catherine",
@@ -1050,16 +997,17 @@ export default function HomePage() {
               <div className="relative rounded-[28px] bg-cream p-8 text-center shadow-soft-lg sm:p-12">
                 <ChairsIllustration className="mx-auto mb-6 h-auto w-full max-w-[260px] sm:max-w-xs" />
                 <h2 className="text-balance text-[1.85rem] font-bold leading-[1.1] tracking-tight text-navy sm:text-[2.4rem]">
-                  Booking is the easiest part of this.
+                  Getting in touch only takes 60 seconds.
                 </h2>
                 <p className="mx-auto mt-5 max-w-lg text-balance text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
                   Send me a short message and I&rsquo;ll get back to you the
-                  same day with a time. Your first 55 minutes are free, and
-                  you don&rsquo;t need to know what to say beforehand.
+                  same day with a time. Your first 55-minute online session
+                  is free, and you don&rsquo;t need to know what to say
+                  beforehand.
                 </p>
                 <div className="mt-8 flex justify-center">
                   <Button href="/contact/" size="lg">
-                    Book your free first session
+                    Get in touch
                   </Button>
                 </div>
               </div>

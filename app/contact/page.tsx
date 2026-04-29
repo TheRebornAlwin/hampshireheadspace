@@ -15,7 +15,7 @@ import Testimonial from "@/components/Testimonial";
 export const metadata: Metadata = {
   title: "Contact and booking",
   description:
-    "Book your free first session in about 90 seconds. No long forms. I reply the same day.",
+    "Getting in touch only takes 60 seconds. Your first 55-minute session is online and free.",
   alternates: { canonical: "/contact" },
 };
 
@@ -38,11 +38,11 @@ export default function ContactPage() {
           </FadeIn>
           <FadeIn delay={120}>
             <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              Booking takes about 90 seconds.
+              Getting in touch only takes 60 seconds.
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              No long form, no questionnaire. Just a few details so I know how
-              to reach you. The first 55-minute session is free.
+              Just a few details so I know how to reach you. Your first
+              55-minute session is online and free.
             </p>
           </FadeIn>
         </Container>
@@ -112,9 +112,9 @@ export default function ContactPage() {
                 </h3>
                 <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/90">
                   {[
-                    "You send your details. (You're here. This is the hard part.)",
-                    "I reply the same day to confirm a time that works for you.",
-                    "You come in for your free 55-minute first session.",
+                    "You send your details. (You're here, this is the hard part.)",
+                    "I reply the same day with a time and a secure video link.",
+                    "We meet for your free 55-minute first session, online.",
                   ].map((s, i) => (
                     <li key={i} className="flex gap-3">
                       <span

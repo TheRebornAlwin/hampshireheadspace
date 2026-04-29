@@ -273,7 +273,7 @@ export default function AboutPage() {
 
           <FadeIn delay={200}>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button href="/contact/">Book your free first session</Button>
+              <Button href="/contact/">Get in touch</Button>
               <Button href="/services/" variant="secondary">
                 See services and fees
               </Button>

@@ -132,8 +132,8 @@ export default function ServicesPage() {
             {[
               {
                 k: "Free",
-                t: "First session",
-                d: "A genuinely free 55 minutes, with no obligation to come back if it isn&rsquo;t the right fit.",
+                t: "First online session",
+                d: "A genuinely free 55 minutes by secure video, with no obligation to come back if it isn&rsquo;t the right fit.",
                 highlight: true,
               },
               {
@@ -228,7 +228,7 @@ export default function ServicesPage() {
                   "Separation",
                   "Bereavement",
                   "OCD",
-                  "Dark thoughts you’re scared to say out loud",
+                  "Thoughts you are scared to say out loud",
                   "Long-term health issues",
                   "Burnout",
                   "Life in general",
@@ -264,12 +264,12 @@ export default function ServicesPage() {
                 Ready when you are.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-navy/85">
-                The first session costs nothing and tells you almost everything
-                you need to know.
+                The first online session is free and tells you almost
+                everything you need to know about whether we&rsquo;re a fit.
               </p>
               <div className="mt-7 flex justify-center">
                 <Button href="/contact/" size="lg">
-                  Book your free first session
+                  Get in touch
                 </Button>
               </div>
             </div>
