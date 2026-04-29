@@ -129,25 +129,6 @@ export default function HomePage() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute top-6 -right-4 grid h-10 w-10 place-items-center rounded-xl2 bg-cream text-navy shadow-soft sm:h-12 sm:w-12"
-                  style={{ animation: "floatSoft 14s ease-in-out 1s infinite" }}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" />
-                    <path d="M3 13h18a1 1 0 0 1 1 1v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a1 1 0 0 1 1-1Z" />
-                    <path d="M5 19v2M19 19v2" />
-                  </svg>
-                </div>
-                <div
-                  aria-hidden="true"
                   className="absolute -bottom-2 -left-3 h-12 w-12 rounded-full bg-soft-blue-strong/80 shadow-soft sm:h-16 sm:w-16"
                   style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
                 />
