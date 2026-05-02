@@ -4,7 +4,7 @@ import LegalPage from "@/components/LegalPage";
 export const metadata: Metadata = {
   title: "Cookie policy",
   description:
-    "Hampshire HeadSpace doesn't use any tracking or advertising cookies. The plain-English version of why.",
+    "Hampshire Headspace doesn't use any tracking or advertising cookies. The plain-English version of why.",
   alternates: { canonical: "/cookies" },
 };
 
@@ -18,7 +18,7 @@ export default function CookiePolicyPage() {
       <section>
         <h2 className="text-xl font-semibold text-navy">No tracking, no advertising</h2>
         <p>
-          Hampshire HeadSpace doesn&apos;t use Google Analytics, Facebook
+          Hampshire Headspace doesn&apos;t use Google Analytics, Facebook
           Pixel, advertising cookies, or any third-party tracking system. I&apos;m
           not interested in following you around the internet, and you
           shouldn&apos;t have to dismiss a cookie banner just to read about

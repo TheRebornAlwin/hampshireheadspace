@@ -127,7 +127,7 @@ export default function Page() {
       <h2 className="mt-8 text-xl font-semibold text-navy">How long it lasts</h2>
       <p>
         The standard length is fifty minutes (the &ldquo;therapy hour&rdquo;)
-        though some practices, including Hampshire HeadSpace, run
+        though some practices, including Hampshire Headspace, run
         fifty-five-minute sessions to give a small extra cushion. The
         counsellor will let you know gently when there&apos;s ten minutes
         left, so you can land somewhere that feels okay rather than getting

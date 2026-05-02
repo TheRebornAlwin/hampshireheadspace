@@ -28,7 +28,7 @@ export default function BookingForm() {
       bestTime: fd.get("bestTime"),
     };
     // eslint-disable-next-line no-console
-    console.log("[Hampshire HeadSpace] booking form submission (placeholder):", payload);
+    console.log("[Hampshire Headspace] booking form submission (placeholder):", payload);
     setSubmitted(true);
   }
 

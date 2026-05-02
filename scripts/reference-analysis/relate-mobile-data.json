@@ -1,0 +1,110 @@
+{
+  "bodyFont": "\"Work Sans\", sans-serif",
+  "bodyBg": "rgba(211, 200, 239, 0.2)",
+  "uniqueColors": [
+    "rgb(0, 0, 0)",
+    "rgba(211, 200, 239, 0.2)",
+    "rgb(39, 51, 49)",
+    "rgb(255, 127, 131)",
+    "rgb(255, 255, 255)",
+    "rgb(33, 37, 41)",
+    "rgb(66, 60, 85)",
+    "rgb(249, 249, 249)",
+    "rgb(51, 51, 51)",
+    "rgb(253, 158, 80)",
+    "rgb(214, 208, 167)",
+    "rgba(0, 0, 0, 0.5)",
+    "rgb(118, 51, 51)",
+    "rgb(250, 213, 211)",
+    "rgb(38, 23, 30)",
+    "rgb(85, 85, 85)",
+    "rgb(249, 255, 250)",
+    "rgb(242, 241, 241)",
+    "rgb(56, 96, 190)",
+    "rgb(244, 244, 244)",
+    "rgb(101, 101, 101)",
+    "rgb(106, 170, 228)",
+    "rgb(102, 153, 204)"
+  ],
+  "uniqueFonts": [
+    "RelateGalanoSemiBold, Helvetica, Arial, sans-serif",
+    "RelateGalanoBold, Helvetica, Arial, sans-serif",
+    "\"Work Sans\", sans-serif"
+  ],
+  "headings": [
+    {
+      "tag": "H2",
+      "text": "Main navigation"
+    },
+    {
+      "tag": "H2",
+      "text": "User account menu"
+    },
+    {
+      "tag": "H1",
+      "text": "My child is st|"
+    },
+    {
+      "tag": "H3",
+      "text": "Try a toolkit at home"
+    },
+    {
+      "tag": "H3",
+      "text": "Talk to a counsellor"
+    },
+    {
+      "tag": "H3",
+      "text": "One-session therapy"
+    },
+    {
+      "tag": "H3",
+      "text": "Book a counselling session"
+    },
+    {
+      "tag": "H3",
+      "text": "Access free counselling"
+    },
+    {
+      "tag": "H2",
+      "text": "Our take on some common problems"
+    },
+    {
+      "tag": "H3",
+      "text": "Menopause and relationships toolkit"
+    },
+    {
+      "tag": "H3",
+      "text": "Forming new relationships after loss"
+    },
+    {
+      "tag": "H3",
+      "text": "Stumbling blocks in new relationships"
+    },
+    {
+      "tag": "H3",
+      "text": "Repairing family relationships"
+    },
+    {
+      "tag": "H3",
+      "text": "Talking about fertility"
+    },
+    {
+      "tag": "H2",
+      "text": "Footer additional"
+    },
+    {
+      "tag": "H2",
+      "text": "Privacy Preference Center"
+    },
+    {
+      "tag": "H3",
+      "text": "Manage Consent Preferences"
+    },
+    {
+      "tag": "H3",
+      "text": "Back"
+    }
+  ],
+  "title": "Home | Relate",
+  "meta": "Relate offers counselling services for every type of relationship nationwide. We provide advice on marriage, LGBT issues, divorce and parenting."
+}

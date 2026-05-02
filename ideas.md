@@ -1,4 +1,4 @@
-# Hampshire HeadSpace, Ideas Backlog
+# Hampshire Headspace, Ideas Backlog
 
 Things to consider before launch or in v2. Not blockers, but worth keeping front-of-mind.
 
@@ -26,7 +26,7 @@ Things to consider before launch or in v2. Not blockers, but worth keeping front
 
 ## Content / SEO
 
-- **Local SEO citations.** Get Hampshire HeadSpace listed on Counselling Directory, Psychology Today UK, BACP Therapist Directory, Welldoing, Yelp UK, Google Business Profile.
+- **Local SEO citations.** Get Hampshire Headspace listed on Counselling Directory, Psychology Today UK, BACP Therapist Directory, Welldoing, Yelp UK, Google Business Profile.
 - **Google Business Profile.** Free, hugely valuable for "counsellor near me" searches.
 - **More articles, slowly.** The current `/blog` has 10 articles. Add 2-3 more per quarter with locally-targeted SEO terms.
 - **Article topics worth writing later:** "Counselling for men", "Burnout vs depression", "When your child needs counselling, not you", "Couples counselling vs individual: when to choose which".
@@ -64,7 +64,7 @@ Things to consider before launch or in v2. Not blockers, but worth keeping front
 
 ## Partnership / referral ideas
 
-- **Reach out to local GPs in Eastleigh / Chandler's Ford** to introduce Hampshire HeadSpace as a private alternative they can mention to patients on the NHS waiting list.
+- **Reach out to local GPs in Eastleigh / Chandler's Ford** to introduce Hampshire Headspace as a private alternative they can mention to patients on the NHS waiting list.
 - **Reach out to local school WhatsApp / mum groups.** Subtle, helpful presence not promotional spam.
 - **Mind Hampshire / local Mind branches.** They sometimes refer when their own services are full.
 

@@ -60,14 +60,14 @@ const faqJsonLd = {
     },
     {
       q: "Do you offer online sessions or only in person?",
-      a: "Both. Your first session is online by secure video, which keeps it free of charge, and from there you can continue online or move to in-person sessions at the Cranberry Wellbeing Centre in Eastleigh. Online sessions are £40 and in-person sessions are £50.",
+      a: "Both. Your first session is online by secure video, which keeps it free of charge, and from there you can continue online or move to in-person sessions at the Cranberry Wellbeing Centre in Eastleigh. Online sessions are £45 and in-person sessions are £55.",
     },
     {
       q: "Where is your room and is there parking?",
       a: "The Cranberry Wellbeing Centre, Eastleigh, opposite The Point. There is free parking right outside, no permits or meters.",
     },
     {
-      q: "What if I can't afford £50 a week?",
+      q: "What if I can't afford £55 a week?",
       a: "Please tell me when you message. I keep a small number of lower-cost spaces.",
     },
     {
@@ -301,7 +301,7 @@ export default function FAQPage() {
                   Centre in Eastleigh.
                 </p>
                 <p>
-                  Online sessions are £40 and in-person sessions are £50,
+                  Online sessions are £45 and in-person sessions are £55,
                   and both are 55 minutes long.
                 </p>
               </FAQItem>
@@ -315,7 +315,7 @@ export default function FAQPage() {
                 </p>
               </FAQItem>
 
-              <FAQItem question="What if I can&rsquo;t afford £50 a week?">
+              <FAQItem question="What if I can&rsquo;t afford £55 a week?">
                 <p>
                   Please mention it when you message, because I keep a small
                   number of lower-cost spaces and would much rather you ask

@@ -1,4 +1,4 @@
-# Hampshire HeadSpace
+# Hampshire Headspace
 
 Marketing site for Ruth's private counselling practice in Eastleigh, Hampshire.
 
@@ -130,4 +130,4 @@ next.config.mjs        # static export config
 
 ## License
 
-Private. All rights reserved by Ruth and Hampshire HeadSpace.
+Private. All rights reserved by Ruth and Hampshire Headspace.

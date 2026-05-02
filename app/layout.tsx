@@ -9,8 +9,8 @@ const SITE_URL = "https://hampshireheadspace.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hampshire HeadSpace, Private Counselling in Eastleigh",
-    template: "%s | Hampshire HeadSpace",
+    default: "Hampshire Headspace, Private Counselling in Eastleigh",
+    template: "%s | Hampshire Headspace",
   },
   description:
     "Private counselling in Eastleigh, Hampshire. Your first 55-minute session is free. BACP-registered, calm, real, and entirely yours.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "counselling Chandlers Ford",
     "anxiety counsellor Southampton",
   ],
-  authors: [{ name: "Ruth, Hampshire HeadSpace" }],
+  authors: [{ name: "Ruth, Hampshire Headspace" }],
   alternates: {
     canonical: "/",
   },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: SITE_URL,
-    siteName: "Hampshire HeadSpace",
-    title: "Hampshire HeadSpace, Private Counselling in Eastleigh",
+    siteName: "Hampshire Headspace",
+    title: "Hampshire Headspace, Private Counselling in Eastleigh",
     description:
       "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh. Your first 55-minute session is free.",
     images: [
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Hampshire HeadSpace logo",
+        alt: "Hampshire Headspace logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hampshire HeadSpace, Private Counselling in Eastleigh",
+    title: "Hampshire Headspace, Private Counselling in Eastleigh",
     description:
       "Private counselling in Eastleigh. Your first 55-minute session is free.",
     images: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Hampshire HeadSpace",
+  name: "Hampshire Headspace",
   description:
     "Private counselling in Eastleigh, Hampshire. BACP-registered counsellor offering individual sessions in person and online. First session free.",
   url: SITE_URL,

@@ -9,12 +9,12 @@ export default function Footer() {
         <div className="space-y-4">
           <Link
             href="/"
-            aria-label="Hampshire HeadSpace, home"
+            aria-label="Hampshire Headspace, home"
             className="inline-block"
           >
             <img
               src={LOGO_URL}
-              alt="Hampshire HeadSpace Counselling"
+              alt="Hampshire Headspace Counselling"
               className="mx-auto h-24 w-auto sm:h-28 md:mx-0"
               width={200}
               height={112}
@@ -54,11 +54,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a className="hover:text-navy" href="tel:+447446136611">
-                07446 136611
+              <a className="hover:text-navy" href="tel:+447843114396">
+                07843 114396
               </a>
               <span className="ml-1 text-xs text-warm-grey-light">
-                (text or call)
+                (text)
               </span>
             </li>
           </ul>
@@ -76,7 +76,7 @@ export default function Footer() {
 
       <div className="border-t border-navy/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 py-6 text-center text-xs text-warm-grey-light sm:flex-row sm:items-center sm:px-6 sm:text-left">
-          <p>© {new Date().getFullYear()} Hampshire HeadSpace. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Hampshire Headspace. All rights reserved.</p>
           <p>
             If you are in crisis, please call the Samaritans on 116 123 (free, 24/7).
           </p>

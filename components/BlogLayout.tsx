@@ -35,7 +35,7 @@ export default function BlogLayout({
           ← All articles
         </Link>
         <p className="mt-6 text-[13px] font-semibold uppercase tracking-wider text-navy/60">
-          Hampshire HeadSpace · Articles
+          Hampshire Headspace · Articles
         </p>
         <h1 className="mt-3 text-balance text-[2rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem]">
           {title}
@@ -58,7 +58,7 @@ export default function BlogLayout({
             Want to talk to someone properly?
           </h2>
           <p className="mt-3 leading-relaxed text-navy/85">
-            Hampshire HeadSpace is private counselling in Eastleigh. The first
+            Hampshire Headspace is private counselling in Eastleigh. The first
             55-minute session is free, with no pressure to come back if it
             isn&apos;t the right fit.
           </p>

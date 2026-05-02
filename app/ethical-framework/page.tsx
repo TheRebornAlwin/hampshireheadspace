@@ -4,7 +4,7 @@ import LegalPage from "@/components/LegalPage";
 export const metadata: Metadata = {
   title: "Ethical framework",
   description:
-    "The ethical framework Hampshire HeadSpace works to. Plain English version of the BACP standards.",
+    "The ethical framework Hampshire Headspace works to. Plain English version of the BACP standards.",
   alternates: { canonical: "/ethical-framework" },
 };
 
@@ -18,7 +18,7 @@ export default function EthicalFrameworkPage() {
       <section>
         <h2 className="text-xl font-semibold text-navy">The framework I work to</h2>
         <p>
-          Hampshire HeadSpace operates in line with the British Association
+          Hampshire Headspace operates in line with the British Association
           for Counselling and Psychotherapy&apos;s Ethical Framework for the
           Counselling Professions. That&apos;s the document UK counsellors
           commit to as a condition of registration, and you can read the full

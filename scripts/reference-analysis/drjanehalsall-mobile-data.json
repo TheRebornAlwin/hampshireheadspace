@@ -1,0 +1,147 @@
+{
+  "bodyFont": "Lato",
+  "bodyBg": "rgb(255, 255, 255)",
+  "uniqueColors": [
+    "rgb(0, 0, 0)",
+    "rgb(255, 255, 255)",
+    "rgb(119, 119, 119)",
+    "rgb(0, 86, 167)",
+    "rgb(33, 33, 33)",
+    "rgb(24, 99, 220)",
+    "rgb(0, 128, 0)",
+    "rgb(244, 244, 244)",
+    "rgb(38, 169, 163)",
+    "rgb(255, 123, 56)",
+    "rgb(87, 74, 66)",
+    "rgb(68, 68, 68)",
+    "rgb(46, 46, 46)",
+    "rgb(65, 56, 51)",
+    "rgb(255, 97, 16)",
+    "rgb(255, 215, 0)",
+    "rgb(163, 162, 158)",
+    "rgba(0, 0, 0, 0.2)",
+    "rgb(195, 195, 195)",
+    "rgba(0, 0, 0, 0.75)",
+    "rgba(255, 255, 255, 0.9)",
+    "rgb(64, 139, 209)",
+    "rgb(221, 240, 238)",
+    "rgb(35, 40, 45)",
+    "rgb(54, 54, 54)",
+    "rgb(255, 96, 16)",
+    "rgb(246, 250, 249)",
+    "rgba(34, 34, 34, 0.6)",
+    "rgb(242, 242, 242)",
+    "rgb(254, 97, 16)",
+    "rgb(34, 34, 34)",
+    "rgb(253, 253, 253)",
+    "rgb(118, 118, 118)"
+  ],
+  "uniqueFonts": [
+    "Lato",
+    "\"Dancing Script\""
+  ],
+  "headings": [
+    {
+      "tag": "H3",
+      "text": "Listen."
+    },
+    {
+      "tag": "H3",
+      "text": "Resolve."
+    },
+    {
+      "tag": "H3",
+      "text": "Understand."
+    },
+    {
+      "tag": "H3",
+      "text": "Listen."
+    },
+    {
+      "tag": "H3",
+      "text": "Resolve."
+    },
+    {
+      "tag": "H3",
+      "text": "Understand."
+    },
+    {
+      "tag": "H2",
+      "text": "Private Counselling And Psychotherapy London and Dubai"
+    },
+    {
+      "tag": "H2",
+      "text": "Dr Jane Halsall"
+    },
+    {
+      "tag": "H2",
+      "text": "Services"
+    },
+    {
+      "tag": "H2",
+      "text": "Depression"
+    },
+    {
+      "tag": "H2",
+      "text": "Anxiety"
+    },
+    {
+      "tag": "H2",
+      "text": "Trauma"
+    },
+    {
+      "tag": "H2",
+      "text": "Co-Dependency"
+    },
+    {
+      "tag": "H2",
+      "text": "Self-Esteem"
+    },
+    {
+      "tag": "H2",
+      "text": "Bereavement"
+    },
+    {
+      "tag": "H2",
+      "text": "Addictions"
+    },
+    {
+      "tag": "H2",
+      "text": "ADHD Assessment"
+    },
+    {
+      "tag": "H2",
+      "text": "How Does It Work?"
+    },
+    {
+      "tag": "H2",
+      "text": "Call Us"
+    },
+    {
+      "tag": "H2",
+      "text": "Discovery"
+    },
+    {
+      "tag": "H2",
+      "text": "Meeting"
+    },
+    {
+      "tag": "H2",
+      "text": "Integrative Therapies Offered"
+    },
+    {
+      "tag": "H2",
+      "text": "Person Centered Therapy"
+    },
+    {
+      "tag": "H2",
+      "text": "Cognitive Based Therapy (CBT)"
+    },
+    {
+      "tag": "H2",
+      "text": "Psychodynamic Therapy"
+    }
+  ],
+  "title": "Private Counselling London | Private Psychotherapy London | Dr Jane Halsall",
+  "meta": "London based counselling and psychotherapy service for individuals and families. Get in touch today to discuss how we can help you."
+}

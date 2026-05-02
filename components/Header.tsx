@@ -44,13 +44,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
         <Link
           href="/"
-          aria-label="Hampshire HeadSpace, home"
+          aria-label="Hampshire Headspace, home"
           className="flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
           <img
             src={LOGO_URL}
-            alt="Hampshire HeadSpace Counselling"
+            alt="Hampshire Headspace Counselling"
             className="h-12 w-auto sm:h-14"
             width={120}
             height={56}

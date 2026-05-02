@@ -135,7 +135,7 @@ export default function Page() {
         The hybrid option
       </h2>
       <p>
-        Many private counsellors, including Hampshire HeadSpace, offer
+        Many private counsellors, including Hampshire Headspace, offer
         both. A common pattern is to do the first session in person, then
         most subsequent sessions online with the occasional in-person
         check-in. That keeps the relational depth of the first

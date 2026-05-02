@@ -4,7 +4,7 @@ import LegalPage from "@/components/LegalPage";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description:
-    "How Hampshire HeadSpace handles your personal information, in plain English. UK GDPR compliant.",
+    "How Hampshire Headspace handles your personal information, in plain English. UK GDPR compliant.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -13,12 +13,12 @@ export default function PrivacyPolicyPage() {
     <LegalPage
       title="Privacy policy"
       updated="April 2026"
-      intro="This page explains what information Hampshire HeadSpace collects, why, and what happens to it. Plain English, no jargon. If anything here is unclear, please get in touch and I'll explain properly."
+      intro="This page explains what information Hampshire Headspace collects, why, and what happens to it. Plain English, no jargon. If anything here is unclear, please get in touch and I'll explain properly."
     >
       <section>
         <h2 className="text-xl font-semibold text-navy">Who I am</h2>
         <p>
-          Hampshire HeadSpace is a private counselling practice run by Ruth in
+          Hampshire Headspace is a private counselling practice run by Ruth in
           Eastleigh, Hampshire. For data protection purposes I am the data
           controller of any personal information you share with me.
         </p>

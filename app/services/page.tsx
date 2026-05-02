@@ -13,7 +13,7 @@ import Testimonial from "@/components/Testimonial";
 export const metadata: Metadata = {
   title: "Services & Fees",
   description:
-    "Individual counselling for adults, in person in Eastleigh or online. £50 per session, £40 online, first 55-minute session free.",
+    "Individual counselling for adults, in person in Eastleigh or online. £55 per session, £45 online, first 55-minute session free.",
   alternates: { canonical: "/services" },
 };
 
@@ -137,12 +137,12 @@ export default function ServicesPage() {
                 highlight: true,
               },
               {
-                k: "£50",
+                k: "£55",
                 t: "In person, Eastleigh",
                 d: "55 minutes in the room at the Cranberry Wellbeing Centre.",
               },
               {
-                k: "£40",
+                k: "£45",
                 t: "Online",
                 d: "55 minutes by secure video, the same session from your own sofa.",
               },
@@ -185,7 +185,7 @@ export default function ServicesPage() {
                 variant="inline"
                 quote={
                   <>
-                    &ldquo;Felt selfish spending £50 a week on me when the
+                    &ldquo;Felt selfish spending £55 a week on me when the
                     house needs new carpets. Six months in and i&rsquo;m a
                     different mum. Honestly best money i&rsquo;ve ever spent.
                     Carpets can wait.&rdquo;
@@ -218,20 +218,22 @@ export default function ServicesPage() {
                 {[
                   "Anxiety",
                   "Depression",
+                  "Stress and overwhelm",
                   "Panic attacks",
-                  "Anger",
-                  "Self-esteem",
-                  "Sadness",
-                  "Loneliness",
-                  "Family issues",
-                  "Relationships",
-                  "Separation",
-                  "Bereavement",
-                  "OCD",
-                  "Thoughts you are scared to say out loud",
-                  "Long-term health issues",
-                  "Burnout",
-                  "Life in general",
+                  "Anger and emotional regulation",
+                  "Low self-esteem and confidence",
+                  "Low mood and sadness",
+                  "Loneliness and isolation",
+                  "Family and friendship difficulties",
+                  "Relationship difficulties",
+                  "Separation and divorce",
+                  "Loss and bereavement",
+                  "Identity-related concerns",
+                  "Life transitions and adjustment",
+                  "Work-related stress and burnout",
+                  "Obsessive Compulsive Disorder (OCD)",
+                  "Suicidal thoughts",
+                  "Long-term health conditions",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -241,9 +243,12 @@ export default function ServicesPage() {
                   </span>
                 ))}
               </div>
-              <p className="mt-6 text-center leading-relaxed text-navy/85">
-                Counselling isn&apos;t only for those with a specific issue. It
-                can also be helpful for anyone who wants to learn more about
+              <p className="mt-6 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
+                There is no issue too big or too small.
+              </p>
+              <p className="mt-3 text-center leading-relaxed text-navy/80">
+                Therapy is not only for those with specific issues. It can also
+                be helpful for anyone who would like to learn more about
                 themselves and their relationships.
               </p>
             </div>

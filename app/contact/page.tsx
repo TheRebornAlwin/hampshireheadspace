@@ -91,18 +91,19 @@ export default function ContactPage() {
                   <li>
                     <a
                       className="font-medium underline-offset-4 hover:underline"
-                      href="tel:+447446136611"
+                      href="tel:+447843114396"
                     >
-                      07446 136611
+                      07843 114396
                     </a>
                     <span className="ml-1 text-warm-grey-light">
-                      (text or call)
+                      (text)
                     </span>
                   </li>
                 </ul>
                 <p className="mt-4 text-sm text-warm-grey">
-                  Email or text whenever suits you, and I&rsquo;ll reply the
-                  same day, usually within a few hours.
+                  Please email or leave a text mentioning how you would like to
+                  be contacted, and I will usually get back to you on the same
+                  day.
                 </p>
               </div>
 

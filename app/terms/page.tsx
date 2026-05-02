@@ -4,7 +4,7 @@ import LegalPage from "@/components/LegalPage";
 export const metadata: Metadata = {
   title: "Terms of service",
   description:
-    "The terms under which Hampshire HeadSpace counselling sessions are offered. Plain English.",
+    "The terms under which Hampshire Headspace counselling sessions are offered. Plain English.",
   alternates: { canonical: "/terms" },
 };
 
@@ -13,7 +13,7 @@ export default function TermsPage() {
     <LegalPage
       title="Terms of service"
       updated="April 2026"
-      intro="These terms cover the practical agreement between Hampshire HeadSpace and clients. They're meant to make things clear, not to be lawyerly. If anything is unclear, please ask."
+      intro="These terms cover the practical agreement between Hampshire Headspace and clients. They're meant to make things clear, not to be lawyerly. If anything is unclear, please ask."
     >
       <section>
         <h2 className="text-xl font-semibold text-navy">What I offer</h2>
@@ -28,7 +28,7 @@ export default function TermsPage() {
       <section>
         <h2 className="text-xl font-semibold text-navy">Fees and payment</h2>
         <p>
-          Sessions after the free first session are £50 in person and £40
+          Sessions after the free first session are £55 in person and £45
           online. Payment is per session, by bank transfer or contactless card,
           on the day. There are no upfront packages and no minimum number of
           sessions to commit to.

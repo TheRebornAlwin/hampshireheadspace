@@ -36,53 +36,65 @@ export default function AboutPage() {
         </div>
         <Container>
           <FadeIn>
-            <ImagePlaceholder
-              label="Ruth, Hampshire HeadSpace"
-              ratio="square"
-              className="mx-auto max-w-[200px] rounded-full"
-            />
+            <div className="relative mx-auto w-[210px] sm:w-[240px]">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
+              />
+              <img
+                src="/ruth-headshot.webp"
+                alt="Ruth, the counsellor at Hampshire Headspace"
+                width={480}
+                height={480}
+                className="relative h-auto w-full rounded-full object-cover shadow-soft-lg ring-2 ring-cream"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
           </FadeIn>
           <FadeIn delay={120}>
-            <h1 className="mx-auto mt-7 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              I&apos;m Ruth. I sit with people and pay attention.
+            <h1 className="mx-auto mt-8 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+              I&apos;m Ruth.
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              I run Hampshire HeadSpace from a quiet room at the Cranberry
-              Wellbeing Centre in Eastleigh, working with adults across
-              Hampshire, in person and online.
+              Compassion, connection and care are important to me, so I base
+              my practice on these principles.
             </p>
           </FadeIn>
         </Container>
       </section>
 
-      {/* WHY I DO THIS WORK */}
+      {/* ABOUT ME — Ruth's exact copy */}
       <Section tone="cream" spacing="tight">
         <Container>
           <FadeIn>
-            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              Why I do this work
-            </h2>
-          </FadeIn>
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-8 max-w-prose space-y-4 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+            <div className="mx-auto max-w-prose space-y-5 text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
-                I came to counselling the long way round, after years of working
-                in roles where I spent most of my time listening to people who
-                were quietly running on empty, without anyone trained to actually
-                help them with what they were carrying. I kept thinking, someone
-                should sit down with these people properly, and eventually I
-                decided that someone might as well be me.
+                I am fully qualified as a humanistic counsellor. I am registered
+                with the BACP (British Association of Counselling and
+                Psychotherapy) and I am committed to offering a confidential
+                and ethical service.
               </p>
               <p>
-                I trained because I&apos;d been on the other side of the room
-                myself, and I know what a difference it makes when the person
-                opposite you is genuinely paying attention rather than waiting
-                for their turn to talk.
+                I engage in regular supervision and training to support my own
+                knowledge and professional development.
               </p>
               <p>
-                I&apos;m here for the people who&apos;ve been holding it
-                together for everyone else, and who&apos;ve quietly run out of
-                room to hold it together for themselves.
+                I am fully insured and hold an enhanced DBS certificate.
+              </p>
+              <p>
+                I offer individual counselling sessions for people aged 16 and
+                over. I welcome neurotypical and neurodiverse clients, as well
+                as individuals from all cultural backgrounds, sexual
+                orientations, and gender identities.
+              </p>
+              <p>
+                I have plentiful experience in the school of life and of
+                working across the charity and private practice sectors.
               </p>
             </div>
           </FadeIn>
@@ -99,32 +111,29 @@ export default function AboutPage() {
         <Container>
           <FadeIn>
             <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              At your pace. Without a script.
+              At your pace.
             </h2>
           </FadeIn>
 
           <FadeIn delay={120}>
             <div className="mx-auto mt-8 max-w-prose space-y-4 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
-                I work with you at your pace. I don&apos;t push, I don&apos;t
-                rush, and I will never make you feel like a checklist. The
-                first session especially is yours to use however you want, and
-                you can talk a lot, talk a little, or sit quietly. None of
-                those are wrong.
+                I work with you at your pace. The first session especially is
+                yours to use however you want, and you can talk a lot, talk a
+                little, or sit quietly. None of those are wrong.
               </p>
               <p>
-                In practice my approach is integrative, which is a slightly
-                bookish way of saying I don&apos;t treat everyone the same.
-                Some weeks we&apos;ll spend the whole session on one thing
-                that surfaced out of nowhere, and other weeks we&apos;ll work
+                My approach is humanistic, grounded in compassion, connection
+                and care. That means I&apos;ll meet you as a whole person
+                rather than a problem to be solved, and we&apos;ll work
+                together at the pace that suits you.
+              </p>
+              <p>
+                Some weeks we&apos;ll spend the whole session on something that
+                surfaced out of nowhere, and other weeks we&apos;ll move
                 steadily through something we&apos;ve been circling for a
                 while. The frame stays the same, the work flexes around what
-                you actually bring through the door.
-              </p>
-              <p>
-                What that looks like in the room is a real conversation,
-                grounded in person-centred values, with practical tools woven
-                in when they&apos;d genuinely help.
+                you bring through the door.
               </p>
             </div>
           </FadeIn>
@@ -200,41 +209,57 @@ export default function AboutPage() {
         <Container>
           <FadeIn>
             <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              And, because it matters too: I&apos;m qualified to do this work.
+              Qualifications and registration.
             </h2>
           </FadeIn>
 
-          <FadeIn delay={120}>
-            <ul className="mx-auto mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
-              {[
-                "BACP registered",
-                "Fully insured for practice",
-                "Enhanced DBS check",
-                "Regular clinical supervision",
-              ].map((c) => (
-                <li
-                  key={c}
-                  className="flex items-start gap-3 rounded-xl2 bg-cream p-4 text-[15px] text-navy/85 shadow-soft"
-                >
-                  <svg
-                    className="mt-0.5 h-5 w-5 shrink-0 text-navy"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
+          <FadeIn delay={100}>
+            <div className="mx-auto mt-8 grid max-w-4xl gap-5 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] md:items-stretch">
+              <div className="flex items-center justify-center rounded-xl2 bg-white p-6 shadow-soft sm:p-8">
+                <img
+                  src="/bacp-logo.webp"
+                  alt="BACP registered member 418989, MBACP"
+                  width={520}
+                  height={232}
+                  className="h-auto w-full max-w-[420px]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {[
+                  "BACP registered (member 418989)",
+                  "Humanistic counsellor",
+                  "Fully insured for practice",
+                  "Enhanced DBS check",
+                  "Regular clinical supervision",
+                  "Ongoing CPD and training",
+                ].map((c) => (
+                  <li
+                    key={c}
+                    className="flex items-start gap-3 rounded-xl2 bg-cream p-4 text-[15px] text-navy/85 shadow-soft"
                   >
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
-                    <path
-                      d="M8.5 12.5l2.5 2.5 5-6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span>{c}</span>
-                </li>
-              ))}
-            </ul>
+                    <svg
+                      className="mt-0.5 h-5 w-5 shrink-0 text-navy"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+                      <path
+                        d="M8.5 12.5l2.5 2.5 5-6"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </FadeIn>
         </Container>
       </Section>
