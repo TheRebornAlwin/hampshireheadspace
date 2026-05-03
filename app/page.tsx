@@ -89,11 +89,14 @@ export default function HomePage() {
             <FadeIn delay={300}>
               <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px] lg:justify-start">
                 {[
-                  "BACP registered",
-                  "Free first 55-min online session",
-                  "Same-day reply",
+                  { t: "BACP registered" },
+                  { t: "Free first 55-min online session" },
+                  { t: "Same-day reply", smOnly: true },
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-1.5">
+                  <li
+                    key={item.t}
+                    className={`items-center gap-1.5 ${item.smOnly ? "hidden sm:flex" : "flex"}`}
+                  >
                     <svg
                       aria-hidden="true"
                       viewBox="0 0 20 20"
@@ -108,7 +111,7 @@ export default function HomePage() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <span className="font-medium">{item}</span>
+                    <span className="font-medium">{item.t}</span>
                   </li>
                 ))}
               </ul>
@@ -579,7 +582,7 @@ export default function HomePage() {
                 className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
               />
               <img
-                src="/ruth-headshot.webp"
+                src="/ruth-headshot.webp?v=5"
                 alt="Ruth, the counsellor at Hampshire Headspace"
                 width={520}
                 height={520}

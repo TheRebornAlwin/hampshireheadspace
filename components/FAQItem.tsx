@@ -17,7 +17,7 @@ export default function FAQItem({ question, children, defaultOpen = false }: Pro
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-navy-deep"
+        className="flex w-full flex-col items-center gap-3 py-5 text-center transition-colors hover:text-navy-deep sm:flex-row sm:justify-between sm:gap-4 sm:text-left"
       >
         <span className="text-[17px] font-medium text-navy sm:text-[18px]">
           {question}
