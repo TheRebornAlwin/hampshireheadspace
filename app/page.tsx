@@ -49,7 +49,7 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={80}>
               <h1 className="text-balance text-[2rem] font-bold leading-[1.08] tracking-tight text-navy sm:text-[2.6rem] lg:text-[3.05rem]">
-                <Typewriter text="Life is a journey, and sometimes the journey is easier when someone walks with you." />
+                <Typewriter text="Life is a journey, and sometimes the journey is easier when someone walks with you :)" />
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
