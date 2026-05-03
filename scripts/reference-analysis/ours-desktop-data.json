@@ -1,0 +1,150 @@
+{
+  "bodyFont": "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif",
+  "bodyBg": "rgb(251, 250, 247)",
+  "uniqueColors": [
+    "rgb(0, 0, 0)",
+    "rgb(251, 250, 247)",
+    "rgb(42, 61, 95)",
+    "rgba(251, 250, 247, 0.85)",
+    "rgb(107, 114, 128)",
+    "rgba(42, 61, 95, 0.8)",
+    "rgba(251, 250, 247, 0.95)",
+    "rgba(42, 61, 95, 0.85)",
+    "rgba(246, 233, 178, 0.6)",
+    "rgba(42, 61, 95, 0.75)",
+    "rgb(246, 233, 178)",
+    "rgba(122, 168, 204, 0.8)",
+    "rgb(255, 176, 192)",
+    "rgba(167, 197, 227, 0.15)",
+    "rgba(42, 61, 95, 0.55)",
+    "rgba(246, 233, 178, 0.4)",
+    "rgba(122, 168, 204, 0.4)",
+    "rgb(138, 142, 151)",
+    "rgba(167, 197, 227, 0.4)",
+    "rgba(246, 233, 178, 0.35)",
+    "rgba(246, 233, 178, 0.3)",
+    "rgba(42, 61, 95, 0.9)",
+    "rgba(246, 233, 178, 0.55)",
+    "rgba(167, 197, 227, 0.25)",
+    "rgba(42, 61, 95, 0.7)",
+    "rgba(167, 197, 227, 0.3)",
+    "rgba(167, 197, 227, 0.2)",
+    "rgba(122, 168, 204, 0.55)",
+    "rgb(255, 217, 183)",
+    "rgb(117, 117, 117)"
+  ],
+  "uniqueFonts": [
+    "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Life is a journey, and sometimes the journey is easier when someone walks with you."
+    },
+    {
+      "tag": "H2",
+      "text": "Life can be difficult, and I understand that."
+    },
+    {
+      "tag": "H2",
+      "text": "You already know."
+    },
+    {
+      "tag": "H2",
+      "text": "A space to slow down and connect with yourself."
+    },
+    {
+      "tag": "H2",
+      "text": "Your first session is free"
+    },
+    {
+      "tag": "H2",
+      "text": "What the first session is actually like"
+    },
+    {
+      "tag": "H3",
+      "text": "Booking the call"
+    },
+    {
+      "tag": "H3",
+      "text": "Settling in beforehand"
+    },
+    {
+      "tag": "H3",
+      "text": "We start gently"
+    },
+    {
+      "tag": "H3",
+      "text": "What you don&rsquo;t have to do"
+    },
+    {
+      "tag": "H3",
+      "text": "What stays between us"
+    },
+    {
+      "tag": "H3",
+      "text": "55 minutes, gently landed"
+    },
+    {
+      "tag": "H3",
+      "text": "At the end, no pressure"
+    },
+    {
+      "tag": "H2",
+      "text": "I’m Ruth."
+    },
+    {
+      "tag": "H3",
+      "text": "Compassion."
+    },
+    {
+      "tag": "H3",
+      "text": "Connection."
+    },
+    {
+      "tag": "H3",
+      "text": "Care."
+    },
+    {
+      "tag": "H2",
+      "text": "Counselling can support people experiencing…"
+    },
+    {
+      "tag": "H2",
+      "text": "Everything you might want to know upfront."
+    },
+    {
+      "tag": "H3",
+      "text": "Sessions"
+    },
+    {
+      "tag": "H3",
+      "text": "Fees"
+    },
+    {
+      "tag": "H3",
+      "text": "Where"
+    },
+    {
+      "tag": "H3",
+      "text": "Contact"
+    },
+    {
+      "tag": "H2",
+      "text": "The questions almost everyone asks"
+    },
+    {
+      "tag": "H2",
+      "text": "People who weren't sure either, until they were."
+    },
+    {
+      "tag": "H2",
+      "text": "May I encourage you to take that first step with me today?"
+    }
+  ],
+  "imageCount": 4,
+  "sectionCount": 14,
+  "totalTextLength": 13102,
+  "scrollHeight": 11441,
+  "title": "Hampshire Headspace, Private Counselling in Eastleigh"
+}

@@ -4,7 +4,7 @@ type Props = {
   children: ReactNode;
   className?: string;
   id?: string;
-  tone?: "cream" | "blue" | "yellow";
+  tone?: "cream" | "blue" | "yellow" | "blue-strong" | "yellow-strong";
   spacing?: "default" | "tight";
 };
 
@@ -12,6 +12,8 @@ const tones = {
   cream: "bg-cream",
   blue: "bg-soft-blue/15",
   yellow: "bg-soft-yellow/35",
+  "blue-strong": "bg-soft-blue/45",
+  "yellow-strong": "bg-soft-yellow/75",
 };
 
 const spacings = {

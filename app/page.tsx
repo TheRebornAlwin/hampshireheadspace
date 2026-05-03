@@ -15,6 +15,7 @@ import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Testimonial from "@/components/Testimonial";
+import Typewriter from "@/components/Typewriter";
 
 const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
 
@@ -48,7 +49,7 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={80}>
               <h1 className="text-balance text-[2rem] font-bold leading-[1.08] tracking-tight text-navy sm:text-[2.6rem] lg:text-[3.05rem]">
-                Life is a journey, and sometimes the journey is easier when someone walks with you.
+                <Typewriter text="Life is a journey, and sometimes the journey is easier when someone walks with you." />
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
@@ -155,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 1.5 — CAN TALKING HELP? (Ruth's exact copy) */}
-      <Section tone="blue" spacing="default" className="relative overflow-hidden">
+      <Section tone="blue-strong" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-4rem] h-44 w-72 opacity-25 animate-drift-slow"
@@ -170,25 +171,41 @@ export default function HomePage() {
             </h2>
           </FadeIn>
           <FadeIn delay={120}>
-            <div className="mx-auto mt-7 max-w-prose space-y-5 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+            <div className="mx-auto mt-7 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
               <p>
                 At times we may all struggle with stresses, strains, challenges,
-                difficulties, loss and change. In a fast changing and sometimes
-                confusing world many of us may struggle to feel connected; with
-                ourselves, with others and within society, and during these
-                times it can be helpful to talk about our thoughts, our feelings
-                and our emotions. We can&rsquo;t always cope on our own and at
-                times may need additional support. The therapeutic relationship
-                aims to give that support.
+                difficulties, loss and change.
               </p>
               <p>
+                In a fast changing and sometimes confusing world many of us may
+                struggle to feel connected; with ourselves, with others and
+                within society. During these times it can be helpful to talk
+                about our thoughts, our feelings and our emotions.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
+              We can&rsquo;t always cope on our own, and at times may need additional support.
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] uppercase tracking-[0.16em] text-navy/55">
+              The therapeutic relationship aims to give that support
+            </p>
+          </FadeIn>
+          <FadeIn delay={280}>
+            <div className="mx-auto mt-10 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+              <p>
                 Beginning therapy and choosing a therapist can be challenging.
+              </p>
+              <p>
                 I offer a space which is safe, welcoming, and non-judgmental in
-                which you can feel secure and supported. A space where there are
-                no expectations. We will work together at a pace that suits you,
-                and we will build a trusting relationship, so that you can work
-                through any difficulties or challenges that you are
-                experiencing.
+                which you can feel secure and supported. A space where there
+                are no expectations.
+              </p>
+              <p>
+                We will work together at a pace that suits you, and we will
+                build a trusting relationship, so that you can work through any
+                difficulties or challenges that you are experiencing.
               </p>
             </div>
           </FadeIn>
@@ -306,24 +323,37 @@ export default function HomePage() {
             </h2>
           </FadeIn>
           <FadeIn delay={120}>
-            <div className="mx-auto mt-7 max-w-prose space-y-5 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+            <div className="mx-auto mt-7 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
               <p>
-                Counselling can provide you with an opportunity to slow down and
-                connect with yourself, to grow and to develop so that you may
-                live with more ease and less strain. During counselling it is
-                likely that you will become more self-aware. You may begin to
-                recognise behaviours and cycles of responding which are no
-                longer helpful, or you may become more able to let go of
-                outdated ideas of yourself or others. You may come to terms with
-                what harms you at the same time as embracing more of what brings
-                joy and fulfilment. The counselling experience can be a freeing
-                journey that will enable you to love, care, nourish and respect
-                yourself, just as you are.
+                Counselling can provide you with an opportunity to slow down
+                and connect with yourself, to grow and to develop so that you
+                may live with more ease and less strain.
               </p>
               <p>
-                While you cannot always choose what happens in your life, you do
-                have a degree of choice and freedom over how you respond. The
-                more clarity you have about how you behave and respond to
+                During counselling it is likely that you will become more
+                self-aware. You may begin to recognise behaviours and cycles of
+                responding which are no longer helpful, or become more able to
+                let go of outdated ideas of yourself or others.
+              </p>
+              <p>
+                You may come to terms with what harms you, at the same time as
+                embracing more of what brings joy and fulfilment.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={220}>
+            <p className="mx-auto mt-9 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
+              A freeing journey that will enable you to love, care, nourish and respect yourself, just as you are.
+            </p>
+          </FadeIn>
+          <FadeIn delay={300}>
+            <div className="mx-auto mt-9 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+              <p>
+                While you cannot always choose what happens in your life, you
+                do have a degree of choice and freedom over how you respond.
+              </p>
+              <p>
+                The more clarity you have about how you behave and respond to
                 life&rsquo;s challenges, the more you can take ownership and
                 move towards a life that is in line with your fundamental
                 values.
@@ -334,7 +364,7 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 3 — MECHANISM */}
-      <Section tone="blue" className="relative overflow-hidden">
+      <Section tone="blue-strong" className="relative overflow-hidden">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute top-8 left-[-5rem] h-40 w-80 opacity-30 animate-drift-slow"
@@ -430,7 +460,7 @@ export default function HomePage() {
               },
               {
                 icon: "heart",
-                t: "What you don&rsquo;t have to do",
+                t: "What you don’t have to do",
                 d: "You don&rsquo;t need to know what to say or share everything, and you certainly don&rsquo;t have to be coherent. Pause, cry, ask things, sit quietly, all of it&rsquo;s welcome.",
                 style: "cream",
               },
@@ -533,11 +563,11 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* SECTION 5 — ABOUT ME (Ruth's exact copy + headshot) */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+      {/* SECTION 5 — ABOUT ME (slim intro on home; full bio lives on About) */}
+      <Section tone="cream" spacing="tight" className="relative overflow-hidden">
         <WaveLines
           variant="blue"
-          className="pointer-events-none absolute inset-x-0 top-10 h-12 opacity-60"
+          className="pointer-events-none absolute inset-x-0 top-6 h-12 opacity-60"
         />
         <Sparkles className="pointer-events-none absolute top-10 right-[6%] h-24 w-40 opacity-60 animate-twinkle" />
         <Container>
@@ -547,8 +577,7 @@ export default function HomePage() {
             </p>
           </FadeIn>
           <FadeIn delay={80}>
-            <div className="relative mx-auto mt-5 w-[230px] sm:w-[260px]">
-              {/* Soft accent ring behind the portrait */}
+            <div className="relative mx-auto mt-5 w-[210px] sm:w-[240px]">
               <div
                 aria-hidden="true"
                 className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
@@ -569,29 +598,14 @@ export default function HomePage() {
             </div>
           </FadeIn>
           <FadeIn delay={140}>
-            <h2 className="mx-auto mt-8 max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
+            <h2 className="mx-auto mt-7 max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
               I&rsquo;m Ruth.
             </h2>
-            <div className="mx-auto mt-5 max-w-prose space-y-4 text-center text-[17px] leading-relaxed text-navy/85">
-              <p>
-                Compassion, connection and care are important to me, so I base
-                my practice on these principles.
-              </p>
-              <p>
-                I am fully qualified as a humanistic counsellor, registered with
-                the BACP (British Association of Counselling and Psychotherapy),
-                and committed to offering a confidential and ethical service.
-              </p>
-              <p>
-                I have plentiful experience in the school of life and of working
-                across the charity and private practice sectors. I offer
-                individual sessions for people aged 16 and over, and welcome
-                neurotypical and neurodiverse clients, as well as individuals
-                from all cultural backgrounds, sexual orientations, and gender
-                identities.
-              </p>
-            </div>
-            <div className="mt-7 flex justify-center">
+            <p className="mx-auto mt-4 max-w-xl text-center text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+              Compassion, connection and care are important to me, so I base
+              my practice on these principles.
+            </p>
+            <div className="mt-6 flex justify-center">
               <Button href="/about/" variant="secondary" size="md">
                 More about Ruth
               </Button>
@@ -601,7 +615,7 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 5.5 — COMPASSION. CONNECTION. CARE. (modeled on Dr Jane Halsall's triple) */}
-      <Section tone="blue" spacing="default" className="relative overflow-hidden">
+      <Section tone="yellow-strong" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-8 right-[-4rem] h-36 w-72 opacity-30 animate-drift-slow"
@@ -699,7 +713,7 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 6 — PRACTICAL INFO */}
-      <Section tone="blue" className="relative overflow-hidden">
+      <Section tone="blue-strong" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-8 right-[10%] h-32 w-60 opacity-40 animate-drift-slow"
@@ -854,7 +868,7 @@ export default function HomePage() {
       </Section>
 
       {/* SECTION 7.5 — TESTIMONIALS BAND */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+      <Section tone="yellow" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute top-4 left-[-4rem] h-32 w-72 opacity-20 animate-drift-slow"

@@ -1,0 +1,149 @@
+{
+  "bodyFont": "apercu-regular-pro, sans-serif",
+  "bodyBg": "rgb(244, 242, 235)",
+  "uniqueColors": [
+    "rgb(0, 0, 0)",
+    "rgb(244, 242, 235)",
+    "rgb(255, 176, 192)",
+    "rgb(255, 209, 93)",
+    "rgb(255, 255, 255)",
+    "rgb(118, 171, 112)",
+    "rgb(24, 99, 220)",
+    "rgb(0, 128, 0)",
+    "rgb(244, 244, 244)",
+    "rgb(33, 33, 33)",
+    "rgb(208, 213, 210)",
+    "rgb(237, 237, 237)",
+    "rgb(41, 60, 91)",
+    "rgb(255, 217, 183)",
+    "rgba(255, 255, 255, 0)",
+    "rgb(17, 35, 55)",
+    "rgba(244, 242, 236, 0.7)",
+    "rgb(88, 94, 106)",
+    "rgb(192, 43, 10)",
+    "rgba(255, 255, 255, 0.65)",
+    "rgba(0, 0, 0, 0.5)",
+    "rgb(34, 34, 34)",
+    "rgb(248, 249, 250)"
+  ],
+  "uniqueFonts": [
+    "apercu-regular-pro, sans-serif",
+    "brandon-grotesque, sans-serif",
+    "\"Apercu Pro\", sans-serif"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "We're all a bit messy"
+    },
+    {
+      "tag": "H2",
+      "text": "Mental maintenance for modern life"
+    },
+    {
+      "tag": "H3",
+      "text": "No waiting lists"
+    },
+    {
+      "tag": "H3",
+      "text": "Personalised matching"
+    },
+    {
+      "tag": "H3",
+      "text": "Whenever, wherever"
+    },
+    {
+      "tag": "H2",
+      "text": "Our spaces"
+    },
+    {
+      "tag": "H3",
+      "text": "Borough, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Greenwich, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Online, Worldwide"
+    },
+    {
+      "tag": "H3",
+      "text": "Kings Cross, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Soho, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Spitalfields, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Borough, London"
+    },
+    {
+      "tag": "H3",
+      "text": "Greenwich, London"
+    },
+    {
+      "tag": "H2",
+      "text": "Our therapists, your choice"
+    },
+    {
+      "tag": "H2",
+      "text": "Pay It Forward"
+    },
+    {
+      "tag": "H2",
+      "text": "Get involved"
+    },
+    {
+      "tag": "H3",
+      "text": "Meet-ups"
+    },
+    {
+      "tag": "H3",
+      "text": "Instagram"
+    },
+    {
+      "tag": "H3",
+      "text": "Swag"
+    },
+    {
+      "tag": "H3",
+      "text": "Newsletter"
+    },
+    {
+      "tag": "H2",
+      "text": "Notebook"
+    },
+    {
+      "tag": "H3",
+      "text": "The Wound to Worldview Pipeline: How Young Men Are Drawn Into the Manosphere"
+    },
+    {
+      "tag": "H3",
+      "text": "What Even Is the Manosphere?"
+    },
+    {
+      "tag": "H3",
+      "text": "The Manosphere Is Quietly Shaping a Generation – And We’re Not Talking About It Enough"
+    },
+    {
+      "tag": "H3",
+      "text": "We've got you"
+    },
+    {
+      "tag": "H3",
+      "text": "Sign up to our newsletter:"
+    }
+  ],
+  "imageCount": 44,
+  "sectionCount": 2,
+  "totalTextLength": 5007,
+  "scrollHeight": 13521,
+  "title": "Self Space - Everyday Mental Maintenance - Therapist London"
+}
