@@ -72,7 +72,7 @@ export default function AboutPage() {
       <Section tone="cream" spacing="tight">
         <Container>
           <FadeIn>
-            <div className="mx-auto max-w-prose space-y-5 text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+            <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
                 I am fully qualified as a humanistic counsellor. I am registered
                 with the BACP (British Association of Counselling and

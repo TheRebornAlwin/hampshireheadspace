@@ -7,7 +7,7 @@ import sharp from "sharp";
 const input = "public/ruth-headshot-original.png";
 const meta = await sharp(input).metadata();
 const size = meta.width;
-const yOffset = Math.min(meta.height - size, 110);
+const yOffset = Math.min(meta.height - size, 200);
 
 await sharp(input)
   .extract({ left: 0, top: yOffset, width: size, height: size })

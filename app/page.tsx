@@ -497,13 +497,13 @@ export default function HomePage() {
                   <li
                     className={`h-full rounded-xl2 p-5 shadow-soft sm:p-6 ${card}`}
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex flex-col items-center gap-3 text-center">
                       <div
                         className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl2 text-navy ${iconBg}`}
                       >
                         <StepIcon name={step.icon} className="h-5 w-5" />
                       </div>
-                      <div className="flex-1">
+                      <div>
                         <p className="text-[12px] font-semibold uppercase tracking-wider text-navy/55">
                           Step {i + 1}
                         </p>
