@@ -152,8 +152,7 @@ export default function ContactPage() {
                   Opposite The Point
                 </address>
                 <p className="mt-3 text-sm text-warm-grey">
-                  Free parking is right outside, with no permits or meters
-                  to worry about.
+                  Free parking is right outside!
                 </p>
                 <div className="mt-5">
                   <ImagePlaceholder
