@@ -57,7 +57,7 @@ export default function HomePage() {
               <p className="mx-auto mt-6 max-w-xl text-pretty text-center text-[17px] leading-relaxed text-navy/85 sm:text-[19px] lg:mx-0 lg:text-left">
                 Private counselling in Eastleigh for adults who&rsquo;d like a
                 calmer, kinder way through. Your first 55-minute online session
-                is free.
+                is free!
               </p>
             </FadeIn>
             <FadeIn delay={240}>
