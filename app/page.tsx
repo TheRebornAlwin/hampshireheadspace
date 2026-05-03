@@ -164,9 +164,6 @@ export default function HomePage() {
               label="A wide Hampshire scene — Lakeside Country Park, Itchen Way, or similar"
               ratio="wide"
             />
-            <p className="mx-auto mt-3 max-w-xl text-center text-xs text-warm-grey-light">
-              Goes here once Ruth sends a calming local landscape — sets the &ldquo;real place&rdquo; feel before the page goes into prose.
-            </p>
           </FadeIn>
         </Container>
       </section>
@@ -627,9 +624,6 @@ export default function HomePage() {
                 label="Ruth in the counselling room — warmer than the studio shot"
                 ratio="landscape"
               />
-              <p className="mt-3 text-center text-xs text-warm-grey-light">
-                A second Ruth photo, taken in the room, looking off-camera — sits below the headshot here to humanise the section.
-              </p>
             </div>
           </FadeIn>
         </Container>
@@ -746,24 +740,14 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={120}>
             <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
-              <div>
-                <ImagePlaceholder
-                  label="The counselling room — two soft chairs, a window, a box of tissues"
-                  ratio="landscape"
-                />
-                <p className="mt-2 text-center text-xs text-warm-grey-light">
-                  Photo #1: the room itself, wide shot, natural window light.
-                </p>
-              </div>
-              <div>
-                <ImagePlaceholder
-                  label="Cranberry Wellbeing Centre, from the street, opposite The Point"
-                  ratio="landscape"
-                />
-                <p className="mt-2 text-center text-xs text-warm-grey-light">
-                  Photo #2: the building exterior — trust + location proof.
-                </p>
-              </div>
+              <ImagePlaceholder
+                label="The counselling room — two soft chairs, a window, a box of tissues"
+                ratio="landscape"
+              />
+              <ImagePlaceholder
+                label="Cranberry Wellbeing Centre, from the street, opposite The Point"
+                ratio="landscape"
+              />
             </div>
           </FadeIn>
         </Container>
