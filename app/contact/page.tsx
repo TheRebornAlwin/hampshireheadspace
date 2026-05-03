@@ -132,6 +132,7 @@ export default function ContactPage() {
 
               <Testimonial
                 tone="cream"
+                className="!h-auto"
                 quote={
                   <>
                     &ldquo;Sending the first message was the scariest part.

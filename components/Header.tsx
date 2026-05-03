@@ -9,7 +9,7 @@ const LOGO_URL = "/logo.webp";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about/", label: "About Ruth" },
-  { href: "/services/", label: "Services & Fees" },
+  { href: "/services/", label: "Services" },
   { href: "/faq/", label: "FAQ" },
   { href: "/contact/", label: "Contact" },
 ];

@@ -32,7 +32,7 @@ export default function Footer() {
           <ul className="space-y-2 text-warm-grey">
             <li><Link className="hover:text-navy" href="/">Home</Link></li>
             <li><Link className="hover:text-navy" href="/about/">About Ruth</Link></li>
-            <li><Link className="hover:text-navy" href="/services/">Services & Fees</Link></li>
+            <li><Link className="hover:text-navy" href="/services/">Services</Link></li>
             <li><Link className="hover:text-navy" href="/faq/">FAQ</Link></li>
             <li><Link className="hover:text-navy" href="/contact/">Contact</Link></li>
             <li><Link className="hover:text-navy" href="/blog/">Articles</Link></li>

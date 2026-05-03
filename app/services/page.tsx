@@ -11,7 +11,7 @@ import Mountains from "@/components/illustrations/Mountains";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Services & Fees",
+  title: "Services",
   description:
     "Individual counselling for adults, in person in Eastleigh or online. £55 per session, £45 online, first 55-minute session free.",
   alternates: { canonical: "/services" },

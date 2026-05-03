@@ -13,6 +13,7 @@ import StepIcon from "@/components/illustrations/StepIcon";
 import WaveLines from "@/components/illustrations/WaveLines";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Testimonial from "@/components/Testimonial";
 import Typewriter from "@/components/Typewriter";
 import Expandable from "@/components/Expandable";
@@ -156,6 +157,21 @@ export default function HomePage() {
             </FadeIn>
           </div>
         </div>
+      </section>
+
+      {/* IMAGE BREAK — Hampshire / Eastleigh scene (placeholder for Ruth's photo #4) */}
+      <section className="relative overflow-hidden bg-cream pb-10 sm:pb-14">
+        <Container size="wide">
+          <FadeIn>
+            <ImagePlaceholder
+              label="A wide Hampshire scene — Lakeside Country Park, Itchen Way, or similar"
+              ratio="wide"
+            />
+            <p className="mx-auto mt-3 max-w-xl text-center text-xs text-warm-grey-light">
+              Goes here once Ruth sends a calming local landscape — sets the &ldquo;real place&rdquo; feel before the page goes into prose.
+            </p>
+          </FadeIn>
+        </Container>
       </section>
 
       {/* SECTION 1.5 — CAN TALKING HELP? (preview + expandable) */}
@@ -606,6 +622,19 @@ export default function HomePage() {
               </Button>
             </div>
           </FadeIn>
+
+          {/* Ruth-in-the-room placeholder (warmer photo #3) */}
+          <FadeIn delay={220}>
+            <div className="mx-auto mt-10 max-w-3xl">
+              <ImagePlaceholder
+                label="Ruth in the counselling room — warmer than the studio shot"
+                ratio="landscape"
+              />
+              <p className="mt-3 text-center text-xs text-warm-grey-light">
+                A second Ruth photo, taken in the room, looking off-camera — sits below the headshot here to humanise the section.
+              </p>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
@@ -707,6 +736,42 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* WHERE YOU'LL FIND ME — image grid (placeholders for room + exterior) */}
+      <Section tone="cream" spacing="tight" className="relative overflow-hidden">
+        <Container size="wide">
+          <FadeIn>
+            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+              Where you&rsquo;ll find me
+            </p>
+            <h2 className="mx-auto mt-4 max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[1.9rem]">
+              The Cranberry Wellbeing Centre, Eastleigh.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={120}>
+            <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
+              <div>
+                <ImagePlaceholder
+                  label="The counselling room — two soft chairs, a window, a box of tissues"
+                  ratio="landscape"
+                />
+                <p className="mt-2 text-center text-xs text-warm-grey-light">
+                  Photo #1: the room itself, wide shot, natural window light.
+                </p>
+              </div>
+              <div>
+                <ImagePlaceholder
+                  label="Cranberry Wellbeing Centre, from the street, opposite The Point"
+                  ratio="landscape"
+                />
+                <p className="mt-2 text-center text-xs text-warm-grey-light">
+                  Photo #2: the building exterior — trust + location proof.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </Container>
+      </Section>
+
       {/* SECTION 6 — PRACTICAL INFO */}
       <Section tone="blue-strong" className="relative overflow-hidden">
         <CloudBlob
@@ -768,7 +833,7 @@ export default function HomePage() {
           <FadeIn delay={240}>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/services/" variant="secondary">
-                Full services and fees
+                Full services
               </Button>
               <Link
                 href="/contact/"
