@@ -6,9 +6,9 @@ import sharp from "sharp";
 // "full-width square + small Y offset" approach left her face too low.
 const input = "public/ruth-headshot-original.png";
 const meta = await sharp(input).metadata();
-const size = 1000;
+const size = 1050;
 const xOffset = Math.round((meta.width - size) / 2);
-const yOffset = Math.min(meta.height - size, 330);
+const yOffset = Math.min(meta.height - size, 295);
 
 await sharp(input)
   .extract({ left: xOffset, top: yOffset, width: size, height: size })

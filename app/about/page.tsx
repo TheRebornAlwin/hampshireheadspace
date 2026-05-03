@@ -46,7 +46,7 @@ export default function AboutPage() {
                 className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
               />
               <img
-                src="/ruth-headshot.webp?v=5"
+                src="/ruth-headshot.webp?v=6"
                 alt="Ruth, the counsellor at Hampshire Headspace"
                 width={480}
                 height={480}
