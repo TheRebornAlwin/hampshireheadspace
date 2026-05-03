@@ -40,7 +40,7 @@ const config: Config = {
         "float-soft": "floatSoft 18s ease-in-out infinite",
         "fly-across": "flyAcross 80s linear infinite",
         "twinkle": "twinkle 7s ease-in-out infinite",
-        "blink": "blink 900ms steps(2, start) infinite",
+        "blink": "blink 520ms steps(2, start) infinite",
       },
       keyframes: {
         fadeUp: {

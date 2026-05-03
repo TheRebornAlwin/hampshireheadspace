@@ -36,7 +36,7 @@ export default function Typewriter({ text, speed = 55, className }: Props) {
       {showCursor && (
         <span
           aria-hidden="true"
-          className="ml-[3px] inline-block h-[0.92em] w-[3px] align-baseline bg-current animate-blink"
+          className="ml-[3px] inline-block h-[1em] w-[3px] translate-y-[0.1em] bg-current animate-blink"
         />
       )}
     </span>
