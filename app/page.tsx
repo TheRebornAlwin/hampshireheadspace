@@ -16,6 +16,7 @@ import FadeIn from "@/components/FadeIn";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Testimonial from "@/components/Testimonial";
 import Typewriter from "@/components/Typewriter";
+import Expandable from "@/components/Expandable";
 
 const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
 
@@ -155,60 +156,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 1.5 — CAN TALKING HELP? (Ruth's exact copy) */}
-      <Section tone="blue-strong" spacing="default" className="relative overflow-hidden">
+      {/* SECTION 1.5 — CAN TALKING HELP? (preview + expandable) */}
+      <Section tone="blue-strong" spacing="tight" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-4rem] h-44 w-72 opacity-25 animate-drift-slow"
         />
         <Container>
-          <FadeIn>
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              Can talking help?
-            </p>
-            <h2 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
-              Life can be difficult, and I understand that.
-            </h2>
-          </FadeIn>
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-7 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              <p>
-                At times we may all struggle with stresses, strains, challenges,
-                difficulties, loss and change.
-              </p>
-              <p>
-                In a fast changing and sometimes confusing world many of us may
-                struggle to feel connected; with ourselves, with others and
-                within society. During these times it can be helpful to talk
-                about our thoughts, our feelings and our emotions.
-              </p>
-            </div>
-          </FadeIn>
-          <FadeIn delay={200}>
-            <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
-              We can&rsquo;t always cope on our own, and at times may need additional support.
-            </p>
-            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] uppercase tracking-[0.16em] text-navy/55">
-              The therapeutic relationship aims to give that support
-            </p>
-          </FadeIn>
-          <FadeIn delay={280}>
-            <div className="mx-auto mt-10 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              <p>
-                Beginning therapy and choosing a therapist can be challenging.
-              </p>
-              <p>
-                I offer a space which is safe, welcoming, and non-judgmental in
-                which you can feel secure and supported. A space where there
-                are no expectations.
-              </p>
-              <p>
-                We will work together at a pace that suits you, and we will
-                build a trusting relationship, so that you can work through any
-                difficulties or challenges that you are experiencing.
-              </p>
-            </div>
-          </FadeIn>
+          <Expandable
+            preview={
+              <>
+                <FadeIn>
+                  <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                    Can talking help?
+                  </p>
+                  <h2 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
+                    Life can be difficult, and I understand that.
+                  </h2>
+                </FadeIn>
+                <FadeIn delay={120}>
+                  <p className="mx-auto mt-7 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
+                    We can&rsquo;t always cope on our own, and at times may need additional support.
+                  </p>
+                  <p className="mx-auto mt-3 max-w-xl text-center text-[14px] uppercase tracking-[0.16em] text-navy/55">
+                    The therapeutic relationship aims to give that support
+                  </p>
+                </FadeIn>
+              </>
+            }
+            more={
+              <div className="mx-auto max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+                <p>
+                  At times we may all struggle with stresses, strains,
+                  challenges, difficulties, loss and change.
+                </p>
+                <p>
+                  In a fast changing and sometimes confusing world many of us
+                  may struggle to feel connected; with ourselves, with others
+                  and within society. During these times it can be helpful to
+                  talk about our thoughts, our feelings and our emotions.
+                </p>
+                <p>
+                  Beginning therapy and choosing a therapist can be challenging.
+                </p>
+                <p>
+                  I offer a space which is safe, welcoming, and non-judgmental
+                  in which you can feel secure and supported. A space where
+                  there are no expectations.
+                </p>
+                <p>
+                  We will work together at a pace that suits you, and we will
+                  build a trusting relationship, so that you can work through
+                  any difficulties or challenges that you are experiencing.
+                </p>
+              </div>
+            }
+          />
         </Container>
       </Section>
 
@@ -306,60 +309,62 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* SECTION 2.5 — ABOUT YOU (Ruth's exact copy) */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+      {/* SECTION 2.5 — ABOUT YOU (preview + expandable) */}
+      <Section tone="cream" spacing="tight" className="relative overflow-hidden">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute top-12 left-[-5rem] h-44 w-80 opacity-20 animate-drift-slower"
         />
         <LeafFloat className="pointer-events-none absolute -bottom-4 right-[4%] h-36 w-36 opacity-60 animate-float-soft" />
         <Container>
-          <FadeIn>
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              About you
-            </p>
-            <h2 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
-              A space to slow down and connect with yourself.
-            </h2>
-          </FadeIn>
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-7 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              <p>
-                Counselling can provide you with an opportunity to slow down
-                and connect with yourself, to grow and to develop so that you
-                may live with more ease and less strain.
-              </p>
-              <p>
-                During counselling it is likely that you will become more
-                self-aware. You may begin to recognise behaviours and cycles of
-                responding which are no longer helpful, or become more able to
-                let go of outdated ideas of yourself or others.
-              </p>
-              <p>
-                You may come to terms with what harms you, at the same time as
-                embracing more of what brings joy and fulfilment.
-              </p>
-            </div>
-          </FadeIn>
-          <FadeIn delay={220}>
-            <p className="mx-auto mt-9 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
-              A freeing journey that will enable you to love, care, nourish and respect yourself, just as you are.
-            </p>
-          </FadeIn>
-          <FadeIn delay={300}>
-            <div className="mx-auto mt-9 max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              <p>
-                While you cannot always choose what happens in your life, you
-                do have a degree of choice and freedom over how you respond.
-              </p>
-              <p>
-                The more clarity you have about how you behave and respond to
-                life&rsquo;s challenges, the more you can take ownership and
-                move towards a life that is in line with your fundamental
-                values.
-              </p>
-            </div>
-          </FadeIn>
+          <Expandable
+            preview={
+              <>
+                <FadeIn>
+                  <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                    About you
+                  </p>
+                  <h2 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
+                    A space to slow down and connect with yourself.
+                  </h2>
+                </FadeIn>
+                <FadeIn delay={120}>
+                  <p className="mx-auto mt-7 max-w-2xl text-center text-balance text-[19px] font-medium leading-snug text-navy sm:text-[22px]">
+                    A freeing journey that will enable you to love, care, nourish and respect yourself, just as you are.
+                  </p>
+                </FadeIn>
+              </>
+            }
+            more={
+              <div className="mx-auto max-w-prose space-y-4 text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
+                <p>
+                  Counselling can provide you with an opportunity to slow down
+                  and connect with yourself, to grow and to develop so that you
+                  may live with more ease and less strain.
+                </p>
+                <p>
+                  During counselling it is likely that you will become more
+                  self-aware. You may begin to recognise behaviours and cycles
+                  of responding which are no longer helpful, or become more
+                  able to let go of outdated ideas of yourself or others.
+                </p>
+                <p>
+                  You may come to terms with what harms you, at the same time
+                  as embracing more of what brings joy and fulfilment.
+                </p>
+                <p>
+                  While you cannot always choose what happens in your life, you
+                  do have a degree of choice and freedom over how you respond.
+                </p>
+                <p>
+                  The more clarity you have about how you behave and respond to
+                  life&rsquo;s challenges, the more you can take ownership and
+                  move towards a life that is in line with your fundamental
+                  values.
+                </p>
+              </div>
+            }
+          />
         </Container>
       </Section>
 
@@ -469,18 +474,6 @@ export default function HomePage() {
                 t: "What stays between us",
                 d: "Nothing you say leaves our session, including the brief GDPR-compliant notes I keep, and nothing goes to your GP or insurer unless you specifically ask me to send it.",
                 style: "highlight",
-              },
-              {
-                icon: "clock",
-                t: "55 minutes, gently landed",
-                d: "I&rsquo;ll quietly let you know when we&rsquo;ve got ten minutes left so we can wrap up somewhere that feels okay rather than mid-sentence.",
-                style: "blue",
-              },
-              {
-                icon: "leave",
-                t: "At the end, no pressure",
-                d: "Take a day or a week, message me if you&rsquo;d like to come back, and if you wouldn&rsquo;t, that&rsquo;s honestly fine too.",
-                style: "yellow",
               },
             ] as const).map((step, i) => {
               const card =
