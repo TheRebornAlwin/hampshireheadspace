@@ -56,11 +56,7 @@ export default function BookingForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-5"
-      noValidate
-    >
+    <form onSubmit={handleSubmit} className="space-y-5">
       {/* Honeypot — bots fill this, humans don't see it */}
       <input
         type="text"
@@ -124,7 +120,7 @@ export default function BookingForm() {
           {(["email", "text", "call"] as const).map((opt) => (
             <label
               key={opt}
-              className="cursor-pointer rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-2 text-sm text-navy/85 has-[:checked]:border-navy has-[:checked]:bg-navy has-[:checked]:text-cream"
+              className="cursor-pointer rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-2 text-sm text-navy/85 transition-colors duration-200 ease-out has-[:checked]:border-navy has-[:checked]:bg-navy has-[:checked]:text-cream"
             >
               <input
                 type="radio"
@@ -160,13 +156,13 @@ export default function BookingForm() {
           id="message"
           name="message"
           rows={4}
-          placeholder="A sentence is enough. You do not have to explain."
+          placeholder="A sentence is enough, you don’t have to elaborate."
           className="w-full resize-none rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-3 text-navy placeholder:text-warm-grey-light focus:border-navy focus:outline-none"
         />
       </div>
 
       <p className="text-xs text-warm-grey">
-        Whatever you write stays between us. I will only use it to get back to you.
+        Whatever you write stays between us, I will only use it to get back to you. Speak soon!
       </p>
 
       {error && (

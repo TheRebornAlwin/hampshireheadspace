@@ -64,10 +64,6 @@ export default function ContactPage() {
                 <h2 className="text-[1.4rem] font-semibold leading-tight text-navy sm:text-[1.65rem]">
                   Send me a short message
                 </h2>
-                <p className="mt-2 text-warm-grey">
-                  First name is fine. You don&apos;t have to explain anything
-                  in detail.
-                </p>
                 <div className="mt-7">
                   <BookingForm />
                 </div>
