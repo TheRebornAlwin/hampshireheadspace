@@ -3,33 +3,36 @@
 import { useState } from "react";
 import Button from "./Button";
 
-/*
-  Placeholder booking form.
-  When ready to wire up:
-    - Swap handleSubmit to POST to a serverless endpoint (Resend, Formspree, or your own).
-    - Or replace with a Cal.com / Calendly embed.
-  For now this just collects values and shows a success state. Nothing is sent.
-*/
-
-type ContactPref = "email" | "text" | "call";
+const FORMSPARK_ENDPOINT = "https://submit-form.com/lMB91bP9I";
 
 export default function BookingForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const payload = {
-      name: fd.get("name"),
-      email: fd.get("email"),
-      phone: fd.get("phone"),
-      contactPref: fd.get("contactPref") as ContactPref,
-      message: fd.get("message"),
-      bestTime: fd.get("bestTime"),
-    };
-    // eslint-disable-next-line no-console
-    console.log("[Hampshire Headspace] booking form submission (placeholder):", payload);
-    setSubmitted(true);
+    setError(false);
+    setSubmitting(true);
+
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+
+    try {
+      const response = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error(`Status ${response.status}`);
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -58,6 +61,16 @@ export default function BookingForm() {
       className="space-y-5"
       noValidate
     >
+      {/* Honeypot — bots fill this, humans don't see it */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+
       <div>
         <label htmlFor="name" className="mb-2 block text-sm font-medium text-navy/80">
           Your name
@@ -97,7 +110,7 @@ export default function BookingForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="If you would prefer a text or call"
+            placeholder="If you would prefer a text"
             className="w-full rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-3 text-navy placeholder:text-warm-grey-light focus:border-navy focus:outline-none"
           />
         </div>
@@ -156,8 +169,23 @@ export default function BookingForm() {
         Whatever you write stays between us. I will only use it to get back to you.
       </p>
 
-      <Button type="submit" size="lg" className="w-full sm:w-auto">
-        Send message
+      {error && (
+        <div role="alert" className="rounded-xl2 border-2 border-red-300 bg-red-50 p-4 text-sm text-red-900">
+          Something went wrong sending the message. Please try again, or email{" "}
+          <a className="underline" href="mailto:hello@hampshireheadspace.com">
+            hello@hampshireheadspace.com
+          </a>{" "}
+          directly.
+        </div>
+      )}
+
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full sm:w-auto"
+        disabled={submitting}
+      >
+        {submitting ? "Sending…" : "Send message"}
       </Button>
     </form>
   );

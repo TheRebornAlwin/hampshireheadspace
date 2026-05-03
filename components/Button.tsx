@@ -37,6 +37,7 @@ type RealButtonProps = CommonProps & {
   href?: never;
   type?: "button" | "submit";
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 export default function Button(props: LinkButtonProps | RealButtonProps) {
@@ -65,11 +66,13 @@ export default function Button(props: LinkButtonProps | RealButtonProps) {
     );
   }
 
+  const realProps = props as RealButtonProps;
   return (
     <button
-      className={classes}
-      type={(props as RealButtonProps).type ?? "button"}
-      onClick={(props as RealButtonProps).onClick}
+      className={`${classes} ${realProps.disabled ? "cursor-not-allowed opacity-60" : ""}`}
+      type={realProps.type ?? "button"}
+      onClick={realProps.onClick}
+      disabled={realProps.disabled}
     >
       {children}
     </button>
