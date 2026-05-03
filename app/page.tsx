@@ -13,7 +13,6 @@ import StepIcon from "@/components/illustrations/StepIcon";
 import WaveLines from "@/components/illustrations/WaveLines";
 import FAQItem from "@/components/FAQItem";
 import FadeIn from "@/components/FadeIn";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import Testimonial from "@/components/Testimonial";
 import Typewriter from "@/components/Typewriter";
 import Expandable from "@/components/Expandable";
@@ -154,18 +153,6 @@ export default function HomePage() {
             </FadeIn>
           </div>
         </div>
-      </section>
-
-      {/* IMAGE BREAK — Hampshire / Eastleigh scene (placeholder for Ruth's photo #4) */}
-      <section className="relative overflow-hidden bg-cream pb-10 sm:pb-14">
-        <Container size="wide">
-          <FadeIn>
-            <ImagePlaceholder
-              label="A wide Hampshire scene — Lakeside Country Park, Itchen Way, or similar"
-              ratio="wide"
-            />
-          </FadeIn>
-        </Container>
       </section>
 
       {/* SECTION 1.5 — CAN TALKING HELP? (preview + expandable) */}
@@ -616,16 +603,6 @@ export default function HomePage() {
               </Button>
             </div>
           </FadeIn>
-
-          {/* Ruth-in-the-room placeholder (warmer photo #3) */}
-          <FadeIn delay={220}>
-            <div className="mx-auto mt-10 max-w-3xl">
-              <ImagePlaceholder
-                label="Ruth in the counselling room — warmer than the studio shot"
-                ratio="landscape"
-              />
-            </div>
-          </FadeIn>
         </Container>
       </Section>
 
@@ -723,32 +700,6 @@ export default function HomePage() {
               be helpful for anyone who would like to learn more about
               themselves and their relationships.
             </p>
-          </FadeIn>
-        </Container>
-      </Section>
-
-      {/* WHERE YOU'LL FIND ME — image grid (placeholders for room + exterior) */}
-      <Section tone="cream" spacing="tight" className="relative overflow-hidden">
-        <Container size="wide">
-          <FadeIn>
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              Where you&rsquo;ll find me
-            </p>
-            <h2 className="mx-auto mt-4 max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[1.9rem]">
-              The Cranberry Wellbeing Centre, Eastleigh.
-            </h2>
-          </FadeIn>
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
-              <ImagePlaceholder
-                label="The counselling room — two soft chairs, a window, a box of tissues"
-                ratio="landscape"
-              />
-              <ImagePlaceholder
-                label="Cranberry Wellbeing Centre, from the street, opposite The Point"
-                ratio="landscape"
-              />
-            </div>
           </FadeIn>
         </Container>
       </Section>

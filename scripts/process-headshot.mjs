@@ -1,16 +1,17 @@
 import sharp from "sharp";
 
 // Square crop and convert to WebP for the about/home portrait spots.
-// Source: 1086 x 1448 portrait. We take a full-width square shifted down
-// from the very top so we lose some of the empty headroom above her hair
-// (Ruth feedback: "too much empty space up top, shift the picture up").
+// Source: 1086 x 1448 portrait. Tighter square + bigger Y offset together
+// pull Ruth's face into the upper portion of the circle frame; the prior
+// "full-width square + small Y offset" approach left her face too low.
 const input = "public/ruth-headshot-original.png";
 const meta = await sharp(input).metadata();
-const size = meta.width;
-const yOffset = Math.min(meta.height - size, 280);
+const size = 980;
+const xOffset = Math.round((meta.width - size) / 2);
+const yOffset = Math.min(meta.height - size, 360);
 
 await sharp(input)
-  .extract({ left: 0, top: yOffset, width: size, height: size })
+  .extract({ left: xOffset, top: yOffset, width: size, height: size })
   .resize(800, 800)
   .webp({ quality: 90, effort: 6 })
   .toFile("public/ruth-headshot.webp");

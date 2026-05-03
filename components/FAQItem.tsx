@@ -44,7 +44,7 @@ export default function FAQItem({ question, children, defaultOpen = false }: Pro
         }`}
       >
         <div className="overflow-hidden">
-          <div className="pr-10 text-warm-grey leading-relaxed space-y-3">
+          <div className="text-center text-warm-grey leading-relaxed space-y-3 sm:pr-10 sm:text-left">
             {children}
           </div>
         </div>
