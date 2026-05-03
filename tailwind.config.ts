@@ -40,7 +40,7 @@ const config: Config = {
         "float-soft": "floatSoft 18s ease-in-out infinite",
         "fly-across": "flyAcross 80s linear infinite",
         "twinkle": "twinkle 7s ease-in-out infinite",
-        "blink": "blink 520ms steps(2, start) infinite",
+        "blink": "blink 800ms step-end infinite",
       },
       keyframes: {
         fadeUp: {
@@ -64,8 +64,8 @@ const config: Config = {
           "50%": { opacity: "0.85" },
         },
         blink: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0" },
+          "0%, 49.9%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
         },
       },
     },

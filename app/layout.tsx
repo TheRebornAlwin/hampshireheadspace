@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
+import ScrollToTopOnLoad from "@/components/ScrollToTopOnLoad";
 
 const SITE_URL = "https://hampshireheadspace.co.uk";
 
@@ -133,6 +134,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-cream text-navy antialiased">
+        <ScrollToTopOnLoad />
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

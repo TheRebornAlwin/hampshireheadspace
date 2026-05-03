@@ -17,9 +17,22 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 8);
+    let lastY = window.scrollY;
+    const handler = () => {
+      const y = window.scrollY;
+      setScrolled(y > 8);
+      if (y < 80) {
+        setHidden(false);
+      } else if (y > lastY + 4) {
+        setHidden(true);
+      } else if (y < lastY - 4) {
+        setHidden(false);
+      }
+      lastY = y;
+    };
     handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
@@ -36,10 +49,8 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-40 w-full backdrop-blur-md transition-all duration-300 ${
-        scrolled
-          ? "bg-cream/85 shadow-soft"
-          : "bg-cream/60"
-      }`}
+        scrolled ? "bg-cream/85 shadow-soft" : "bg-cream/60"
+      } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
         <Link
