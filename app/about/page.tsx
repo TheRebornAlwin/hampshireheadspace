@@ -30,34 +30,36 @@ export default function AboutMePage() {
         >
           <Birds className="h-12 w-48 opacity-60" count={3} />
         </div>
-        <Container>
-          <FadeIn>
-            <div className="relative mx-auto w-[210px] sm:w-[240px]">
-              <div
-                aria-hidden="true"
-                className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
-              />
-              <img
-                src="/ruth-headshot.webp?v=7"
-                alt="Ruth, the counsellor at Hampshire Headspace"
-                width={480}
-                height={480}
-                className="relative h-auto w-full rounded-full object-cover shadow-soft-lg ring-2 ring-cream"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-          </FadeIn>
-          <FadeIn delay={120}>
-            <h1 className="mx-auto mt-8 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              About me
-            </h1>
-          </FadeIn>
-        </Container>
+        <div className="relative z-10">
+          <Container>
+            <FadeIn>
+              <div className="relative mx-auto w-[210px] sm:w-[240px]">
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
+                />
+                <img
+                  src="/ruth-headshot.webp?v=7"
+                  alt="Ruth, the counsellor at Hampshire Headspace"
+                  width={480}
+                  height={480}
+                  className="relative h-auto w-full rounded-full object-cover shadow-soft-lg ring-2 ring-cream"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={120}>
+              <h1 className="mx-auto mt-8 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+                About me
+              </h1>
+            </FadeIn>
+          </Container>
+        </div>
       </section>
 
       {/* RUTH'S EXACT WORDING — fully open, no Read More */}

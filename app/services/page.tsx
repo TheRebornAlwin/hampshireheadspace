@@ -31,17 +31,19 @@ export default function ServicesPage() {
         >
           <Birds className="h-12 w-44 opacity-55" count={2} />
         </div>
-        <Container>
-          <FadeIn>
-            <h1 className="mx-auto max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              Services
-            </h1>
-            <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              Individual counselling for adults, in person in Eastleigh or
-              online.
-            </p>
-          </FadeIn>
-        </Container>
+        <div className="relative z-10">
+          <Container>
+            <FadeIn>
+              <h1 className="mx-auto max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+                Services
+              </h1>
+              <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
+                Individual counselling for adults, in person in Eastleigh or
+                online.
+              </p>
+            </FadeIn>
+          </Container>
+        </div>
       </section>
 
       {/* WHAT COUNSELLING CAN SUPPORT — Ruth's exact list */}

@@ -29,22 +29,24 @@ export default function ContactPage() {
           className="pointer-events-none absolute top-32 left-[-4rem] h-32 w-60 opacity-25 animate-drift-slow"
         />
         <PaperPlane className="pointer-events-none absolute top-8 right-[8%] hidden h-20 w-44 opacity-50 animate-float-soft lg:block" />
-        <Container>
-          <FadeIn>
-            <EnvelopeIllustration className="mx-auto h-auto w-full max-w-[180px] sm:max-w-[220px]" />
-          </FadeIn>
-          <FadeIn delay={120}>
-            <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              Where to find me?
-            </h1>
-            <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              I offer a comfortable and quiet counselling room at the
-              Cranberry Wellbeing Centre in Eastleigh, located directly
-              opposite the Point Arts and Performance Centre. Free parking is
-              available.
-            </p>
-          </FadeIn>
-        </Container>
+        <div className="relative z-10">
+          <Container>
+            <FadeIn>
+              <EnvelopeIllustration className="mx-auto h-auto w-full max-w-[180px] sm:max-w-[220px]" />
+            </FadeIn>
+            <FadeIn delay={120}>
+              <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+                Where to find me?
+              </h1>
+              <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
+                I offer a comfortable and quiet counselling room at the
+                Cranberry Wellbeing Centre in Eastleigh, located directly
+                opposite the Point Arts and Performance Centre. Free parking is
+                available.
+              </p>
+            </FadeIn>
+          </Container>
+        </div>
       </section>
 
       <Section tone="cream" spacing="default" className="relative overflow-hidden">

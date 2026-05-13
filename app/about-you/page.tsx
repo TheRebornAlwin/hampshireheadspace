@@ -34,25 +34,27 @@ export default function AboutYouPage() {
         >
           <Birds className="h-12 w-44 opacity-55" count={2} />
         </div>
-        <Container>
-          <FadeIn>
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              About you
-            </p>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              A space to slow down and connect with yourself.
-            </h1>
-          </FadeIn>
-          <FadeIn delay={180}>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
-              The counselling experience can be a freeing journey that will
-              enable you to love, care, nourish and respect yourself, just as
-              you are.
-            </p>
-          </FadeIn>
-        </Container>
+        <div className="relative z-10">
+          <Container>
+            <FadeIn>
+              <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                About you
+              </p>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+                A space to slow down and connect with yourself.
+              </h1>
+            </FadeIn>
+            <FadeIn delay={180}>
+              <p className="mx-auto mt-6 max-w-2xl text-center text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
+                The counselling experience can be a freeing journey that will
+                enable you to love, care, nourish and respect yourself, just as
+                you are.
+              </p>
+            </FadeIn>
+          </Container>
+        </div>
       </section>
 
       {/* RUTH'S EXACT WORDING */}
