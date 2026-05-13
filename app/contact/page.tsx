@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import BookingForm from "@/components/BookingForm";
 import EnvelopeIllustration from "@/components/illustrations/EnvelopeIllustration";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import FadeIn from "@/components/FadeIn";
 import CloudBlob from "@/components/illustrations/CloudBlob";
 import PaperPlane from "@/components/illustrations/PaperPlane";
@@ -118,9 +117,14 @@ export default function ContactPage() {
                   Free parking is right outside!
                 </p>
                 <div className="mt-5">
-                  <ImagePlaceholder
-                    label="Cranberry Wellbeing Centre, Eastleigh"
-                    ratio="wide"
+                  <img
+                    src="/cranberry.webp"
+                    alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
+                    width={1024}
+                    height={1024}
+                    className="h-auto w-full rounded-xl2 shadow-soft"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

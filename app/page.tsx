@@ -9,7 +9,6 @@ import Sparkles from "@/components/illustrations/Sparkles";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
 import FadeIn from "@/components/FadeIn";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
 
@@ -191,18 +190,20 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* YARN IMAGE PLACEHOLDER — Ruth's softer yarn photo */}
+      {/* THE ROOM — Ruth's actual counselling room */}
       <section className="relative overflow-hidden bg-cream py-12 sm:py-16">
         <Container size="wide">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
-              <ImagePlaceholder
-                label="The softer yarn image &mdash; Ruth&rsquo;s supplied photo"
-                ratio="wide"
+              <img
+                src="/room.webp"
+                alt="The counselling room at the Cranberry Wellbeing Centre — soft chairs, a window, a lamp, plants"
+                width={1600}
+                height={2133}
+                className="h-auto w-full rounded-xl2 shadow-soft-lg"
+                loading="lazy"
+                decoding="async"
               />
-              <p className="mx-auto mt-3 max-w-xl text-center text-xs text-warm-grey-light">
-                Ruth&rsquo;s updated softer yarn photo goes here.
-              </p>
             </div>
           </FadeIn>
         </Container>
