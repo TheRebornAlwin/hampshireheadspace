@@ -10,8 +10,6 @@ import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
 import FadeIn from "@/components/FadeIn";
 
-const HERO_IMAGE_URL = "/hero-tangled-yarn.webp";
-
 export default function HomePage() {
   return (
     <>
@@ -94,7 +92,7 @@ export default function HomePage() {
 
           <div className="lg:col-span-5">
             <FadeIn delay={120}>
-              <div className="relative mx-auto w-full max-w-xs sm:max-w-md lg:max-w-none">
+              <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm lg:max-w-none">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
@@ -115,16 +113,22 @@ export default function HomePage() {
                   style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
                 />
                 <img
-                  src={HERO_IMAGE_URL}
-                  alt="A counsellor in a soft blue chair gently holding the loose end of a tangled blue and yellow ball of yarn."
-                  width={900}
-                  height={820}
-                  className="relative h-auto w-full animate-float-soft"
+                  src="/logo-icon.webp"
+                  alt="Hampshire Headspace logo"
+                  width={800}
+                  height={630}
+                  className="relative mx-auto h-auto w-full animate-float-soft"
                   loading="eager"
                   // @ts-expect-error fetchpriority is valid HTML
                   fetchpriority="high"
                   decoding="async"
                 />
+                <p className="mt-4 text-center text-[1.05rem] font-semibold tracking-[0.16em] text-navy uppercase sm:text-[1.2rem]">
+                  Hampshire Headspace
+                </p>
+                <p className="text-center text-[0.85rem] font-medium tracking-[0.32em] text-navy/70 uppercase sm:text-[0.95rem]">
+                  Counselling
+                </p>
               </div>
             </FadeIn>
           </div>
@@ -190,17 +194,17 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* THE ROOM — Ruth's actual counselling room */}
+      {/* YARN PHOTO — placed after the "Can talking help" prose, per Ruth's spec */}
       <section className="relative overflow-hidden bg-cream py-12 sm:py-16">
         <Container size="wide">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
               <img
-                src="/room.webp"
-                alt="The counselling room at the Cranberry Wellbeing Centre — soft chairs, a window, a lamp, plants"
-                width={1600}
-                height={2133}
-                className="h-auto w-full rounded-xl2 shadow-soft-lg"
+                src="/hero-tangled-yarn.webp"
+                alt="A counsellor in a soft blue chair gently holding the loose end of a tangled ball of yarn."
+                width={900}
+                height={820}
+                className="h-auto w-full rounded-xl2"
                 loading="lazy"
                 decoding="async"
               />
