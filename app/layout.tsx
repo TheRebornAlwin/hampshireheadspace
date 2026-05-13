@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Hampshire Headspace",
   },
   description:
-    "Private counselling in Eastleigh, Hampshire. Your first 55-minute session is free. BACP-registered, calm, real, and entirely yours.",
+    "Private counselling in Eastleigh, Hampshire. Your first 50-minute session is free. BACP-registered, calm, real, and entirely yours.",
   keywords: [
     "counsellor Eastleigh",
     "private counselling Hampshire",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Hampshire Headspace",
     title: "Hampshire Headspace, Private Counselling in Eastleigh",
     description:
-      "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh. Your first 55-minute session is free.",
+      "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh. Your first 50-minute session is free.",
     images: [
       {
         url: "/logo.png",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hampshire Headspace, Private Counselling in Eastleigh",
     description:
-      "Private counselling in Eastleigh. Your first 55-minute session is free.",
+      "Private counselling in Eastleigh. Your first 50-minute session is free.",
     images: [
       "/logo.png",
     ],

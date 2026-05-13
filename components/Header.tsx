@@ -8,9 +8,10 @@ const LOGO_URL = "/logo.webp";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about/", label: "About Ruth" },
+  { href: "/about-you/", label: "About You" },
+  { href: "/about/", label: "About Me" },
   { href: "/services/", label: "Services" },
-  { href: "/faq/", label: "FAQ" },
+  { href: "/services/#fees", label: "Fees" },
   { href: "/contact/", label: "Contact" },
 ];
 
@@ -56,7 +57,7 @@ export default function Header() {
         <Link
           href="/"
           aria-label="Hampshire Headspace, home"
-          className="flex items-center gap-3"
+          className="flex items-center"
           onClick={() => setOpen(false)}
         >
           <img
@@ -66,9 +67,6 @@ export default function Header() {
             width={120}
             height={56}
           />
-          <span className="hidden text-[13px] font-medium leading-tight text-warm-grey lg:block">
-            Private counselling<br />in Eastleigh
-          </span>
         </Link>
 
         <nav
@@ -85,7 +83,7 @@ export default function Header() {
             </Link>
           ))}
           <Button href="/contact/" size="md">
-            Book free session
+            Get in touch
           </Button>
         </nav>
 
@@ -146,7 +144,7 @@ export default function Header() {
               size="md"
               className="w-full"
             >
-              Book free session
+              Get in touch
             </Button>
           </div>
         </nav>

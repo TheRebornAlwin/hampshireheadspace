@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
     <LegalPage
       title="Privacy policy"
       updated="April 2026"
-      intro="This page explains what information Hampshire Headspace collects, why, and what happens to it. Plain English, no jargon. If anything here is unclear, please get in touch and I'll explain properly."
+      intro="This page explains what information Hampshire Headspace collects, why, and what happens to it. Plain English, no jargon. If anything here is unclear, please get in touch."
     >
       <section>
         <h2 className="text-xl font-semibold text-navy">Who I am</h2>
@@ -46,8 +46,7 @@ export default function PrivacyPolicyPage() {
         <p>
           I do not run any analytics, tracking pixels, or advertising cookies
           on this website. I do not sell, share, or pass your information to
-          marketing companies, ever. I do not put your details into any AI
-          system.
+          marketing companies, ever.
         </p>
       </section>
 
@@ -84,7 +83,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <p>
           I take regular clinical supervision, where I sometimes discuss the
-          work with another senior counsellor, but you are never named or made
+          work with another senior counsellor, but you are never made
           identifiable in those conversations.
         </p>
       </section>

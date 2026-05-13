@@ -8,14 +8,12 @@ import FadeIn from "@/components/FadeIn";
 import CloudBlob from "@/components/illustrations/CloudBlob";
 import PaperPlane from "@/components/illustrations/PaperPlane";
 import Birds from "@/components/illustrations/Birds";
-import Sun from "@/components/illustrations/Sun";
 import LeafFloat from "@/components/illustrations/LeafFloat";
-import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Contact and booking",
+  title: "Where to find me",
   description:
-    "Getting in touch only takes 60 seconds. Your first 55-minute session is online and free.",
+    "A comfortable and quiet counselling room at the Cranberry Wellbeing Centre in Eastleigh, opposite The Point Arts and Performance Centre. Free parking.",
   alternates: { canonical: "/contact" },
 };
 
@@ -38,11 +36,13 @@ export default function ContactPage() {
           </FadeIn>
           <FadeIn delay={120}>
             <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              Getting in touch only takes 60 seconds.
+              Where to find me?
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              Just a few details so I know how to reach you. Your first
-              55-minute session is online and free.
+              I offer a comfortable and quiet counselling room at the
+              Cranberry Wellbeing Centre in Eastleigh, located directly
+              opposite the Point Arts and Performance Centre. Free parking is
+              available.
             </p>
           </FadeIn>
         </Container>
@@ -92,60 +92,23 @@ export default function ContactPage() {
                       07843 114396
                     </a>
                     <span className="ml-1 text-warm-grey-light">
-                      (text)
+                      (text) or message
                     </span>
                   </li>
                 </ul>
                 <p className="mt-4 text-sm text-warm-grey">
-                  Please email or leave a text mentioning how you would like to
-                  be contacted, and I will usually get back to you on the same
-                  day.
+                  Please email or leave a text mentioning how and when you
+                  would like to be contacted, and I will usually get back to
+                  you on the same day.
                 </p>
               </div>
-
-              <div className="rounded-xl2 bg-soft-yellow/40 p-6 sm:p-7">
-                <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
-                  What happens next
-                </h3>
-                <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/90">
-                  {[
-                    "You send your details. (You're here, this is the hard part.)",
-                    "I reply the same day with a time and a secure video link.",
-                    "We meet for your free 55-minute first session, online.",
-                  ].map((s, i) => (
-                    <li key={i} className="flex gap-3">
-                      <span
-                        className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-navy text-cream text-[12px] font-semibold"
-                        aria-hidden="true"
-                      >
-                        {i + 1}
-                      </span>
-                      <span>{s}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              <Testimonial
-                tone="cream"
-                className="!h-auto"
-                quote={
-                  <>
-                    &ldquo;Sending the first message was the scariest part.
-                    Ruth replied within an hour, no fuss, just a time. After
-                    that the rest was easy.&rdquo;
-                  </>
-                }
-                attribution="Beth"
-                context="36"
-              />
 
               <div className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
                 <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
                   Where to find us
                 </h3>
                 <address className="mt-3 not-italic text-[15px] leading-relaxed text-navy/90">
-                  Cranberry Wellbeing Centre
+                  <span className="font-semibold text-navy">Cranberry Wellbeing Centre</span>
                   <br />
                   Eastleigh, Hampshire
                   <br />

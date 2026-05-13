@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </Link>
           <p className="mx-auto max-w-xs text-sm leading-relaxed text-warm-grey md:mx-0">
-            Private counselling in Eastleigh, Hampshire. BACP-registered. First 55-minute session is free.
+            Private counselling in Eastleigh, Hampshire. BACP-registered. First 50-minute session &ndash; no fee.
           </p>
         </div>
 
@@ -31,11 +31,11 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-warm-grey">
             <li><Link className="hover:text-navy" href="/">Home</Link></li>
-            <li><Link className="hover:text-navy" href="/about/">About Ruth</Link></li>
+            <li><Link className="hover:text-navy" href="/about-you/">About You</Link></li>
+            <li><Link className="hover:text-navy" href="/about/">About Me</Link></li>
             <li><Link className="hover:text-navy" href="/services/">Services</Link></li>
-            <li><Link className="hover:text-navy" href="/faq/">FAQ</Link></li>
+            <li><Link className="hover:text-navy" href="/services/#fees">Fees</Link></li>
             <li><Link className="hover:text-navy" href="/contact/">Contact</Link></li>
-            <li><Link className="hover:text-navy" href="/blog/">Articles</Link></li>
           </ul>
         </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-warm-grey">
             <li>
-              Cranberry Wellbeing Centre<br />
+              <span className="font-semibold text-navy">Cranberry Wellbeing Centre</span><br />
               Eastleigh, Hampshire
             </li>
             <li>
@@ -58,7 +58,7 @@ export default function Footer() {
                 07843 114396
               </a>
               <span className="ml-1 text-xs text-warm-grey-light">
-                (text)
+                (text) or message
               </span>
             </li>
           </ul>

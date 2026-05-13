@@ -59,11 +59,11 @@ export default function BlogLayout({
           </h2>
           <p className="mt-3 leading-relaxed text-navy/85">
             Hampshire Headspace is private counselling in Eastleigh. The first
-            55-minute session is free, with no pressure to come back if it
+            50-minute session is free, with no pressure to come back if it
             isn&apos;t the right fit.
           </p>
           <div className="mt-5">
-            <Button href="/contact/">Book your free first session</Button>
+            <Button href="/contact/">Get in touch</Button>
           </div>
         </div>
       </Container>

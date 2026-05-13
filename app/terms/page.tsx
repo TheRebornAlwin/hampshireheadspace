@@ -20,7 +20,7 @@ export default function TermsPage() {
         <p>
           One-to-one counselling for adults aged 16 and up, either at the
           Cranberry Wellbeing Centre in Eastleigh or by secure video call.
-          Sessions are 55 minutes long. The first session is free, with no
+          Sessions are 50 minutes long. The first session is free, with no
           obligation to book again afterwards.
         </p>
       </section>
@@ -29,9 +29,9 @@ export default function TermsPage() {
         <h2 className="text-xl font-semibold text-navy">Fees and payment</h2>
         <p>
           Sessions after the free first session are £55 in person and £45
-          online. Payment is per session, by bank transfer or contactless card,
-          on the day. There are no upfront packages and no minimum number of
-          sessions to commit to.
+          online. Payment is per session, by bank transfer or contactless card.
+          There are no upfront packages and no minimum number of sessions to
+          commit to.
         </p>
         <p>
           Lower-cost spaces are sometimes available. If finance is the thing

@@ -149,6 +149,27 @@ export default function BookingForm() {
       </div>
 
       <div>
+        <label htmlFor="source" className="mb-2 block text-sm font-medium text-navy/80">
+          How did you find me?
+        </label>
+        <select
+          id="source"
+          name="source"
+          defaultValue=""
+          className="w-full rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-3 text-navy focus:border-navy focus:outline-none"
+        >
+          <option value="" disabled>Please choose&hellip;</option>
+          <option value="search">Search Engine</option>
+          <option value="bacp">BACP Website</option>
+          <option value="counselling-directory">Counselling Directory Website</option>
+          <option value="hacp">HACP Website</option>
+          <option value="cranberry">Cranberry Wellbeing Website</option>
+          <option value="word-of-mouth">Word of Mouth</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
         <label htmlFor="message" className="mb-2 block text-sm font-medium text-navy/80">
           Anything you want to say (optional)
         </label>

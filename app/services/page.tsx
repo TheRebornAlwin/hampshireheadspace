@@ -8,12 +8,11 @@ import Sun from "@/components/illustrations/Sun";
 import Birds from "@/components/illustrations/Birds";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
-import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Individual counselling for adults, in person in Eastleigh or online. £55 per session, £45 online, first 55-minute session free.",
+    "Individual humanistic counselling for adults in Eastleigh, Hampshire. £55 per session in person, £45 online. A free initial online session to meet and discuss your needs.",
   alternates: { canonical: "/services" },
 };
 
@@ -35,116 +34,128 @@ export default function ServicesPage() {
         <Container>
           <FadeIn>
             <h1 className="mx-auto max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-              Simple, transparent, no surprises.
+              Services
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-              One thing at a time. Here&apos;s exactly what I offer, what it
-              costs, and how sessions work.
+              Individual counselling for adults, in person in Eastleigh or
+              online.
             </p>
           </FadeIn>
         </Container>
       </section>
 
-      {/* WHAT I OFFER */}
-      <Section tone="cream" spacing="tight">
-        <Container>
+      {/* WHAT COUNSELLING CAN SUPPORT — Ruth's exact list */}
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="blue"
+          className="pointer-events-none absolute -top-6 left-[-4rem] h-32 w-72 opacity-20 animate-drift-slower"
+        />
+        <Container size="wide">
           <FadeIn>
-            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              What I offer
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+              Counselling can support people experiencing&hellip;
             </h2>
-            <div className="mx-auto mt-6 max-w-prose space-y-4 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-              <p>
-                Individual counselling for adults aged 16 and up. Neurotypical
-                and neurodiverse welcome. All identities welcome.
+          </FadeIn>
+
+          <FadeIn delay={120}>
+            <div className="mx-auto mt-8 max-w-4xl rounded-xl2 bg-cream p-6 shadow-soft sm:p-8">
+              <div className="flex flex-wrap justify-center gap-2">
+                {[
+                  "Anxiety",
+                  "Depression",
+                  "Stress and overwhelm",
+                  "Panic attacks",
+                  "Anger and emotional regulation difficulties",
+                  "Low self-esteem and low confidence",
+                  "Low mood and sadness",
+                  "Loneliness and isolation",
+                  "Family and friendship difficulties",
+                  "Relationship difficulties",
+                  "Separation and divorce",
+                  "Loss and bereavement",
+                  "Identity-related concerns",
+                  "Life transitions and adjustment difficulties",
+                  "Work-related stress and burnout",
+                  "Obsessive Compulsive Disorder (OCD)",
+                  "Suicidal thoughts",
+                  "Long-term health conditions",
+                  "&hellip;and life in general",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-soft-blue/30 px-3.5 py-1.5 text-sm text-navy/85"
+                    dangerouslySetInnerHTML={{ __html: tag }}
+                  />
+                ))}
+              </div>
+              <p className="mt-6 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
+                There is no issue too big or too small.
               </p>
-              <p>
-                Face-to-face in Eastleigh, or online via secure video,
-                whichever feels easier for you. Some people prefer the room,
-                some prefer their own sofa, and both work.
+              <p className="mt-3 text-center leading-relaxed text-navy/80">
+                Therapy is not only for those with specific issues. It can also
+                be helpful for anyone who would like to learn more about
+                themselves and their relationships.
               </p>
             </div>
           </FadeIn>
         </Container>
       </Section>
 
-      {/* HOW SESSIONS WORK */}
+      {/* HOW LONG */}
       <Section tone="blue" spacing="default" className="relative overflow-hidden">
-        <CloudBlob
-          variant="yellow"
-          className="pointer-events-none absolute -top-6 left-[-4rem] h-32 w-72 opacity-30 animate-drift-slow"
-        />
         <LeafFloat className="pointer-events-none absolute -bottom-2 right-[3%] h-36 w-36 opacity-70 animate-float-soft" />
-        <Container size="wide">
+        <Container>
           <FadeIn>
             <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              How sessions work
+              How long does counselling last?
             </h2>
           </FadeIn>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {[
-              {
-                t: "55 minutes",
-                d: "Each session is just under an hour, starting properly when you sit down, and I&rsquo;ll quietly let you know when we&rsquo;ve got ten minutes left so we can land somewhere okay rather than mid-sentence.",
-              },
-              {
-                t: "Usually weekly",
-                d: "Weekly works for most people because it gives the work some continuity between sessions, but if you need to skip the odd one we&rsquo;ll just figure out what suits you.",
-              },
-              {
-                t: "Short term or longer",
-                d: "Six to twelve sessions is enough for some people and some prefer to stay longer, and we&rsquo;ll decide together based on what you actually want rather than a fixed package.",
-              },
-              {
-                t: "You&rsquo;re in charge",
-                d: "You can pause counselling, change the frequency, or stop whenever you want, with no tie-in or contract, because I&rsquo;d rather you stay only when it&rsquo;s genuinely your choice.",
-              },
-            ].map((item, i) => (
-              <FadeIn key={item.t} delay={i * 70}>
-                <div className="h-full rounded-xl2 bg-cream p-6 text-center shadow-soft sm:p-7">
-                  <h3 className="text-[18px] font-semibold text-navy sm:text-[20px]">
-                    {item.t}
-                  </h3>
-                  <p
-                    className="mt-3 leading-relaxed text-navy/80"
-                    dangerouslySetInnerHTML={{ __html: item.d }}
-                  />
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <FadeIn delay={120}>
+            <p className="mx-auto mt-6 max-w-prose text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+              Counselling sessions are 50 minutes long, usually weekly and the
+              process can either be short term (6&ndash;12 sessions) or longer
+              term. This can be discussed and decided together.
+            </p>
+          </FadeIn>
         </Container>
       </Section>
 
       {/* FEES */}
-      <Section tone="cream" spacing="default">
+      <Section tone="cream" spacing="default" id="fees">
         <Container size="wide">
           <FadeIn>
             <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
               Fees
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-warm-grey">
-              Pricing in plain numbers. Pay as you go, after each session.
+            <p className="mx-auto mt-5 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+              It&rsquo;s really important to find the right counsellor for you,
+              all counsellors are different, so for that reason I offer a free
+              initial online session which gives us an opportunity to meet and
+              discuss your needs.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+              After the initial free online session, I charge &pound;55 per
+              session face to face and &pound;45 per session online.
             </p>
           </FadeIn>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
             {[
               {
                 k: "Free",
-                t: "First online session",
-                d: "A genuinely free 55 minutes by secure video, with no obligation to come back if it isn&rsquo;t the right fit.",
+                t: "Initial online session",
+                d: "50 minutes by secure video to meet and discuss your needs.",
                 highlight: true,
               },
               {
                 k: "£55",
                 t: "In person, Eastleigh",
-                d: "55 minutes in the room at the Cranberry Wellbeing Centre.",
+                d: "50 minutes in the room at the Cranberry Wellbeing Centre.",
               },
               {
                 k: "£45",
                 t: "Online",
-                d: "55 minutes by secure video, the same session from your own sofa.",
+                d: "50 minutes by secure video, the same session from the comfort of your own home.",
               },
             ].map((row) => (
               <FadeIn key={row.t} delay={80}>
@@ -161,102 +172,18 @@ export default function ServicesPage() {
                   <p className="mt-2 text-[14px] font-semibold uppercase tracking-wider text-navy/70">
                     {row.t}
                   </p>
-                  <p
-                    className="mt-3 leading-relaxed text-navy/85"
-                    dangerouslySetInnerHTML={{ __html: row.d }}
-                  />
+                  <p className="mt-3 leading-relaxed text-navy/85">
+                    {row.d}
+                  </p>
                 </div>
               </FadeIn>
             ))}
           </div>
-
-          <FadeIn delay={200}>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-warm-grey">
-              If money is the thing standing in the way of booking, please
-              mention it when you message, because I keep a small number of
-              lower-cost spaces and would much rather you ask than not come at
-              all.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={300}>
-            <div className="mt-12">
-              <Testimonial
-                variant="inline"
-                quote={
-                  <>
-                    &ldquo;Felt selfish spending £55 a week on me when the
-                    house needs new carpets. Six months in and i&rsquo;m a
-                    different mum. Honestly best money i&rsquo;ve ever spent.
-                    Carpets can wait.&rdquo;
-                  </>
-                }
-                attribution="Rachel"
-                context="38, Hedge End"
-              />
-            </div>
-          </FadeIn>
         </Container>
       </Section>
 
-      {/* WHAT I WORK WITH */}
-      <Section tone="blue" spacing="default">
-        <Container>
-          <FadeIn>
-            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              What I work with
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-warm-grey">
-              There&apos;s no issue too big or too small. The list below is a
-              rough map, not a checklist you have to fit into.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={120}>
-            <div className="mt-8 rounded-xl2 bg-cream p-6 shadow-soft sm:p-8">
-              <div className="flex flex-wrap justify-center gap-2">
-                {[
-                  "Anxiety",
-                  "Depression",
-                  "Stress and overwhelm",
-                  "Panic attacks",
-                  "Anger and emotional regulation",
-                  "Low self-esteem and confidence",
-                  "Low mood and sadness",
-                  "Loneliness and isolation",
-                  "Family and friendship difficulties",
-                  "Relationship difficulties",
-                  "Separation and divorce",
-                  "Loss and bereavement",
-                  "Identity-related concerns",
-                  "Life transitions and adjustment",
-                  "Work-related stress and burnout",
-                  "Obsessive Compulsive Disorder (OCD)",
-                  "Suicidal thoughts",
-                  "Long-term health conditions",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-soft-blue/30 px-3.5 py-1.5 text-sm text-navy/85"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p className="mt-6 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
-                There is no issue too big or too small.
-              </p>
-              <p className="mt-3 text-center leading-relaxed text-navy/80">
-                Therapy is not only for those with specific issues. It can also
-                be helpful for anyone who would like to learn more about
-                themselves and their relationships.
-              </p>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
-
-      <Section tone="yellow" spacing="tight" className="relative overflow-hidden">
+      {/* CTA */}
+      <Section tone="yellow" spacing="default" className="relative overflow-hidden">
         <Sun
           className="pointer-events-none absolute top-8 right-[8%] h-28 w-28 opacity-55 animate-float-soft"
           withRays
@@ -265,13 +192,9 @@ export default function ServicesPage() {
         <Container>
           <FadeIn>
             <div className="text-center">
-              <h2 className="text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-                Ready when you are.
+              <h2 className="mx-auto max-w-2xl text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+                May I encourage you to take that first step with me today?
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-navy/85">
-                The first online session is free and tells you almost
-                everything you need to know about whether we&rsquo;re a fit.
-              </p>
               <div className="mt-7 flex justify-center">
                 <Button href="/contact/" size="lg">
                   Get in touch

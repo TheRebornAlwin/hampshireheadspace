@@ -39,7 +39,7 @@ export default function MobileStickyCTA() {
           href="/contact/"
           className="flex h-12 w-full items-center justify-center rounded-xl2 bg-navy px-5 text-[15px] font-medium text-cream transition-colors hover:bg-navy-deep"
         >
-          Book your free first session
+          Get in touch
         </Link>
       </div>
     </div>
