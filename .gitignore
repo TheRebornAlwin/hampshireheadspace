@@ -36,5 +36,6 @@ next-env.d.ts
 
 # local image processing + QA artifacts
 /about-you-raw
+/cranberry-raw
 /logo-icon-raw*
 /scripts/mobile-shots/

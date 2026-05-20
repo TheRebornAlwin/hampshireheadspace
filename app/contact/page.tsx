@@ -122,8 +122,8 @@ export default function ContactPage() {
                   <img
                     src="/cranberry.webp"
                     alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
-                    width={1024}
-                    height={1024}
+                    width={1086}
+                    height={1449}
                     className="h-auto w-full rounded-xl2 shadow-soft"
                     loading="lazy"
                     decoding="async"
