@@ -57,6 +57,25 @@ export default function AboutYouPage() {
         </div>
       </section>
 
+      {/* IMAGE — counselling scene */}
+      <section className="relative overflow-hidden bg-cream pt-2 pb-10 sm:pt-4 sm:pb-12">
+        <Container>
+          <FadeIn>
+            <div className="mx-auto max-w-md">
+              <img
+                src="/about-you.webp"
+                alt="A client in a quiet counselling session with Ruth"
+                width={1122}
+                height={1402}
+                className="h-auto w-full rounded-xl2 shadow-soft-lg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
       {/* RUTH'S EXACT WORDING */}
       <Section tone="cream" spacing="default">
         <Container>

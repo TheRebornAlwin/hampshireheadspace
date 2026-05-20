@@ -118,21 +118,12 @@ export default function ContactPage() {
                 <p className="mt-3 text-sm text-warm-grey">
                   Free parking is right outside!
                 </p>
-                <div className="mt-5 space-y-3">
+                <div className="mt-5">
                   <img
                     src="/cranberry.webp"
                     alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
                     width={1024}
                     height={1024}
-                    className="h-auto w-full rounded-xl2 shadow-soft"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    src="/room.webp"
-                    alt="The counselling room — soft chairs, a window, a lamp, plants"
-                    width={1600}
-                    height={2133}
                     className="h-auto w-full rounded-xl2 shadow-soft"
                     loading="lazy"
                     decoding="async"
