@@ -37,16 +37,37 @@ export default function AboutYouPage() {
         <div className="relative z-10">
           <Container>
             <FadeIn>
-              <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+              <div className="relative mx-auto w-[210px] sm:w-[240px]">
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
+                />
+                <img
+                  src="/about-you.webp"
+                  alt="A quiet, supportive counselling conversation"
+                  width={1122}
+                  height={1402}
+                  className="relative aspect-square w-full rounded-full object-cover object-[center_30%] shadow-soft-lg ring-2 ring-cream"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <p className="mt-6 text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
                 About you
               </p>
             </FadeIn>
-            <FadeIn delay={100}>
+            <FadeIn delay={160}>
               <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
                 A space to slow down and connect with yourself.
               </h1>
             </FadeIn>
-            <FadeIn delay={180}>
+            <FadeIn delay={220}>
               <p className="mx-auto mt-6 max-w-2xl text-center text-pretty text-[17px] leading-relaxed text-navy/85 sm:text-[19px]">
                 The counselling experience can be a freeing journey that will
                 enable you to love, care, nourish and respect yourself, just as
@@ -55,25 +76,6 @@ export default function AboutYouPage() {
             </FadeIn>
           </Container>
         </div>
-      </section>
-
-      {/* IMAGE — counselling scene */}
-      <section className="relative overflow-hidden bg-cream pt-2 pb-10 sm:pt-4 sm:pb-12">
-        <Container>
-          <FadeIn>
-            <div className="mx-auto max-w-md">
-              <img
-                src="/about-you.webp"
-                alt="A client in a quiet counselling session with Ruth"
-                width={1122}
-                height={1402}
-                className="h-auto w-full rounded-xl2 shadow-soft-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </FadeIn>
-        </Container>
       </section>
 
       {/* RUTH'S EXACT WORDING */}
