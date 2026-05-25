@@ -12,14 +12,42 @@ import Mountains from "@/components/illustrations/Mountains";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Individual humanistic counselling for adults in Eastleigh, Hampshire. £55 per session in person, £45 online. A free initial online session to meet and discuss your needs.",
+    "Individual humanistic counselling for adults in Eastleigh, Hampshire. £55 per session in person, £40 online. A free initial online session to meet and discuss your needs.",
   alternates: { canonical: "/services" },
 };
+
+const TAGS = [
+  "Anxiety",
+  "Depression",
+  "Low mood and persistent sadness",
+  "Stress, overwhelm, and burnout",
+  "Panic attacks",
+  "Worry and overthinking",
+  "Anger and emotional regulation difficulties",
+  "Low self-esteem and low confidence",
+  "People-pleasing and perfectionism",
+  "A harsh inner critic",
+  "Feelings of being stuck or lost",
+  "Disconnection",
+  "Loneliness and isolation",
+  "Family, friendship, and relationship issues",
+  "Patterns in relationships",
+  "Separation and divorce",
+  "Parenting difficulties",
+  "Caring responsibilities",
+  "Loss and bereavement",
+  "Identity-related concerns",
+  "Life transitions and adjustment difficulties",
+  "Obsessive Compulsive Disorder (OCD)",
+  "Suicidal thoughts",
+  "Long-term health conditions",
+  "&hellip;and life in general",
+];
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12">
+      <section className="relative overflow-hidden pt-10 pb-6 sm:pt-16 sm:pb-8">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
@@ -34,19 +62,15 @@ export default function ServicesPage() {
         <div className="relative z-10">
           <Container>
             <FadeIn>
-              <h1 className="mx-auto max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
+              <h1 className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
                 Services
               </h1>
-              <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-                Individual counselling for adults, in person in Eastleigh or
-                online.
-              </p>
             </FadeIn>
           </Container>
         </div>
       </section>
 
-      {/* WHAT COUNSELLING CAN SUPPORT — Ruth's exact list */}
+      {/* WHAT COUNSELLING CAN SUPPORT */}
       <Section tone="cream" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="blue"
@@ -60,37 +84,17 @@ export default function ServicesPage() {
           </FadeIn>
 
           <FadeIn delay={120}>
-            <div className="mx-auto mt-8 max-w-4xl rounded-xl2 bg-cream p-6 shadow-soft sm:p-8">
-              <div className="flex flex-wrap justify-center gap-2">
-                {[
-                  "Anxiety",
-                  "Depression",
-                  "Stress and overwhelm",
-                  "Panic attacks",
-                  "Anger and emotional regulation difficulties",
-                  "Low self-esteem and low confidence",
-                  "Low mood and sadness",
-                  "Loneliness and isolation",
-                  "Family and friendship difficulties",
-                  "Relationship difficulties",
-                  "Separation and divorce",
-                  "Loss and bereavement",
-                  "Identity-related concerns",
-                  "Life transitions and adjustment difficulties",
-                  "Work-related stress and burnout",
-                  "Obsessive Compulsive Disorder (OCD)",
-                  "Suicidal thoughts",
-                  "Long-term health conditions",
-                  "&hellip;and life in general",
-                ].map((tag) => (
-                  <span
+            <div className="mx-auto mt-8 max-w-4xl rounded-xl2 bg-cream p-5 shadow-soft sm:p-8">
+              <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {TAGS.map((tag) => (
+                  <li
                     key={tag}
-                    className="rounded-full bg-soft-blue/30 px-3.5 py-1.5 text-sm text-navy/85"
+                    className="rounded-full bg-soft-blue/30 px-3.5 py-2 text-center text-[14px] leading-snug text-navy/85 sm:text-[15px]"
                     dangerouslySetInnerHTML={{ __html: tag }}
                   />
                 ))}
-              </div>
-              <p className="mt-6 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
+              </ul>
+              <p className="mt-7 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
                 There is no issue too big or too small.
               </p>
               <p className="mt-3 text-center leading-relaxed text-navy/80">
@@ -126,18 +130,18 @@ export default function ServicesPage() {
       <Section tone="cream" spacing="default" id="fees">
         <Container size="wide">
           <FadeIn>
-            <h2 className="mx-auto max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
               Fees
-            </h2>
+            </p>
             <p className="mx-auto mt-5 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-              It&rsquo;s really important to find the right counsellor for you,
+              It is really important to find the right counsellor for you,
               all counsellors are different, so for that reason I offer a free
               initial online session which gives us an opportunity to meet and
               discuss your needs.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               After the initial free online session, I charge &pound;55 per
-              session face to face and &pound;45 per session online.
+              session face to face and &pound;40 per session online.
             </p>
           </FadeIn>
 
@@ -155,7 +159,7 @@ export default function ServicesPage() {
                 d: "50 minutes in the room at the Cranberry Wellbeing Centre.",
               },
               {
-                k: "£45",
+                k: "£40",
                 t: "Online",
                 d: "50 minutes by secure video, the same session from the comfort of your own home.",
               },

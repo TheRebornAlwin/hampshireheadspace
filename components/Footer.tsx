@@ -21,7 +21,10 @@ export default function Footer() {
             />
           </Link>
           <p className="mx-auto max-w-xs text-sm leading-relaxed text-warm-grey md:mx-0">
-            Private counselling in Eastleigh, Hampshire. BACP-registered. First 50-minute session &ndash; no fee.
+            Private counselling in Eastleigh, Hampshire.
+          </p>
+          <p className="mx-auto max-w-xs text-balance text-[1.05rem] font-semibold leading-snug tracking-tight text-navy sm:text-[1.15rem] md:mx-0">
+            A space to slow down and connect&hellip;
           </p>
         </div>
 
@@ -43,22 +46,24 @@ export default function Footer() {
           <h4 className="text-[13px] font-semibold uppercase tracking-wider text-navy/70">
             Get in touch
           </h4>
-          <ul className="space-y-2 text-warm-grey">
+          <ul className="space-y-2">
             <li>
-              <span className="font-semibold text-navy">Cranberry Wellbeing Centre</span><br />
-              Eastleigh, Hampshire
-            </li>
-            <li>
-              <a className="hover:text-navy" href="mailto:hello@hampshireheadspace.com">
+              <a
+                className="text-[0.95rem] font-semibold tracking-tight text-navy hover:underline"
+                href="mailto:hello@hampshireheadspace.com"
+              >
                 hello@hampshireheadspace.com
               </a>
             </li>
             <li>
-              <a className="hover:text-navy" href="tel:+447843114396">
+              <a
+                className="text-[0.95rem] font-semibold tracking-tight text-navy hover:underline"
+                href="tel:+447843114396"
+              >
                 07843 114396
               </a>
-              <span className="ml-1 text-xs text-warm-grey-light">
-                (text) or message
+              <span className="ml-1 text-[0.95rem] font-semibold tracking-tight text-navy">
+                (text or message)
               </span>
             </li>
           </ul>
@@ -66,10 +71,9 @@ export default function Footer() {
             BACP registered, fully insured, with an enhanced DBS check and regular clinical supervision.
           </p>
           <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 pt-2 text-xs text-warm-grey-light md:justify-start">
-            <li><Link className="hover:text-navy" href="/privacy/">Privacy</Link></li>
-            <li><Link className="hover:text-navy" href="/cookies/">Cookies</Link></li>
             <li><Link className="hover:text-navy" href="/terms/">Terms</Link></li>
             <li><Link className="hover:text-navy" href="/ethical-framework/">Ethical framework</Link></li>
+            <li><Link className="hover:text-navy" href="/privacy/">Privacy</Link></li>
           </ul>
         </div>
       </div>

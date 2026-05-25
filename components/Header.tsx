@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Button from "./Button";
 
 const LOGO_URL = "/logo.webp";
 
@@ -73,7 +72,7 @@ export default function Header() {
           aria-label="Primary"
           className="hidden items-center gap-8 lg:flex"
         >
-          {links.slice(1).map((link) => (
+          {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -82,9 +81,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button href="/contact/" size="md">
-            Get in touch
-          </Button>
         </nav>
 
         <button
@@ -138,15 +134,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-3">
-            <Button
-              href="/contact/"
-              size="md"
-              className="w-full"
-            >
-              Get in touch
-            </Button>
-          </div>
         </nav>
       </div>
     </header>

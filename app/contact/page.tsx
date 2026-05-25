@@ -93,37 +93,50 @@ export default function ContactPage() {
                       07843 114396
                     </a>
                     <span className="ml-1 text-warm-grey-light">
-                      (text) or message
+                      (text or message)
                     </span>
                   </li>
                 </ul>
                 <p className="mt-4 text-sm text-warm-grey">
-                  Please email or leave a text mentioning how and when you
-                  would like to be contacted, and I will usually get back to
-                  you on the same day.
+                  Please email or leave a text mentioning how you would like
+                  to be contacted, and I will usually get back to you on the
+                  same day.
                 </p>
               </div>
 
               <div className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
                 <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
-                  Where to find us
+                  Where to find me
                 </h3>
                 <address className="mt-3 not-italic text-[15px] leading-relaxed text-navy/90">
                   <span className="font-semibold text-navy">Cranberry Wellbeing Centre</span>
                   <br />
-                  Eastleigh, Hampshire
+                  67 Leigh Road,
                   <br />
-                  Opposite The Point
+                  Eastleigh, Hampshire,
+                  <br />
+                  SO50 9DF.
+                  <br />
+                  (Opposite The Point)
                 </address>
                 <p className="mt-3 text-sm text-warm-grey">
-                  Free parking is right outside!
+                  Free parking is right outside.
                 </p>
-                <div className="mt-5">
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   <img
                     src="/cranberry.webp"
                     alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
                     width={1086}
                     height={1449}
+                    className="h-auto w-full rounded-xl2 shadow-soft"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="/door.webp"
+                    alt="The sage-green front door at the Cranberry Wellbeing Centre, with the intercom on the left"
+                    width={1024}
+                    height={1536}
                     className="h-auto w-full rounded-xl2 shadow-soft"
                     loading="lazy"
                     decoding="async"
@@ -134,6 +147,28 @@ export default function ContactPage() {
           </div>
         </Container>
       </Section>
+
+      {/* THE ROOM — horizontal pic to balance the page, per Ruth's spec */}
+      <section className="relative overflow-hidden bg-cream pb-16 sm:pb-20">
+        <Container size="wide">
+          <FadeIn>
+            <div className="mx-auto max-w-5xl">
+              <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                The counselling room
+              </p>
+              <img
+                src="/room.webp"
+                alt="The counselling room — sage walls, two pink armchairs facing a small fireplace, framed botanical prints, plants and warm lamp light"
+                width={1536}
+                height={1024}
+                className="mt-4 h-auto w-full rounded-xl2 shadow-soft-lg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
     </>
   );
 }

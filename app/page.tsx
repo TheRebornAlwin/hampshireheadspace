@@ -6,9 +6,25 @@ import CloudBlob from "@/components/illustrations/CloudBlob";
 import Birds from "@/components/illustrations/Birds";
 import Sun from "@/components/illustrations/Sun";
 import Sparkles from "@/components/illustrations/Sparkles";
-import LeafFloat from "@/components/illustrations/LeafFloat";
 import Mountains from "@/components/illustrations/Mountains";
 import FadeIn from "@/components/FadeIn";
+
+function Heart({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+    >
+      <path
+        d="M16 27s-9-5.5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-9 12-9 12z"
+        fill="currentColor"
+        opacity="0.85"
+      />
+    </svg>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -44,12 +60,6 @@ export default function HomePage() {
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
-              <p className="mx-auto mt-6 max-w-xl text-pretty text-center text-[17px] leading-relaxed text-navy/85 sm:text-[19px] lg:mx-0 lg:text-left">
-                Private counselling in Eastleigh for adults who&rsquo;d like a
-                calmer, kinder way through.
-              </p>
-            </FadeIn>
-            <FadeIn delay={240}>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
                 <Button href="/contact/" size="lg">
                   Get in touch
@@ -57,18 +67,15 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            {/* Trust micro-badges */}
-            <FadeIn delay={300}>
+            {/* Trust micro-badges — all three visible on mobile per Ruth */}
+            <FadeIn delay={240}>
               <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px] lg:justify-start">
                 {[
-                  { t: "BACP registered" },
-                  { t: "First session – no fee" },
-                  { t: "Same-day reply", smOnly: true },
-                ].map((item) => (
-                  <li
-                    key={item.t}
-                    className={`items-center gap-1.5 ${item.smOnly ? "hidden sm:flex" : "flex"}`}
-                  >
+                  "BACP registered",
+                  "First session – no fee",
+                  "Same-day reply",
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-1.5">
                     <svg
                       aria-hidden="true"
                       viewBox="0 0 20 20"
@@ -83,72 +90,55 @@ export default function HomePage() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <span className="font-medium">{item.t}</span>
+                    <span className="font-medium">{t}</span>
                   </li>
                 ))}
               </ul>
             </FadeIn>
           </div>
 
+          {/* HERO LOGO — using Ruth's provided combo (icon + wordmark in one image) */}
           <div className="lg:col-span-5">
             <FadeIn delay={120}>
-              <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm lg:max-w-none">
+              <div className="relative mx-auto w-full max-w-[300px] sm:max-w-sm lg:max-w-none">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
                 />
+                {/* Dots: hidden on mobile so they don't sit over the wordmark; only show from sm+ where there's room */}
                 <div
                   aria-hidden="true"
-                  className="absolute -top-3 -right-2 h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:h-20 sm:w-20"
+                  className="absolute -top-3 -right-2 hidden h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:block sm:h-20 sm:w-20"
                   style={{ animation: "floatSoft 12s ease-in-out infinite" }}
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute -bottom-2 -left-3 h-12 w-12 rounded-full bg-soft-blue-strong/80 shadow-soft sm:h-16 sm:w-16"
+                  className="absolute -bottom-2 -left-3 hidden h-12 w-12 rounded-full bg-soft-blue-strong/80 shadow-soft sm:block sm:h-16 sm:w-16"
                   style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute bottom-6 -left-1 h-6 w-6 rounded-full bg-[#FFB0C0] shadow-soft sm:h-8 sm:w-8"
+                  className="absolute bottom-6 -left-1 hidden h-6 w-6 rounded-full bg-[#FFB0C0] shadow-soft sm:block sm:h-8 sm:w-8"
                   style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
                 />
                 <img
-                  src="/logo-icon.webp"
-                  alt="Hampshire Headspace logo"
-                  width={800}
-                  height={630}
+                  src="/logo.webp"
+                  alt="Hampshire Headspace Counselling"
+                  width={1080}
+                  height={780}
                   className="relative mx-auto h-auto w-full animate-float-soft"
                   loading="eager"
                   // @ts-expect-error fetchpriority is valid HTML
                   fetchpriority="high"
                   decoding="async"
                 />
-                <p className="mt-4 text-center text-[1.05rem] font-semibold tracking-[0.16em] text-navy uppercase sm:text-[1.2rem]">
-                  Hampshire Headspace
-                </p>
-                <p className="text-center text-[0.85rem] font-medium tracking-[0.32em] text-navy/70 uppercase sm:text-[0.95rem]">
-                  Counselling
-                </p>
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* HEADLINER QUOTE — moved up per Ruth's request */}
-      <section className="relative overflow-hidden bg-soft-yellow py-14 sm:py-20">
-        <Sparkles className="pointer-events-none absolute top-6 right-[8%] h-20 w-32 opacity-70 animate-twinkle" />
-        <Sparkles className="pointer-events-none absolute bottom-6 left-[6%] h-16 w-28 opacity-50 animate-twinkle" />
-        <Container>
-          <FadeIn>
-            <p className="mx-auto max-w-3xl text-center text-balance font-semibold leading-[1.18] tracking-tight text-navy text-[1.55rem] sm:text-[2rem] lg:text-[2.4rem]">
-              People who need support sometimes look a lot like people who don&rsquo;t need support.
-            </p>
-          </FadeIn>
-        </Container>
-      </section>
-
-      {/* SECTION — CAN TALKING TO SOMEONE HELP? (Ruth's exact prose, fully visible) */}
+      {/* SECTION — CAN TALKING TO SOMEONE HELP? Paragraphs reordered per Ruth */}
       <Section tone="blue-strong" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
@@ -159,19 +149,9 @@ export default function HomePage() {
             <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
               Can talking to someone help?
             </p>
-            <h2 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
-              Life can be difficult, and I understand that.
-            </h2>
           </FadeIn>
           <FadeIn delay={120}>
             <div className="mx-auto mt-8 max-w-prose space-y-5 text-center text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              <p>
-                We can&rsquo;t always cope on our own and at times may need
-                additional support.
-              </p>
-              <p>
-                The therapeutic relationship aims to give that support.
-              </p>
               <p>
                 At times we may all struggle with stresses, strains,
                 challenges, difficulties, loss and change. In a fast changing
@@ -179,6 +159,14 @@ export default function HomePage() {
                 connected; with ourselves, with others and within society and
                 during these times it can be helpful to talk about our
                 thoughts, our feelings and our emotions.
+              </p>
+              <p className="text-balance text-[1.35rem] font-semibold leading-snug text-navy sm:text-[1.6rem]">
+                Life can be difficult, and I understand that.
+              </p>
+              <p>
+                We can&rsquo;t always cope on our own and at times may need
+                additional support. The therapeutic relationship aims to give
+                that support.
               </p>
               <p>
                 Beginning therapy and choosing a therapist can be challenging.
@@ -194,16 +182,29 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* YARN PHOTO — placed after the "Can talking help" prose, per Ruth's spec */}
+      {/* YELLOW BANNER — moved DOWN to here per Ruth, sits AFTER the talking text */}
+      <section className="relative overflow-hidden bg-soft-yellow py-14 sm:py-20">
+        <Sparkles className="pointer-events-none absolute top-6 right-[8%] h-20 w-32 opacity-70 animate-twinkle" />
+        <Sparkles className="pointer-events-none absolute bottom-6 left-[6%] h-16 w-28 opacity-50 animate-twinkle" />
+        <Container>
+          <FadeIn>
+            <p className="mx-auto max-w-3xl text-center text-balance font-semibold leading-[1.18] tracking-tight text-navy text-[1.55rem] sm:text-[2rem] lg:text-[2.4rem]">
+              People who need support sometimes look a lot like people who don&rsquo;t need support.
+            </p>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* YARN PHOTO — Yarn 2 (softer colours) */}
       <section className="relative overflow-hidden bg-cream py-12 sm:py-16">
         <Container size="wide">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
               <img
                 src="/hero-tangled-yarn.webp"
-                alt="A counsellor in a soft blue chair gently holding the loose end of a tangled ball of yarn."
-                width={900}
-                height={820}
+                alt="Two figures sitting in soft blue chairs — one with a tangled ball of yarn for a head, the other calmly holding the loose end."
+                width={1254}
+                height={1254}
                 className="h-auto w-full rounded-xl2"
                 loading="lazy"
                 decoding="async"
@@ -213,162 +214,52 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* SECTION — COMPASSION. CONNECTION. CARE. */}
+      {/* AT THE HEART OF COUNSELLING — was "How I work", reordered Connection/Compassion/Care */}
       <Section tone="yellow-strong" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-8 right-[-4rem] h-36 w-72 opacity-30 animate-drift-slow"
         />
+        {/* Subtle abstract hearts echoing the logo */}
+        <Heart className="pointer-events-none absolute top-6 left-[5%] h-10 w-10 text-navy/15 sm:h-14 sm:w-14" />
+        <Heart className="pointer-events-none absolute bottom-6 right-[6%] h-8 w-8 text-navy/20 sm:h-12 sm:w-12" />
         <Container size="wide">
           <FadeIn>
             <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              How I work
+              At the heart of counselling
             </p>
             <h2 className="mx-auto mt-4 max-w-2xl text-center text-balance text-[1.65rem] font-semibold leading-tight text-navy sm:text-[2.1rem]">
-              Compassion. Connection. Care.
+              Connection. Compassion. Care.
             </h2>
           </FadeIn>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-3 md:items-stretch">
             {[
               {
-                t: "Compassion.",
-                d: "You&rsquo;re carrying things that nobody around you has seen. In our hour together you don&rsquo;t have to soften any of it.",
+                t: "Connection.",
+                d: "Being met as you are, beyond roles, expectations, or appearances. Where the difficult, messy, and human parts of experience can have space.",
               },
               {
-                t: "Connection.",
-                d: "Counselling that works is much less a technique, and much more a real human noticing what you&rsquo;re saying, and what you&rsquo;re not quite saying.",
+                t: "Compassion.",
+                d: "Understanding you within your own frame of reference. We are all shaped by different beginnings, by different experiences of love, loss, safety, survival, pressure and opportunity, or the absence of these things. We all struggle differently. We all protect ourselves differently. We all use different coping strategies.",
               },
               {
                 t: "Care.",
-                d: "The room is comfortable, your time starts properly when you sit down, I take supervision seriously, and I won&rsquo;t take you for granted.",
+                d: "Holding the relationship with consistency, respect, and professional responsibility.",
               },
             ].map((v, i) => (
               <FadeIn key={v.t} delay={i * 80}>
-                <div className="h-full rounded-xl2 bg-cream p-7 text-center shadow-soft sm:p-8">
+                <div className="relative h-full rounded-xl2 bg-cream p-7 text-center shadow-soft sm:p-8">
+                  <Heart className="absolute -top-3 left-1/2 h-7 w-7 -translate-x-1/2 text-soft-yellow drop-shadow-sm" />
                   <h3 className="text-[1.85rem] font-bold leading-tight tracking-tight text-navy sm:text-[2.2rem]">
                     {v.t}
                   </h3>
-                  <p
-                    className="mt-3 text-[15px] leading-relaxed text-navy/80 sm:text-[16px]"
-                    dangerouslySetInnerHTML={{ __html: v.d }}
-                  />
+                  <p className="mt-3 text-[15px] leading-relaxed text-navy/80 sm:text-[16px]">
+                    {v.d}
+                  </p>
                 </div>
               </FadeIn>
             ))}
           </div>
-        </Container>
-      </Section>
-
-      {/* SECTION — ABOUT ME (slim intro, links to full page) */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
-        <Sparkles className="pointer-events-none absolute top-10 right-[6%] h-24 w-40 opacity-60 animate-twinkle" />
-        <Container>
-          <FadeIn>
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-              About me
-            </p>
-          </FadeIn>
-          <FadeIn delay={80}>
-            <div className="relative mx-auto mt-5 w-[210px] sm:w-[240px]">
-              <div
-                aria-hidden="true"
-                className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
-              />
-              <img
-                src="/ruth-headshot.webp?v=7"
-                alt="Ruth, the counsellor at Hampshire Headspace"
-                width={520}
-                height={520}
-                className="relative h-auto w-full rounded-full object-cover shadow-soft-lg ring-2 ring-cream"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </FadeIn>
-          <FadeIn delay={140}>
-            <h2 className="mx-auto mt-7 max-w-2xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-              I&rsquo;m Ruth.
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-center text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
-              Compassion, connection and care are important to me, so I base
-              my practice on these principles.
-            </p>
-            <div className="mt-6 flex justify-center">
-              <Button href="/about/" variant="secondary" size="md">
-                About me
-              </Button>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
-
-      {/* SECTION — WHAT COUNSELLING CAN SUPPORT */}
-      <Section tone="blue-strong" spacing="default" className="relative overflow-hidden">
-        <CloudBlob
-          variant="blue"
-          className="pointer-events-none absolute -top-6 left-[-4rem] h-32 w-72 opacity-20 animate-drift-slower"
-        />
-        <LeafFloat className="pointer-events-none absolute -bottom-4 right-[3%] h-36 w-36 opacity-60 animate-float-soft" />
-        <Container size="wide">
-          <FadeIn>
-            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.75rem] font-semibold leading-tight text-navy sm:text-[2.25rem]">
-              Counselling can support people experiencing&hellip;
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-8 max-w-4xl rounded-xl2 bg-cream p-6 shadow-soft sm:p-8">
-              <div className="flex flex-wrap justify-center gap-2">
-                {[
-                  "Anxiety",
-                  "Depression",
-                  "Stress and overwhelm",
-                  "Panic attacks",
-                  "Anger and emotional regulation",
-                  "Low self-esteem and confidence",
-                  "Low mood and sadness",
-                  "Loneliness and isolation",
-                  "Family and friendship difficulties",
-                  "Relationship difficulties",
-                  "Separation and divorce",
-                  "Loss and bereavement",
-                  "Identity-related concerns",
-                  "Life transitions and adjustment",
-                  "Work-related stress and burnout",
-                  "Obsessive Compulsive Disorder (OCD)",
-                  "Suicidal thoughts",
-                  "Long-term health conditions",
-                  "&hellip;and life in general",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-soft-blue/25 px-3.5 py-1.5 text-[14px] text-navy/85 sm:text-[15px]"
-                    dangerouslySetInnerHTML={{ __html: tag }}
-                  />
-                ))}
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[22px]">
-              There is no issue too big or too small.
-            </p>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-navy/80 sm:text-[17px]">
-              Therapy is not only for those with specific issues. It can also
-              be helpful for anyone who would like to learn more about
-              themselves and their relationships.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <Button href="/services/" variant="secondary">
-                See services
-              </Button>
-            </div>
-          </FadeIn>
         </Container>
       </Section>
 

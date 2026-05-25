@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutYouPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12">
+      <section className="relative overflow-hidden bg-cream pt-10 pb-4 sm:pt-16 sm:pb-6">
         <CloudBlob
           variant="blue"
           className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
@@ -78,8 +78,8 @@ export default function AboutYouPage() {
         </div>
       </section>
 
-      {/* RUTH'S EXACT WORDING */}
-      <Section tone="cream" spacing="default">
+      {/* RUTH'S EXACT WORDING — tightened pt so it joins the hero without a visible gap */}
+      <section className="bg-cream pt-2 pb-14 sm:pt-4 sm:pb-20">
         <Container>
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
@@ -109,7 +109,7 @@ export default function AboutYouPage() {
             </div>
           </FadeIn>
         </Container>
-      </Section>
+      </section>
 
       {/* CTA */}
       <Section tone="blue" spacing="default" className="relative overflow-hidden">

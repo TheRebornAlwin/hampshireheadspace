@@ -15,7 +15,17 @@ export default function BookingForm() {
     setError(false);
     setSubmitting(true);
 
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const formData = new FormData(e.currentTarget);
+    const data: Record<string, string | string[]> = {};
+    for (const [key, value] of formData.entries()) {
+      if (typeof value !== "string") continue;
+      if (key in data) {
+        const existing = data[key];
+        data[key] = Array.isArray(existing) ? [...existing, value] : [existing, value];
+      } else {
+        data[key] = value;
+      }
+    }
 
     try {
       const response = await fetch(FORMSPARK_ENDPOINT, {
@@ -114,7 +124,7 @@ export default function BookingForm() {
 
       <fieldset>
         <legend className="mb-2 block text-sm font-medium text-navy/80">
-          How would you prefer I reply?
+          How would you prefer I reply? <span className="font-normal text-warm-grey">(tick any that work)</span>
         </legend>
         <div className="flex flex-wrap gap-2">
           {(["email", "text", "call"] as const).map((opt) => (
@@ -123,7 +133,7 @@ export default function BookingForm() {
               className="cursor-pointer rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-2 text-sm text-navy/85 transition-colors duration-200 ease-out has-[:checked]:border-navy has-[:checked]:bg-navy has-[:checked]:text-cream"
             >
               <input
-                type="radio"
+                type="checkbox"
                 name="contactPref"
                 value={opt}
                 defaultChecked={opt === "email"}
@@ -137,7 +147,7 @@ export default function BookingForm() {
 
       <div>
         <label htmlFor="bestTime" className="mb-2 block text-sm font-medium text-navy/80">
-          Roughly when suits you? (optional)
+          Roughly when suits you for counselling? (optional)
         </label>
         <input
           id="bestTime"
@@ -177,7 +187,6 @@ export default function BookingForm() {
           id="message"
           name="message"
           rows={4}
-          placeholder="A sentence is enough, you don’t have to elaborate."
           className="w-full resize-none rounded-xl2 border-2 border-soft-blue/60 bg-cream px-4 py-3 text-navy placeholder:text-warm-grey-light focus:border-navy focus:outline-none"
         />
       </div>

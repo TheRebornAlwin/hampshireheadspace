@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutMePage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-10 pb-12 sm:pt-16 sm:pb-16">
+      <section className="relative overflow-hidden bg-cream pt-10 pb-4 sm:pt-16 sm:pb-6">
         <CloudBlob
           variant="yellow"
           className="pointer-events-none absolute -top-12 right-[-6rem] h-64 w-[24rem] opacity-30"
@@ -33,7 +33,12 @@ export default function AboutMePage() {
         <div className="relative z-10">
           <Container>
             <FadeIn>
-              <div className="relative mx-auto w-[210px] sm:w-[240px]">
+              <h1 className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                About me
+              </h1>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <div className="relative mx-auto mt-6 w-[210px] sm:w-[240px]">
                 <div
                   aria-hidden="true"
                   className="absolute -inset-3 rounded-full bg-soft-yellow/55 blur-sm"
@@ -43,34 +48,37 @@ export default function AboutMePage() {
                   className="absolute -inset-1.5 rounded-full bg-soft-blue/40"
                 />
                 <img
-                  src="/ruth-headshot.webp?v=7"
+                  src="/ruth-headshot.webp?v=8"
                   alt="Ruth, the counsellor at Hampshire Headspace"
-                  width={480}
-                  height={480}
-                  className="relative h-auto w-full rounded-full object-cover shadow-soft-lg ring-2 ring-cream"
+                  width={800}
+                  height={1067}
+                  className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
                   loading="eager"
                   decoding="async"
                 />
               </div>
             </FadeIn>
-            <FadeIn delay={120}>
-              <h1 className="mx-auto mt-8 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
-                About me
-              </h1>
-            </FadeIn>
           </Container>
         </div>
       </section>
 
-      {/* RUTH'S EXACT WORDING — fully open, no Read More */}
-      <Section tone="cream" spacing="default">
+      {/* INTRO — headline-styled, tight spacing per Ruth */}
+      <section className="bg-cream pt-4 pb-2 sm:pt-6 sm:pb-4">
+        <Container>
+          <FadeIn>
+            <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+              I&rsquo;m Ruth and connection, compassion and care are important to
+              me, so I base my practice on these principles.
+            </h2>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* RUTH'S EXACT WORDING — remaining paragraphs */}
+      <section className="bg-cream pb-14 sm:pb-20">
         <Container>
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-              <p>
-                I&rsquo;m Ruth and compassion, connection and care are
-                important to me, so I base my practice on these principles.
-              </p>
               <p>
                 I am a fully qualified humanistic counsellor. I am registered
                 with the BACP (British Association of Counselling and
@@ -81,9 +89,7 @@ export default function AboutMePage() {
                 I engage in regular supervision and training to support my own
                 knowledge and professional development.
               </p>
-              <p>
-                I am fully insured and hold an enhanced DBS certificate.
-              </p>
+              <p>I am fully insured and hold an enhanced DBS certificate.</p>
               <p>
                 I offer individual counselling sessions for people aged 16 and
                 over. I welcome neurotypical and neurodiverse clients, as well
@@ -98,7 +104,7 @@ export default function AboutMePage() {
             </div>
           </FadeIn>
         </Container>
-      </Section>
+      </section>
 
       {/* CREDENTIALS */}
       <Section tone="blue" spacing="tight">
@@ -125,7 +131,7 @@ export default function AboutMePage() {
 
               <ul className="grid gap-3 sm:grid-cols-2">
                 {[
-                  "BACP registered (member 418989)",
+                  "BACP registered member (418989)",
                   "Humanistic counsellor",
                   "Fully insured for practice",
                   "Enhanced DBS check",
@@ -160,8 +166,8 @@ export default function AboutMePage() {
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+      {/* CTA — colour wash behind, per Ruth */}
+      <Section tone="yellow" spacing="default" className="relative overflow-hidden">
         <Sparkles className="pointer-events-none absolute top-12 right-[8%] h-24 w-40 opacity-65 animate-twinkle" />
         <LeafFloat className="pointer-events-none absolute -bottom-4 left-[2%] h-36 w-36 opacity-70 animate-float-soft" />
         <Container>

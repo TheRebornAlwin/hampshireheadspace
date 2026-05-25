@@ -3,7 +3,7 @@ import Container from "./Container";
 
 type Props = {
   title: string;
-  intro: string;
+  intro?: string;
   updated: string;
   children: ReactNode;
 };
@@ -19,9 +19,11 @@ export default function LegalPage({ title, intro, updated, children }: Props) {
           {title}
         </h1>
         <p className="mt-2 text-sm text-warm-grey">Last updated: {updated}</p>
-        <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-navy/85">
-          {intro}
-        </p>
+        {intro && (
+          <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-navy/85">
+            {intro}
+          </p>
+        )}
         <div className="prose-style mt-10 max-w-prose space-y-7 text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
           {children}
         </div>

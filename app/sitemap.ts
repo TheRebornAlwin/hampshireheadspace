@@ -9,13 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",
     "/about",
+    "/about-you",
     "/services",
-    "/faq",
     "/contact",
-    "/privacy",
-    "/cookies",
     "/terms",
     "/ethical-framework",
+    "/privacy",
     "/blog",
   ];
   return paths.map((p) => ({

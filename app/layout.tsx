@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MobileStickyCTA from "@/components/MobileStickyCTA";
 import ScrollToTopOnLoad from "@/components/ScrollToTopOnLoad";
 
 const SITE_URL = "https://hampshireheadspace.co.uk";
@@ -75,9 +74,10 @@ const localBusinessJsonLd = {
   priceRange: "££",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Cranberry Wellbeing Centre",
+    streetAddress: "Cranberry Wellbeing Centre, 67 Leigh Road",
     addressLocality: "Eastleigh",
     addressRegion: "Hampshire",
+    postalCode: "SO50 9DF",
     addressCountry: "GB",
   },
   areaServed: [
@@ -141,7 +141,6 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <MobileStickyCTA />
       </body>
     </html>
   );

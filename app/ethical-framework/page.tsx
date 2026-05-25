@@ -4,52 +4,57 @@ import LegalPage from "@/components/LegalPage";
 export const metadata: Metadata = {
   title: "Ethical framework",
   description:
-    "The ethical framework Hampshire Headspace works to.",
+    "The ethical framework Hampshire Headspace works to as a BACP-registered counsellor.",
   alternates: { canonical: "/ethical-framework" },
 };
 
 export default function EthicalFrameworkPage() {
   return (
-    <LegalPage
-      title="Ethical framework"
-      updated="April 2026"
-      intro="As a BACP-registered counsellor I work to a clear, professional ethical framework."
-    >
+    <LegalPage title="Ethical framework" updated="April 2026">
       <section>
-        <h2 className="text-xl font-semibold text-navy">The framework I adhere to</h2>
         <p>
-          Hampshire Headspace operates in line with the British Association
-          for Counselling and Psychotherapy Ethical Framework for the
-          Counselling Professions.
+          As a BACP-registered counsellor, I work within a professional and
+          ethical framework.
         </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold text-navy">Respecting your autonomy</h2>
         <p>
-          You make the decisions about your own life and your own counselling.
+          A copy of the British Association for Counselling and Psychotherapy
+          Ethical Framework for the Counselling Professions (BACP) can be found
+          at{" "}
+          <a className="underline" href="https://www.bacp.co.uk">
+            www.bacp.co.uk
+          </a>
+          .
         </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold text-navy">Supervision</h2>
         <p>
-          All BACP-registered counsellors take regular clinical supervision,
-          where we sometimes discuss the work with another senior
-          practitioner. This is for the quality of your care, and you are
-          never identifiable in those conversations.
+          In summary, the framework is shaped by values such as trust, empathy,
+          integrity, and respect for client wellbeing, and sets out expectations
+          for how counselling is practiced:
         </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold text-navy">If something doesn&apos;t feel right</h2>
-        <p>
-          You can raise anything with me, and I&apos;d much rather you did.
-          If, after that, you weren&apos;t satisfied, the BACP has a formal
-          professional conduct procedure you can use to make a complaint,
-          with details at{" "}
-          <a className="underline" href="https://www.bacp.co.uk">www.bacp.co.uk</a>.
-        </p>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Treat clients with respect, dignity, and fairness.</li>
+          <li>
+            Keep information confidential, except where there is a serious
+            safety risk or legal requirement.
+          </li>
+          <li>
+            Work within the limits of training and competence, honestly and
+            professionally.
+          </li>
+          <li>Prioritise client wellbeing and aim to avoid harm.</li>
+          <li>Maintain clear professional boundaries.</li>
+          <li>
+            Be open about how counselling works, including limitations, fees,
+            cancellations, and confidentiality.
+          </li>
+          <li>
+            Continue training and supervision to support safe and effective
+            practice.
+          </li>
+          <li>
+            Be accountable for practice and follow a complaints process if
+            concerns arise.
+          </li>
+        </ul>
       </section>
     </LegalPage>
   );
