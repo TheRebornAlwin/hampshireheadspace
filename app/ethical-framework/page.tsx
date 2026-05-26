@@ -25,11 +25,17 @@ export default function EthicalFrameworkPage() {
           </a>
           .
         </p>
+      </section>
+
+      <section>
         <p>
           In summary, the framework is shaped by values such as trust, empathy,
           integrity, and respect for client wellbeing, and sets out expectations
           for how counselling is practiced:
         </p>
+      </section>
+
+      <section>
         <ul className="list-disc space-y-2 pl-6">
           <li>Treat clients with respect, dignity, and fairness.</li>
           <li>

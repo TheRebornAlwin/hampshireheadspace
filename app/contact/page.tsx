@@ -120,7 +120,7 @@ export default function ContactPage() {
                   (Opposite The Point)
                 </address>
                 <p className="mt-3 text-sm text-warm-grey">
-                  Free parking is right outside.
+                  Free parking is available.
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   <img
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
                     width={1086}
                     height={1449}
-                    className="h-auto w-full rounded-xl2 shadow-soft"
+                    className="aspect-[3/4] w-full rounded-xl2 object-cover shadow-soft"
                     loading="lazy"
                     decoding="async"
                   />
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     alt="The sage-green front door at the Cranberry Wellbeing Centre, with the intercom on the left"
                     width={1024}
                     height={1536}
-                    className="h-auto w-full rounded-xl2 shadow-soft"
+                    className="aspect-[3/4] w-full rounded-xl2 object-cover shadow-soft"
                     loading="lazy"
                     decoding="async"
                   />

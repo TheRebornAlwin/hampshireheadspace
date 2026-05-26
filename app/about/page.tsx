@@ -67,8 +67,8 @@ export default function AboutMePage() {
         <Container>
           <FadeIn>
             <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              I&rsquo;m Ruth and connection, compassion and care are important to
-              me, so I base my practice on these principles.
+              I&rsquo;m Ruth, and connection, compassion and care are important
+              to me, so I base my practice on these principles.
             </h2>
           </FadeIn>
         </Container>
@@ -80,26 +80,28 @@ export default function AboutMePage() {
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
-                I am a fully qualified humanistic counsellor. I am registered
-                with the BACP (British Association of Counselling and
-                Psychotherapy) and I am committed to offering a confidential
-                and ethical service.
+                I am a fully qualified humanistic counsellor, registered with
+                the British Association of Counselling and Psychotherapy (BACP)
+                and committed to offering a confidential and ethical service.
               </p>
               <p>
-                I engage in regular supervision and training to support my own
-                knowledge and professional development.
+                I have experience working with adolescents and adults in
+                charity organisations, education, and private counselling, with
+                a particular interest in supporting individuals affected by
+                addiction. Alongside my professional work, life experience has
+                deeply informed my sense of compassion and understanding of
+                the challenges people can face.
               </p>
-              <p>I am fully insured and hold an enhanced DBS certificate.</p>
+              <p>
+                I engage in regular supervision and training to support my
+                knowledge and professional development. I am fully insured and
+                hold an enhanced DBS certificate.
+              </p>
               <p>
                 I offer individual counselling sessions for people aged 16 and
                 over. I welcome neurotypical and neurodiverse clients, as well
                 as individuals from all cultural backgrounds, sexual
                 orientations, and gender identities.
-              </p>
-              <p>
-                I have plentiful experience in the school of life, working
-                with adolescents, and of working across the charity and
-                private practice sectors.
               </p>
             </div>
           </FadeIn>
@@ -132,8 +134,8 @@ export default function AboutMePage() {
               <ul className="grid gap-3 sm:grid-cols-2">
                 {[
                   "BACP registered member (418989)",
-                  "Humanistic counsellor",
-                  "Fully insured for practice",
+                  "Qualified humanistic counsellor",
+                  "Fully insured to practice",
                   "Enhanced DBS check",
                   "Regular clinical supervision",
                   "Ongoing CPD and training",

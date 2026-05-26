@@ -214,15 +214,19 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* AT THE HEART OF COUNSELLING — was "How I work", reordered Connection/Compassion/Care */}
-      <Section tone="yellow-strong" spacing="default" className="relative overflow-hidden">
+      {/* AT THE HEART OF COUNSELLING — blue background, scattered yellow hearts per Ruth */}
+      <Section tone="blue-strong" spacing="default" className="relative overflow-hidden">
         <CloudBlob
-          variant="yellow"
-          className="pointer-events-none absolute -top-8 right-[-4rem] h-36 w-72 opacity-30 animate-drift-slow"
+          variant="blue"
+          className="pointer-events-none absolute -top-8 right-[-4rem] h-36 w-72 opacity-25 animate-drift-slow"
         />
-        {/* Subtle abstract hearts echoing the logo */}
-        <Heart className="pointer-events-none absolute top-6 left-[5%] h-10 w-10 text-navy/15 sm:h-14 sm:w-14" />
-        <Heart className="pointer-events-none absolute bottom-6 right-[6%] h-8 w-8 text-navy/20 sm:h-12 sm:w-12" />
+        {/* Scattered yellow hearts — randomised positions and sizes for organic feel */}
+        <Heart className="pointer-events-none absolute top-[6%] left-[4%] h-7 w-7 rotate-[-12deg] text-soft-yellow opacity-90 sm:h-10 sm:w-10" />
+        <Heart className="pointer-events-none absolute top-[18%] right-[7%] h-5 w-5 rotate-[8deg] text-soft-yellow opacity-70 sm:h-8 sm:w-8" />
+        <Heart className="pointer-events-none absolute top-[42%] left-[2%] h-4 w-4 rotate-[20deg] text-soft-yellow opacity-65 sm:h-6 sm:w-6" />
+        <Heart className="pointer-events-none absolute top-[60%] right-[3%] h-6 w-6 rotate-[-18deg] text-soft-yellow opacity-80 sm:h-9 sm:w-9" />
+        <Heart className="pointer-events-none absolute bottom-[14%] left-[10%] h-5 w-5 rotate-[6deg] text-soft-yellow opacity-70 sm:h-8 sm:w-8" />
+        <Heart className="pointer-events-none absolute bottom-[8%] right-[14%] h-4 w-4 rotate-[-22deg] text-soft-yellow opacity-60 sm:h-7 sm:w-7" />
         <Container size="wide">
           <FadeIn>
             <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
@@ -236,15 +240,15 @@ export default function HomePage() {
             {[
               {
                 t: "Connection.",
-                d: "Being met as you are, beyond roles, expectations, or appearances. Where the difficult, messy, and human parts of experience can have space.",
+                d: "Beyond appearances, roles, expectations or judgements. A meeting where the difficult, messy, and human parts of experience can have space.",
               },
               {
                 t: "Compassion.",
-                d: "Understanding you within your own frame of reference. We are all shaped by different beginnings, by different experiences of love, loss, safety, survival, pressure and opportunity, or the absence of these things. We all struggle differently. We all protect ourselves differently. We all use different coping strategies.",
+                d: "Understanding you within your own frame of reference. We are all shaped by different beginnings, by different experiences of love, loss, safety, survival, pressure and opportunity, or the absence of these things. We all struggle differently. We all protect ourselves differently. We all cope differently.",
               },
               {
                 t: "Care.",
-                d: "Holding the relationship with consistency, respect, and professional responsibility.",
+                d: "Holding the relationship with consistency, respect, and professional responsibility, in a space where trust may develop.",
               },
             ].map((v, i) => (
               <FadeIn key={v.t} delay={i * 80}>

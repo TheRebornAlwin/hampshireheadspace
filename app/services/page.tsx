@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 const TAGS = [
   "Anxiety",
   "Depression",
-  "Low mood and persistent sadness",
-  "Stress, overwhelm, and burnout",
   "Panic attacks",
+  "Stress, overwhelm, and burnout",
+  "Low mood and persistent sadness",
   "Worry and overthinking",
   "Anger and emotional regulation difficulties",
   "Low self-esteem and low confidence",
@@ -47,10 +47,14 @@ const TAGS = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-10 pb-6 sm:pt-16 sm:pb-8">
+      <section className="relative overflow-hidden pt-6 pb-2 sm:pt-10 sm:pb-3">
         <CloudBlob
-          variant="blue"
-          className="pointer-events-none absolute -top-12 left-[-6rem] h-64 w-[24rem] opacity-20"
+          variant="yellow"
+          className="pointer-events-none absolute -top-6 right-[-4rem] h-40 w-72 opacity-30 animate-drift-slow"
+        />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute top-12 left-[6%] h-3 w-3 rounded-full bg-[#FFB0C0] opacity-80 sm:h-4 sm:w-4"
         />
         <div
           className="pointer-events-none absolute top-[18%] left-0 right-0 h-12 animate-fly-across"
@@ -73,8 +77,12 @@ export default function ServicesPage() {
       {/* WHAT COUNSELLING CAN SUPPORT */}
       <Section tone="cream" spacing="default" className="relative overflow-hidden">
         <CloudBlob
-          variant="blue"
-          className="pointer-events-none absolute -top-6 left-[-4rem] h-32 w-72 opacity-20 animate-drift-slower"
+          variant="yellow"
+          className="pointer-events-none absolute -top-4 left-[-4rem] h-32 w-72 opacity-25 animate-drift-slower"
+        />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute top-16 right-[8%] h-3 w-3 rounded-full bg-[#FFB0C0] opacity-70 sm:h-4 sm:w-4"
         />
         <Container size="wide">
           <FadeIn>
@@ -86,7 +94,7 @@ export default function ServicesPage() {
           <FadeIn delay={120}>
             <div className="mx-auto mt-8 max-w-4xl rounded-xl2 bg-cream p-5 shadow-soft sm:p-8">
               <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                {TAGS.map((tag) => (
+                {TAGS.slice(0, -1).map((tag) => (
                   <li
                     key={tag}
                     className="rounded-full bg-soft-blue/30 px-3.5 py-2 text-center text-[14px] leading-snug text-navy/85 sm:text-[15px]"
@@ -94,6 +102,12 @@ export default function ServicesPage() {
                   />
                 ))}
               </ul>
+              <div className="mt-2 flex justify-center">
+                <span
+                  className="inline-block rounded-full bg-soft-blue/30 px-4 py-2 text-center text-[14px] leading-snug text-navy/85 sm:text-[15px]"
+                  dangerouslySetInnerHTML={{ __html: TAGS[TAGS.length - 1] }}
+                />
+              </div>
               <p className="mt-7 text-center text-balance text-[18px] font-medium leading-snug text-navy sm:text-[20px]">
                 There is no issue too big or too small.
               </p>
