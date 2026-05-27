@@ -26,9 +26,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRa1o74WxlwBoXC02JYsPjAyFlLMdSZ8prOEaKT",
-    shortcut:
-      "https://5gl6uqlaxg.ufs.sh/f/x0izTbEnXmRa1o74WxlwBoXC02JYsPjAyFlLMdSZ8prOEaKT",
+    icon: "/logo-icon.webp",
+    shortcut: "/logo-icon.webp",
   },
   openGraph: {
     type: "website",
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
       "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh. Your first 50-minute session is free.",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 1200,
         height: 630,
         alt: "Hampshire Headspace logo",
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Private counselling in Eastleigh. Your first 50-minute session is free.",
     images: [
-      "/logo.png",
+      "/logo.webp",
     ],
   },
   robots: {
@@ -70,7 +69,7 @@ const localBusinessJsonLd = {
     "Private counselling in Eastleigh, Hampshire. BACP-registered counsellor offering individual sessions in person and online. First session free.",
   url: SITE_URL,
   image:
-    "/logo.png",
+    "/logo.webp",
   priceRange: "££",
   address: {
     "@type": "PostalAddress",
