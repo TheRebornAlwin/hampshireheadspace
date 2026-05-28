@@ -67,22 +67,22 @@ export default function AboutYouPage() {
                 A space to slow down and connect with yourself.
               </h1>
             </FadeIn>
-            <FadeIn delay={220}>
-              <p className="mx-auto mt-4 max-w-2xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-                The counselling experience can be a freeing journey that will
-                enable you to love, care, nourish and respect yourself, just as
-                you are.
-              </p>
-            </FadeIn>
           </Container>
         </div>
       </section>
 
-      {/* RUTH'S EXACT WORDING — tightened pt so it joins the hero without a visible gap */}
-      <section className="bg-cream pt-2 pb-14 sm:pt-4 sm:pb-20">
+      {/* RUTH'S EXACT WORDING — subhead now lives inside the prose block so the
+          sizing, width and line-rhythm are uniform on desktop (Ruth: "extra line"
+          between first sentence and the rest) */}
+      <section className="bg-cream pt-4 pb-14 sm:pt-6 sm:pb-20">
         <Container>
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+              <p>
+                The counselling experience can be a freeing{" "}
+                journey that will enable you to love, care, nourish and
+                respect yourself, just as you are.
+              </p>
               <p>
                 Counselling can provide you with an opportunity to slow down
                 and connect, to grow and to develop so that you may live with

@@ -47,14 +47,14 @@ const TAGS = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-6 pb-2 sm:pt-10 sm:pb-3">
+      <section className="relative overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0">
         <CloudBlob
           variant="yellow"
-          className="pointer-events-none absolute -top-6 right-[-4rem] h-40 w-72 opacity-30 animate-drift-slow"
+          className="pointer-events-none absolute top-4 right-4 h-24 w-44 opacity-35 animate-drift-slow sm:h-28 sm:w-56"
         />
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute top-12 left-[6%] h-3 w-3 rounded-full bg-[#FFB0C0] opacity-80 sm:h-4 sm:w-4"
+        <CloudBlob
+          variant="pink"
+          className="pointer-events-none absolute top-10 left-[3%] h-16 w-28 -rotate-12 opacity-70 sm:h-20 sm:w-36"
         />
         <div
           className="pointer-events-none absolute top-[18%] left-0 right-0 h-12 animate-fly-across"
@@ -78,11 +78,11 @@ export default function ServicesPage() {
       <Section tone="cream" spacing="default" className="relative overflow-hidden">
         <CloudBlob
           variant="yellow"
-          className="pointer-events-none absolute -top-4 left-[-4rem] h-32 w-72 opacity-25 animate-drift-slower"
+          className="pointer-events-none absolute top-6 left-4 h-24 w-44 opacity-30 animate-drift-slower sm:h-28 sm:w-56"
         />
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute top-16 right-[8%] h-3 w-3 rounded-full bg-[#FFB0C0] opacity-70 sm:h-4 sm:w-4"
+        <CloudBlob
+          variant="pink"
+          className="pointer-events-none absolute top-16 right-[4%] h-16 w-28 rotate-6 opacity-65 sm:h-20 sm:w-36"
         />
         <Container size="wide">
           <FadeIn>

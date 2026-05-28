@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/logo-icon.webp",
-    shortcut: "/logo-icon.webp",
+    icon: "/logo-icon.webp?v=2",
+    shortcut: "/logo-icon.webp?v=2",
   },
   openGraph: {
     type: "website",
@@ -118,7 +118,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/logo.webp"
+          href="/logo.webp?v=2"
           type="image/webp"
           // @ts-expect-error fetchpriority is valid HTML
           fetchpriority="high"

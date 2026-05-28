@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const LOGO_URL = "/logo.webp";
+const LOGO_URL = "/logo.webp?v=2";
 
 const links = [
   { href: "/", label: "Home" },

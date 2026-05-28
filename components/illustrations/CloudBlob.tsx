@@ -1,10 +1,15 @@
 type Props = {
   className?: string;
-  variant?: "blue" | "yellow";
+  variant?: "blue" | "yellow" | "pink";
 };
 
 export default function CloudBlob({ className = "", variant = "blue" }: Props) {
-  const fill = variant === "yellow" ? "#F6E9B2" : "#A7C5E3";
+  const fill =
+    variant === "yellow"
+      ? "#F6E9B2"
+      : variant === "pink"
+      ? "#FFD6DD"
+      : "#A7C5E3";
   return (
     <svg
       viewBox="0 0 400 200"

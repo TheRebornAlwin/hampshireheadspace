@@ -122,7 +122,7 @@ export default function HomePage() {
                   style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
                 />
                 <img
-                  src="/logo.webp"
+                  src="/logo.webp?v=2"
                   alt="Hampshire Headspace Counselling"
                   width={1080}
                   height={780}
@@ -240,7 +240,7 @@ export default function HomePage() {
             {[
               {
                 t: "Connection.",
-                d: "Beyond appearances, roles, expectations or judgements. A meeting where the difficult, messy, and human parts of experience can have space.",
+                d: "Beyond appearances, roles, expectations or judgements. Meeting where the difficult, messy, and human parts of experience can have space.",
               },
               {
                 t: "Compassion.",
@@ -253,7 +253,6 @@ export default function HomePage() {
             ].map((v, i) => (
               <FadeIn key={v.t} delay={i * 80}>
                 <div className="relative h-full rounded-xl2 bg-cream p-7 text-center shadow-soft sm:p-8">
-                  <Heart className="absolute -top-3 left-1/2 h-7 w-7 -translate-x-1/2 text-soft-yellow drop-shadow-sm" />
                   <h3 className="text-[1.85rem] font-bold leading-tight tracking-tight text-navy sm:text-[2.2rem]">
                     {v.t}
                   </h3>
