@@ -79,9 +79,10 @@ export default function AboutYouPage() {
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               <p>
-                The counselling experience can be a freeing{" "}
-                journey that will enable you to love, care, nourish and
-                respect yourself, just as you are.
+                The counselling experience can be a{" "}
+                <span style={{ wordSpacing: "4px" }}>freeing journey</span>{" "}
+                that will enable you to love, care, nourish and respect
+                yourself, just as you are.
               </p>
               <p>
                 Counselling can provide you with an opportunity to slow down
