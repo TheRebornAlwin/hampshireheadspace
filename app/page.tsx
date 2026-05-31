@@ -303,11 +303,6 @@ export default function HomePage() {
                   I&rsquo;m Ruth, and connection, compassion and care are
                   important to me, so I base my practice on these principles.
                 </h2>
-                <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-navy/85 sm:text-[17px] md:mx-0">
-                  I offer a space which is safe, welcoming, and non-judgmental
-                  in which you can feel secure and supported. A space where
-                  there are no expectations.
-                </p>
                 <div className="mt-7 flex justify-center md:justify-start">
                   <Button href="/about/" variant="secondary">
                     More about me
