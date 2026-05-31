@@ -304,9 +304,9 @@ export default function HomePage() {
                   important to me, so I base my practice on these principles.
                 </h2>
                 <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-navy/85 sm:text-[17px] md:mx-0">
-                  I work in a way that is warm, open and non-judgmental, offering
-                  a space where you can feel safe enough to explore whatever you
-                  are carrying, at a pace that feels right for you.
+                  I offer a space which is safe, welcoming, and non-judgmental
+                  in which you can feel secure and supported. A space where
+                  there are no expectations.
                 </p>
                 <div className="mt-7 flex justify-center md:justify-start">
                   <Button href="/about/" variant="secondary">
