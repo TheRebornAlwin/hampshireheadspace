@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="What to expect from your first counselling session"
       description="Step by step, beat by beat, so you know what's coming before you walk in."
+      slug="what-to-expect-from-your-first-counselling-session"
       publishedISO="2026-03-28"
       publishedHuman="28 March 2026"
       readMinutes={6}

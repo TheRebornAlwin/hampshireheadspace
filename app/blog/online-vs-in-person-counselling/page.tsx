@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="Online or in person: which counselling actually works better?"
       description="There's a real answer, and it's not the one you'll see on the big online-therapy adverts."
+      slug="online-vs-in-person-counselling"
       publishedISO="2026-02-04"
       publishedHuman="4 February 2026"
       readMinutes={5}

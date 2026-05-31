@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="Grief doesn't follow the timeline you expected"
       description="Why bereavement keeps surprising you a year, two years, ten years on, and what to do about it."
+      slug="grief-doesnt-follow-a-timeline"
       publishedISO="2026-01-28"
       publishedHuman="28 January 2026"
       readMinutes={6}

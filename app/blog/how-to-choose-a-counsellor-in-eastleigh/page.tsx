@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="How to choose a counsellor in Eastleigh"
       description="Six questions worth asking before you book, and what every counsellor's website tells you that you can safely ignore."
+      slug="how-to-choose-a-counsellor-in-eastleigh"
       publishedISO="2026-04-12"
       publishedHuman="12 April 2026"
       readMinutes={7}

@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="Anxiety in midlife: why it shows up now"
       description="On the surface nothing changed, and yet everything feels like it might."
+      slug="anxiety-in-midlife"
       publishedISO="2026-02-14"
       publishedHuman="14 February 2026"
       readMinutes={6}

@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="Counselling, therapy, psychotherapy: what's the actual difference?"
       description="The plain-English version, with the bits the official sites don't quite spell out."
+      slug="counselling-vs-therapy-vs-psychotherapy"
       publishedISO="2026-04-04"
       publishedHuman="4 April 2026"
       readMinutes={6}

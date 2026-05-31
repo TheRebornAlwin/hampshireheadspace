@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="How long does counselling take to work?"
       description="An honest answer that doesn't promise transformation by week three."
+      slug="how-long-does-counselling-take-to-work"
       publishedISO="2026-03-20"
       publishedHuman="20 March 2026"
       readMinutes={6}

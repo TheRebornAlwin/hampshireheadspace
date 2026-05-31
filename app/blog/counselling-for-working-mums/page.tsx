@@ -14,6 +14,7 @@ export default function Page() {
     <BlogLayout
       title="When you've held it together for everyone else for too long"
       description="Notes for working mothers who don't have time, energy or permission to fall apart."
+      slug="counselling-for-working-mums"
       publishedISO="2026-02-22"
       publishedHuman="22 February 2026"
       readMinutes={6}

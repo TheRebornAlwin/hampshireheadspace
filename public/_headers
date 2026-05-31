@@ -1,6 +1,15 @@
 # Cloudflare Pages cache headers
 # Reference: https://developers.cloudflare.com/pages/configuration/headers/
 
+# Security / trust headers for every route. Cheap signal of a well-run,
+# secure site (a YMYL trust factor) and standard best practice.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
 # Static assets — cache aggressively. Filenames are stable (not hashed) but we
 # can re-cache by re-uploading. For images, fonts and the like that almost
 # never change, a long max-age + immutable means the browser never re-requests

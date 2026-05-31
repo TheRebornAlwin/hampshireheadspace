@@ -3,26 +3,84 @@ import Link from "next/link";
 import Container from "./Container";
 import Button from "./Button";
 import CloudBlob from "./illustrations/CloudBlob";
+import { SITE_URL, business, ruth } from "@/lib/siteConfig";
+import { getRelated } from "@/lib/posts";
 
 type Props = {
   title: string;
   description: string;
+  slug: string;
   publishedISO: string;
   publishedHuman: string;
   readMinutes: number;
+  modifiedISO?: string;
   children: ReactNode;
 };
 
 export default function BlogLayout({
   title,
   description,
+  slug,
   publishedISO,
   publishedHuman,
   readMinutes,
+  modifiedISO,
   children,
 }: Props) {
+  const url = `${SITE_URL}/blog/${slug}/`;
+  const related = getRelated(slug, 3);
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    inLanguage: "en-GB",
+    datePublished: publishedISO,
+    dateModified: modifiedISO ?? publishedISO,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: `${SITE_URL}/logo.webp`,
+    author: {
+      "@type": "Person",
+      "@id": ruth.id,
+      name: ruth.name,
+      jobTitle: ruth.jobTitle,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: business.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.webp`,
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Articles",
+        item: `${SITE_URL}/blog/`,
+      },
+      { "@type": "ListItem", position: 3, name: title, item: url },
+    ],
+  };
+
   return (
     <article className="relative overflow-hidden pt-12 pb-20 sm:pt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CloudBlob
         variant="blue"
         className="pointer-events-none absolute -top-12 right-[-5rem] h-44 w-72 opacity-20 animate-drift-slow"
@@ -66,6 +124,31 @@ export default function BlogLayout({
             <Button href="/contact/">Get in touch</Button>
           </div>
         </div>
+
+        {related.length > 0 && (
+          <nav aria-label="Related articles" className="mt-14">
+            <h2 className="text-[13px] font-semibold uppercase tracking-wider text-navy/60">
+              More articles
+            </h2>
+            <ul className="mt-5 grid gap-4">
+              {related.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/blog/${p.slug}/`}
+                    className="group block rounded-xl2 bg-cream p-5 shadow-soft transition-shadow hover:shadow-soft-lg"
+                  >
+                    <h3 className="text-[16px] font-semibold leading-snug text-navy group-hover:text-navy-deep sm:text-[17px]">
+                      {p.title}
+                    </h3>
+                    <p className="mt-2 text-[14px] leading-relaxed text-warm-grey">
+                      {p.excerpt}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </Container>
     </article>
   );

@@ -13,6 +13,7 @@ export default function Page() {
     <BlogLayout
       title="What does BACP registered actually mean?"
       description="It's the badge every UK counsellor displays. Here's what it's actually committing them to."
+      slug="what-does-bacp-registered-actually-mean"
       publishedISO="2026-03-02"
       publishedHuman="2 March 2026"
       readMinutes={5}

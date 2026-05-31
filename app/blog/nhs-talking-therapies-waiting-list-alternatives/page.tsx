@@ -16,6 +16,7 @@ export default function Page() {
     <BlogLayout
       title="Waiting on NHS Talking Therapies: how long is too long, and what to do meanwhile"
       description="A practical guide for the months between referral and the first session that may or may not arrive."
+      slug="nhs-talking-therapies-waiting-list-alternatives"
       publishedISO="2026-03-10"
       publishedHuman="10 March 2026"
       readMinutes={7}

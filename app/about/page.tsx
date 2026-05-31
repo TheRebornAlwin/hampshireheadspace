@@ -7,6 +7,7 @@ import Birds from "@/components/illustrations/Birds";
 import LeafFloat from "@/components/illustrations/LeafFloat";
 import Sparkles from "@/components/illustrations/Sparkles";
 import FadeIn from "@/components/FadeIn";
+import { SITE_URL, business, ruth } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "About me",
@@ -15,9 +16,37 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": ruth.id,
+  name: ruth.name,
+  jobTitle: ruth.jobTitle,
+  url: `${SITE_URL}/about/`,
+  worksFor: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#business`,
+    name: business.name,
+  },
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "Professional registration",
+    recognizedBy: {
+      "@type": "Organization",
+      name: "British Association for Counselling and Psychotherapy (BACP)",
+    },
+    identifier: ruth.bacpNumber,
+  },
+  sameAs: ruth.sameAs,
+};
+
 export default function AboutMePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <section className="relative overflow-hidden bg-cream pt-10 pb-4 sm:pt-16 sm:pb-6">
         <CloudBlob
           variant="yellow"
