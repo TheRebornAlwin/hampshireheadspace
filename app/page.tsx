@@ -169,7 +169,6 @@ export default function HomePage() {
                 that support.
               </p>
               <p>
-                Beginning therapy and choosing a therapist can be challenging.
                 I offer a space which is safe, welcoming, and non-judgmental in
                 which you can feel secure and supported. A space where there
                 are no expectations. We will work together at a pace that suits
@@ -240,7 +239,7 @@ export default function HomePage() {
             {[
               {
                 t: "Connection.",
-                d: "Beyond appearances, roles, expectations or judgements. Meeting where the difficult, messy, and human parts of experience can have space.",
+                d: "Beyond appearances, roles, expectations or judgements. Meeting you where the difficult, messy, and human parts of experience can have space.",
               },
               {
                 t: "Compassion.",
@@ -263,6 +262,60 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* SECTION — ABOUT ME (photo on homepage, per Ruth's feedback) */}
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -bottom-10 left-[-4rem] h-40 w-72 opacity-20 animate-drift-slow"
+        />
+        <Container size="wide">
+          <FadeIn>
+            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
+              <div className="md:col-span-5">
+                <div className="relative mx-auto w-[210px] sm:w-[250px]">
+                  <div
+                    aria-hidden="true"
+                    className="absolute -inset-3 rounded-full bg-soft-blue/45 blur-sm"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute -inset-1.5 rounded-full bg-soft-yellow/50"
+                  />
+                  <img
+                    src="/ruth-headshot.webp?v=8"
+                    alt="Ruth, counsellor at Hampshire Headspace"
+                    width={480}
+                    height={480}
+                    className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div className="text-center md:col-span-7 md:text-left">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                  About me
+                </p>
+                <h2 className="mx-auto mt-4 max-w-xl text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem] md:mx-0">
+                  I&rsquo;m Ruth, and connection, compassion and care are
+                  important to me, so I base my practice on these principles.
+                </h2>
+                <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-navy/85 sm:text-[17px] md:mx-0">
+                  I work in a way that is warm, open and non-judgmental, offering
+                  a space where you can feel safe enough to explore whatever you
+                  are carrying, at a pace that feels right for you.
+                </p>
+                <div className="mt-7 flex justify-center md:justify-start">
+                  <Button href="/about/" variant="secondary">
+                    More about me
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 

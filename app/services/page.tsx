@@ -49,10 +49,6 @@ export default function ServicesPage() {
     <>
       <section className="relative overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0">
         <CloudBlob
-          variant="yellow"
-          className="pointer-events-none absolute top-4 right-4 h-24 w-44 opacity-35 animate-drift-slow sm:h-28 sm:w-56"
-        />
-        <CloudBlob
           variant="pink"
           className="pointer-events-none absolute top-10 left-[3%] h-16 w-28 -rotate-12 opacity-70 sm:h-20 sm:w-36"
         />
@@ -112,8 +108,8 @@ export default function ServicesPage() {
                 There is no issue too big or too small.
               </p>
               <p className="mt-3 text-center leading-relaxed text-navy/80">
-                Therapy is not only for those with specific issues. It can also
-                be helpful for anyone who would like to learn more about
+                Counselling is not only for those with specific issues. It can
+                also be helpful for anyone who would like to learn more about
                 themselves and their relationships.
               </p>
             </div>
