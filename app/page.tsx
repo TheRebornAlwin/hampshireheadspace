@@ -113,12 +113,12 @@ export default function HomePage() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute -bottom-2 -left-3 hidden h-12 w-12 rounded-full bg-soft-blue-strong/80 shadow-soft sm:block sm:h-16 sm:w-16"
+                  className="absolute -bottom-2 -left-3 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
                   style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute bottom-6 -left-1 hidden h-6 w-6 rounded-full bg-[#FFB0C0] shadow-soft sm:block sm:h-8 sm:w-8"
+                  className="absolute bottom-6 -left-1 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
                   style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
                 />
                 <img

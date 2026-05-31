@@ -39,3 +39,5 @@ next-env.d.ts
 /*-raw.*
 /logo-icon-raw*
 /scripts/mobile-shots/
+
+scripts/*.png
