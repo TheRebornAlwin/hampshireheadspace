@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTopOnLoad from "@/components/ScrollToTopOnLoad";
 
-const SITE_URL = "https://hampshireheadspace.co.uk";
+const SITE_URL = "https://hampshireheadspace.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

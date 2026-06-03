@@ -2,7 +2,7 @@
 // footer, etc. Update the TODO values once the manual Part 1 tasks are done,
 // then everything that consumes this file updates automatically.
 
-export const SITE_URL = "https://hampshireheadspace.co.uk";
+export const SITE_URL = "https://hampshireheadspace.com";
 
 export const business = {
   name: "Hampshire Headspace",
