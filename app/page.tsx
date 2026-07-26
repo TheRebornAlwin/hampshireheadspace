@@ -198,43 +198,47 @@ export default function HomePage() {
           variant="yellow"
           className="pointer-events-none absolute -bottom-10 left-[-4rem] h-40 w-72 opacity-20 animate-drift-slow"
         />
+        {/* Centred stack rather than photo-beside-headline: with the full copy
+            open, a left-aligned headline over centred body text read as two
+            different alignments, and the small headshot was outweighed by the
+            text below it. Same order as the About Me page. */}
         <Container size="wide">
           <FadeIn>
-            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
-              <div className="md:col-span-5">
-                <div className="relative mx-auto w-[210px] sm:w-[250px]">
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-3 rounded-full bg-soft-blue/45 blur-sm"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-1.5 rounded-full bg-soft-yellow/50"
-                  />
-                  <img
-                    src="/ruth-headshot.webp?v=8"
-                    alt="Ruth, counsellor at Hampshire Headspace"
-                    width={480}
-                    height={480}
-                    className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-              <div className="text-center md:col-span-7 md:text-left">
-                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-                  About me
-                </p>
-                <h2 className="mx-auto mt-4 max-w-xl text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem] md:mx-0">
-                  {aboutMeIntro}
-                </h2>
-              </div>
+            <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+              About me
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={80}>
+            <div className="relative mx-auto mt-6 w-[240px] sm:w-[300px]">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-3 rounded-full bg-soft-blue/45 blur-sm"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -inset-1.5 rounded-full bg-soft-yellow/50"
+              />
+              <img
+                src="/ruth-headshot.webp?v=8"
+                alt="Ruth, counsellor at Hampshire Headspace"
+                width={480}
+                height={480}
+                className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </FadeIn>
 
-          <FadeIn delay={120}>
-            <div className="mx-auto mt-10 max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+          <FadeIn delay={140}>
+            <h2 className="mx-auto mt-8 max-w-2xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
+              {aboutMeIntro}
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={200}>
+            <div className="mx-auto mt-8 max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               {aboutMeParagraphs.map((p) => (
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
