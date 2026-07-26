@@ -9,13 +9,14 @@ const SITE_URL = "https://hampshireheadspace.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hampshire Headspace, Private Counselling in Eastleigh",
+    default: "Hampshire Headspace, Private Counselling in Eastleigh and Winchester",
     template: "%s | Hampshire Headspace",
   },
   description:
-    "Private counselling in Eastleigh, Hampshire. Your first 50-minute session is free. BACP-registered, calm, real, and entirely yours.",
+    "Private counselling in Eastleigh and Winchester, Hampshire. Your first 50-minute session is free. BACP-registered, calm, real, and entirely yours.",
   keywords: [
     "counsellor Eastleigh",
+    "counsellor Winchester",
     "private counselling Hampshire",
     "BACP counsellor Eastleigh",
     "counselling Chandlers Ford",
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: SITE_URL,
     siteName: "Hampshire Headspace",
-    title: "Hampshire Headspace, Private Counselling in Eastleigh",
+    title: "Hampshire Headspace, Private Counselling in Eastleigh and Winchester",
     description:
-      "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh. Your first 50-minute session is free.",
+      "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh and Winchester. Your first 50-minute session is free.",
     images: [
       {
         url: "/logo.webp",
@@ -48,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hampshire Headspace, Private Counselling in Eastleigh",
+    title: "Hampshire Headspace, Private Counselling in Eastleigh and Winchester",
     description:
-      "Private counselling in Eastleigh. Your first 50-minute session is free.",
+      "Private counselling in Eastleigh and Winchester. Your first 50-minute session is free.",
     images: [
       "/logo.webp",
     ],
@@ -66,19 +67,21 @@ const localBusinessJsonLd = {
   "@type": "ProfessionalService",
   name: "Hampshire Headspace",
   description:
-    "Private counselling in Eastleigh, Hampshire. BACP-registered counsellor offering individual sessions in person and online. First session free.",
+    "Private counselling in Eastleigh and Winchester, Hampshire. BACP-registered counsellor offering individual sessions in person and online. First session free.",
   url: SITE_URL,
   image:
     "/logo.webp",
   priceRange: "££",
+  // Two rooms, neither street address published, so this stays at locality
+  // level. The town signals live in `areaServed` below.
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Cranberry Wellbeing Centre, 67 Leigh Road",
     addressLocality: "Eastleigh",
     addressRegion: "Hampshire",
-    postalCode: "SO50 9DF",
     addressCountry: "GB",
   },
+  telephone: "+447717811986",
+  email: "hello@hampshireheadspace.com",
   areaServed: [
     "Eastleigh",
     "Chandler's Ford",
@@ -110,7 +113,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/hero-tangled-yarn.webp"
+          href="/hero-session.webp"
           type="image/webp"
           // @ts-expect-error fetchpriority is valid HTML
           fetchpriority="high"

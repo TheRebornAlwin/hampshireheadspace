@@ -9,7 +9,7 @@ import { SITE_URL, business } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Counselling in Eastleigh",
   description:
-    "Private counselling in Eastleigh, Hampshire with Ruth Fleming, a BACP-registered counsellor. In person at the Cranberry Wellbeing Centre or online. The first 50-minute session is free.",
+    "Private counselling in Eastleigh, Hampshire with Ruth Fleming, a BACP-registered counsellor. In person in central Eastleigh, or online. The first 50-minute session is free.",
   alternates: { canonical: "/counselling-in-eastleigh" },
 };
 
@@ -71,9 +71,9 @@ export default function Page() {
             <p className="mt-5 max-w-prose text-[17px] leading-relaxed text-navy/85 sm:text-[18px]">
               Private counselling with Ruth Fleming, a BACP-registered
               humanistic counsellor based in the centre of Eastleigh. Sessions
-              are available in person at the Cranberry Wellbeing Centre, or
-              online from wherever you feel most comfortable. The first
-              50-minute session is free.
+              are available in person in a comfortable, quiet room in central
+              Eastleigh, or online from wherever you feel most comfortable. The
+              first 50-minute session is free.
             </p>
           </FadeIn>
         </Container>
@@ -102,22 +102,24 @@ export default function Page() {
                 Where to find me in Eastleigh
               </h2>
               <p>
-                I see clients at the Cranberry Wellbeing Centre, 67 Leigh Road,
-                Eastleigh, SO50 9DF, opposite The Point. Free parking is
-                available, which spares you the small but genuine stress of a
-                meter running while you are trying to focus on the work. If you
-                are travelling from Chandler&rsquo;s Ford, Southampton, Hedge
-                End, Romsey or Winchester, it is an easy drive.
+                I see clients in a comfortable and quiet room in central
+                Eastleigh. Free parking is available, which spares you the
+                small but genuine stress of a meter running while you are
+                trying to focus on the work. If you are travelling from
+                Chandler&rsquo;s Ford, Southampton, Hedge End or Romsey, it is
+                an easy drive. I also work from a room in Winnall in
+                Winchester, if that suits you better.
               </p>
               <h2 className="pt-2 text-[1.3rem] font-semibold leading-snug text-navy sm:text-[1.5rem]">
                 Fees
               </h2>
               <p>
-                The initial online session is free, and gives us an opportunity
-                to meet and discuss your needs. After that, sessions are
-                &pound;55 in person and &pound;40 online, each lasting 50
-                minutes, usually weekly. Counselling can be short term, around
-                six to twelve sessions, or longer term. We decide together.
+                The initial session is free and carries no obligation, and
+                gives us an opportunity to meet and discuss your needs. After
+                that, sessions are &pound;50 face to face and &pound;40 online,
+                each lasting 50 minutes, usually weekly. Counselling can be
+                short term, around six to twelve sessions, or longer term. We
+                decide together.
               </p>
             </div>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">

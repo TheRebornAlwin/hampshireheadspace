@@ -12,7 +12,7 @@ import LeafFloat from "@/components/illustrations/LeafFloat";
 export const metadata: Metadata = {
   title: "Where to find me",
   description:
-    "A comfortable and quiet counselling room at the Cranberry Wellbeing Centre in Eastleigh, opposite The Point Arts and Performance Centre. Free parking.",
+    "Comfortable and quiet counselling rooms in central Eastleigh and Winnall in Winchester, both with free parking and easy access. Or we can meet online.",
   alternates: { canonical: "/contact" },
 };
 
@@ -38,11 +38,14 @@ export default function ContactPage() {
               <h1 className="mx-auto mt-4 max-w-3xl text-center text-balance text-[1.85rem] font-semibold leading-[1.15] text-navy sm:text-[2.5rem] lg:text-[3rem]">
                 Where to find me?
               </h1>
+              {/* Ruth's doc reads "a comfortable and quiet counselling rooms" —
+                  stray article dropped. Restore if she wants it verbatim. */}
               <p className="mx-auto mt-5 max-w-xl text-center text-pretty text-[16px] leading-relaxed text-navy/85 sm:text-[18px]">
-                I offer a comfortable and quiet counselling room at the
-                Cranberry Wellbeing Centre in Eastleigh, located directly
-                opposite the Point Arts and Performance Centre. Free parking is
-                available.
+                I offer comfortable and quiet counselling rooms in either
+                central Eastleigh or Winnall in Winchester. Both have free
+                parking and are easily accessible. Alternatively, we can meet
+                online. Please contact me to discuss options and for further
+                information.
               </p>
             </FadeIn>
           </Container>
@@ -74,7 +77,7 @@ export default function ContactPage() {
             <FadeIn delay={140} className="space-y-6 lg:col-span-5">
               <div className="rounded-xl2 bg-soft-blue/15 p-6 sm:p-7">
                 <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
-                  Other ways to reach me
+                  How to reach me
                 </h3>
                 <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy/90">
                   <li>
@@ -88,9 +91,9 @@ export default function ContactPage() {
                   <li>
                     <a
                       className="font-medium underline-offset-4 hover:underline"
-                      href="tel:+447843114396"
+                      href="tel:+447717811986"
                     >
-                      07843 114396
+                      07717 811986
                     </a>
                     <span className="ml-1 text-warm-grey-light">
                       (text or message)
@@ -104,71 +107,43 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="rounded-xl2 bg-cream p-6 shadow-soft sm:p-7">
-                <h3 className="text-[15px] font-semibold uppercase tracking-wider text-navy/70">
-                  Where to find me
-                </h3>
-                <address className="mt-3 not-italic text-[15px] leading-relaxed text-navy/90">
-                  <span className="font-semibold text-navy">Cranberry Wellbeing Centre</span>
-                  <br />
-                  67 Leigh Road,
-                  <br />
-                  Eastleigh, Hampshire,
-                  <br />
-                  SO50 9DF.
-                  <br />
-                  (Opposite The Point)
-                </address>
-                <p className="mt-3 text-sm text-warm-grey">
-                  Free parking is available.
-                </p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  <img
-                    src="/cranberry.webp"
-                    alt="Cranberry Wellbeing Centre, Eastleigh — the green door entrance"
-                    width={1086}
-                    height={1449}
-                    className="aspect-[3/4] w-full rounded-xl2 object-cover shadow-soft"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    src="/door.webp"
-                    alt="The sage-green front door at the Cranberry Wellbeing Centre, with the intercom on the left"
-                    width={1024}
-                    height={1536}
-                    className="aspect-[3/4] w-full rounded-xl2 object-cover shadow-soft"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
+              {/*
+                The "Where to find me" address card for the Cranberry Wellbeing
+                Centre used to sit here. Ruth: that room is currently
+                unavailable, so it is off the site for now, but she may go back
+                to it. The address is kept on record as `dormantLocations` in
+                lib/siteConfig.ts, and the markup is in git history.
+
+                Ruth picked the two photos below, but asked that they are NOT
+                labelled as the counselling room, since the room may change. So:
+                no caption, and alt text that says what is shown without
+                claiming whose room it is.
+              */}
+              <div className="space-y-4">
+                <img
+                  src="/room-chairs.webp"
+                  alt="A quiet corner with a pink armchair and a pale blue chair either side of a small round table"
+                  width={980}
+                  height={652}
+                  className="h-auto w-full rounded-xl2 shadow-soft"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="/room-shelves.webp"
+                  alt="Open shelves holding books, creative materials and therapeutic resources"
+                  width={988}
+                  height={657}
+                  className="h-auto w-full rounded-xl2 shadow-soft"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </FadeIn>
           </div>
         </Container>
       </Section>
 
-      {/* THE ROOM — horizontal pic to balance the page, per Ruth's spec */}
-      <section className="relative overflow-hidden bg-cream pb-16 sm:pb-20">
-        <Container size="wide">
-          <FadeIn>
-            <div className="mx-auto max-w-5xl">
-              <p className="text-center text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-                The counselling room
-              </p>
-              <img
-                src="/room.webp"
-                alt="The counselling room — sage walls, two pink armchairs facing a small fireplace, framed botanical prints, plants and warm lamp light"
-                width={1536}
-                height={1024}
-                className="mt-4 h-auto w-full rounded-xl2 shadow-soft-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </FadeIn>
-        </Container>
-      </section>
     </>
   );
 }

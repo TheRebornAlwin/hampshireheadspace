@@ -11,7 +11,7 @@ import FadeIn from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "About you",
   description:
-    "A space to slow down and connect with yourself. Counselling for adults in Eastleigh, Hampshire.",
+    "A space to slow down and connect with yourself. Counselling in Eastleigh and Winchester, Hampshire, or online.",
   alternates: { canonical: "/about-you" },
 };
 
@@ -106,6 +106,13 @@ export default function AboutYouPage() {
                 life&rsquo;s challenges, the more you can take ownership and
                 move towards a life that is in line with what matters most to
                 you.
+              </p>
+              {/* Ruth's doc reads "in either in Eastleigh" — duplicated word
+                  dropped. Restore if she wants it verbatim. */}
+              <p>
+                You can meet with me in either Eastleigh, Winchester or online.
+                Online can suit people when time, accessibility, transport or
+                mobility present issues.
               </p>
             </div>
           </FadeIn>

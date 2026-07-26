@@ -8,18 +8,19 @@ export const business = {
   name: "Hampshire Headspace",
   legalName: "Hampshire Headspace",
   email: "hello@hampshireheadspace.com",
-  phoneE164: "+447843114396",
-  phoneDisplay: "07843 114396",
+  phoneE164: "+447717811986",
+  phoneDisplay: "07717 811986",
   priceRange: "££",
+  // Ruth now works from two rooms and publishes neither street address, so this
+  // stays at locality level. Eastleigh is the primary locality; Winchester is
+  // covered by `locations` and `areaServed` below.
   address: {
-    streetAddress: "Cranberry Wellbeing Centre, 67 Leigh Road",
     addressLocality: "Eastleigh",
     addressRegion: "Hampshire",
-    postalCode: "SO50 9DF",
     addressCountry: "GB",
   },
   // TODO (Task 1): refine the exact pin from the Google Business Profile.
-  // Approximate from postcode SO50 9DF / 67 Leigh Road, Eastleigh.
+  // Approximate centre of Eastleigh.
   geo: { lat: 50.9694, lng: -1.3503 },
   // TODO (Task 1): confirm the real opening hours from the Google Business Profile.
   openingHours: [
@@ -42,6 +43,27 @@ export const business = {
   sameAs: [] as string[],
 };
 
+// The rooms Ruth currently works from. No street addresses are published.
+export const locations = [
+  { town: "Eastleigh", area: "central Eastleigh" },
+  { town: "Winchester", area: "Winnall in Winchester" },
+];
+
+// Kept on record only. The Cranberry room is unavailable, so it is off the site
+// for now, but Ruth may go back to it — restore the address card on the contact
+// page from here if she does.
+export const dormantLocations = [
+  {
+    name: "Cranberry Wellbeing Centre",
+    streetAddress: "67 Leigh Road",
+    addressLocality: "Eastleigh",
+    addressRegion: "Hampshire",
+    postalCode: "SO50 9DF",
+    addressCountry: "GB",
+    note: "Opposite The Point. Free parking is available.",
+  },
+];
+
 export const ruth = {
   name: "Ruth Fleming",
   jobTitle: "Humanistic Counsellor",
@@ -55,18 +77,17 @@ export const ruth = {
 
 export const offers = [
   {
-    name: "Free initial online session",
+    name: "Free initial session",
     price: "0",
     priceCurrency: "GBP",
     description:
-      "A free 50-minute online session to meet and discuss your needs.",
+      "Up to 50 minutes with no obligation, to meet, to talk, to get a feel for me, by phone, online or in person.",
   },
   {
-    name: "Counselling session, in person",
-    price: "55",
+    name: "Counselling session, face to face",
+    price: "50",
     priceCurrency: "GBP",
-    description:
-      "A 50-minute session in the room at the Cranberry Wellbeing Centre, Eastleigh.",
+    description: "A 50-minute session in either Eastleigh or Winchester.",
   },
   {
     name: "Counselling session, online",

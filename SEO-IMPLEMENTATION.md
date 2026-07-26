@@ -31,11 +31,11 @@ This is the Maps/“counsellor near me” listing. It is the largest local ranki
 1. Go to **business.google.com** → "Manage now".
 2. Business name: **Hampshire Headspace**.
 3. **Primary category: “Mental Health Service”** (add secondary: “Counselor” / “Psychotherapist”). The primary category is one of the strongest ranking signals — get it right.
-4. Address: **Cranberry Wellbeing Centre, 67 Leigh Road, Eastleigh, SO50 9DF**.
-5. Service area: Eastleigh, Chandler's Ford, Southampton, Hedge End, Romsey, Winchester.
-6. Phone: **07843 114396**. Website: your live domain (see Task 4).
+4. Address: **no public street address**. Ruth works from rooms in central Eastleigh and Winnall, Winchester, and publishes neither. Set this up as a **service-area business** (Google asks "do you serve customers at your business address?" → answer **No**) and give Eastleigh as the base town.
+5. Service area: Eastleigh, Winchester, Chandler's Ford, Southampton, Hedge End, Romsey.
+6. Phone: **07717 811986**. Website: your live domain (see Task 4).
 7. **Verify** (postcard or phone — Google decides). This can take a few days; everything else can continue meanwhile.
-8. After verifying: add **services** (free initial session, in-person £55, online £40), **opening hours**, a keyword-rich description ("Private counselling in Eastleigh…"), and **at least 5 photos** (room, building exterior, Ruth, logo).
+8. After verifying: add **services** (free initial session, face to face £50, online £40), **opening hours**, a keyword-rich description ("Private counselling in Eastleigh and Winchester…"), and **at least 5 photos** (the rooms, Ruth, logo).
 > 📌 **Write down the exact lat/long pin and final opening hours** — Claude needs them for Part 3.
 
 ### ✅ Task 2 — Google Search Console + submit sitemap — ~15 min
@@ -52,17 +52,19 @@ Tells Google your site exists and to index it fast. Claude can't log in as you.
 3. **Easiest fast-indexing:** in **Cloudflare → Cache → Configuration**, turn on **Crawler Hints** — this auto-submits changes via IndexNow to Bing with zero maintenance. (This replaces needing the manual IndexNow key file, though Claude will still create the key file as a fallback. Note: Google does **not** use IndexNow — that's what Search Console/sitemap in Task 2 is for.)
 
 ### ✅ Task 4 — Lock the domain + redirects — ~10 min (in Cloudflare)
-1. Decide the live domain: **`hampshireheadspace.co.uk`** (already hard-coded as canonical everywhere — recommended).
+1. The live domain is **`hampshireheadspace.com`** (already hard-coded as canonical everywhere).
 2. Point that domain at the Cloudflare Pages site.
-3. For the other 3 domains: add **301 redirects → `hampshireheadspace.co.uk`** (Cloudflare → Rules → Redirect Rules). Never serve the same site on two live domains.
+3. For the other 3 domains: add **301 redirects → `hampshireheadspace.com`** (Cloudflare → Rules → Redirect Rules). Never serve the same site on two live domains.
 
 ### ✅ Task 5 — Directory listings / citations (NAP) — ~45 min, do over a week
 Each is a trust signal + backlink + referral source. **Use identical Name / Address / Phone everywhere** (copy-paste exactly):
-> `Hampshire Headspace, Cranberry Wellbeing Centre, 67 Leigh Road, Eastleigh, SO50 9DF · 07843 114396`
+> `Hampshire Headspace, Eastleigh and Winchester, Hampshire · 07717 811986`
+
+> ⚠️ No street address is published anywhere on the site, so do **not** invent one for a directory. If a listing forces an address field, use the town only, and keep it identical everywhere — inconsistent NAP is what breaks local ranking.
 1. **BACP "Find a Therapist"** — included with membership. Highest trust signal for mental health. **Grab your public BACP profile URL** (Part 3).
 2. **Counselling Directory** (counselling-directory.org.uk) — the dominant UK directory. Paid but worth it. **Grab the profile URL** (Part 3).
 3. **Psychology Today UK** (psychologytoday.com/gb) — paid, high authority. **Grab the profile URL** (Part 3).
-4. **Free citations:** Bing Places, Yell, FreeIndex, Cranberry Wellbeing Centre's own website (ask them to link to you — a strong local backlink).
+4. **Free citations:** Bing Places, Yell, FreeIndex. If Ruth returns to the Cranberry Wellbeing Centre, ask them to link to the site too — a strong local backlink.
 
 ### ✅ Task 6 — Reviews — ongoing
 Once you have your first happy clients, ask for a **Google review on your Business Profile** (Task 1). Reviews are a direct local ranking factor and the highest-value place for the testimonial Ruth offered.

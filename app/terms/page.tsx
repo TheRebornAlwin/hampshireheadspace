@@ -14,17 +14,16 @@ export default function TermsPage() {
       <section>
         <h2 className="text-xl font-semibold text-navy">What I offer</h2>
         <p>
-          One-to-one counselling for people aged 16 and over, either at the
-          Cranberry Wellbeing Centre in Eastleigh or by secure video call.
-          Sessions are 50 minutes long, unless another arrangement has been
-          made.
+          One-to-one counselling for people aged 16 and over, either in person
+          in Eastleigh or Winchester, or by secure video call. Sessions are 50
+          minutes long, unless another arrangement has been made.
         </p>
       </section>
 
       <section>
         <h2 className="text-xl font-semibold text-navy">Fees and payment</h2>
         <p>
-          After the free first session, costs are &pound;55 in person and
+          After the free first session, costs are &pound;50 face to face and
           &pound;40 online.
         </p>
         <p>Payment is prior to each session, by bank transfer.</p>

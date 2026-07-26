@@ -107,11 +107,11 @@ export default function Page() {
                 Sessions and fees
               </h2>
               <p>
-                Sessions are held in person at the Cranberry Wellbeing Centre,
-                67 Leigh Road, Eastleigh, SO50 9DF, opposite The Point, with
-                free parking, or online by secure video. The initial online
-                session is free. After that, sessions are &pound;55 in person
-                and &pound;40 online, each lasting 50 minutes.
+                Sessions are held in person in a comfortable and quiet room in
+                central Eastleigh, with free parking, or online by secure
+                video. The initial session is free and carries no obligation.
+                After that, sessions are &pound;50 face to face and &pound;40
+                online, each lasting 50 minutes.
               </p>
             </div>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">

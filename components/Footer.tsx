@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </Link>
           <p className="mx-auto max-w-xs text-sm leading-relaxed text-warm-grey md:mx-0">
-            Private counselling in Eastleigh, Hampshire.
+            Private counselling in Eastleigh and Winchester, Hampshire.
           </p>
           <p className="mx-auto max-w-xs text-balance text-[1.05rem] font-semibold leading-snug tracking-tight text-navy sm:text-[1.15rem] md:mx-0">
             A space to slow down and connect&hellip;
@@ -58,9 +58,9 @@ export default function Footer() {
             <li>
               <a
                 className="text-[0.95rem] font-semibold tracking-tight text-navy hover:underline"
-                href="tel:+447843114396"
+                href="tel:+447717811986"
               >
-                07843 114396
+                07717 811986
               </a>
               <span className="ml-1 text-[0.95rem] font-semibold tracking-tight text-navy">
                 (text or message)

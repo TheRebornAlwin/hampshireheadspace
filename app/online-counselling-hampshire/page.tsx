@@ -106,10 +106,11 @@ export default function Page() {
                 Sessions and fees
               </h2>
               <p>
-                The initial online session is free, and gives us an opportunity
-                to meet and discuss your needs. After that, online sessions are
-                &pound;40, each lasting 50 minutes, usually weekly. In-person
-                sessions in Eastleigh are &pound;55.
+                The initial session is free and carries no obligation, and
+                gives us an opportunity to meet and discuss your needs. After
+                that, online sessions are &pound;40, each lasting 50 minutes,
+                usually weekly. Face-to-face sessions in Eastleigh or
+                Winchester are &pound;50.
               </p>
             </div>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">

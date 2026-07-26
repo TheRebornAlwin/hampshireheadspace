@@ -12,7 +12,7 @@ import Mountains from "@/components/illustrations/Mountains";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Individual humanistic counselling for adults in Eastleigh, Hampshire. £55 per session in person, £40 online. A free initial online session to meet and discuss your needs.",
+    "Individual humanistic counselling in Eastleigh and Winchester, Hampshire. £50 per session face to face, £40 online. A free initial session, with no obligation, to meet and discuss your needs.",
   alternates: { canonical: "/services" },
 };
 
@@ -146,12 +146,12 @@ export default function ServicesPage() {
             <p className="mx-auto mt-5 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
               It is really important to find the right counsellor for you,
               all counsellors are different, so for that reason I offer a free
-              initial online session which gives us an opportunity to meet and
+              initial session which gives us an opportunity to meet and
               discuss your needs.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-              After the initial free online session, I charge &pound;55 per
-              session face to face and &pound;40 per session online.
+              After the initial free no obligation session, I charge &pound;50
+              per session face to face and &pound;40 per session online.
             </p>
           </FadeIn>
 
@@ -159,19 +159,19 @@ export default function ServicesPage() {
             {[
               {
                 k: "Free",
-                t: "Initial online session",
-                d: "50 minutes by secure video to meet and discuss your needs.",
+                t: "Initial session",
+                d: "Up to 50 minutes with no obligation, to meet, to talk, to get a feel for me, by phone, online or in person.",
                 highlight: true,
               },
               {
-                k: "£55",
-                t: "In person, Eastleigh",
-                d: "50 minutes in the room at the Cranberry Wellbeing Centre.",
+                k: "£50",
+                t: "Face-to-face",
+                d: "In either Eastleigh or Winchester.",
               },
               {
                 k: "£40",
                 t: "Online",
-                d: "50 minutes by secure video, the same session from the comfort of your own home.",
+                d: "By secure video, the same session from the comfort of your own home.",
               },
             ].map((row) => (
               <FadeIn key={row.t} delay={80}>

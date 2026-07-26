@@ -8,11 +8,12 @@ import LeafFloat from "@/components/illustrations/LeafFloat";
 import Sparkles from "@/components/illustrations/Sparkles";
 import FadeIn from "@/components/FadeIn";
 import { SITE_URL, business, ruth } from "@/lib/siteConfig";
+import { aboutMeIntro, aboutMeParagraphs } from "@/lib/aboutMe";
 
 export const metadata: Metadata = {
   title: "About me",
   description:
-    "Ruth is a BACP-registered humanistic counsellor at the Cranberry Wellbeing Centre in Eastleigh, Hampshire.",
+    "Ruth is a BACP-registered humanistic counsellor working from rooms in Eastleigh and Winchester, Hampshire, and online.",
   alternates: { canonical: "/about" },
 };
 
@@ -96,8 +97,7 @@ export default function AboutMePage() {
         <Container>
           <FadeIn>
             <h2 className="mx-auto max-w-3xl text-center text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem]">
-              I&rsquo;m Ruth, and connection, compassion and care are important
-              to me, so I base my practice on these principles.
+              {aboutMeIntro}
             </h2>
           </FadeIn>
         </Container>
@@ -108,30 +108,9 @@ export default function AboutMePage() {
         <Container>
           <FadeIn>
             <div className="mx-auto max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
-              <p>
-                I am a fully qualified humanistic counsellor, registered with
-                the British Association of Counselling and Psychotherapy (BACP)
-                and committed to offering a confidential and ethical service.
-              </p>
-              <p>
-                I have experience working with adolescents and adults in
-                charity organisations, education, and private counselling, with
-                a particular interest in supporting individuals affected by
-                addiction. Alongside my professional work, life experience has
-                deeply informed my sense of compassion and understanding of
-                the challenges people can face.
-              </p>
-              <p>
-                I engage in regular supervision and training to support my
-                knowledge and professional development. I am fully insured and
-                hold an enhanced DBS certificate.
-              </p>
-              <p>
-                I offer individual counselling sessions for people aged 16 and
-                over. I welcome neurotypical and neurodiverse clients, as well
-                as individuals from all cultural backgrounds, sexual
-                orientations, and gender identities.
-              </p>
+              {aboutMeParagraphs.map((p) => (
+                <p key={p.slice(0, 40)}>{p}</p>
+              ))}
             </div>
           </FadeIn>
         </Container>

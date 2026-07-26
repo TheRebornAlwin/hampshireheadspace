@@ -8,6 +8,7 @@ import Sun from "@/components/illustrations/Sun";
 import Sparkles from "@/components/illustrations/Sparkles";
 import Mountains from "@/components/illustrations/Mountains";
 import FadeIn from "@/components/FadeIn";
+import { aboutMeIntro, aboutMeParagraphs } from "@/lib/aboutMe";
 
 function Heart({ className = "" }: { className?: string }) {
   return (
@@ -46,95 +47,104 @@ export default function HomePage() {
           <Birds className="h-16 w-56 opacity-70" count={3} />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-12">
-          <div className="text-center lg:col-span-7 lg:pt-6 lg:text-left">
-            <FadeIn>
-              <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-soft-yellow/60 px-4 py-1.5 text-[13px] font-medium text-navy/85">
-                <span className="h-1.5 w-1.5 rounded-full bg-navy/80" />
-                Private counselling, Eastleigh
-              </p>
-            </FadeIn>
-            <FadeIn delay={80}>
-              <h1 className="text-balance text-[2.1rem] font-bold leading-[1.08] tracking-tight text-navy sm:text-[2.8rem] lg:text-[3.4rem]">
-                A space to slow down and connect&hellip;
-              </h1>
-            </FadeIn>
-            <FadeIn delay={160}>
-              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
-                <Button href="/contact/" size="lg">
-                  Get in touch
-                </Button>
-              </div>
-            </FadeIn>
+        <div className="relative z-10 mx-auto max-w-3xl px-5 text-center sm:px-6">
+          <FadeIn>
+            <p className="mb-8 inline-flex items-center gap-2 rounded-full bg-soft-yellow/60 px-4 py-1.5 text-[13px] font-medium text-navy/85">
+              <span className="h-1.5 w-1.5 rounded-full bg-navy/80" />
+              Private counselling, Eastleigh and Winchester
+            </p>
+          </FadeIn>
 
-            {/* Trust micro-badges — all three visible on mobile per Ruth */}
-            <FadeIn delay={240}>
-              <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px] lg:justify-start">
-                {[
-                  "BACP registered",
-                  "First session – no fee",
-                  "Same-day reply",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-1.5">
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 20 20"
-                      className="h-4 w-4 text-navy"
-                    >
-                      <path
-                        d="M4 10.5l3.5 3.5 8.5-9"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    <span className="font-medium">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </FadeIn>
-          </div>
+          {/* HERO PHOTO — kept modest per Ruth, softened corners, and edged with
+              the same yellow/blue rings as the round headshot */}
+          <FadeIn delay={80}>
+            <div className="relative mx-auto w-full max-w-[380px] sm:max-w-[480px]">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-3 rounded-[32px] bg-soft-blue/45 blur-sm"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -inset-1.5 rounded-[30px] bg-soft-yellow/55"
+              />
+              {/* Dots: hidden on mobile so they don't crowd the photo */}
+              <div
+                aria-hidden="true"
+                className="absolute -top-6 -right-6 hidden h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:block sm:h-20 sm:w-20"
+                style={{ animation: "floatSoft 12s ease-in-out infinite" }}
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-5 -left-6 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
+                style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-4 left-16 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
+                style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
+              />
+              <img
+                src="/hero-session.webp"
+                alt="Ruth, counsellor at Hampshire Headspace, listening during a counselling session"
+                width={1153}
+                height={769}
+                className="relative h-auto w-full rounded-[28px] object-cover shadow-soft-lg ring-2 ring-cream"
+                loading="eager"
+                // @ts-expect-error fetchpriority is valid HTML
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+          </FadeIn>
 
-          {/* HERO LOGO — using Ruth's provided combo (icon + wordmark in one image) */}
-          <div className="lg:col-span-5">
-            <FadeIn delay={120}>
-              <div className="relative mx-auto w-full max-w-[300px] sm:max-w-sm lg:max-w-none">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(251,241,200,0.55),transparent_70%)]"
-                />
-                {/* Dots: hidden on mobile so they don't sit over the wordmark; only show from sm+ where there's room */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -top-3 -right-2 hidden h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:block sm:h-20 sm:w-20"
-                  style={{ animation: "floatSoft 12s ease-in-out infinite" }}
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-2 -left-3 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
-                  style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute bottom-6 -left-1 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
-                  style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
-                />
-                <img
-                  src="/logo.webp?v=2"
-                  alt="Hampshire Headspace Counselling"
-                  width={1080}
-                  height={780}
-                  className="relative mx-auto h-auto w-full animate-float-soft"
-                  loading="eager"
-                  // @ts-expect-error fetchpriority is valid HTML
-                  fetchpriority="high"
-                  decoding="async"
-                />
-              </div>
-            </FadeIn>
-          </div>
+          {/* HEADLINE — set in the logo's wordmark style per Ruth */}
+          <FadeIn delay={160}>
+            <h1 className="mx-auto mt-10 max-w-2xl text-balance text-[1.4rem] font-bold uppercase leading-[1.2] tracking-[0.05em] text-navy sm:text-[1.95rem] lg:text-[2.35rem]">
+              Counselling at Hampshire Headspace
+            </h1>
+          </FadeIn>
+          <FadeIn delay={220}>
+            <p className="mx-auto mt-4 max-w-xl text-balance text-[1.1rem] font-medium leading-snug text-navy/85 sm:text-[1.45rem]">
+              &hellip;a space to slow down and connect&hellip;
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={280}>
+            <div className="mt-8 flex justify-center">
+              <Button href="/contact/" size="lg">
+                Get in touch
+              </Button>
+            </div>
+          </FadeIn>
+
+          {/* Trust micro-badges — all three visible on mobile per Ruth */}
+          <FadeIn delay={340}>
+            <ul className="mt-7 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[13px] text-navy/75 sm:text-[14px]">
+              {[
+                "BACP registered",
+                "First session – no fee",
+                "Same-day reply",
+              ].map((t) => (
+                <li key={t} className="flex items-center gap-1.5">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    className="h-4 w-4 text-navy"
+                  >
+                    <path
+                      d="M4 10.5l3.5 3.5 8.5-9"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="font-medium">{t}</span>
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
         </div>
       </section>
 
@@ -176,6 +186,58 @@ export default function HomePage() {
                 work through any difficulties or challenges that you are
                 experiencing.
               </p>
+            </div>
+          </FadeIn>
+        </Container>
+      </Section>
+
+      {/* SECTION — ABOUT ME. Ruth: move it up to sit under "Can talking to
+          someone help?", open in full, and drop the "more about me" button. */}
+      <Section tone="cream" spacing="default" className="relative overflow-hidden">
+        <CloudBlob
+          variant="yellow"
+          className="pointer-events-none absolute -bottom-10 left-[-4rem] h-40 w-72 opacity-20 animate-drift-slow"
+        />
+        <Container size="wide">
+          <FadeIn>
+            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
+              <div className="md:col-span-5">
+                <div className="relative mx-auto w-[210px] sm:w-[250px]">
+                  <div
+                    aria-hidden="true"
+                    className="absolute -inset-3 rounded-full bg-soft-blue/45 blur-sm"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute -inset-1.5 rounded-full bg-soft-yellow/50"
+                  />
+                  <img
+                    src="/ruth-headshot.webp?v=8"
+                    alt="Ruth, counsellor at Hampshire Headspace"
+                    width={480}
+                    height={480}
+                    className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div className="text-center md:col-span-7 md:text-left">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
+                  About me
+                </p>
+                <h2 className="mx-auto mt-4 max-w-xl text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem] md:mx-0">
+                  {aboutMeIntro}
+                </h2>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={120}>
+            <div className="mx-auto mt-10 max-w-prose space-y-5 text-center text-[16px] leading-relaxed text-navy/85 sm:text-[17px]">
+              {aboutMeParagraphs.map((p) => (
+                <p key={p.slice(0, 40)}>{p}</p>
+              ))}
             </div>
           </FadeIn>
         </Container>
@@ -262,55 +324,6 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
-        </Container>
-      </Section>
-
-      {/* SECTION — ABOUT ME (photo on homepage, per Ruth's feedback) */}
-      <Section tone="cream" spacing="default" className="relative overflow-hidden">
-        <CloudBlob
-          variant="yellow"
-          className="pointer-events-none absolute -bottom-10 left-[-4rem] h-40 w-72 opacity-20 animate-drift-slow"
-        />
-        <Container size="wide">
-          <FadeIn>
-            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
-              <div className="md:col-span-5">
-                <div className="relative mx-auto w-[210px] sm:w-[250px]">
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-3 rounded-full bg-soft-blue/45 blur-sm"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-1.5 rounded-full bg-soft-yellow/50"
-                  />
-                  <img
-                    src="/ruth-headshot.webp?v=8"
-                    alt="Ruth, counsellor at Hampshire Headspace"
-                    width={480}
-                    height={480}
-                    className="relative aspect-square w-full rounded-full object-cover object-[center_25%] shadow-soft-lg ring-2 ring-cream"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-              <div className="text-center md:col-span-7 md:text-left">
-                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-navy/55">
-                  About me
-                </p>
-                <h2 className="mx-auto mt-4 max-w-xl text-balance text-[1.5rem] font-semibold leading-tight text-navy sm:text-[2rem] md:mx-0">
-                  I&rsquo;m Ruth, and connection, compassion and care are
-                  important to me, so I base my practice on these principles.
-                </h2>
-                <div className="mt-7 flex justify-center md:justify-start">
-                  <Button href="/about/" variant="secondary">
-                    More about me
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
         </Container>
       </Section>
 

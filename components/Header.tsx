@@ -59,12 +59,13 @@ export default function Header() {
           className="flex items-center"
           onClick={() => setOpen(false)}
         >
+          {/* Ruth asked for a bigger mark in the top left */}
           <img
             src={LOGO_URL}
             alt="Hampshire Headspace Counselling"
-            className="h-12 w-auto sm:h-14"
-            width={120}
-            height={56}
+            className="h-16 w-auto sm:h-20"
+            width={160}
+            height={80}
           />
         </Link>
 

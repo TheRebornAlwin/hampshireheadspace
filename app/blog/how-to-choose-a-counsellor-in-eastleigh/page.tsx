@@ -105,10 +105,10 @@ export default function Page() {
         to the high street?
       </p>
       <p>
-        For Eastleigh specifically, central locations like the Cranberry
-        Wellbeing Centre (opposite The Point) tend to have free parking right
-        outside, which spares you the small but genuine stress of a meter
-        running while you&apos;re trying to focus on the work.
+        For Eastleigh specifically, central locations tend to have free parking
+        right outside, which spares you the small but genuine stress of a meter
+        running while you&apos;re trying to focus on the work. It is worth
+        asking before you book.
       </p>
 
       <h2 className="mt-8 text-xl font-semibold text-navy">
