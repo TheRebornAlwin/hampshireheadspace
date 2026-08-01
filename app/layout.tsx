@@ -126,6 +126,14 @@ export default function RootLayout({
           // @ts-expect-error fetchpriority is valid HTML
           fetchpriority="high"
         />
+        {/* The homepage headline is now the wordmark lockup, so it paints
+            above the fold on every visit. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/logo-wordmark.webp"
+          type="image/webp"
+        />
         {/*
           Analytics placeholder. When ready, drop in Plausible or GA snippet here.
           Do not add any tracking before talking with Ruth about consent.

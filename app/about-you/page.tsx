@@ -90,6 +90,11 @@ export default function AboutYouPage() {
                 more ease and less strain.
               </p>
               <p>
+                Many things, of course, cannot or need not be changed, and in
+                these instances, you may find a way to make sense of your
+                experience, and to move towards acceptance and understanding.
+              </p>
+              <p>
                 During counselling it is likely that you will become more
                 self-aware. You may begin to recognise behaviours and cycles
                 of responding which are no longer helpful, or you may become
@@ -100,19 +105,16 @@ export default function AboutYouPage() {
                 embracing more of what brings joy and fulfilment.
               </p>
               <p>
-                While you cannot always choose what happens in your life, you
-                do have a degree of choice and freedom over how you respond.
                 The more clarity you have about how you behave and respond to
-                life&rsquo;s challenges, the more you can take ownership and
-                move towards a life that is in line with what matters most to
-                you.
+                life&rsquo;s challenges, the more you can move towards a life
+                that is in line with what matters most to you.
               </p>
               {/* Ruth's doc reads "in either in Eastleigh" — duplicated word
                   dropped. Restore if she wants it verbatim. */}
               <p>
                 You can meet with me in either Eastleigh, Winchester or online.
-                Online can suit people when time, accessibility, transport or
-                mobility present issues.
+                Online might suit you if time, accessibility, mobility or
+                transport present issues.
               </p>
             </div>
           </FadeIn>

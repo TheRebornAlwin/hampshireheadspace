@@ -40,11 +40,14 @@ export default function HomePage() {
           variant="yellow"
           className="pointer-events-none absolute -bottom-20 right-[-6rem] h-72 w-[26rem] opacity-25"
         />
+        {/* Ruth: on mobile the birds flew straight behind the photo. The photo
+            starts much higher up the section on a phone, so the flight line is
+            lifted clear of it there and left where it was on desktop. */}
         <div
-          className="pointer-events-none absolute top-[14%] left-0 right-0 h-16 animate-fly-across"
+          className="pointer-events-none absolute top-1 sm:top-[14%] left-0 right-0 h-16 animate-fly-across"
           aria-hidden="true"
         >
-          <Birds className="h-16 w-56 opacity-70" count={3} />
+          <Birds className="h-12 w-44 opacity-70 sm:h-16 sm:w-56" count={3} />
         </div>
 
         <div className="relative z-10 mx-auto max-w-3xl px-5 text-center sm:px-6">
@@ -67,20 +70,23 @@ export default function HomePage() {
                 aria-hidden="true"
                 className="absolute -inset-1.5 rounded-[30px] bg-soft-yellow/55"
               />
-              {/* Dots: hidden on mobile so they don't crowd the photo */}
+              {/* Dots: hidden on mobile so they don't crowd the photo.
+                  Ruth: on desktop they barely showed, because the photo paints
+                  over them. Each one is now pushed far enough past the edge
+                  that most of the circle sits outside the frame. */}
               <div
                 aria-hidden="true"
-                className="absolute -top-6 -right-6 hidden h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:block sm:h-20 sm:w-20"
+                className="absolute -top-10 -right-12 hidden h-16 w-16 rounded-full bg-soft-yellow shadow-soft sm:block sm:h-20 sm:w-20"
                 style={{ animation: "floatSoft 12s ease-in-out infinite" }}
               />
               <div
                 aria-hidden="true"
-                className="absolute -bottom-5 -left-6 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
+                className="absolute -bottom-8 -left-10 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
                 style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
               />
               <div
                 aria-hidden="true"
-                className="absolute -bottom-4 left-16 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
+                className="absolute -bottom-6 left-12 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
                 style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
               />
               <img
@@ -97,16 +103,27 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
-          {/* HEADLINE — set in the logo's wordmark style per Ruth */}
+          {/* HEADLINE — Ruth sent the full wordmark lockup and asked for it in
+              place of the typeset headline. It stays inside the h1 with the
+              same words as alt text, so search engines and screen readers read
+              the headline exactly as before. */}
           <FadeIn delay={160}>
-            <h1 className="mx-auto mt-10 max-w-2xl text-balance text-[1.4rem] font-bold uppercase leading-[1.2] tracking-[0.05em] text-navy sm:text-[1.95rem] lg:text-[2.35rem]">
-              Counselling at Hampshire Headspace
+            <h1 className="mt-10">
+              <span className="sr-only">
+                Hampshire Headspace Counselling. A space to slow down and
+                connect.
+              </span>
+              <img
+                src="/logo-wordmark.webp"
+                alt=""
+                aria-hidden="true"
+                width={1280}
+                height={248}
+                className="mx-auto h-auto w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[500px]"
+                loading="eager"
+                decoding="async"
+              />
             </h1>
-          </FadeIn>
-          <FadeIn delay={220}>
-            <p className="mx-auto mt-4 max-w-xl text-balance text-[1.1rem] font-medium leading-snug text-navy/85 sm:text-[1.45rem]">
-              &hellip;a space to slow down and connect&hellip;
-            </p>
           </FadeIn>
 
           <FadeIn delay={280}>
