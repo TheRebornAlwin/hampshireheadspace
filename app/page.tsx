@@ -84,10 +84,21 @@ export default function HomePage() {
                 className="absolute -bottom-8 -left-10 hidden h-12 w-12 rounded-full bg-soft-blue/80 shadow-soft sm:block sm:h-16 sm:w-16"
                 style={{ animation: "floatSoft 16s ease-in-out 0.5s infinite" }}
               />
+              {/* Ruth liked the pink spot and asked for it further out, plus a
+                  second one dropped in somewhere. This one now clears the
+                  bottom edge completely. */}
               <div
                 aria-hidden="true"
-                className="absolute -bottom-6 left-12 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
+                className="absolute -bottom-9 left-10 hidden h-6 w-6 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-8 sm:w-8"
                 style={{ animation: "floatSoft 18s ease-in-out 1.5s infinite" }}
+              />
+              {/* The second pink spot. Off the left flank, between the yellow
+                  and the blue, at its own size and drift speed so the pair
+                  doesn't read as a matched set. */}
+              <div
+                aria-hidden="true"
+                className="absolute top-[26%] -left-9 hidden h-5 w-5 rounded-full bg-[#FFD6DD] shadow-soft sm:block sm:h-6 sm:w-6"
+                style={{ animation: "floatSoft 14s ease-in-out 2.5s infinite" }}
               />
               <img
                 src="/hero-session.webp"
