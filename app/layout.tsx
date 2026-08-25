@@ -36,8 +36,11 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Hampshire Headspace",
     title: "Hampshire Headspace, Private Counselling in Eastleigh and Winchester",
-    description:
-      "On paper, you've got a good life. So why does it feel like this? Private counselling in Eastleigh and Winchester. Your first 50-minute session is free.",
+    // Ruth asked for the "on paper" hook to come out of the shared-link card
+    // and for the grey line under the title to name the towns instead. This
+    // is the line WhatsApp, Facebook and LinkedIn show; the Google search
+    // snippet is the separate `description` field above and is untouched.
+    description: "Private counselling in Eastleigh and Winchester.",
     images: [
       {
         url: "/logo.webp",
