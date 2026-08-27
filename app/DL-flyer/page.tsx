@@ -248,13 +248,16 @@ export default function DlFlyerPage() {
   return (
     <div className="fixed inset-0 z-[60] overflow-auto bg-[#E9EAEE] print:static print:overflow-visible print:bg-white">
       <style>{`
+        /* This <style> ships inside this page only, so the rule is scoped to
+           this route. The proof renders inside the normal site shell; nothing
+           but the two flyer sides belongs on it, so the header, skip link and
+           footer come out of the render entirely rather than just being
+           covered by the backdrop. */
+        body > header, body > footer, body > .skip-link { display: none !important; }
+        body { margin: 0 !important; }
+
         @media print {
           @page { size: 99mm 210mm; margin: 0; }
-          .no-print { display: none !important; }
-          /* The proof sits inside the normal site shell. Printing it must not
-             carry the site header, skip link and footer onto the sheets. */
-          body > header, body > footer, body > .skip-link { display: none !important; }
-          body { margin: 0 !important; }
           /* The panels sit side by side on screen. At DL page width only one
              fits, so stack them in print: one side per sheet, no gaps, no
              padding, no shadow. */
@@ -267,63 +270,13 @@ export default function DlFlyerPage() {
       `}</style>
 
       <div className="dl-wrap mx-auto w-fit px-6 py-8">
-        <div className="no-print mb-6 max-w-[820px]">
-          <h1 className="text-[22px] font-bold tracking-tight text-navy">
-            Hampshire Headspace &mdash; DL flyer proof
-          </h1>
-          <p className="mt-1 text-[14px] leading-relaxed text-navy/75">
-            Two-sided DL, shown at true size: 99mm &times; 210mm per side.
-            Printing this page gives both sides at actual size, one per sheet.
-          </p>
-        </div>
-
         <div className="dl-sheet flex flex-wrap items-start gap-7">
-          <div>
-            <p className="no-print mb-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-navy/60">
-              Side 1 &mdash; front
-            </p>
-            <div className="dl-shadow shadow-soft-lg">
-              <Front />
-            </div>
+          <div className="dl-shadow shadow-soft-lg">
+            <Front />
           </div>
-          <div className="dl-side-2">
-            <p className="no-print mb-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-navy/60">
-              Side 2 &mdash; back
-            </p>
-            <div className="dl-shadow shadow-soft-lg">
-              <Back />
-            </div>
+          <div className="dl-side-2 dl-shadow shadow-soft-lg">
+            <Back />
           </div>
-        </div>
-
-        <div className="no-print mt-8 max-w-[820px] rounded-xl2 border border-navy/15 bg-white p-6">
-          <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-navy/70">
-            Queries before this goes to print
-          </p>
-          <ol className="mt-3 list-decimal space-y-2 pl-5 text-[14px] leading-relaxed text-navy/85">
-            <li>
-              <strong>Phone number.</strong> The letterhead reads{" "}
-              <strong>07843 114396</strong>, but the website currently shows{" "}
-              <strong>07717 811986</strong>. The letterhead number is the one
-              used here. Which is right, and should the website change to match?
-            </li>
-            <li>
-              <strong>Banner wording.</strong> This uses the website&rsquo;s
-              exact line, &ldquo;People who need support sometimes look a lot
-              like people who don&rsquo;t need support.&rdquo; Happy to switch to
-              the shorter version from the email instead.
-            </li>
-            <li>
-              <strong>Copy on the back.</strong> The attachment didn&rsquo;t come
-              through, so the wording, the list and the fees are all taken from
-              the website. Send it over and anything that differs gets swapped
-              in.
-            </li>
-            <li>
-              <strong>For the printer.</strong> Final artwork to be supplied as a
-              print-ready PDF at 99 &times; 210mm plus 3mm bleed, CMYK, 300dpi.
-            </li>
-          </ol>
         </div>
       </div>
     </div>
