@@ -109,7 +109,7 @@ function Front() {
         className="pointer-events-none absolute -right-[22mm] bottom-[24mm] h-[40mm] w-[70mm] opacity-30"
       />
       <div className="pointer-events-none absolute right-[7mm] top-[15mm]">
-        <Birds className="h-[9mm] w-[30mm] opacity-70" count={3} />
+        <Birds className="h-[9mm] w-[30mm] opacity-70" count={3} animated={false} />
       </div>
       <div className="pointer-events-none absolute left-[6mm] top-[72mm] h-[7mm] w-[7mm] rounded-full bg-soft-yellow" />
       <div className="pointer-events-none absolute right-[5mm] top-[92mm] h-[5mm] w-[5mm] rounded-full bg-soft-blue/80" />
@@ -182,7 +182,7 @@ function Back() {
         className="pointer-events-none absolute -right-[26mm] top-[86mm] h-[40mm] w-[72mm] opacity-20"
       />
       <div className="pointer-events-none absolute left-[7mm] top-[8mm]">
-        <Birds className="h-[8mm] w-[26mm] opacity-60" count={2} />
+        <Birds className="h-[8mm] w-[26mm] opacity-60" count={2} animated={false} />
       </div>
       <div className="pointer-events-none absolute right-[6mm] top-[30mm] h-[6mm] w-[6mm] rounded-full bg-soft-yellow" />
       <div className="pointer-events-none absolute left-[4mm] top-[104mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />

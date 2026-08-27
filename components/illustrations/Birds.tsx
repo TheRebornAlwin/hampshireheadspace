@@ -1,6 +1,9 @@
 type Props = {
   className?: string;
   count?: 2 | 3 | 4;
+  /* Paper cannot flap. Anything headed for print passes animated={false}
+     and the flock holds still. */
+  animated?: boolean;
 };
 
 /* Soft seagull-silhouette birds with proper wing kinematics.
@@ -8,7 +11,11 @@ type Props = {
    a real vertical arc, swinging from below the body line (downstroke,
    wings out and dipped) through level (gliding) to high above the body
    (upstroke, wings raised), the way an actual flying bird moves. */
-export default function Birds({ className = "", count = 3 }: Props) {
+export default function Birds({
+  className = "",
+  count = 3,
+  animated = true,
+}: Props) {
   const birds = [
     { x: 25, y: 38, scale: 1.05, opacity: 0.78, dur: 0.55, delay: 0 },
     { x: 82, y: 22, scale: 0.7, opacity: 0.55, dur: 0.7, delay: 0.22 },
@@ -28,6 +35,12 @@ export default function Birds({ className = "", count = 3 }: Props) {
   const wingsUp =
     "M-9 -9 C-7 -7 -3 -4 0 -2 C3 -4 7 -7 9 -9";
 
+  // Frozen, the birds alternate between two poses, so a still flock reads
+  // like a photograph rather than a row of identical stencils. The downstroke
+  // is left out on purpose: mid-flap its tips sit below the body, which reads
+  // as a plain arch once it stops moving.
+  const stillPoses = [wingsLevel, wingsUp];
+
   return (
     <svg
       viewBox="0 0 220 80"
@@ -42,7 +55,7 @@ export default function Birds({ className = "", count = 3 }: Props) {
           opacity={b.opacity}
         >
           <path
-            d={wingsLevel}
+            d={animated ? wingsLevel : stillPoses[i % stillPoses.length]}
             stroke="#2A3D5F"
             strokeWidth="1.7"
             strokeLinecap="round"
@@ -51,6 +64,7 @@ export default function Birds({ className = "", count = 3 }: Props) {
           >
             {/* Down -> Level -> Up -> Level -> Down (one full flap cycle).
                 Eased so wings accelerate in the middle of each stroke. */}
+            {animated && (
             <animate
               attributeName="d"
               dur={`${b.dur}s`}
@@ -61,6 +75,7 @@ export default function Birds({ className = "", count = 3 }: Props) {
               keySplines="0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1"
               values={`${wingsDown};${wingsLevel};${wingsUp};${wingsLevel};${wingsDown}`}
             />
+            )}
           </path>
         </g>
       ))}
