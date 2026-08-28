@@ -8,88 +8,80 @@ import Sparkles from "@/components/illustrations/Sparkles";
    It is NOT added to robots.txt: a Disallow line would publish the path to
    anyone who reads robots.txt, which is the opposite of keeping it quiet.
 
-   The two panels are laid out at true DL size (99mm x 210mm) using mm and pt
-   throughout, so what prints from this page is actual size rather than a
-   scaled approximation. */
+   Every word here is Ruth's, taken from FLYER.docx. The two panels are laid
+   out at true DL size (99mm x 210mm) using mm and pt throughout, so what
+   prints from this page is actual size rather than a scaled approximation. */
 
 export const metadata: Metadata = {
   title: "DL flyer proof",
   robots: { index: false, follow: false, nocache: true },
 };
 
-const HELPS_WITH = [
-  "Anxiety",
-  "Low self-esteem and confidence",
-  "Depression",
-  "People-pleasing and perfectionism",
-  "Panic attacks",
-  "Feeling stuck or lost",
-  "Stress, overwhelm and burnout",
-  "Loneliness and isolation",
-  "Low mood and sadness",
-  "Relationship difficulties",
-  "Worry and overthinking",
-  "Loss and bereavement",
+/* Her doc repeats the same sign-off on both sides. Labels are hers:
+   "Website:" not "Web:", "Text or voicemail:" not "Text or message:". */
+const CONTACT = [
+  ["Email:", "hello@hampshireheadspace.com"],
+  ["Website:", "hampshireheadspace.com"],
+  ["Text or voicemail:", "07717 811986"],
 ];
 
-const FEES = [
-  { label: "First 50-minute session", value: "Free" },
-  { label: "Face to face, Eastleigh or Winchester", value: "£50" },
-  { label: "Online, by secure video", value: "£40" },
-];
-
-function Tick() {
+/* The logo in her doc carries the tagline, but that copy of the artwork
+   reads "a space to show down and connect". The site's wordmark has the
+   correct "slow", so the lockup is rebuilt here from the two site assets
+   rather than dropping her file in with the typo baked into it. */
+function Lockup({ mark, word }: { mark: string; word: string }) {
   return (
-    <svg
-      viewBox="0 0 20 20"
-      aria-hidden="true"
-      className="mt-[0.7mm] h-[2.6mm] w-[2.6mm] shrink-0 text-navy"
-    >
-      <path
-        d="M4 10.5l4 4 8-9"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+    <div className="flex flex-col items-center">
+      <img
+        src="/logo-icon.webp"
+        alt=""
+        aria-hidden="true"
+        width={559}
+        height={447}
+        className={mark}
       />
-    </svg>
+      <img
+        src="/logo-wordmark.webp"
+        alt=""
+        aria-hidden="true"
+        width={1280}
+        height={248}
+        className={`mt-[2.5mm] ${word}`}
+      />
+    </div>
   );
 }
 
-/* The letterhead block Ruth sent: navy rule, logo, vertical divider, details,
-   navy rule. Reproduced rather than reinterpreted, since she supplied it as
-   finished artwork. */
-function ContactStrip() {
+function SignOff() {
   return (
-    <div className="-mx-[8mm]">
-      <div className="h-[4mm] bg-navy" />
-      <div className="flex items-center gap-[4mm] bg-white px-[6mm] py-[5mm]">
-        <img
-          src="/logo.webp"
-          alt=""
-          aria-hidden="true"
-          width={1200}
-          height={974}
-          className="w-[21mm] shrink-0"
-        />
-        <div className="h-[19mm] w-[0.7mm] shrink-0 rounded-full bg-navy" />
-        <div className="min-w-0">
-          <p className="text-[13pt] font-extrabold leading-none tracking-tight text-navy">
-            Ruth Fleming
+    <>
+      <p className="text-[9pt] font-bold leading-[1.35] text-navy">
+        May I encourage you to take that first step with me today?
+      </p>
+      <div className="mt-[3mm] space-y-[1.2mm]">
+        {CONTACT.map(([label, value]) => (
+          <p key={label} className="text-[8pt] leading-none text-navy">
+            <span className="font-semibold">{label}</span> {value}
           </p>
-          <p className="mt-[1mm] text-[9.5pt] font-bold leading-none text-navy">
-            MBACP
-          </p>
-          <div className="mt-[2.4mm] space-y-[1mm] text-[7pt] font-semibold leading-tight text-navy">
-            <p>Email: hello@hampshireheadspace.com</p>
-            <p>Web: hampshireheadspace.com</p>
-            <p>Text or message: 07843 114396</p>
-          </div>
-        </div>
+        ))}
       </div>
-      <div className="h-[4mm] bg-navy" />
-    </div>
+    </>
+  );
+}
+
+/* Both the BACP mark and the yarn illustration are supplied on solid white.
+   Cream is only a few points off white on screen but prints as real ink, so
+   dropped in plainly they would each sit in a faint white box. Multiply
+   blending lets the paper show through instead. */
+function Bacp({ className }: { className: string }) {
+  return (
+    <img
+      src="/bacp-logo.webp"
+      alt="BACP registered member 418989, MBACP"
+      width={600}
+      height={268}
+      className={`mix-blend-multiply ${className}`}
+    />
   );
 }
 
@@ -98,68 +90,64 @@ function Front() {
     <div className="dl-panel relative flex h-[210mm] w-[99mm] flex-col overflow-hidden bg-cream">
       <div className="h-[6mm] shrink-0 bg-navy" />
 
-      {/* Ambience lifted straight from the website: clouds, birds, and the
-          yellow/blue/pink spots. */}
+      {/* Ambience lifted straight from the website: clouds, birds and dots. */}
       <CloudBlob
         variant="blue"
-        className="pointer-events-none absolute -left-[26mm] top-[10mm] h-[42mm] w-[76mm] opacity-25"
+        className="pointer-events-none absolute -left-[26mm] top-[8mm] h-[42mm] w-[76mm] opacity-25"
       />
       <CloudBlob
         variant="yellow"
-        className="pointer-events-none absolute -right-[22mm] bottom-[24mm] h-[40mm] w-[70mm] opacity-30"
+        className="pointer-events-none absolute -right-[24mm] bottom-[30mm] h-[40mm] w-[70mm] opacity-30"
       />
-      <div className="pointer-events-none absolute right-[7mm] top-[15mm]">
-        <Birds className="h-[9mm] w-[30mm] opacity-70" count={3} animated={false} />
+      <div className="pointer-events-none absolute right-[6mm] top-[12mm]">
+        <Birds className="h-[8mm] w-[26mm] opacity-70" count={3} animated={false} />
       </div>
-      <div className="pointer-events-none absolute left-[6mm] top-[72mm] h-[7mm] w-[7mm] rounded-full bg-soft-yellow" />
-      <div className="pointer-events-none absolute right-[5mm] top-[92mm] h-[5mm] w-[5mm] rounded-full bg-soft-blue/80" />
-      <div className="pointer-events-none absolute left-[12mm] top-[152mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />
-      <div className="pointer-events-none absolute right-[13mm] top-[170mm] h-[3mm] w-[3mm] rounded-full bg-[#FFD6DD]" />
-      <Sparkles className="pointer-events-none absolute left-[3mm] top-[120mm] h-[14mm] w-[22mm] opacity-45" />
+      <div className="pointer-events-none absolute left-[5mm] top-[62mm] h-[6mm] w-[6mm] rounded-full bg-soft-yellow" />
+      <div className="pointer-events-none absolute right-[4mm] top-[80mm] h-[4.5mm] w-[4.5mm] rounded-full bg-soft-blue/80" />
+      <div className="pointer-events-none absolute left-[7mm] top-[148mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />
+      <div className="pointer-events-none absolute right-[9mm] top-[168mm] h-[3mm] w-[3mm] rounded-full bg-[#FFD6DD]" />
+      <Sparkles className="pointer-events-none absolute left-[2mm] top-[104mm] h-[12mm] w-[20mm] opacity-45" />
 
-      <div className="relative flex flex-1 flex-col items-center px-[8mm] pb-[7mm] pt-[13mm] text-center">
+      <div className="relative flex flex-1 flex-col items-center px-[9mm] pb-[6mm] pt-[7mm] text-center">
+        <Lockup mark="w-[20mm]" word="w-[48mm]" />
+
+        <h1 className="mt-[5mm] text-[12pt] font-bold uppercase leading-[1.2] tracking-[0.01em] text-navy">
+          Can talking to someone help?
+        </h1>
+
+        <p className="mt-[3.5mm] text-[8pt] leading-[1.5] text-navy">
+          At times we may all struggle with stresses, strains, challenges,
+          difficulties, loss and change. In a fast changing and sometimes
+          confusing world many of us may struggle to feel connected; with
+          ourselves, with others and within society and during these times it
+          can be helpful to talk about our thoughts, our feelings and our
+          emotions.
+        </p>
+        <p className="mt-[2.5mm] text-[8pt] leading-[1.5] text-navy">
+          Counselling can provide an opportunity to slow down and connect so
+          that you may live with more ease and less strain.
+        </p>
+
         <img
-          src="/logo.webp"
-          alt=""
-          aria-hidden="true"
+          src="/hero-tangled-yarn.webp"
+          alt="Two figures sitting in soft blue chairs, one with a tangled ball of yarn for a head, the other calmly holding the loose end."
           width={1200}
-          height={974}
-          className="w-[46mm]"
+          height={1200}
+          className="mt-[2.5mm] w-[36mm] mix-blend-multiply"
         />
 
-        <p className="mt-[7mm] text-[9pt] font-semibold uppercase tracking-[0.16em] text-navy/70">
-          Private counselling
-        </p>
-        <p className="mt-[1.5mm] text-[11pt] font-bold text-navy">
-          Eastleigh &middot; Winchester &middot; Online
-        </p>
-
-        {/* The banner Ruth asked for, in the website's yellow, full bleed. */}
-        <div className="-mx-[8mm] mt-[10mm] w-[99mm] bg-soft-yellow px-[9mm] py-[9mm]">
-          <p className="text-balance text-[14.5pt] font-bold leading-[1.2] tracking-tight text-navy">
+        {/* The banner Ruth asked for "if it could fit", in the website's
+            yellow, full bleed to the panel edges. */}
+        <div className="-mx-[9mm] mt-[2.5mm] w-[99mm] bg-soft-yellow px-[8mm] py-[3.2mm]">
+          <p className="text-balance text-[9pt] font-bold leading-[1.25] tracking-tight text-navy">
             People who need support sometimes look a lot like people who
             don&rsquo;t need support.
           </p>
         </div>
 
-        <p className="mt-[9mm] max-w-[76mm] text-[9.5pt] leading-relaxed text-navy/85">
-          A calm, confidential space to slow down, make sense of things and feel
-          properly heard. No judgement, no rush.
-        </p>
-
-        <div className="mt-[7mm] rounded-full bg-navy px-[7mm] py-[3.2mm]">
-          <p className="text-[9.5pt] font-bold leading-none text-cream">
-            Your first 50-minute session is free
-          </p>
-        </div>
-
-        <div className="mt-auto">
-          <p className="text-[10.5pt] font-bold tracking-tight text-navy">
-            hampshireheadspace.com
-          </p>
-          <p className="mt-[1.5mm] text-[8pt] font-semibold text-navy/75">
-            Ruth Fleming MBACP &middot; BACP registered
-          </p>
+        <div className="mt-auto pt-[3mm]">
+          <SignOff />
+          <Bacp className="mx-auto mt-[3mm] w-[36mm]" />
         </div>
       </div>
 
@@ -175,71 +163,72 @@ function Back() {
 
       <CloudBlob
         variant="yellow"
-        className="pointer-events-none absolute -left-[24mm] top-[8mm] h-[38mm] w-[68mm] opacity-25"
+        className="pointer-events-none absolute -left-[24mm] top-[6mm] h-[38mm] w-[68mm] opacity-25"
       />
       <CloudBlob
         variant="blue"
-        className="pointer-events-none absolute -right-[26mm] top-[86mm] h-[40mm] w-[72mm] opacity-20"
+        className="pointer-events-none absolute -right-[26mm] top-[92mm] h-[40mm] w-[72mm] opacity-20"
       />
-      <div className="pointer-events-none absolute left-[7mm] top-[8mm]">
-        <Birds className="h-[8mm] w-[26mm] opacity-60" count={2} animated={false} />
+      <div className="pointer-events-none absolute left-[6mm] top-[9mm]">
+        <Birds className="h-[7mm] w-[22mm] opacity-60" count={2} animated={false} />
       </div>
-      <div className="pointer-events-none absolute right-[6mm] top-[30mm] h-[6mm] w-[6mm] rounded-full bg-soft-yellow" />
-      <div className="pointer-events-none absolute left-[4mm] top-[104mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />
-      <div className="pointer-events-none absolute right-[8mm] top-[126mm] h-[4.5mm] w-[4.5mm] rounded-full bg-soft-blue/80" />
+      <div className="pointer-events-none absolute right-[5mm] top-[26mm] h-[5mm] w-[5mm] rounded-full bg-soft-yellow" />
+      <div className="pointer-events-none absolute left-[3mm] top-[112mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />
+      <div className="pointer-events-none absolute right-[6mm] top-[136mm] h-[4mm] w-[4mm] rounded-full bg-soft-blue/80" />
 
-      <div className="relative flex flex-1 flex-col px-[8mm] pt-[15mm]">
-        <h2 className="text-center text-[15pt] font-bold leading-[1.2] tracking-tight text-navy">
-          Can talking to someone help?
-        </h2>
-        <p className="mx-auto mt-[3.5mm] max-w-[78mm] text-center text-[8.5pt] leading-relaxed text-navy/85">
-          I&rsquo;m Ruth, a BACP-registered humanistic counsellor. I work with
-          adults and young people from 16, in person and online, on things like:
-        </p>
-
-        <div className="mt-[6mm] grid grid-cols-2 gap-x-[4mm] gap-y-[2mm]">
-          {HELPS_WITH.map((item) => (
-            <div key={item} className="flex items-start gap-[1.6mm]">
-              <Tick />
-              <span className="text-[7.6pt] font-medium leading-[1.35] text-navy">
-                {item}
-              </span>
-            </div>
-          ))}
-        </div>
-        <p className="mt-[3mm] text-center text-[8pt] font-semibold italic text-navy/70">
-          &hellip;and life in general.
-        </p>
-
-        {/* Fees, taken from the site so the two cannot drift apart. */}
-        <div className="mt-[6mm] rounded-[3mm] bg-white/70 px-[6mm] py-[5mm] shadow-soft ring-[0.3mm] ring-soft-blue/50">
-          <p className="text-center text-[8pt] font-bold uppercase tracking-[0.14em] text-navy/70">
-            Fees
-          </p>
-          <dl className="mt-[3mm] space-y-[2mm]">
-            {FEES.map((f) => (
-              <div key={f.label} className="flex items-baseline gap-[2mm]">
-                <dt className="text-[8pt] leading-tight text-navy/85">
-                  {f.label}
-                </dt>
-                <span className="mb-[0.8mm] h-[0.3mm] flex-1 bg-navy/20" />
-                <dd className="text-[9.5pt] font-bold leading-none text-navy">
-                  {f.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
+      <div className="relative flex flex-1 flex-col items-center px-[9mm] pb-[6mm] pt-[8mm] text-center">
+        {/* Her doc uses the rectangular portrait, not the site's circular
+            crop, so it is framed the way the site treats its photographs. */}
+        <div className="relative">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-[1.5mm] rounded-[4mm] bg-soft-yellow/50"
+          />
+          <img
+            src="/ruth-headshot.webp?v=8"
+            alt="Ruth, counsellor at Hampshire Headspace"
+            width={800}
+            height={1067}
+            className="relative h-[43mm] w-[32mm] rounded-[3mm] object-cover object-[center_20%] shadow-soft ring-[0.5mm] ring-cream"
+          />
         </div>
 
-        <p className="mt-[5mm] text-center text-[8.5pt] leading-relaxed text-navy/85">
-          Quiet, comfortable rooms in central Eastleigh and in Winnall,
-          Winchester, both with free parking. Online sessions across the UK.
+        <p className="mt-[5mm] text-[9.5pt] font-bold leading-[1.3] text-navy">
+          I&rsquo;m Ruth and I offer connection, compassion and care.
+        </p>
+        <p className="mt-[1.5mm] text-[9.5pt] font-bold leading-[1.3] text-navy">
+          Meeting you as you are, beyond roles, expectations, or appearances.
         </p>
 
-        <div className="mt-auto">
-          <ContactStrip />
+        <p className="mt-[4mm] text-[7.6pt] leading-[1.45] text-navy">
+          I am a fully qualified humanistic counsellor, registered with the
+          British Association of Counselling and Psychotherapy (BACP) and
+          committed to offering a confidential and ethical service.
+        </p>
+        <p className="mt-[2.2mm] text-[7.6pt] leading-[1.45] text-navy">
+          I offer individual counselling sessions for people aged 16 and over.
+          I welcome neurotypical and neurodiverse clients, as well as
+          individuals from all cultural backgrounds, sexual orientations, and
+          gender identities, in a space which is safe, welcoming, and
+          non-judgmental in which you can feel secure and supported.
+        </p>
+        <p className="mt-[2.2mm] text-[7.6pt] leading-[1.45] text-navy">
+          I have experience working with both adults and adolescents in private
+          practice, charity organisations and education settings.
+        </p>
+        <p className="mt-[2.2mm] text-[7.6pt] leading-[1.45] text-navy">
+          I operate from comfortable rooms in both Eastleigh and Winchester or
+          can work online. Contact me to find out more and to arrange a
+          suitable appointment.
+        </p>
+
+        <div className="mt-auto pt-[4mm]">
+          <SignOff />
+          <Bacp className="mx-auto mt-[4mm] w-[44mm]" />
         </div>
       </div>
+
+      <div className="h-[6mm] shrink-0 bg-navy" />
     </div>
   );
 }
