@@ -4,6 +4,14 @@ type Props = {
   /* Paper cannot flap. Anything headed for print passes animated={false}
      and the flock holds still. */
   animated?: boolean;
+  /* Stroke is in viewBox units, so a small bird drawn at print size ends up
+     with a hairline the press cannot hold. Print callers pass a heavier
+     weight; on screen the default is unchanged. */
+  strokeWidth?: number;
+  /* Per-bird opacity is baked into the flock below for depth. Print needs
+     the whole flock lifted without flattening that depth, so this scales
+     every bird's opacity by the same factor. */
+  opacityScale?: number;
 };
 
 /* Soft seagull-silhouette birds with proper wing kinematics.
@@ -15,6 +23,8 @@ export default function Birds({
   className = "",
   count = 3,
   animated = true,
+  strokeWidth = 1.7,
+  opacityScale = 1,
 }: Props) {
   const birds = [
     { x: 25, y: 38, scale: 1.05, opacity: 0.78, dur: 0.55, delay: 0 },
@@ -52,12 +62,12 @@ export default function Birds({
         <g
           key={i}
           transform={`translate(${b.x} ${b.y}) scale(${b.scale})`}
-          opacity={b.opacity}
+          opacity={Math.min(1, b.opacity * opacityScale)}
         >
           <path
             d={animated ? wingsLevel : stillPoses[i % stillPoses.length]}
             stroke="#2A3D5F"
-            strokeWidth="1.7"
+            strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
