@@ -41,7 +41,7 @@ function Lockup() {
         aria-hidden="true"
         width={559}
         height={447}
-        className="w-[25mm]"
+        className="w-[28mm]"
       />
       <img
         src="/logo-wordmark.webp"
@@ -49,7 +49,7 @@ function Lockup() {
         aria-hidden="true"
         width={1280}
         height={248}
-        className="mt-[2.5mm] w-[52mm]"
+        className="mt-[2.5mm] w-[56mm]"
       />
     </div>
   );
@@ -71,10 +71,11 @@ function Footer() {
         </p>
       </div>
 
-      {/* "LARGER CONTACT DETAILS MAYBE?" */}
-      <div className="mt-[3mm] space-y-[1.2mm] px-[9mm]">
+      {/* "LARGER CONTACT DETAILS MAYBE?", then "increase size of contact
+          details a little" on the second pass. */}
+      <div className="mt-[3mm] space-y-[1.4mm] px-[9mm]">
         {CONTACT.map(([label, value]) => (
-          <p key={label} className="text-[9pt] leading-none text-navy">
+          <p key={label} className="text-[9.8pt] leading-none text-navy">
             <span className="font-semibold">{label}</span> {value}
           </p>
         ))}
@@ -121,8 +122,13 @@ function Front() {
         className="pointer-events-none absolute -right-[24mm] top-[30mm] h-[40mm] w-[70mm] opacity-30"
       />
       {/* Her print lost the birds altogether, so they now carry a press-safe
-          stroke and sit at full flock opacity. */}
-      <div className="pointer-events-none absolute right-[5mm] top-[11mm]">
+          stroke and sit at full flock opacity.
+
+          "MOVE BIRD OUT", arrowed at the bird sitting against the logo cloud.
+          The flock is 40mm wide and only 37mm of panel is clear to the right
+          of the mark, so it is pushed past the trim rather than shrunk: the
+          box overhangs, the birds themselves do not, and they keep full size. */}
+      <div className="pointer-events-none absolute -right-[3mm] top-[9mm]">
         <Birds
           className="h-[13mm] w-[40mm]"
           count={3}
@@ -135,6 +141,12 @@ function Front() {
       <div className="pointer-events-none absolute right-[4mm] top-[80mm] h-[4.5mm] w-[4.5mm] rounded-full bg-soft-blue/80" />
       <div className="pointer-events-none absolute left-[7mm] top-[150mm] h-[4mm] w-[4mm] rounded-full bg-[#FFD6DD]" />
       <div className="pointer-events-none absolute right-[9mm] top-[170mm] h-[3mm] w-[3mm] rounded-full bg-[#FFD6DD]" />
+      {/* "YELLOW" written against a cloud drawn into the bottom-left corner,
+          level with the BACP mark. */}
+      <CloudBlob
+        variant="yellow"
+        className="pointer-events-none absolute -left-[20mm] bottom-[7mm] h-[32mm] w-[60mm] opacity-30"
+      />
       <Sparkles className="pointer-events-none absolute left-[2mm] top-[104mm] h-[12mm] w-[20mm] opacity-45" />
 
       <div className="relative flex flex-1 flex-col items-center px-[9mm] pb-[5.5mm] pt-[5mm] text-center">
@@ -164,7 +176,7 @@ function Front() {
           alt="Two figures sitting in soft blue chairs, one with a tangled ball of yarn for a head, the other calmly holding the loose end."
           width={1200}
           height={1200}
-          className="mt-[2.2mm] w-[31mm] mix-blend-multiply"
+          className="mt-[2.2mm] w-[27mm] mix-blend-multiply"
         />
 
         {/* "HIGHLIGHT IN ANOTHER WAY, NOT SURE HOW." The full-bleed yellow
@@ -196,21 +208,24 @@ function Back() {
         variant="blue"
         className="pointer-events-none absolute -left-[24mm] top-[6mm] h-[38mm] w-[68mm] opacity-25"
       />
-      {/* "PINK CLOUD?" drawn to the right of the portrait. */}
+      {/* "PINK CLOUD?" drawn to the right of the portrait, then "DOWN A TINY
+          BIT" against it on the second pass. */}
       <CloudBlob
         variant="pink"
-        className="pointer-events-none absolute -right-[14mm] top-[14mm] h-[34mm] w-[58mm] opacity-55"
+        className="pointer-events-none absolute -right-[14mm] top-[20mm] h-[34mm] w-[58mm] opacity-55"
       />
       {/* "CLOUD." drawn low on the right, beside the BACP mark. */}
       <CloudBlob
         variant="blue"
         className="pointer-events-none absolute -right-[22mm] bottom-[10mm] h-[36mm] w-[64mm] opacity-25"
       />
-      {/* "ADD BIRD." with two birds drawn into this corner. */}
+      {/* "ADD BIRD." with two birds drawn into this corner, then "one extra
+          bird at top of page two". Sized to match side 1 exactly, and it
+          still stops 3mm clear of the portrait. */}
       <div className="pointer-events-none absolute left-[5mm] top-[10mm]">
         <Birds
-          className="h-[12mm] w-[36mm]"
-          count={2}
+          className="h-[13mm] w-[40mm]"
+          count={3}
           animated={false}
           strokeWidth={1.9}
           opacityScale={1.4}
@@ -239,48 +254,50 @@ function Back() {
           />
         </div>
 
+        {/* Her file ends both of these with an ellipsis followed by a full
+            stop, which is what Word's autocorrect makes of four typed dots.
+            Set as-is it prints as "ABOUT ME... ." with a gap before the last
+            dot, so both are set as a single ellipsis, matching the three dots
+            in the tagline above the fold on side 1.
+
+            She reordered side 2 and cut it back so it could carry side 1's
+            type size. Two headings only, in her order: about her first, then
+            what to expect. The rule that used to sit between them is gone.
+            "I can't get rid of the lines on page 2, but don't want any" is
+            about the paragraph borders in her Word file, not a request for a
+            divider here. */}
         <div className="mt-[3.5mm]">
-          <Heading>What to expect from counselling?</Heading>
+          <Heading>About me&hellip;</Heading>
         </div>
 
-        <p className="mt-[3mm] text-[7.1pt] leading-[1.45] text-navy">
-          Counselling can be different for everyone. During counselling you may
-          find a way to make sense of your experience, and to move towards
-          acceptance and understanding.
-        </p>
-        <p className="mt-[1.8mm] text-[7.1pt] leading-[1.45] text-navy">
-          It is likely that you will become more self-aware. You may begin to
-          recognise behaviours and cycles of responding which are no longer
-          helpful, or you may become more able to let go of outdated ideas of
-          yourself or others. You may come to terms with what harms you at the
-          same time as embracing more of what brings joy and fulfilment.
-        </p>
-
-        {/* The row of dashes in her document, set as a rule. */}
-        <div
-          aria-hidden="true"
-          className="mt-[2.6mm] h-[0.4mm] w-[26mm] rounded-full bg-soft-blue"
-        />
-
-        <p className="mt-[2.6mm] text-[7.1pt] leading-[1.45] text-navy">
+        <p className="mt-[3mm] text-[8pt] leading-[1.5] text-navy">
           I&rsquo;m Ruth, a fully qualified humanistic counsellor, registered
           with the British Association of Counselling and Psychotherapy (BACP)
           and committed to offering a confidential and ethical service.
         </p>
-        <p className="mt-[1.8mm] text-[7.1pt] leading-[1.45] text-navy">
+        <p className="mt-[2.2mm] text-[8pt] leading-[1.5] text-navy">
           I offer individual counselling sessions for people aged 16 and over.
           I welcome neurotypical and neurodiverse clients, as well as
           individuals from all cultural backgrounds, sexual orientations, and
           gender identities, in a space which is safe, welcoming, and
           non-judgmental in which you can feel secure and supported.
         </p>
-        <p className="mt-[1.8mm] text-[7.1pt] leading-[1.45] text-navy">
+        <p className="mt-[2.2mm] text-[8pt] leading-[1.5] text-navy">
           I have experience working with both adults and adolescents in private
           practice, charity organisations and education settings.
         </p>
-        <p className="mt-[1.8mm] text-[7.1pt] leading-[1.45] text-navy">
-          I operate from comfortable rooms in both Eastleigh and Winchester or
-          can work online.
+
+        <div className="mt-[4mm]">
+          <Heading>What to expect?</Heading>
+        </div>
+
+        {/* "1 paragraph." on her scan, and one paragraph in her document. */}
+        <p className="mt-[3mm] text-[8pt] leading-[1.5] text-navy">
+          Counselling can be different for everyone. During counselling you may
+          find a way to make sense of your experience and to move towards
+          acceptance and understanding. You may come to terms with what harms
+          you at the same time as embracing more of what brings joy and
+          fulfilment&hellip;
         </p>
 
         <Footer />
@@ -295,7 +312,7 @@ export default function DlFlyerPage() {
   return (
     <div className="fixed inset-0 z-[60] overflow-auto bg-[#E9EAEE] print:static print:overflow-visible print:bg-white">
       <style>{`
-        /* This <style> ships inside this page only, so the rule is scoped to
+        /* This block ships inside this page only, so the rule is scoped to
            this route. The proof renders inside the normal site shell; nothing
            but the two flyer sides belongs on it, so the header, skip link and
            footer come out of the render entirely rather than just being
