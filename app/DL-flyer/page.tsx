@@ -296,8 +296,8 @@ function Back() {
           Counselling can be different for everyone. During counselling you may
           find a way to make sense of your experience and to move towards
           acceptance and understanding. You may come to terms with what harms
-          you at the same time as embracing more of what brings joy and
-          fulfilment&hellip;
+          you at the same time as embracing more of what brings
+          peace&hellip;
         </p>
 
         <Footer />
