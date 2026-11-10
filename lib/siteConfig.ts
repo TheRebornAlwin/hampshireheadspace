@@ -85,13 +85,13 @@ export const offers = [
   },
   {
     name: "Counselling session, face to face",
-    price: "50",
+    price: "60",
     priceCurrency: "GBP",
     description: "A 50-minute session in either Eastleigh or Winchester.",
   },
   {
     name: "Counselling session, online",
-    price: "40",
+    price: "50",
     priceCurrency: "GBP",
     description: "A 50-minute session by secure video.",
   },

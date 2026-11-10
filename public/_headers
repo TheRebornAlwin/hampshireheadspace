@@ -40,3 +40,12 @@
 
 /
   Cache-Control: public, max-age=0, must-revalidate
+
+# The pages.dev address is Cloudflare's test copy of this site. Google had
+# indexed it alongside hampshireheadspace.com, so tell search engines to drop
+# it (and any preview deploys). The real domain is unaffected.
+https://hampshireheadspace.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.hampshireheadspace.pages.dev/*
+  X-Robots-Tag: noindex
